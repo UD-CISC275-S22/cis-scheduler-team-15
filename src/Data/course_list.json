@@ -1,0 +1,62 @@
+[
+    {
+        "courseID": 1,
+        "listing": "CISC108",
+        "title": "Introduction to Computer Science I",
+        "PreReqs": [],
+        "CoReqs": [],
+        "offered": ["Fall", "Spring"],
+        "credits": 3,
+        "majorReq": true,
+        "techReq": false,
+        "breadthReq": false
+    },
+    {
+        "courseID": 2,
+        "listing": "CISC108",
+        "title": "Introduction to Computer Science I",
+        "PreReqs": [],
+        "CoReqs": [],
+        "offered": ["Fall", "Spring"],
+        "credits": 3,
+        "majorReq": true,
+        "techReq": false,
+        "breadthReq": false
+    },
+    {
+        "courseID": 3,
+        "listing": "CISC108",
+        "title": "Introduction to Computer Science I",
+        "PreReqs": [],
+        "CoReqs": [],
+        "offered": ["Fall", "Spring"],
+        "credits": 3,
+        "majorReq": true,
+        "techReq": false,
+        "breadthReq": false
+    },
+    {
+        "courseID": 4,
+        "listing": "CISC108",
+        "title": "Introduction to Computer Science I",
+        "PreReqs": [],
+        "CoReqs": [],
+        "offered": ["Fall", "Spring"],
+        "credits": 3,
+        "majorReq": true,
+        "techReq": false,
+        "breadthReq": false
+    },
+    {
+        "courseID": 5,
+        "listing": "CISC108",
+        "title": "Introduction to Computer Science I",
+        "PreReqs": [],
+        "CoReqs": [],
+        "offered": ["Fall", "Spring"],
+        "credits": 3,
+        "majorReq": true,
+        "techReq": false,
+        "breadthReq": false
+    }
+]
