@@ -1,0 +1,14 @@
+[
+    {
+        "degreeID": 1,
+        "name": "Default",
+        "semesters": [
+            {
+                "semesterID": 1,
+                "season": "Fall",
+                "year": 2020,
+                "courses": []
+            }
+        ]
+    }
+]

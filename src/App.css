@@ -2,6 +2,18 @@
     text-align: center;
 }
 
+.App-thin {
+    width: 80%;
+    margin-left: 10%;
+    text-align: justify;
+}
+
+.App-special {
+    text-align: center;
+    font-weight: bold;
+    color: rgb(0, 72, 255);
+}
+
 .App-logo {
     height: 40vmin;
     pointer-events: none;
@@ -22,7 +34,7 @@
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: white;
+    color: gold;
 }
 
 .App-link {
