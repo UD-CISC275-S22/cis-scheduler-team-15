@@ -6,7 +6,5 @@ export interface Course {
     coReqs: number[];
     offered: string[];
     credits: number;
-    majorReq: boolean;
-    techReq: boolean;
-    breadthReq: boolean;
+    reqsSatisfied: string[];
 }

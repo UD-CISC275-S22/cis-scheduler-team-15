@@ -4,59 +4,219 @@
         "listing": "CISC108",
         "title": "Introduction to Computer Science I",
         "PreReqs": [],
-        "CoReqs": [],
+        "CoReqs": ["MATH241"],
         "offered": ["Fall", "Spring"],
         "credits": 3,
-        "majorReq": true,
-        "techReq": false,
-        "breadthReq": false
+        "reqsSatisfied": ["CISC108"]
     },
     {
         "courseID": 2,
-        "listing": "CISC108",
-        "title": "Introduction to Computer Science I",
-        "PreReqs": [],
-        "CoReqs": [],
+        "listing": "CISC181",
+        "title": "Introduction to Computer Science II",
+        "PreReqs": ["CISC108"],
+        "CoReqs": ["MATH241"],
         "offered": ["Fall", "Spring"],
         "credits": 3,
-        "majorReq": true,
-        "techReq": false,
-        "breadthReq": false
+        "reqsSatisfied": ["CISC181"]
     },
     {
         "courseID": 3,
-        "listing": "CISC108",
-        "title": "Introduction to Computer Science I",
-        "PreReqs": [],
-        "CoReqs": [],
+        "listing": "CISC210",
+        "title": "Introduction to Systems Programming",
+        "PreReqs": ["CISC108"],
+        "CoReqs": ["MATH241"],
         "offered": ["Fall", "Spring"],
         "credits": 3,
-        "majorReq": true,
-        "techReq": false,
-        "breadthReq": false
+        "reqsSatisfied": ["CISC210"]
     },
     {
         "courseID": 4,
-        "listing": "CISC108",
-        "title": "Introduction to Computer Science I",
-        "PreReqs": [],
+        "listing": "CISC320",
+        "title": "Introduction to Algorithms",
+        "PreReqs": ["MATH210"],
         "CoReqs": [],
         "offered": ["Fall", "Spring"],
         "credits": 3,
-        "majorReq": true,
-        "techReq": false,
-        "breadthReq": false
+        "reqsSatisfied": ["CISC300+"]
     },
     {
         "courseID": 5,
-        "listing": "CISC108",
-        "title": "Introduction to Computer Science I",
+        "listing": "CISC220",
+        "title": "Data Structures",
+        "PreReqs": ["CISC210"],
+        "CoReqs": ["Math241"],
+        "offered": ["Fall", "Spring"],
+        "credits": 3,
+        "reqsSatisfied": ["CISC220"]
+    },
+    {
+        "courseID": 6,
+        "listing": "CISC260",
+        "title": "Machine Organization and Assembly Language",
+        "PreReqs": ["CISC210"],
+        "CoReqs": [],
+        "offered": ["Fall", "Spring"],
+        "credits": 3,
+        "reqsSatisfied": ["CISC260"]
+    },
+    {
+        "courseID": 7,
+        "listing": "CISC367",
+        "title": "Upper Level CISC Course (Edit)",
         "PreReqs": [],
         "CoReqs": [],
         "offered": ["Fall", "Spring"],
         "credits": 3,
-        "majorReq": true,
-        "techReq": false,
-        "breadthReq": false
+        "reqsSatisfied": ["CISC300+"]
+    },
+    {
+        "courseID": 8,
+        "listing": "CISC367",
+        "title": "Upper Level CISC Course (Edit)",
+        "PreReqs": [],
+        "CoReqs": [],
+        "offered": ["Fall", "Spring"],
+        "credits": 3,
+        "reqsSatisfied": ["CISC300+"]
+    },
+    {
+        "courseID": 9,
+        "listing": "CISC367",
+        "title": "Upper Level CISC Course (Edit)",
+        "PreReqs": [],
+        "CoReqs": [],
+        "offered": ["Fall", "Spring"],
+        "credits": 3,
+        "reqsSatisfied": ["CISC300+"]
+    },
+    {
+        "courseID": 10,
+        "listing": "CISC367",
+        "title": "Upper Level CISC Course (Edit)",
+        "PreReqs": [],
+        "CoReqs": [],
+        "offered": ["Fall", "Spring"],
+        "credits": 3,
+        "reqsSatisfied": ["CISC300+"]
+    },
+    {
+        "courseID": 11,
+        "listing": "CISC367",
+        "title": "Upper Level CISC Course (Edit)",
+        "PreReqs": [],
+        "CoReqs": [],
+        "offered": ["Fall", "Spring"],
+        "credits": 3,
+        "reqsSatisfied": ["CISC300+"]
+    },
+    {
+        "courseID": 12,
+        "listing": "MATH210",
+        "title": "Discrete Mathematics I",
+        "PreReqs": [],
+        "CoReqs": ["MATH241"],
+        "offered": ["Fall", "Winter", "Spring"],
+        "credits": 3,
+        "reqsSatisfied": ["MATH210"]
+    },
+    {
+        "courseID": 13,
+        "listing": "MATH241",
+        "title": "Analytic Geometry and Calculus A",
+        "PreReqs": [],
+        "CoReqs": [],
+        "offered": ["Fall", "Winter", "Spring", "Summer"],
+        "credits": 4,
+        "reqsSatisfied": ["MATH241"]
+    },
+    {
+        "courseID": 14,
+        "listing": "MATH242",
+        "title": "Analytic Geometry and Calculus B",
+        "PreReqs": ["MATH241"],
+        "CoReqs": [],
+        "offered": ["Fall", "Winter", "Spring", "Summer"],
+        "credits": 4,
+        "reqsSatisfied": []
+    },
+    {
+        "courseID": 15,
+        "listing": "MATH243",
+        "title": "Analytic Geometry and Calculus C",
+        "PreReqs": ["MATH242"],
+        "CoReqs": [],
+        "offered": ["Fall", "Winter", "Spring", "Summer"],
+        "credits": 2,
+        "reqsSatisfied": []
+    },
+    {
+        "courseID": 16,
+        "listing": "EGGG101",
+        "title": "Introduction to Engineering",
+        "PreReqs": [],
+        "CoReqs": [],
+        "offered": ["Fall"],
+        "credits": 2,
+        "reqsSatisfied": ["FYS"]
+    },
+    {
+        "courseID": 17,
+        "listing": "ENGL110",
+        "title": "Seminar in Composition",
+        "PreReqs": ["CISC210"],
+        "CoReqs": ["Math241"],
+        "offered": ["Fall", "Winter", "Spring", "Summer"],
+        "credits": 3,
+        "reqsSatisfied": ["ENGL110"]
+    },
+    {
+        "courseID": 18,
+        "listing": "UNIV367",
+        "title": "Upper Level Breadth (edit)",
+        "PreReqs": [],
+        "CoReqs": [],
+        "offered": ["Fall", "Spring"],
+        "credits": 3,
+        "reqsSatisfied": ["BREADTH300+"]
+    },
+    {
+        "courseID": 19,
+        "listing": "UNIV367",
+        "title": "Upper Level Breadth (edit)",
+        "PreReqs": [],
+        "CoReqs": [],
+        "offered": ["Fall", "Spring"],
+        "credits": 3,
+        "reqsSatisfied": ["BREADTH300+"]
+    },
+    {
+        "courseID": 20,
+        "listing": "CISC475",
+        "title": "Advanced Software Engineering (Capstone)",
+        "PreReqs": ["CISC275"],
+        "CoReqs": [],
+        "offered": ["Fall", "Spring"],
+        "credits": 3,
+        "reqsSatisfied": ["DLE", "Capstone"]
+    },
+    {
+        "courseID": 21,
+        "listing": "CISC498",
+        "title": "Computer Science Senior Design Project I",
+        "PreReqs": ["CISC275", "CISC320"],
+        "CoReqs": [],
+        "offered": ["Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["CISC300+"]
+    },
+    {
+        "courseID": 22,
+        "listing": "CISC499",
+        "title": "Computer Science Senior Design Project II (Capstone)",
+        "PreReqs": ["CISC498"],
+        "CoReqs": [],
+        "offered": ["Spring"],
+        "credits": 3,
+        "reqsSatisfied": ["DLE", "Capstone"]
     }
 ]
