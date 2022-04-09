@@ -31,13 +31,13 @@
     },
     {
         "courseID": 4,
-        "listing": "CISC320",
-        "title": "Introduction to Algorithms",
-        "PreReqs": ["MATH210"],
+        "listing": "CISC275",
+        "title": "Introduction to Software Engineering",
+        "PreReqs": ["CISC181", "CISC220"],
         "CoReqs": [],
         "offered": ["Fall", "Spring"],
         "credits": 3,
-        "reqsSatisfied": ["CISC300+"]
+        "reqsSatisfied": ["CISC275"]
     },
     {
         "courseID": 5,
@@ -62,7 +62,7 @@
     {
         "courseID": 7,
         "listing": "CISC367",
-        "title": "Upper Level CISC Course (Edit)",
+        "title": "CISC Placeholder I (upper-level)",
         "PreReqs": [],
         "CoReqs": [],
         "offered": ["Fall", "Spring"],
@@ -72,7 +72,7 @@
     {
         "courseID": 8,
         "listing": "CISC367",
-        "title": "Upper Level CISC Course (Edit)",
+        "title": "CISC Placeholder II (upper-level)",
         "PreReqs": [],
         "CoReqs": [],
         "offered": ["Fall", "Spring"],
@@ -82,7 +82,7 @@
     {
         "courseID": 9,
         "listing": "CISC367",
-        "title": "Upper Level CISC Course (Edit)",
+        "title": "CISC Placeholder III (upper-level)",
         "PreReqs": [],
         "CoReqs": [],
         "offered": ["Fall", "Spring"],
@@ -92,7 +92,7 @@
     {
         "courseID": 10,
         "listing": "CISC367",
-        "title": "Upper Level CISC Course (Edit)",
+        "title": "CISC Placeholder IV (upper-level)",
         "PreReqs": [],
         "CoReqs": [],
         "offered": ["Fall", "Spring"],
@@ -102,7 +102,7 @@
     {
         "courseID": 11,
         "listing": "CISC367",
-        "title": "Upper Level CISC Course (Edit)",
+        "title": "CISC Placeholder V (upper-level)",
         "PreReqs": [],
         "CoReqs": [],
         "offered": ["Fall", "Spring"],
@@ -172,22 +172,22 @@
     {
         "courseID": 18,
         "listing": "UNIV367",
-        "title": "Upper Level Breadth (edit)",
+        "title": "Breadth I (upper-level)",
         "PreReqs": [],
         "CoReqs": [],
         "offered": ["Fall", "Spring"],
         "credits": 3,
-        "reqsSatisfied": ["BREADTH300+"]
+        "reqsSatisfied": ["BREADTH300+", "Breadth"]
     },
     {
         "courseID": 19,
         "listing": "UNIV367",
-        "title": "Upper Level Breadth (edit)",
+        "title": "Breadth II (upper-level)",
         "PreReqs": [],
         "CoReqs": [],
         "offered": ["Fall", "Spring"],
         "credits": 3,
-        "reqsSatisfied": ["BREADTH300+"]
+        "reqsSatisfied": ["BREADTH300+", "Breadth"]
     },
     {
         "courseID": 20,
@@ -218,5 +218,235 @@
         "offered": ["Spring"],
         "credits": 3,
         "reqsSatisfied": ["DLE", "Capstone"]
+    },
+    {
+        "courseID": 23,
+        "listing": "UNIV167",
+        "title": "Breadth I (Multicultural)",
+        "PreReqs": [],
+        "CoReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["Multicultural", "Breadth"]
+    },
+    {
+        "courseID": 24,
+        "listing": "UNIV167",
+        "title": "Breadth I (Creative Arts and Humanities)",
+        "PreReqs": [],
+        "CoReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["CAH", "Breadth"]
+    },
+    {
+        "courseID": 25,
+        "listing": "UNIV167",
+        "title": "Breadth II (Creative Arts and Humanities)",
+        "PreReqs": [],
+        "CoReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["CAH", "Breadth"]
+    },
+    {
+        "courseID": 26,
+        "listing": "UNIV167",
+        "title": "Breadth I (History and Cultural Change)",
+        "PreReqs": [],
+        "CoReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["HCC", "Breadth"]
+    },
+    {
+        "courseID": 27,
+        "listing": "UNIV167",
+        "title": "Breadth II (History and Cultural Change)",
+        "PreReqs": [],
+        "CoReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["HCC", "Breadth"]
+    },
+    {
+        "courseID": 28,
+        "listing": "UNIV167",
+        "title": "Breadth I (Social and Behavioral Sciences)",
+        "PreReqs": [],
+        "CoReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["SBS", "Breadth"]
+    },
+    {
+        "courseID": 29,
+        "listing": "UNIV167",
+        "title": "Breadth II (Social and Behavioral Sciences)",
+        "PreReqs": [],
+        "CoReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["SBS", "Breadth"]
+    },
+    {
+        "courseID": 30,
+        "listing": "UNIV167",
+        "title": "Breadth I (Natural Sciences Lab)",
+        "PreReqs": [],
+        "CoReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 4,
+        "reqsSatisfied": ["Science", "Breadth"]
+    },
+    {
+        "courseID": 31,
+        "listing": "UNIV167",
+        "title": "Free I",
+        "PreReqs": [],
+        "CoReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": []
+    },
+    {
+        "courseID": 32,
+        "listing": "UNIV167",
+        "title": "Free II",
+        "PreReqs": [],
+        "CoReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": []
+    },
+    {
+        "courseID": 33,
+        "listing": "UNIV167",
+        "title": "Free III",
+        "PreReqs": [],
+        "CoReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": []
+    },
+    {
+        "courseID": 34,
+        "listing": "UNIV167",
+        "title": "Free IV",
+        "PreReqs": [],
+        "CoReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": []
+    },
+    {
+        "courseID": 35,
+        "listing": "UNIV167",
+        "title": "Free V",
+        "PreReqs": [],
+        "CoReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": []
+    },
+    {
+        "courseID": 36,
+        "listing": "UNIV167",
+        "title": "Free VI",
+        "PreReqs": [],
+        "CoReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": []
+    },
+    {
+        "courseID": 37,
+        "listing": "UNIV167",
+        "title": "Free VII",
+        "PreReqs": [],
+        "CoReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": []
+    },
+    {
+        "courseID": 38,
+        "listing": "UNIV167",
+        "title": "Free VIII",
+        "PreReqs": [],
+        "CoReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": []
+    },
+    {
+        "courseID": 39,
+        "listing": "UNIV167",
+        "title": "Free IX",
+        "PreReqs": [],
+        "CoReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": []
+    },
+    {
+        "courseID": 40,
+        "listing": "UNIV167",
+        "title": "Free X",
+        "PreReqs": [],
+        "CoReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": []
+    },
+    {
+        "courseID": 41,
+        "listing": "UNIV167",
+        "title": "Free XI",
+        "PreReqs": [],
+        "CoReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": []
+    },
+    {
+        "courseID": 41,
+        "listing": "ENGL167",
+        "title": "Second Writing Requirement",
+        "PreReqs": [],
+        "CoReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["SWR"]
+    },
+    {
+        "courseID": 43,
+        "listing": "CISC320",
+        "title": "Introduction to Algorithms",
+        "PreReqs": ["MATH210"],
+        "CoReqs": [],
+        "offered": ["Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["CISC300+"]
+    },
+    {
+        "courseID": 44,
+        "listing": "UNIV167",
+        "title": "Breadth I (General)",
+        "PreReqs": [],
+        "CoReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["CAH", "Breadth"]
+    },
+    {
+        "courseID": 45,
+        "listing": "UNIV167",
+        "title": "Breadth II (General)",
+        "PreReqs": [],
+        "CoReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["CAH", "Breadth"]
     }
 ]
