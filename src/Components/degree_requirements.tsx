@@ -6,16 +6,16 @@ import "../App.css";
 
 export function DegreeRequirements(): JSX.Element {
     return (
-        <div>
+        <div className="App-thin">
             <Row>
                 <Col>
                     <h3>University Requirements: </h3>
-                    <ul>
+                    <ul className="App-left-list">
                         <li>ENGL 110 - Seminar in Compostion</li>
                         <li>First Year Seminar (FYS)</li>
                         <li>Discovery Learning Experience (DLE)</li>
                         <li>Multicultural Requirement</li>
-                        <li>Univertiy Breadth Requirements:</li>
+                        <li>University Breadth Requirements:</li>
                         <a>
                             {"   "}
                             <ul>
@@ -28,13 +28,13 @@ export function DegreeRequirements(): JSX.Element {
                                 </li>
                             </ul>
                         </a>
+                        <li>Capstone Experience</li>
                     </ul>
-                    <a>Capstone Experience</a>
                 </Col>
                 <Col>
                     <h3>College Requirements:</h3>
                     <h6>Additional 25 Breadth Requirements:</h6>
-                    <ul>
+                    <ul className="App-left-list">
                         <li>6 credits Creative Arts and Humanities</li>
                         <li>6 credits History and Cultural Change</li>
                         <li>6 credits Social and Behavioral Sciences</li>
@@ -54,14 +54,14 @@ export function DegreeRequirements(): JSX.Element {
                     <h3>Major Requirements:</h3>
                     <a>
                         CISC courses require a C-, Those who wish to take CISC
-                        306 or CISC 304 require a C- in MATH 210.
+                        306 or CISC 304 require a C- in MATH 210
                     </a>
                     <br></br>
                     <a>
                         No more than 45 credits can come from the same
                         department prefix
                     </a>
-                    <ul>
+                    <ul className="App-left-list">
                         <li>CISC 108 - Introduction to Computer Science I</li>
                         <li>CISC 181 - Introduction to Computer Science II</li>
                         <li>CISC 210 - Introduction to Systems Programming </li>
@@ -72,7 +72,7 @@ export function DegreeRequirements(): JSX.Element {
                         </li>
                         <li>
                             15 credits of computer science tech electives 301 or
-                            above expect:
+                            above except:
                         </li>
                         <ul>
                             <li>
