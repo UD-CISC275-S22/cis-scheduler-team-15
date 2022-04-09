@@ -1,16 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { Degree } from "../Interfaces/degree";
-import { Stack } from "react-bootstrap";
+import { Stack, ToggleButton } from "react-bootstrap";
+import PlanData from "./../Data/plan_data.json";
 
-export function DegreePlans({ degrees }: { degrees: Degree[] }): JSX.Element {
+export function DegreePlans(): JSX.Element {
+    const DEGREEPLANS = PlanData.map((degree): Degree => ({ ...degree }));
+    const [degreePlans] = useState<Degree[]>(DEGREEPLANS);
+
     return (
         <Stack gap={2}>
             <div>To be modified</div>
-            {degrees.map((degree: Degree) => (
-                <div key={degree.degreeID}>
-                    {degree.degreeID}:{degree.name}
-                </div>
-            ))}
+            <div>
+                {degreePlans.map((degree: Degree) => (
+                    <ToggleButton value={degree.degreeID} key={degree.degreeID}>
+                        {degree.degreeID}: {degree.name}
+                    </ToggleButton>
+                ))}
+            </div>
         </Stack>
     );
 }
