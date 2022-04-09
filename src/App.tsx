@@ -3,6 +3,7 @@ import { Row, Col } from "react-bootstrap";
 import { DegreePlans } from "./Components/degree_plans";
 //import CourseList from "./Data/course_list.json";
 //import { Degree } from "./Interfaces/degree";
+import { DegreeRequirements } from "./Components/degree_requirements";
 import "./App.css";
 
 //const degrees = PlanData.map((degree): Degree => degree as Degree);
@@ -51,6 +52,7 @@ function App(): JSX.Element {
                 Degree Requirements: [Add Show/Hide Component with list of
                 requirements]
             </h3>
+            <DegreeRequirements></DegreeRequirements>
             <hr></hr>
             <h3>
                 Course List: [Add show/Hide Component with list of existing

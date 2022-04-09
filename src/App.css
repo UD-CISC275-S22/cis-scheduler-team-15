@@ -8,6 +8,10 @@
     text-align: justify;
 }
 
+h6 {
+    text-decoration: underline;
+}
+
 .App-special {
     text-align: center;
     font-weight: bold;
