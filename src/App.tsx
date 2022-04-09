@@ -1,7 +1,6 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
-//import { DegreePlans } from "./Components/degree_plans";
-//import PlanData from "./Data/plan_data.json";
+import { DegreePlans } from "./Components/degree_plans";
 //import CourseList from "./Data/course_list.json";
 //import { Degree } from "./Interfaces/degree";
 import "./App.css";
@@ -46,6 +45,7 @@ function App(): JSX.Element {
             </div>
             <hr></hr>
             <h3>Degree Plans:</h3>
+            <DegreePlans></DegreePlans>
             <hr></hr>
             <h3>
                 Degree Requirements: [Add Show/Hide Component with list of
