@@ -2,8 +2,8 @@ export interface Course {
     courseID: number;
     listing: string;
     title: string;
-    preReqs: string[];
-    coReqs: string[];
+    preReqs: number[];
+    coReqs: number[];
     offered: string[];
     credits: number;
     reqsSatisfied: string[];
