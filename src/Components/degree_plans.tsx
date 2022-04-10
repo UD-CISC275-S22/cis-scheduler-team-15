@@ -49,7 +49,7 @@ export function DegreePlans(): JSX.Element {
         <Stack gap={2}>
             <div>To be modified</div>
             <Row>
-                <Col>
+                <Col xs={9}>
                     <div className="App">
                         {degreePlans.map((degree: Degree) => (
                             <span
