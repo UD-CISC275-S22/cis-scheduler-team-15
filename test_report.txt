@@ -36,7 +36,7 @@
       at updateHostComponent (node_modules/react-dom/cjs/react-dom.development.js:17632:3)
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (220 ms)
+  ✕ renders the course name somewhere (339 ms)
 
   ● renders the course name somewhere
 
@@ -54,6 +54,20 @@ FAIL src/App.test.tsx
       [0mCISC275[0m
       [0m: [0m
       [0mIntroduction to Software Engineering[0m
+      [0m [0m
+      [36m<span>[39m
+        [36m<button[39m
+          [33mclass[39m=[32m"btn btn-secondary btn-circle btn-sm btn btn-primary"[39m
+          [33mdata-bs-toggle[39m=[32m"modal"[39m
+          [33mdata-toggle[39m=[32m"tooltip"[39m
+          [33mtitle[39m=[32m"Click for more info on CISC275"[39m
+          [33mtype[39m=[32m"button"[39m
+        [36m>[39m
+          [36m<i>[39m
+            [0mi[0m
+          [36m</i>[39m
+        [36m</button>[39m
+      [36m</span>[39m
     [36m</div>[39m
 
     (If this is intentional, then use the `*AllBy*` variant of the query (like `queryAllByText`, `getAllByText`, or `findAllByText`)).
@@ -265,12 +279,13 @@ FAIL src/App.test.tsx
 ------------------------------|---------|----------|---------|---------|-------------------
 File                          | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ------------------------------|---------|----------|---------|---------|-------------------
-All files                     |   54.28 |       50 |   47.61 |   53.12 |                   
+All files                     |   53.84 |       50 |   45.83 |   52.77 |                   
  src                          |     100 |      100 |     100 |     100 |                   
   App.tsx                     |     100 |      100 |     100 |     100 |                   
- src/Components               |   52.94 |       50 |      45 |   51.61 |                   
+ src/Components               |   52.63 |       50 |   43.47 |   51.42 |                   
   course_list.tsx             |   85.71 |       75 |      75 |   83.33 | 16                
-  course_list_view.tsx        |      50 |       50 |   33.33 |      50 | 10-15,30          
+  course_list_view.tsx        |      50 |       50 |   33.33 |      50 | 11-16,34          
+  course_list_view_info.tsx   |      50 |      100 |   33.33 |      50 | 20-24             
   degree_plans.tsx            |   35.29 |    16.66 |      30 |   33.33 | 13-30,57-73       
   degree_requirement_view.tsx |     100 |      100 |     100 |     100 |                   
   degree_requirements.tsx     |   66.66 |       75 |      50 |   66.66 | 12                
@@ -282,5 +297,5 @@ All files                     |   54.28 |       50 |   47.61 |   53.12 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.972 s
+Time:        2.459 s
 Ran all test suites.
