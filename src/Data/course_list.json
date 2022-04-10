@@ -424,7 +424,7 @@
         "courseID": 43,
         "listing": "CISC320",
         "title": "Introduction to Algorithms",
-        "preReqs": ["MATH210"],
+        "preReqs": [12],
         "coReqs": [],
         "offered": ["Fall"],
         "credits": 3,

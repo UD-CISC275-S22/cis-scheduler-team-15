@@ -4,6 +4,7 @@ import { DegreePlans } from "./Components/degree_plans";
 //import CourseList from "./Data/course_list.json";
 //import { Degree } from "./Interfaces/degree";
 import { DegreeRequirements } from "./Components/degree_requirements";
+import { CourseList } from "./Components/course_list";
 import "./App.css";
 
 //const degrees = PlanData.map((degree): Degree => degree as Degree);
@@ -45,19 +46,14 @@ function App(): JSX.Element {
                 following links. Best of luck in navigating your future!
             </div>
             <hr></hr>
-            <h3>Degree Plans:</h3>
+            <h3>Degree Plans</h3>
             <DegreePlans></DegreePlans>
             <hr></hr>
-            <h3>
-                Degree Requirements: [Add Show/Hide Component with list of
-                requirements]
-            </h3>
+            <h3>Degree Requirements</h3>
             <DegreeRequirements></DegreeRequirements>
             <hr></hr>
-            <h3>
-                Course List: [Add show/Hide Component with list of existing
-                courses]
-            </h3>
+            <h3>Course List</h3>
+            <CourseList></CourseList>
             <hr></hr>
             <h3>External Links:</h3>
             <Row>

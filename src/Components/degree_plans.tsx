@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Degree } from "../Interfaces/degree";
 import { Stack, ToggleButton, Col, Row, Button } from "react-bootstrap";
 import PlanData from "./../Data/plan_data.json";
+
 const DEGREEPLANS = PlanData.map((degree): Degree => ({ ...degree }));
 
 export function DegreePlans(): JSX.Element {
