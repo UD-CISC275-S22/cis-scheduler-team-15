@@ -8,6 +8,21 @@
     text-align: justify;
 }
 
+.App-tables {
+    width: 100%;
+    margin-left: 5%;
+    text-align: justify;
+}
+
+td {
+    border: 2px black solid;
+    text-align: justify;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
 h6 {
     text-decoration: underline;
 }
