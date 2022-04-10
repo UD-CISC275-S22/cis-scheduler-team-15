@@ -2,6 +2,7 @@ import * as React from "react";
 import { useState } from "react";
 import { Button, Container } from "react-bootstrap";
 import { Course } from "../Interfaces/course";
+import { CourseListViewInfo } from "./course_list_view_info";
 
 export function CourseListView({ course }: { course: Course }): JSX.Element {
     const [editing, setEditing] = useState<boolean>(false); // Will need to be revised
@@ -24,7 +25,10 @@ export function CourseListView({ course }: { course: Course }): JSX.Element {
             <Container>
                 <div>
                     <div>
-                        {course.listing}: {course.title}
+                        {course.listing}: {course.title}{" "}
+                        <CourseListViewInfo
+                            course={course}
+                        ></CourseListViewInfo>
                     </div>
                     <div>
                         <Button onClick={() => setEditing(true)}>Edit</Button>
