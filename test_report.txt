@@ -18,25 +18,269 @@
       at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22812:16)
       at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
 
-PASS src/App.test.tsx
-  ✓ renders the course name somewhere (102 ms)
+  console.error
+    Warning: Encountered two children with the same key, `41`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+        at div
+        at /home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/node_modules/react-bootstrap/cjs/Stack.js:23:7
+        at div
+        at CourseList (/home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/src/Components/course_list.tsx:11:23)
+        at div
+        at App
 
---------------------------|---------|----------|---------|---------|-------------------
-File                      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
---------------------------|---------|----------|---------|---------|-------------------
-All files                 |    42.1 |    16.66 |   41.66 |   41.17 |                   
- src                      |     100 |      100 |     100 |     100 |                   
-  App.tsx                 |     100 |      100 |     100 |     100 |                   
- src/Components           |   38.88 |    16.66 |   36.36 |    37.5 |                   
-  degree_plans.tsx        |   35.29 |    16.66 |      30 |   33.33 | 12-29,56-72       
-  degree_requirements.tsx |     100 |      100 |     100 |     100 |                   
- src/Interfaces           |       0 |        0 |       0 |       0 |                   
-  course.ts               |       0 |        0 |       0 |       0 |                   
-  degree.ts               |       0 |        0 |       0 |       0 |                   
-  semester.ts             |       0 |        0 |       0 |       0 |                   
---------------------------|---------|----------|---------|---------|-------------------
-Test Suites: 1 passed, 1 total
-Tests:       1 passed, 1 total
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
+      at updateHostComponent (node_modules/react-dom/cjs/react-dom.development.js:17632:3)
+
+FAIL src/App.test.tsx
+  ✕ renders the course name somewhere (220 ms)
+
+  ● renders the course name somewhere
+
+    TestingLibraryElementError: Found multiple elements with the text: /CISC275/i
+
+    Here are the matching elements:
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<h1>[39m
+      [0mUD CISC275 with React Hooks and TypeScript[0m
+    [36m</h1>[39m
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<div>[39m
+      [0mCISC275[0m
+      [0m: [0m
+      [0mIntroduction to Software Engineering[0m
+    [36m</div>[39m
+
+    (If this is intentional, then use the `*AllBy*` variant of the query (like `queryAllByText`, `getAllByText`, or `findAllByText`)).
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"App"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"App-header"[39m
+          [36m>[39m
+            [36m<h1>[39m
+              [0mUD CISC275 with React Hooks and TypeScript[0m
+            [36m</h1>[39m
+            [36m<h2>[39m
+              [0mAuthors:[0m
+            [36m</h2>[39m
+            [36m<p>[39m
+              [36m<div>[39m
+                [0mHenry Fidlow[0m
+              [36m</div>[39m
+              [36m<div>[39m
+                [0mMichael Savas[0m
+              [36m</div>[39m
+              [36m<div>[39m
+                [0mJerel Okonski[0m
+              [36m</div>[39m
+            [36m</p>[39m
+          [36m</div>[39m
+          [36m<div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"App-special"[39m
+            [36m>[39m
+              [36m<h1>[39m
+                [0mUD Degree Plan Tester[0m
+              [36m</h1>[39m
+              [36m<img[39m
+                [33mheight[39m=[32m"100"[39m
+                [33msrc[39m=[32m"https://clipartix.com/wp-content/uploads/2016/04/Paper-clip-art-free-free-clipart-images-clipartcow.png"[39m
+                [33mwidth[39m=[32m"100"[39m
+              [36m/>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<h3>[39m
+            [0mInstructions:[0m
+          [36m</h3>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"App-thin"[39m
+          [36m>[39m
+            [0mThis application is developed with the intent of helping University of Delaware Computer Science (CISC) majors determine the degree plan best suited to their interests, while still meeting degree requirements. To navigate this page, select an existing or new degree plan. Within the plan you can edit and view the semesters and classes you would like. When you are satisfied with the plan, you can check to see if all the degree requirements have been met. A list of commonly offered CISC courses has been provided. For further information on available breadth and technical elective courses, you can refer to the following links. Best of luck in navigating your future![0m
+          [36m</div>[39m
+          [36m<hr />[39m
+          [36m<h3>[39m
+            [0mDegree Plans[0m
+          [36m</h3>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"vstack gap-2"[39m
+          [36m>[39m
+            [36m<div>[39m
+              [0mTo be modified[0m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"row"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"col"[39m
+              [36m>[39m
+                [36m<div>[39m
+                  [36m<span[39m
+                    [33mstyle[39m=[32m"margin: 5px;"[39m
+                  [36m>[39m
+                    [36m<input[39m
+                      [33mautocomplete[39m=[32m"off"[39m
+                      [33mclass[39m=[32m"btn-check"[39m
+                      [33mvalue[39m=[32m"1"[39m
+                    [36m/>[39m
+                    [36m<label[39m
+                      [33mclass[39m=[32m"btn btn-outline-primary"[39m
+                      [33mrole[39m=[32m"button"[39m
+                      [33mtabindex[39m=[32m"0"[39m
+                    [36m>[39m
+                      [0m1[0m
+                      [0m: [0m
+                      [0mDefault[0m
+                    [36m</label>[39m
+                  [36m</span>[39m
+                [36m</div>[39m
+              [36m</div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"col"[39m
+              [36m>[39m
+                [36m<div>[39m
+                  [36m<button[39m
+                    [33mclass[39m=[32m"btn btn-primary"[39m
+                    [33mtype[39m=[32m"button"[39m
+                  [36m>[39m
+                    [0mAdd new plan[0m
+                  [36m</button>[39m
+                [36m</div>[39m
+                [36m<br />[39m
+                [36m<div>[39m
+                  [36m<button[39m
+                    [33mclass[39m=[32m"btn btn-primary"[39m
+                    [33mtype[39m=[32m"button"[39m
+                  [36m>[39m
+                    [0mDelete selected plan[0m
+                  [36m</button>[39m
+                [36m</div>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<hr />[39m
+          [36m<h3>[39m
+            [0mDegree Requirements[0m
+          [36m</h3>[39m
+          [36m<div>[39m
+            [36m<div>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-primary"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mHide[0m
+              [36m</button>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"container"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"row"[39m
+                [36m>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"col"[39m
+                  [36m>[39m
+                    [36m<h3>[39m
+                      [0mUniversity Requirements: [0m
+                    [36m</h3>[39m
+                    [36m<ul[39m
+                      [33mclass[39m=[32m"App-left-list"[39m
+                    [36m>[39m
+                      [36m<li>[39m
+                        [0mENGL 110 - Seminar in Compostion[0m
+                      [36m</li>[39m
+                      [36m<li>[39m
+                        [0mFirst Year Seminar (FYS)[0m
+                      [36m</li>[39m
+                      [36m<li>[39m
+                        [0mDiscovery Learning Experience (DLE)[0m
+                      [36m</li>[39m
+                      [36m<li>[39m
+                        [0mMulticultural Requirement[0m
+                      [36m</li>[39m
+                      [36m<li>[39m
+                        [0mUniversity Breadth Requirements:[0m
+                      [36m</li>[39m
+                      [36m<a>[39m
+                        [0m   [0m
+                        [36m<ul>[39m
+                          [36m<li>[39m
+                            [0mCreative Arts and Humanities[0m
+                          [36m</li>[39m
+                          [36m<li>[39m
+                            [0mHistory and Cultural Change[0m
+                          [36m</li>[39m
+                          [36m<li>[39m
+                            [0mSocial and Behavioral Sciences[0m
+                          [36m</li>[39m
+                          [36m<li>[39m
+                            [0mMathematics, Natural Sciences, and Technology[0m
+                          [36m</li>[39m
+                        [36m</ul>[39m
+                      [36m</a>[39m
+                      [36m<li>[39m
+                        [0mCapstone Experience[0m
+                      [36m</li>[39m
+                    [36m</ul>[39m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"col"[39m
+                  [36m>[39m
+                    [36m<h3>[39m
+                      [0mCollege Requirements:[0m
+                    [36m</h3>[39m
+                    [36m<h6>[39m
+                      [0mAdditional 25 Breadth Requirements:[0m
+                    [36m</h6>[39m
+                    [36m<ul[39m
+                      [33mclass[39m=[32m"App-left-list"[...
+
+       5 | test("renders the course name somewhere", () => {
+       6 |     render(<App />);
+    >  7 |     const linkElement = screen.getByText(/CISC275/i);
+         |                                ^
+       8 |     expect(linkElement).toBeInTheDocument();
+       9 | });
+      10 |
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at getElementError (node_modules/@testing-library/dom/dist/query-helpers.js:25:35)
+      at getMultipleElementsFoundError (node_modules/@testing-library/dom/dist/query-helpers.js:29:10)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:66:13
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/App.test.tsx:7:32)
+      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
+      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
+      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
+      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
+
+------------------------------|---------|----------|---------|---------|-------------------
+File                          | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+------------------------------|---------|----------|---------|---------|-------------------
+All files                     |   54.28 |       50 |   47.61 |   53.12 |                   
+ src                          |     100 |      100 |     100 |     100 |                   
+  App.tsx                     |     100 |      100 |     100 |     100 |                   
+ src/Components               |   52.94 |       50 |      45 |   51.61 |                   
+  course_list.tsx             |   85.71 |       75 |      75 |   83.33 | 16                
+  course_list_view.tsx        |      50 |       50 |   33.33 |      50 | 10-15,30          
+  degree_plans.tsx            |   35.29 |    16.66 |      30 |   33.33 | 13-30,57-73       
+  degree_requirement_view.tsx |     100 |      100 |     100 |     100 |                   
+  degree_requirements.tsx     |   66.66 |       75 |      50 |   66.66 | 12                
+ src/Interfaces               |       0 |        0 |       0 |       0 |                   
+  course.ts                   |       0 |        0 |       0 |       0 |                   
+  degree.ts                   |       0 |        0 |       0 |       0 |                   
+  semester.ts                 |       0 |        0 |       0 |       0 |                   
+------------------------------|---------|----------|---------|---------|-------------------
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        1.997 s
+Time:        2.972 s
 Ran all test suites.
