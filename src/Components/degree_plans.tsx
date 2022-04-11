@@ -83,6 +83,7 @@ export function DegreePlans(): JSX.Element {
                                 <DegreePlanView
                                     degree={degree}
                                     editDegree={editDegreePlan}
+                                    removeDegree={removeDegreePlan}
                                     hidden={
                                         degree.degreeID !== currentDegreePlanID
                                     }

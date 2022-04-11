@@ -6,37 +6,49 @@ import { Button } from "react-bootstrap";
 
 export function SemesterView({
     semester,
-    editMode
+    editMode,
+    deleteSemester
 }: {
     semester: Semester;
     editMode: boolean;
+    deleteSemester: (semesterID: number) => void;
 }): JSX.Element {
     return (
         <table key={semester.semesterID}>
             <tr>
-                <th colSpan={2}>
+                <th>
                     <b>
                         {semester.season} {semester.year}
                     </b>
                 </th>
-                <Button hidden={!editMode}>Edit</Button>
+                <th className="Align-right">
+                    <Button hidden={!editMode}>Edit</Button>
+                </th>
+                <th>
+                    <Button
+                        hidden={!editMode}
+                        onClick={() => deleteSemester(semester.semesterID)}
+                    >
+                        Delete
+                    </Button>
+                </th>
             </tr>
             <tr>
-                <td>
+                <td width={125}>
                     <b>Course ID</b>
                 </td>
-                <td>
+                <td width={350}>
                     <b>Course Name</b>
                 </td>
-                <td>
+                <td width={75}>
                     <b>Credits</b>
                 </td>
             </tr>
             {semester.courses.map((course: Course) => (
                 <tr key={course.courseID}>
-                    <td width={100}>{course.listing}</td>
-                    <td width={350}>{course.title}</td>
-                    <td width={75}>{course.credits}</td>
+                    <td>{course.listing}</td>
+                    <td>{course.title}</td>
+                    <td>{course.credits}</td>
                 </tr>
             ))}
             <tr>

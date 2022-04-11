@@ -8,6 +8,10 @@
     text-align: justify;
 }
 
+.Align-right {
+    text-align: right;
+}
+
 .App-tables {
     width: 90%;
     margin-left: 5%;
