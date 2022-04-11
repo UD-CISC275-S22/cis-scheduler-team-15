@@ -5,9 +5,11 @@ import "../App.css";
 import { Button } from "react-bootstrap";
 
 export function SemesterView({
-    semester
+    semester,
+    editMode
 }: {
     semester: Semester;
+    editMode: boolean;
 }): JSX.Element {
     return (
         <table key={semester.semesterID}>
@@ -17,7 +19,7 @@ export function SemesterView({
                         {semester.season} {semester.year}
                     </b>
                 </th>
-                <Button>Edit</Button>
+                <Button hidden={!editMode}>Edit</Button>
             </tr>
             <tr>
                 <td>

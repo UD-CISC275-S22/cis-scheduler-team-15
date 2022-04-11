@@ -45,6 +45,15 @@ export function DegreePlans(): JSX.Element {
         );
     }
 
+    function editDegreePlan(degreeID: number, newDegreePlan: Degree) {
+        setDegreePlans(
+            degreePlans.map(
+                (degree: Degree): Degree =>
+                    degree.degreeID === degreeID ? newDegreePlan : degree
+            )
+        );
+    }
+
     return (
         <Stack gap={2}>
             <div>To be modified</div>
@@ -73,6 +82,7 @@ export function DegreePlans(): JSX.Element {
                                 </ToggleButton>
                                 <DegreePlanView
                                     degree={degree}
+                                    editDegree={editDegreePlan}
                                     hidden={
                                         degree.degreeID !== currentDegreePlanID
                                     }
