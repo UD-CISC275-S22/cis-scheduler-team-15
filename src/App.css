@@ -12,10 +12,20 @@
     text-align: right;
 }
 
-.App-tables {
-    width: 90%;
-    margin-left: 5%;
-    text-align: justify;
+.Align-left {
+    text-align: left;
+}
+
+.App-table-left {
+    width: 75%;
+    margin-left: 25%;
+    text-align: left;
+}
+
+.App-table-right {
+    width: 95%;
+    margin-left: 0%;
+    text-align: left;
 }
 
 td {
