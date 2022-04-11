@@ -5,6 +5,7 @@ import "../App.css";
 import { Row, Col, Button } from "react-bootstrap";
 import { SemesterView } from "./SemesterView";
 import { AddSemester } from "./add_semester";
+import { Course } from "../Interfaces/course";
 
 export function DegreePlanView({
     degree,
@@ -16,6 +17,16 @@ export function DegreePlanView({
     hidden: boolean;
 }): JSX.Element {
     const [editMode, setEditMode] = useState<boolean>(false);
+    const courseList = degree.semesters.map(
+        (semester: Semester) => semester.courses
+    );
+    const creditList = courseList.map((courses: Course[]) =>
+        courses.map((course: Course): number => course.credits)
+    );
+    const credits = creditList
+        .flat()
+        .reduce((prev: number, num: number) => prev + num, 0);
+
     const springSummer = degree.semesters.filter(
         (semester: Semester): boolean =>
             semester.season === "Spring" || semester.season === "Summer"
@@ -24,35 +35,68 @@ export function DegreePlanView({
         (semester: Semester): boolean =>
             semester.season === "Fall" || semester.season === "Winter"
     );
+
+    function deleteSemester(semesterID: number) {
+        const newSemesters = degree.semesters.filter(
+            (semester: Semester): boolean => semester.semesterID !== semesterID
+        );
+        editDegree(degree.degreeID, {
+            ...degree,
+            semesters: newSemesters
+        });
+    }
+
     return (
         <div hidden={hidden}>
             <br></br>
-            <Button onClick={() => setEditMode(!editMode)}>
-                Edit Degree Plan
+            <Button
+                onClick={() => setEditMode(!editMode)}
+                variant={editMode ? "warning" : "success"}
+            >
+                {editMode ? "Stop Edit" : "Edit Plan"}
             </Button>
             <Row>
                 <Col>
-                    <div className="App-tables">
+                    <div>
                         {FallWinter.map((semester: Semester) => (
-                            <SemesterView
-                                semester={semester}
-                                editMode={editMode}
+                            <div
                                 key={semester.semesterID}
-                            ></SemesterView>
+                                className="App-table-left"
+                            >
+                                <SemesterView
+                                    semester={semester}
+                                    editMode={editMode}
+                                    deleteSemester={deleteSemester}
+                                ></SemesterView>
+                                <br></br>
+                            </div>
                         ))}
                     </div>
                 </Col>
                 <Col>
-                    <div className="App-tables">
+                    <div>
                         {springSummer.map((semester: Semester) => (
-                            <SemesterView
-                                semester={semester}
-                                editMode={editMode}
+                            <div
                                 key={semester.semesterID}
-                            ></SemesterView>
+                                className="App-table-right"
+                            >
+                                <SemesterView
+                                    semester={semester}
+                                    editMode={editMode}
+                                    deleteSemester={deleteSemester}
+                                ></SemesterView>
+                                <br></br>
+                            </div>
                         ))}
                     </div>
                 </Col>
+            </Row>
+            <Row>
+                <div>
+                    <h2>
+                        {degree.name} Total Credits: {credits}
+                    </h2>
+                </div>
             </Row>
             <Row>
                 <AddSemester

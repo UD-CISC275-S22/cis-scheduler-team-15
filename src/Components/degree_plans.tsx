@@ -56,9 +56,30 @@ export function DegreePlans(): JSX.Element {
 
     return (
         <Stack gap={2}>
-            <div>To be modified</div>
             <Row>
-                <Col xs={9}>
+                <Col>
+                    <Button onClick={addEmptyDegreePlan}>Add Empty plan</Button>
+                </Col>
+                <Col xs={3}>
+                    <Button onClick={addStartDegreePlan}>
+                        Add Default plan (8 semesters)
+                    </Button>
+                </Col>
+                <Col>
+                    <Button
+                        onClick={() => removeDegreePlan(currentDegreePlanID)}
+                        variant={
+                            currentDegreePlanID === 0
+                                ? "outline-danger"
+                                : "danger"
+                        }
+                    >
+                        Delete selected plan
+                    </Button>
+                </Col>
+            </Row>
+            <Row>
+                <Col>
                     <div className="App">
                         {degreePlans.map((degree: Degree) => (
                             <span
@@ -80,6 +101,10 @@ export function DegreePlans(): JSX.Element {
                                 >
                                     {degree.degreeID}: {degree.name}
                                 </ToggleButton>
+                            </span>
+                        ))}
+                        {degreePlans.map((degree: Degree) => (
+                            <span key={degree.degreeID}>
                                 <DegreePlanView
                                     degree={degree}
                                     editDegree={editDegreePlan}
@@ -89,29 +114,6 @@ export function DegreePlans(): JSX.Element {
                                 ></DegreePlanView>
                             </span>
                         ))}
-                    </div>
-                </Col>
-                <Col>
-                    <div>
-                        <Button onClick={addStartDegreePlan}>
-                            Add Default plan
-                        </Button>
-                    </div>
-                    <br></br>
-                    <div>
-                        <Button onClick={addEmptyDegreePlan}>
-                            Add Empty plan
-                        </Button>
-                    </div>
-                    <br></br>
-                    <div>
-                        <Button
-                            onClick={() =>
-                                removeDegreePlan(currentDegreePlanID)
-                            }
-                        >
-                            Delete selected plan
-                        </Button>
                     </div>
                 </Col>
             </Row>

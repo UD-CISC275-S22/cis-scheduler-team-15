@@ -8,10 +8,24 @@
     text-align: justify;
 }
 
-.App-tables {
-    width: 90%;
-    margin-left: 5%;
-    text-align: justify;
+.Align-right {
+    text-align: right;
+}
+
+.Align-left {
+    text-align: left;
+}
+
+.App-table-left {
+    width: 75%;
+    margin-left: 25%;
+    text-align: left;
+}
+
+.App-table-right {
+    width: 95%;
+    margin-left: 0%;
+    text-align: left;
 }
 
 td {
