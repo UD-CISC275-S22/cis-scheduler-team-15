@@ -29,7 +29,26 @@ export function CourseListViewInfo({
                         </div>
                     </Modal.Title>
                 </Modal.Header>
-                <Modal.Body>Insert info Here</Modal.Body>
+                <Modal.Body>
+                    <div>
+                        <b>Credit(s): </b>
+                        {course.credits}
+                    </div>
+                    <div>
+                        <b>Pre-Requistie Courses: </b>
+                        {course.preReqs.length === 0 ? "N/A" : course.preReqs}
+                    </div>
+                    <div>
+                        <b>Co-Requisite Courses: </b>
+                        {course.coReqs.length === 0 ? "N/A" : course.coReqs}
+                    </div>
+                    <div>
+                        <b>Semesters Offered: </b>
+                        {course.offered.map((year: string) => (
+                            <span key={year}>{year} </span>
+                        ))}
+                    </div>
+                </Modal.Body>
             </Modal>
         </span>
     );
