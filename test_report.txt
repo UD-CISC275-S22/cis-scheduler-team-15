@@ -102,7 +102,7 @@
       at updateHostComponent (node_modules/react-dom/cjs/react-dom.development.js:17632:3)
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (459 ms)
+  ✕ renders the course name somewhere (566 ms)
 
   ● renders the course name somewhere
 
@@ -334,15 +334,15 @@ FAIL src/App.test.tsx
 ------------------------------|---------|----------|---------|---------|-------------------
 File                          | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ------------------------------|---------|----------|---------|---------|-------------------
-All files                     |   49.35 |       40 |   45.65 |   49.31 |                   
+All files                     |      50 |    47.05 |    46.8 |      50 |                   
  src                          |     100 |      100 |     100 |     100 |                   
   App.tsx                     |     100 |      100 |     100 |     100 |                   
- src/Components               |   48.68 |       40 |   44.44 |   48.61 |                   
+ src/Components               |   49.35 |    47.05 |   45.65 |   49.31 |                   
   SemesterView.tsx            |     100 |      100 |     100 |     100 |                   
   add_semester.tsx            |      25 |        0 |    12.5 |      25 | 21-51,60-64       
   course_list.tsx             |   85.71 |       75 |      75 |   83.33 | 16                
   course_list_view.tsx        |      50 |       50 |   33.33 |      50 | 11-16,34          
-  course_list_view_info.tsx   |      50 |      100 |   33.33 |      50 | 20-24             
+  course_list_view_info.tsx   |      60 |      100 |      50 |      60 | 20-24             
   degree_plan_view.tsx        |   88.88 |      100 |   83.33 |   88.88 | 30                
   degree_plans.tsx            |   27.27 |       10 |   21.42 |   26.31 | 14-52,79-110      
   degree_requirement_view.tsx |     100 |      100 |     100 |     100 |                   
@@ -355,5 +355,5 @@ All files                     |   49.35 |       40 |   45.65 |   49.31 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.115 s
+Time:        3.618 s
 Ran all test suites.
