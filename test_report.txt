@@ -31,7 +31,7 @@
         at div
         at /home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/node_modules/react-bootstrap/cjs/Row.js:22:3
         at div
-        at DegreePlanView (/home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/src/Components/degree_plan_view.tsx:9:5)
+        at DegreePlanView (/home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/src/Components/degree_plan_view.tsx:10:5)
         at span
         at div
         at div
@@ -63,7 +63,7 @@
         at div
         at /home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/node_modules/react-bootstrap/cjs/Row.js:22:3
         at div
-        at DegreePlanView (/home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/src/Components/degree_plan_view.tsx:9:5)
+        at DegreePlanView (/home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/src/Components/degree_plan_view.tsx:10:5)
         at span
         at div
         at div
@@ -102,7 +102,7 @@
       at updateHostComponent (node_modules/react-dom/cjs/react-dom.development.js:17632:3)
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (461 ms)
+  ✕ renders the course name somewhere (459 ms)
 
   ● renders the course name somewhere
 
@@ -234,6 +234,12 @@ FAIL src/App.test.tsx
                       [33mhidden[39m=[32m""[39m
                     [36m>[39m
                       [36m<br />[39m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"btn btn-primary"[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mEdit Degree Plan[0m
+                      [36m</button>[39m
                       [36m<div[39m
                         [33mclass[39m=[32m"row"[39m
                       [36m>[39m
@@ -256,6 +262,7 @@ FAIL src/App.test.tsx
                                 [36m</th>[39m
                                 [36m<button[39m
                                   [33mclass[39m=[32m"btn btn-primary"[39m
+                                  [33mhidden[39m=[32m""[39m
                                   [33mtype[39m=[32m"button"[39m
                                 [36m>[39m
                                   [0mEdit[0m
@@ -303,14 +310,7 @@ FAIL src/App.test.tsx
                                 [36m</td>[39m
                                 [36m<td[39m
                                   [33mwidth[39m=[32m"350"[39m
-                                [36m>[39m
-                                  [0mIntroduction to Engineering[0m
-                                [36m</td>[39m
-                                [36m<td[39m
-                                  [33mwidth[39m=[32m"75"[39m
-                                [36m>[39m
-                                  [0m2[0m
-                       ...
+                             ...
 
        5 | test("renders the course name somewhere", () => {
        6 |     render(<App />);
@@ -334,16 +334,17 @@ FAIL src/App.test.tsx
 ------------------------------|---------|----------|---------|---------|-------------------
 File                          | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ------------------------------|---------|----------|---------|---------|-------------------
-All files                     |   60.37 |    54.54 |   57.14 |   61.22 |                   
+All files                     |   49.35 |       40 |   45.65 |   49.31 |                   
  src                          |     100 |      100 |     100 |     100 |                   
   App.tsx                     |     100 |      100 |     100 |     100 |                   
- src/Components               |   59.61 |    54.54 |   55.88 |   60.41 |                   
+ src/Components               |   48.68 |       40 |   44.44 |   48.61 |                   
   SemesterView.tsx            |     100 |      100 |     100 |     100 |                   
+  add_semester.tsx            |      25 |        0 |    12.5 |      25 | 21-51,60-64       
   course_list.tsx             |   85.71 |       75 |      75 |   83.33 | 16                
   course_list_view.tsx        |      50 |       50 |   33.33 |      50 | 11-16,34          
   course_list_view_info.tsx   |      50 |      100 |   33.33 |      50 | 20-24             
-  degree_plan_view.tsx        |     100 |      100 |     100 |     100 |                   
-  degree_plans.tsx            |      30 |     12.5 |      25 |   29.41 | 14-43,70-100      
+  degree_plan_view.tsx        |   88.88 |      100 |   83.33 |   88.88 | 30                
+  degree_plans.tsx            |   27.27 |       10 |   21.42 |   26.31 | 14-52,79-110      
   degree_requirement_view.tsx |     100 |      100 |     100 |     100 |                   
   degree_requirements.tsx     |   66.66 |       75 |      50 |   66.66 | 12                
  src/Interfaces               |       0 |        0 |       0 |       0 |                   
@@ -354,5 +355,5 @@ All files                     |   60.37 |    54.54 |   57.14 |   61.22 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.863 s
+Time:        3.115 s
 Ran all test suites.
