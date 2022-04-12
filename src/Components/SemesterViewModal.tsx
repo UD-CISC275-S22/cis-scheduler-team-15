@@ -1,12 +1,15 @@
 import React from "react";
 import { Course } from "../Interfaces/course";
 import { Semester } from "../Interfaces/semester";
+import { Button } from "react-bootstrap";
 import "../App.css";
 
 export function SemesterViewModal({
-    semester
+    semester,
+    deleteCourse
 }: {
     semester: Semester;
+    deleteCourse: (course: Course, semster: Semester) => void;
 }): JSX.Element {
     return (
         <div>
@@ -27,6 +30,18 @@ export function SemesterViewModal({
                         <td>{course.listing}</td>
                         <td>{course.title}</td>
                         <td>{course.credits}</td>
+                        <td>
+                            <Button
+                                className="btn btn-secondary btn-circle btn-sm"
+                                data-bs-toggle="modal"
+                                data-toggle="tooltip"
+                                title={"Click to delete " + course.listing}
+                                variant="danger"
+                                onClick={() => deleteCourse(course, semester)}
+                            >
+                                x
+                            </Button>
+                        </td>
                     </tr>
                 ))}
                 <tr>
