@@ -70,7 +70,7 @@
       at updateHostComponent (node_modules/react-dom/cjs/react-dom.development.js:17632:3)
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (506 ms)
+  ✕ renders the course name somewhere (513 ms)
 
   ● renders the course name somewhere
 
@@ -302,12 +302,13 @@ FAIL src/App.test.tsx
 ------------------------------|---------|----------|---------|---------|-------------------
 File                          | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ------------------------------|---------|----------|---------|---------|-------------------
-All files                     |   47.11 |     47.5 |   43.07 |   46.46 |                   
+All files                     |    42.6 |    43.18 |   38.88 |   41.81 |                   
  src                          |     100 |      100 |     100 |     100 |                   
   App.tsx                     |     100 |      100 |     100 |     100 |                   
- src/Components               |    46.6 |     47.5 |   42.18 |   45.91 |                   
+ src/Components               |    42.1 |    43.18 |   38.02 |   41.28 |                   
   SemesterViewHome.tsx        |      80 |      100 |      80 |      80 | 43                
-  SemesterViewModal.tsx       |       0 |      100 |       0 |       0 | 11-42             
+  SemesterViewModal.tsx       |       0 |      100 |       0 |       0 | 14-57             
+  add_course.tsx              |       0 |        0 |       0 |       0 | 12-20             
   add_semester.tsx            |      25 |        0 |    12.5 |      25 | 21-51,60-64       
   course_list.tsx             |   85.71 |       75 |      75 |   83.33 | 16                
   course_list_view.tsx        |      50 |       50 |   33.33 |      50 | 11-16,34          
@@ -316,7 +317,7 @@ All files                     |   47.11 |     47.5 |   43.07 |   46.46 |
   degree_plans.tsx            |   30.43 |    16.66 |   26.66 |      30 | 14-52,70,100      
   degree_requirement_view.tsx |     100 |      100 |     100 |     100 |                   
   degree_requirements.tsx     |   66.66 |       75 |      50 |   66.66 | 12                
-  edit_semester.tsx           |      20 |      100 |   16.66 |      20 | 21-35,42-60       
+  edit_semester.tsx           |   13.33 |      100 |   11.11 |   13.33 | 23-54,61-74       
  src/Interfaces               |       0 |        0 |       0 |       0 |                   
   course.ts                   |       0 |        0 |       0 |       0 |                   
   degree.ts                   |       0 |        0 |       0 |       0 |                   
@@ -325,5 +326,5 @@ All files                     |   47.11 |     47.5 |   43.07 |   46.46 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.909 s
+Time:        2.937 s
 Ran all test suites.
