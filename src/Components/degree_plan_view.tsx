@@ -3,7 +3,7 @@ import { Degree } from "../Interfaces/degree";
 import { Semester } from "../Interfaces/semester";
 import "../App.css";
 import { Row, Col, Button } from "react-bootstrap";
-import { SemesterView } from "./SemesterView";
+import { SemesterViewHome } from "./SemesterViewHome";
 import { AddSemester } from "./add_semester";
 import { Course } from "../Interfaces/course";
 
@@ -63,11 +63,13 @@ export function DegreePlanView({
                                 key={semester.semesterID}
                                 className="App-table-left"
                             >
-                                <SemesterView
+                                <SemesterViewHome
                                     semester={semester}
                                     editMode={editMode}
                                     deleteSemester={deleteSemester}
-                                ></SemesterView>
+                                    degree={degree}
+                                    editDegree={editDegree}
+                                ></SemesterViewHome>
                                 <br></br>
                             </div>
                         ))}
@@ -80,11 +82,13 @@ export function DegreePlanView({
                                 key={semester.semesterID}
                                 className="App-table-right"
                             >
-                                <SemesterView
+                                <SemesterViewHome
                                     semester={semester}
                                     editMode={editMode}
                                     deleteSemester={deleteSemester}
-                                ></SemesterView>
+                                    degree={degree}
+                                    editDegree={editDegree}
+                                ></SemesterViewHome>
                                 <br></br>
                             </div>
                         ))}

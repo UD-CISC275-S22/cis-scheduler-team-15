@@ -1,17 +1,23 @@
 import React from "react";
 import { Course } from "../Interfaces/course";
 import { Semester } from "../Interfaces/semester";
+import { Degree } from "../Interfaces/degree";
 import "../App.css";
 import { Button } from "react-bootstrap";
+import { EditSemester } from "./edit_semester";
 
-export function SemesterView({
+export function SemesterViewHome({
     semester,
     editMode,
-    deleteSemester
+    deleteSemester,
+    degree,
+    editDegree
 }: {
     semester: Semester;
     editMode: boolean;
     deleteSemester: (semesterID: number) => void;
+    degree: Degree;
+    editDegree: (degreeID: number, newDegree: Degree) => void;
 }): JSX.Element {
     return (
         <div>
@@ -23,9 +29,12 @@ export function SemesterView({
                         </b>
                     </th>
                     <th className="Align-right">
-                        <Button hidden={!editMode} variant="success">
-                            Edit
-                        </Button>
+                        <EditSemester
+                            semester={semester}
+                            editMode={editMode}
+                            degree={degree}
+                            editDegree={editDegree}
+                        ></EditSemester>
                     </th>
                     <th>
                         <Button
