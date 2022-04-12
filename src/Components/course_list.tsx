@@ -9,7 +9,7 @@ const COURSES = AllCourses.map((course): Course => ({ ...course }));
 
 export function CourseList(): JSX.Element {
     const [courses] = useState<Course[]>(COURSES);
-    const [visible, setVisible] = useState<boolean>(true);
+    const [visible, setVisible] = useState<boolean>(false);
 
     return (
         <div>
