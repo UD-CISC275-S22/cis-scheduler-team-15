@@ -2,8 +2,6 @@ import React from "react";
 import { Course } from "../Interfaces/course";
 import { Semester } from "../Interfaces/semester";
 import "../App.css";
-import { Button } from "react-bootstrap";
-import { EditSemester } from "./edit_semester";
 
 export function SemesterViewModal({
     semester
