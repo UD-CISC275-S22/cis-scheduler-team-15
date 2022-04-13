@@ -16,6 +16,10 @@
     text-align: left;
 }
 
+.Align-center {
+    text-align: center;
+}
+
 .App-table-left {
     width: 75%;
     margin-left: 25%;

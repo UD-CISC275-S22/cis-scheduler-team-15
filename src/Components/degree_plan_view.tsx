@@ -10,11 +10,13 @@ import { Course } from "../Interfaces/course";
 export function DegreePlanView({
     degree,
     editDegree,
-    hidden
+    hidden,
+    courses
 }: {
     degree: Degree;
     editDegree: (degreeID: number, newDegree: Degree) => void;
     hidden: boolean;
+    courses: Course[];
 }): JSX.Element {
     const [editMode, setEditMode] = useState<boolean>(false);
     const courseList = degree.semesters.map(
@@ -69,6 +71,7 @@ export function DegreePlanView({
                                     deleteSemester={deleteSemester}
                                     degree={degree}
                                     editDegree={editDegree}
+                                    courses={courses}
                                 ></SemesterViewHome>
                                 <br></br>
                             </div>
@@ -88,6 +91,7 @@ export function DegreePlanView({
                                     deleteSemester={deleteSemester}
                                     degree={degree}
                                     editDegree={editDegree}
+                                    courses={courses}
                                 ></SemesterViewHome>
                                 <br></br>
                             </div>
