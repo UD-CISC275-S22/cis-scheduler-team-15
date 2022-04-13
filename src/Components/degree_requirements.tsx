@@ -4,7 +4,7 @@ import { DegreeRequirementView } from "./degree_requirement_view";
 import "../App.css";
 
 export function DegreeRequirements(): JSX.Element {
-    const [visible, setVisible] = useState<boolean>(true);
+    const [visible, setVisible] = useState<boolean>(false);
 
     return (
         <div>

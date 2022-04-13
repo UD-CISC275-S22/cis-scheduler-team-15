@@ -63,7 +63,7 @@ export function DegreePlans({ courses }: { courses: Course[] }): JSX.Element {
                 </Col>
                 <Col xs={3}>
                     <Button onClick={addStartDegreePlan}>
-                        Add Default plan (8 semesters)
+                        Add Default Plan (8 semesters)
                     </Button>
                 </Col>
                 <Col>
