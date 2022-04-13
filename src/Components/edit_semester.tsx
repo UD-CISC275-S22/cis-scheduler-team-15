@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Modal } from "react-bootstrap";
+import { Button, Modal, Row, Col } from "react-bootstrap";
 import { Degree } from "../Interfaces/degree";
 import { Semester } from "../Interfaces/semester";
 import { Course } from "../Interfaces/course";
@@ -9,12 +9,14 @@ export function EditSemester({
     semester,
     editMode,
     degree,
-    editDegree
+    editDegree,
+    courses
 }: {
     semester: Semester;
     editMode: boolean;
     degree: Degree;
     editDegree: (degreeID: number, newDegree: Degree) => void;
+    courses: Course[];
 }): JSX.Element {
     //const [currentSemester, editCurrentSemester] = useState<Semester>(semester);
     const [modal, setModal] = useState<boolean>(false);
@@ -64,21 +66,41 @@ export function EditSemester({
             >
                 Edit
             </Button>
-            <Modal show={modal} onHide={() => setModal(false)}>
+            <Modal
+                show={modal}
+                onHide={() => setModal(false)}
+                scrollable={true}
+                dialogClassName="modal-1000h"
+            >
                 <Modal.Header closeButton>
                     <Modal.Title>
                         <div>Edit Semester</div>
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <Button onClick={() => deleteAll(semester)}>
-                        Delete All
-                    </Button>
+                    <Row className="Align-center">
+                        <AddCourse
+                            courses={courses}
+                            semester={semester}
+                            degree={degree}
+                            editDegree={editDegree}
+                        ></AddCourse>
+                    </Row>
+                    <Row className="Align-right">
+                        <Col>
+                            <Button
+                                variant="danger"
+                                onClick={() => deleteAll(semester)}
+                            >
+                                Delete All
+                            </Button>
+                        </Col>
+                    </Row>
+                    <br></br>
                     <SemesterViewModal
                         semester={semester}
                         deleteCourse={deleteCourse}
                     ></SemesterViewModal>
-                    <AddCourse></AddCourse>
                 </Modal.Body>
             </Modal>
         </div>

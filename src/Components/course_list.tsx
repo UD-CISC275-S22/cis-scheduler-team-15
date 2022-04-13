@@ -2,15 +2,11 @@ import React from "react";
 import { useState } from "react";
 import { Course } from "../Interfaces/course";
 import { Stack, Button } from "react-bootstrap";
-import AllCourses from "./../Data/course_list.json";
 import { CourseListView } from "./course_list_view";
 
-const COURSES = AllCourses.map((course): Course => ({ ...course }));
-
-export function CourseList(): JSX.Element {
-    const [courses] = useState<Course[]>(COURSES);
-    const [visible, setVisible] = useState<boolean>(false);
-
+export function CourseList({ courses }: { courses: Course[] }): JSX.Element {
+    const [visible, setVisible] = useState<boolean>(true);
+    //the state for courses is now an input because app.tsx needs to pass it to degree plans
     return (
         <div>
             <Button onClick={() => setVisible(!visible)}>
