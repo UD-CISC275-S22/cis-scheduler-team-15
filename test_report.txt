@@ -8,7 +8,7 @@
         at p
         at div
         at div
-        at App
+        at App (/home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/src/App.tsx:17:23)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
       at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
@@ -40,9 +40,9 @@
         at /home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/node_modules/react-bootstrap/cjs/Row.js:22:3
         at div
         at /home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/node_modules/react-bootstrap/cjs/Stack.js:23:7
-        at DegreePlans (/home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/src/Components/degree_plans.tsx:10:43)
+        at DegreePlans (/home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/src/Components/degree_plans.tsx:10:31)
         at div
-        at App
+        at App (/home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/src/App.tsx:17:23)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
       at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
@@ -52,30 +52,30 @@
       at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22812:16)
       at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
 
-PASS src/App.test.tsx
+PASS src/App.test.tsx (5.267 s)
   Final Project Tests
-    ✓ renders the course name somewhere (300 ms)
-    ✓ Insert and Remove a degree plan (685 ms)
+    ✓ renders the course name somewhere (490 ms)
+    ✓ Insert and Remove a degree plan (2685 ms)
 
 ------------------------------|---------|----------|---------|---------|-------------------
 File                          | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ------------------------------|---------|----------|---------|---------|-------------------
-All files                     |   47.82 |    38.63 |   44.44 |   45.45 |                   
+All files                     |   46.61 |       46 |   44.44 |   44.53 |                   
  src                          |     100 |      100 |     100 |     100 |                   
   App.tsx                     |     100 |      100 |     100 |     100 |                   
- src/Components               |   47.36 |    38.63 |   43.66 |   44.95 |                   
-  SemesterViewHome.tsx        |      80 |      100 |      80 |      80 | 43                
+ src/Components               |   44.96 |       46 |   43.03 |    43.2 |                   
+  SemesterViewHome.tsx        |      80 |      100 |      80 |      80 | 46                
   SemesterViewModal.tsx       |       0 |      100 |       0 |       0 | 14-57             
-  add_course.tsx              |       0 |        0 |       0 |       0 | 12-20             
+  add_course.tsx              |       0 |        0 |       0 |       0 | 20-116            
   add_semester.tsx            |      25 |        0 |    12.5 |      25 | 21-51,60-64       
-  course_list.tsx             |   71.42 |       50 |      50 |   66.66 | 16-22             
-  course_list_view.tsx        |       0 |        0 |       0 |       0 | 8-34              
-  course_list_view_info.tsx   |       0 |        0 |       0 |       0 | 11-48             
-  degree_plan_view.tsx        |   78.94 |       75 |      75 |   77.77 | 40-43,53          
-  degree_plans.tsx            |    91.3 |    58.33 |   86.66 |      90 | 49-52             
+  course_list.tsx             |      75 |       75 |   66.66 |      75 | 12                
+  course_list_view.tsx        |      50 |       50 |   33.33 |      50 | 11-16,34          
+  course_list_view_info.tsx   |      60 |      100 |      50 |      60 | 20-24             
+  degree_plan_view.tsx        |   78.94 |       75 |      75 |   77.77 | 42-45,55          
+  degree_plans.tsx            |    91.3 |    58.33 |   86.66 |      90 | 50-53             
   degree_requirement_view.tsx |       0 |      100 |       0 |       0 | 5                 
   degree_requirements.tsx     |   66.66 |       50 |      50 |   66.66 | 12                
-  edit_semester.tsx           |   13.33 |      100 |   11.11 |   13.33 | 23-54,61-74       
+  edit_semester.tsx           |   13.33 |      100 |   11.11 |   13.33 | 25-56,63-93       
  src/Interfaces               |       0 |        0 |       0 |       0 |                   
   course.ts                   |       0 |        0 |       0 |       0 |                   
   degree.ts                   |       0 |        0 |       0 |       0 |                   
@@ -84,5 +84,5 @@ All files                     |   47.82 |    38.63 |   44.44 |   45.45 |
 Test Suites: 1 passed, 1 total
 Tests:       2 passed, 2 total
 Snapshots:   0 total
-Time:        3.54 s
+Time:        5.863 s
 Ran all test suites.
