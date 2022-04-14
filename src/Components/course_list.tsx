@@ -8,8 +8,17 @@ import { CourseListView } from "./course_list_view";
 const COURSES = AllCourses.map((course): Course => ({ ...course }));
 
 export function CourseList(): JSX.Element {
-    const [courses] = useState<Course[]>(COURSES);
+    const [courses, setCourses] = useState<Course[]>(COURSES);
     const [visible, setVisible] = useState<boolean>(true);
+
+    function editCourses(courseID: number, editedCourse: Course) {
+        setCourses(
+            courses.map(
+                (course: Course): Course =>
+                    courseID === course.courseID ? editedCourse : course
+            )
+        );
+    }
 
     return (
         <div>
@@ -20,7 +29,11 @@ export function CourseList(): JSX.Element {
                 <Stack gap={2}>
                     {courses.map((course: Course) => (
                         <div key={course.courseID}>
-                            <CourseListView course={course}></CourseListView>
+                            <CourseListView
+                                course={course}
+                                courses={courses}
+                                editCourses={editCourses}
+                            ></CourseListView>
                         </div>
                     ))}
                 </Stack>
