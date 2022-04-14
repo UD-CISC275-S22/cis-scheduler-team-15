@@ -3,7 +3,6 @@ import { Button, Form, Row, Col } from "react-bootstrap";
 import { Degree } from "../Interfaces/degree";
 import { Semester } from "../Interfaces/semester";
 import { Course } from "../Interfaces/course";
-//import { SemesterViewModal } from "./SemesterViewModal";
 
 export function AddCourse({
     courses,
@@ -29,19 +28,6 @@ export function AddCourse({
         setResultID(parseInt(event.target.value));
     }
 
-    function createBlankCourse(): Course {
-        const newCourse: Course = {
-            courseID: 0,
-            listing: "",
-            title: "",
-            preReqs: [],
-            coReqs: [],
-            offered: [],
-            credits: 0,
-            reqsSatisfied: []
-        };
-        return newCourse;
-    }
     function checkInsertCourse() {
         semester.courses
             .map((course: Course): number => course.courseID)
@@ -51,13 +37,9 @@ export function AddCourse({
     }
     function insertCourse() {
         setDuplicateCourse(false);
-        const newCourseArray = courses.filter(
+        const newCourse = courses.filter(
             (course: Course): boolean => course.courseID === resultID
-        );
-        const newCourse =
-            newCourseArray.length === 0
-                ? createBlankCourse()
-                : newCourseArray[0];
+        )[0];
         const newSemester: Semester = {
             semesterID: semester.semesterID,
             season: semester.season,
