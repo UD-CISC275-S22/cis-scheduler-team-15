@@ -19,6 +19,7 @@ export function CourseListViewInfoEdit({
     //insert other edit functions
 
     function createNewCourse(course: Course): Course {
+        courses;
         const newCourse: Course = {
             courseID: course.courseID,
             listing: course.listing,
