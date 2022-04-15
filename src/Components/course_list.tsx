@@ -5,7 +5,7 @@ import { Stack, Button } from "react-bootstrap";
 import { CourseListView } from "./course_list_view";
 
 export function CourseList({ courses }: { courses: Course[] }): JSX.Element {
-    const [visible, setVisible] = useState<boolean>(true);
+    const [visible, setVisible] = useState<boolean>(false);
     //the state for courses is now an input because app.tsx needs to pass it to degree plans
     return (
         <div>
