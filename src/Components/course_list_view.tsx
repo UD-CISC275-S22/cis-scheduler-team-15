@@ -1,6 +1,6 @@
 import * as React from "react";
-import { useState } from "react";
-import { Button, Container } from "react-bootstrap";
+//import { useState } from "react";
+import { Container } from "react-bootstrap";
 import { Course } from "../Interfaces/course";
 import { CourseListViewInfo } from "./course_list_view_info";
 
@@ -13,8 +13,6 @@ export function CourseListView({
     courses: Course[];
     editCourses: (courseID: number, editedCourse: Course) => void;
 }): JSX.Element {
-    const [editing, setEditing] = useState<boolean>(false); // Will need to be revised
-
     return (
         <Container>
             <div>

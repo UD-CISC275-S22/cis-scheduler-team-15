@@ -3,10 +3,11 @@ import { Degree } from "../Interfaces/degree";
 import { Stack, ToggleButton, Col, Row, Button } from "react-bootstrap";
 import PlanData from "./../Data/plan_data.json";
 import { DegreePlanView } from "./degree_plan_view";
+import { Course } from "../Interfaces/course";
 
 const DEGREEPLANSTART = PlanData.map((degree): Degree => ({ ...degree }));
 
-export function DegreePlans(): JSX.Element {
+export function DegreePlans({ courses }: { courses: Course[] }): JSX.Element {
     const [degreePlans, setDegreePlans] = useState<Degree[]>(DEGREEPLANSTART);
     const [currentDegreePlanID, setCurrentDegreePlanID] = useState<number>(0);
 
@@ -62,7 +63,7 @@ export function DegreePlans(): JSX.Element {
                 </Col>
                 <Col xs={3}>
                     <Button onClick={addStartDegreePlan}>
-                        Add Default plan (8 semesters)
+                        Add Default Plan (8 semesters)
                     </Button>
                 </Col>
                 <Col>
@@ -106,6 +107,7 @@ export function DegreePlans(): JSX.Element {
                         {degreePlans.map((degree: Degree) => (
                             <span key={degree.degreeID}>
                                 <DegreePlanView
+                                    courses={courses}
                                     degree={degree}
                                     editDegree={editDegreePlan}
                                     hidden={

@@ -6,10 +6,23 @@ import { DegreePlans } from "./Components/degree_plans";
 import { DegreeRequirements } from "./Components/degree_requirements";
 import { CourseList } from "./Components/course_list";
 import "./App.css";
+import AllCourses from "./Data/course_list.json";
+import { useState } from "react";
+import { Course } from "./Interfaces/course";
 
 //const degrees = PlanData.map((degree): Degree => degree as Degree);
 
 function App(): JSX.Element {
+    const COURSES = AllCourses.map((course): Course => ({ ...course }));
+    const [courses, setCourses] = useState<Course[]>(COURSES); //had to move this state from course_list to here because DegreePlans needs it
+    function editCourses(courseID: number, editedCourse: Course) {
+        setCourses(
+            courses.map(
+                (course: Course): Course =>
+                    courseID === course.courseID ? editedCourse : course
+            )
+        );
+    }
     return (
         <div className="App">
             <div className="App-header">
@@ -47,13 +60,16 @@ function App(): JSX.Element {
             </div>
             <hr></hr>
             <h3>Degree Plans</h3>
-            <DegreePlans></DegreePlans>
+            <DegreePlans courses={courses}></DegreePlans>
             <hr></hr>
             <h3>Degree Requirements</h3>
             <DegreeRequirements></DegreeRequirements>
             <hr></hr>
             <h3>Course List</h3>
-            <CourseList></CourseList>
+            <CourseList
+                courses={courses}
+                editCourses={editCourses}
+            ></CourseList>
             <hr></hr>
             <h3>External Links:</h3>
             <Row>
