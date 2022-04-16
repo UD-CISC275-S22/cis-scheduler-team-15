@@ -14,7 +14,15 @@ import { Course } from "./Interfaces/course";
 
 function App(): JSX.Element {
     const COURSES = AllCourses.map((course): Course => ({ ...course }));
-    const [courses] = useState<Course[]>(COURSES); //had to move this state from course_list to here because DegreePlans needs it
+    const [courses, setCourses] = useState<Course[]>(COURSES); //had to move this state from course_list to here because DegreePlans needs it
+    function editCourses(courseID: number, editedCourse: Course) {
+        setCourses(
+            courses.map(
+                (course: Course): Course =>
+                    courseID === course.courseID ? editedCourse : course
+            )
+        );
+    }
     return (
         <div className="App">
             <div className="App-header">
@@ -58,7 +66,10 @@ function App(): JSX.Element {
             <DegreeRequirements></DegreeRequirements>
             <hr></hr>
             <h3>Course List</h3>
-            <CourseList courses={courses}></CourseList>
+            <CourseList
+                courses={courses}
+                editCourses={editCourses}
+            ></CourseList>
             <hr></hr>
             <h3>External Links:</h3>
             <Row>
