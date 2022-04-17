@@ -153,7 +153,12 @@ describe("Final Project Tests", () => {
         expect(text4).toBeVisible();
     });
 
-    test("Students can see a table that shows semesters and courses", () => {});
+    test("Students can see a table that shows semesters and courses", () => {
+        const firstDefault = screen.queryByRole("button", {
+            name: /1: Default/i
+        });
+        firstDefault?.click();
+    });
 
     test("Students can insert or remove a semester in a plan", () => {});
 
