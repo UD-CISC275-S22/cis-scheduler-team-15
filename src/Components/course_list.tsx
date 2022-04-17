@@ -12,7 +12,7 @@ export function CourseList({
     courses: Course[];
     editCourses: (courseID: number, editedCourse: Course) => void;
 }): JSX.Element {
-    const [visible, setVisible] = useState<boolean>(true);
+    const [visible, setVisible] = useState<boolean>(false);
     //the state for courses is now an input because app.tsx needs to pass it to degree plans
 
     return (
