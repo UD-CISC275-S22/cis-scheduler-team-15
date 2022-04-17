@@ -73,9 +73,7 @@ export function CourseListViewInfo({
                     </div>
                     <div>
                         <b>Semesters Offered: </b>
-                        {course.offered.map((year: string) => (
-                            <span key={year}>{year} </span>
-                        ))}
+                        {course.offered.join(", ")}
                     </div>
                     <div>
                         <CourseListViewInfoEdit
