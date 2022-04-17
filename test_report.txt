@@ -56,29 +56,34 @@
 
 PASS src/App.test.tsx
   Final Project Tests
-    ✓ renders the course name somewhere (427 ms)
-    ✓ Insert and Remove a degree plan (1815 ms)
+    ✓ renders the course name somewhere (249 ms)
+    ✓ Insert and Remove a degree plan (678 ms)
+    ✓ Students can see a list of all the degree plans they have made (391 ms)
+    ✓ Students can see a list of degree requirements (189 ms)
+    ✓ Students can see a list of existing courses (337 ms)
+    ✓ Students can see a table that shows semesters and courses (274 ms)
+    ✓ Students can insert or remove a semester in a plan (443 ms)
 
 ---------------------------------|---------|----------|---------|---------|-------------------
 File                             | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ---------------------------------|---------|----------|---------|---------|-------------------
-All files                        |   45.56 |    42.85 |   45.71 |   43.55 |                   
+All files                        |   56.21 |     62.5 |   56.19 |    54.6 |                   
  src                             |     100 |      100 |     100 |     100 |                   
   App.tsx                        |     100 |      100 |     100 |     100 |                   
- src/Components                  |   45.23 |    42.85 |   45.19 |    43.2 |                   
+ src/Components                  |   55.95 |     62.5 |   55.76 |   54.32 |                   
   SemesterViewHome.tsx           |      80 |      100 |      80 |      80 | 46                
   SemesterViewModal.tsx          |       0 |      100 |       0 |       0 | 14-57             
   add_course.tsx                 |       0 |        0 |       0 |       0 | 20-116            
-  add_semester.tsx               |      25 |        0 |    12.5 |      25 | 21-51,60-64       
-  course_list.tsx                |   88.88 |    83.33 |    87.5 |   88.88 | 20                
+  add_semester.tsx               |      85 |    83.33 |      75 |      85 | 26-27,64          
+  course_list.tsx                |     100 |      100 |     100 |     100 |                   
   course_list_view.tsx           |     100 |      100 |     100 |     100 |                   
   course_list_view_info.tsx      |   85.71 |      100 |   77.77 |   85.71 | 45-49             
   course_list_view_info_edit.tsx |    8.33 |        0 |    7.69 |    4.34 | 21-125            
   course_state.tsx               |   66.66 |        0 |      50 |      60 | 13-16             
-  degree_plan_view.tsx           |   78.94 |       75 |      75 |   77.77 | 42-45,55          
-  degree_plans.tsx               |    91.3 |    58.33 |   86.66 |      90 | 50-53             
-  degree_requirement_view.tsx    |       0 |      100 |       0 |       0 | 5                 
-  degree_requirements.tsx        |   66.66 |       50 |      50 |   66.66 | 12                
+  degree_plan_view.tsx           |   84.21 |      100 |   83.33 |   83.33 | 42-45             
+  degree_plans.tsx               |     100 |    66.66 |     100 |     100 | 16-53             
+  degree_requirement_view.tsx    |     100 |      100 |     100 |     100 |                   
+  degree_requirements.tsx        |     100 |      100 |     100 |     100 |                   
   edit_semester.tsx              |   13.33 |      100 |   11.11 |   13.33 | 25-56,63-93       
  src/Interfaces                  |       0 |        0 |       0 |       0 |                   
   course.ts                      |       0 |        0 |       0 |       0 |                   
@@ -86,7 +91,7 @@ All files                        |   45.56 |    42.85 |   45.71 |   43.55 |
   semester.ts                    |       0 |        0 |       0 |       0 |                   
 ---------------------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 passed, 1 total
-Tests:       2 passed, 2 total
+Tests:       7 passed, 7 total
 Snapshots:   0 total
-Time:        5.009 s
+Time:        5.537 s
 Ran all test suites.
