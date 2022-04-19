@@ -205,6 +205,59 @@ describe("Final Project Tests", () => {
         expect(text1).not.toBeNull();
     });
 
+    test("Students can clear out all the existing courses in a semester", () => {
+        const degreePlanButton = screen.getByRole("button", {
+            name: /1: Default/i
+        });
+        degreePlanButton.click();
+        const editPlanButton = screen.getByRole("button", {
+            name: /Edit Plan/i
+        });
+        editPlanButton.click();
+        const editSemesterButtons = screen.queryAllByRole("button", {
+            name: /Edit/i
+        });
+
+        editSemesterButtons[1].click();
+        const deleteAllButton = screen.getByRole("button", {
+            name: /Delete All/i
+        });
+        expect(deleteAllButton).not.toBeNull();
+
+        let allButtons = screen.queryAllByRole("button");
+        const allButtonsLength = allButtons.length;
+
+        deleteAllButton.click();
+        allButtons = screen.queryAllByRole("button");
+        expect(allButtons.length).toBe(allButtonsLength - 5);
+    });
+
+    test("Students can clear out individual courses in a semester", () => {
+        const degreePlanButton = screen.getByRole("button", {
+            name: /1: Default/i
+        });
+        degreePlanButton.click();
+        const editPlanButton = screen.getByRole("button", {
+            name: /Edit Plan/i
+        });
+        editPlanButton.click();
+        const editSemesterButtons = screen.queryAllByRole("button", {
+            name: /Edit/i
+        });
+
+        editSemesterButtons[1].click();
+
+        let allButtons = screen.queryAllByRole("button");
+        expect(allButtons.length).toBe(32);
+
+        const deleteButton = screen.queryAllByRole("button", {
+            name: /Click to delete/i
+        })[0];
+        deleteButton.click();
+        allButtons = screen.queryAllByRole("button");
+        expect(allButtons.length).toBe(31);
+    });
+
     test("Students can insert a course in a semester", () => {
         const addEmpty = screen.getByRole("button", {
             name: /Add Empty Plan/i
@@ -277,6 +330,5 @@ describe("Final Project Tests", () => {
     /*
     test("Students can clear out semesters in a plan", () => {});
 
-    test("Students can clear out all the existing courses in a semester or clear out individual courses", () => {});
     */
 });

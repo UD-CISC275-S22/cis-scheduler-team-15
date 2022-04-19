@@ -47,8 +47,9 @@ export function AddCourse({
     );
 
     function updateSearch(event: React.ChangeEvent<HTMLInputElement>) {
-        setSearch(event.target.value);
-        setResultID(searchCourses(search)[0].courseID);
+        const newSearch = event.target.value;
+        setSearch(newSearch);
+        setResultID(searchCourses(newSearch)[0].courseID);
     }
 
     function updateResultID(event: React.ChangeEvent<HTMLSelectElement>) {

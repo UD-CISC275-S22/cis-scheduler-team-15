@@ -25,8 +25,15 @@ export function CourseListViewInfoEdit({
     const [preReqss, setPreReqs] = useState<number[]>(course.preReqs);
     const [newID, setNewID] = useState<number>(idInitialSetter);
     const [removeID, setRemoveID] = useState<number>(idInitialSetter);
+
+    const [coReqss, setCoReqs] = useState<number[]>(course.coReqs);
+    const [newCoID, setNewCoID] = useState<number>(idInitialSetter);
+    const [removeCoID, setRemoveCoID] = useState<number>(idInitialSetter);
+
     const [double, setDouble] = useState<boolean>(false);
     const [doubler, setDoubler] = useState<boolean>(false);
+    const [doubleCo, setDoubleCo] = useState<boolean>(false);
+    const [doubleCor, setDoubleCor] = useState<boolean>(false);
 
     function idInitialSetter(): number {
         if (course.courseID === 1) {
@@ -69,12 +76,21 @@ export function CourseListViewInfoEdit({
         editCourses(courseID, defaultCourse[0]);
         setDouble(false);
         setDoubler(false);
+        setDoubleCo(false);
+        setDoubleCor(false);
     }
     function updateNewID(event: ChangeEvent) {
         setNewID(parseInt(event.target.value));
     }
     function updateRemoveID(event: ChangeEvent) {
         setRemoveID(parseInt(event.target.value));
+    }
+
+    function updateNewCoID(event: ChangeEvent) {
+        setNewCoID(parseInt(event.target.value));
+    }
+    function updateRemoveCoID(event: ChangeEvent) {
+        setRemoveCoID(parseInt(event.target.value));
     }
 
     function addNewPreReq(courseID: number) {
@@ -118,10 +134,68 @@ export function CourseListViewInfoEdit({
             editCourses(course.courseID, newCourse);
             setPreReqs(removePreReq);
             setDoubler(false);
-            setDouble(false);
+            setDoubleCo(false);
+            setDoubleCor(false);
         } else {
             setDoubler(true);
             setDouble(false);
+            setDoubleCo(false);
+            setDoubleCor(false);
+        }
+    }
+
+    function addNewCoReq(courseID: number) {
+        if (coReqss.includes(courseID)) {
+            setDoubleCo(true);
+            setDoubleCor(false);
+            setDouble(false);
+            setDoubler(false);
+        } else {
+            setCoReqs([...coReqss, courseID]);
+            setDoubleCo(false);
+            setDoubleCor(false);
+            setDouble(false);
+            setDoubler(false);
+            const newCourse: Course = {
+                courseID: course.courseID,
+                listing: listings,
+                title: titles,
+                preReqs: course.preReqs,
+                coReqs: [...coReqss, courseID],
+                offered: course.offered,
+                credits: creditse,
+                reqsSatisfied: course.reqsSatisfied
+            };
+            editCourses(course.courseID, newCourse);
+        }
+    }
+
+    function removeCoReq(courseID: number) {
+        if (coReqss.includes(courseID)) {
+            const removeCoReq = coReqss.filter(
+                (courseIDf: number) => courseIDf !== courseID
+            );
+            setDoubleCo(false);
+            const newCourse: Course = {
+                courseID: course.courseID,
+                listing: listings,
+                title: titles,
+                preReqs: course.preReqs,
+                coReqs: removeCoReq,
+                offered: course.offered,
+                credits: creditse,
+                reqsSatisfied: course.reqsSatisfied
+            };
+            editCourses(course.courseID, newCourse);
+            setCoReqs(removeCoReq);
+            setDoubleCor(false);
+            setDouble(false);
+            setDoubler(false);
+        } else {
+            setDoubleCor(true);
+            setDoubleCo(false);
+            setDouble(false);
+            setDoubler(false);
         }
     }
 
@@ -231,8 +305,63 @@ export function CourseListViewInfoEdit({
                                 Remove PreReq
                             </Button>
                         </InputGroup>
-                        <div>{double && "Course already a PreReq"}</div>
-                        <div>{doubler && "Course not one of the PreReqs"}</div>
+                        <div className="text-danger">
+                            {double && "Course already a PreReq"}
+                        </div>
+                        <div className="text-danger">
+                            {doubler && "Course not one of the PreReqs"}
+                        </div>
+                        <Form.Label>Edit Co-Requisites:</Form.Label>
+                        <InputGroup>
+                            <Form.Select
+                                value={newCoID}
+                                onChange={updateNewCoID}
+                            >
+                                {courses
+                                    .filter(
+                                        (coursef: Course) =>
+                                            coursef.courseID !== course.courseID
+                                    )
+                                    .map((coursem: Course) => (
+                                        <option
+                                            key={coursem.courseID}
+                                            value={coursem.courseID}
+                                        >
+                                            {coursem.listing}
+                                        </option>
+                                    ))}
+                            </Form.Select>
+                            <Button onClick={() => addNewCoReq(newCoID)}>
+                                Add CoReq
+                            </Button>
+                            <Form.Select
+                                value={removeCoID}
+                                onChange={updateRemoveCoID}
+                            >
+                                {courses
+                                    .filter(
+                                        (coursef: Course) =>
+                                            coursef.courseID !== course.courseID
+                                    )
+                                    .map((coursem: Course) => (
+                                        <option
+                                            key={coursem.courseID}
+                                            value={coursem.courseID}
+                                        >
+                                            {coursem.listing}
+                                        </option>
+                                    ))}
+                            </Form.Select>
+                            <Button onClick={() => removeCoReq(removeCoID)}>
+                                Remove CoReq
+                            </Button>
+                        </InputGroup>
+                        <div className="text-danger">
+                            {doubleCo && "Course already a CoReq"}
+                        </div>
+                        <div className="text-danger">
+                            {doubleCor && "Course not one of the CoReqs"}
+                        </div>
                         <hr />
                         <Button onClick={() => resetDefault(course.courseID)}>
                             Reset Course to Default
