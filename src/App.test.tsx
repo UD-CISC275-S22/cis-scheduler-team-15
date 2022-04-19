@@ -228,9 +228,8 @@ describe("Final Project Tests", () => {
 
         deleteAllButton.click();
         allButtons = screen.queryAllByRole("button");
-        expect(allButtons.length).toBe(allButtonsLength-5);
+        expect(allButtons.length).toBe(allButtonsLength - 5);
     });
-
     test("Students can clear out individual courses in a semester", () => {
         const degreePlanButton = screen.getByRole("button", {
             name: /1: Default/i
