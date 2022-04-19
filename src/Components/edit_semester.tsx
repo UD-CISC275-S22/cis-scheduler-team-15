@@ -38,7 +38,8 @@ export function EditSemester({
             semesterID: semester.semesterID,
             season: semester.season,
             year: semester.year,
-            courses: []
+            courses: [],
+            errors: []
         };
         replaceSemesterInDegree(newSemester);
     }
@@ -51,7 +52,8 @@ export function EditSemester({
             semesterID: semester.semesterID,
             season: semester.season,
             year: semester.year,
-            courses: newCourses
+            courses: newCourses,
+            errors: Array(newCourses.length).fill("")
         };
         replaceSemesterInDegree(newSemester);
     }
