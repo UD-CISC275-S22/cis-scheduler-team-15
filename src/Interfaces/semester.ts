@@ -5,4 +5,5 @@ export interface Semester {
     season: string;
     year: number;
     courses: Course[];
+    errors: string[];
 }

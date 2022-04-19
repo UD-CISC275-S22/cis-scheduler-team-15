@@ -58,7 +58,8 @@
                         "credits": 3,
                         "reqsSatisfied": ["Multicultural"]
                     }
-                ]
+                ],
+                "errors": ["", "", "", "", ""]
             },
             {
                 "semesterID": 2,
@@ -115,7 +116,8 @@
                         "credits": 3,
                         "reqsSatisfied": []
                     }
-                ]
+                ],
+                "errors": ["", "", "", "", ""]
             },
             {
                 "semesterID": 3,
@@ -172,7 +174,8 @@
                         "credits": 3,
                         "reqsSatisfied": []
                     }
-                ]
+                ],
+                "errors": ["", "", "", "", ""]
             },
             {
                 "semesterID": 4,
@@ -229,7 +232,8 @@
                         "credits": 3,
                         "reqsSatisfied": []
                     }
-                ]
+                ],
+                "errors": ["", "", "", "", ""]
             },
             {
                 "semesterID": 5,
@@ -286,7 +290,8 @@
                         "credits": 3,
                         "reqsSatisfied": []
                     }
-                ]
+                ],
+                "errors": ["", "", "", "", ""]
             },
             {
                 "semesterID": 6,
@@ -343,7 +348,8 @@
                         "credits": 3,
                         "reqsSatisfied": []
                     }
-                ]
+                ],
+                "errors": ["", "", "", "", ""]
             },
             {
                 "semesterID": 7,
@@ -400,7 +406,8 @@
                         "credits": 3,
                         "reqsSatisfied": []
                     }
-                ]
+                ],
+                "errors": ["", "", "", "", ""]
             },
             {
                 "semesterID": 8,
@@ -457,7 +464,8 @@
                         "credits": 3,
                         "reqsSatisfied": []
                     }
-                ]
+                ],
+                "errors": ["", "", "", "", ""]
             }
         ]
     }

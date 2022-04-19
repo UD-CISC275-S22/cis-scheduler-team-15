@@ -204,6 +204,7 @@ describe("Final Project Tests", () => {
         text1 = screen.queryByText("Winter 2022");
         expect(text1).not.toBeNull();
     });
+
     test("Students can clear out all the existing courses in a semester", () => {
         const degreePlanButton = screen.getByRole("button", {
             name: /1: Default/i
@@ -230,6 +231,7 @@ describe("Final Project Tests", () => {
         allButtons = screen.queryAllByRole("button");
         expect(allButtons.length).toBe(allButtonsLength - 5);
     });
+
     test("Students can clear out individual courses in a semester", () => {
         const degreePlanButton = screen.getByRole("button", {
             name: /1: Default/i
@@ -255,9 +257,77 @@ describe("Final Project Tests", () => {
         allButtons = screen.queryAllByRole("button");
         expect(allButtons.length).toBe(31);
     });
-    /*
-    test("Students can insert a course in a semester", () => {});
 
+    test("Students can insert a course in a semester", () => {
+        const addEmpty = screen.getByRole("button", {
+            name: /Add Empty Plan/i
+        });
+        addEmpty.click();
+        const firstEmpty = screen.queryByRole("button", {
+            name: /2: Degree Plan 2/i
+        });
+        firstEmpty?.click();
+        const editButton = screen.queryByRole("button", {
+            name: /Edit Plan/i
+        });
+        editButton?.click();
+        const addSemester = screen.queryByRole("button", {
+            name: /Add Semester/i
+        });
+        addSemester?.click();
+        const createSemester = screen.queryByRole("button", {
+            name: /Create Semester/i
+        });
+        createSemester?.click();
+        const closeModal = screen.queryByRole("closebutton");
+        closeModal?.click();
+        let text1 = screen.queryAllByText("CISC108");
+        let text2 = screen.queryAllByText("MATH241");
+        let text3 = screen.queryAllByText("EGGG101");
+        let text4 = screen.queryByText("Degree plan 2 Total Credits: 0");
+        expect(text1[2]).toBeUndefined();
+        expect(text2[2]).toBeUndefined();
+        expect(text3[2]).toBeUndefined();
+        expect(text4).toBeVisible();
+        const editSemester = screen.getByRole("button", {
+            name: "Edit"
+        });
+        editSemester.click();
+        const addCourse = screen.getByRole("button", {
+            name: /Add Course/i
+        });
+        addCourse.click();
+        let adding = screen.getByRole("button", {
+            name: "Click to add 1"
+        });
+        adding.click();
+        const filter = screen.getAllByRole("textbox");
+        const selectCourses = screen.getAllByRole("combobox");
+        const newC = screen.getAllByTestId("add-course-select");
+        userEvent.selectOptions(selectCourses[2], newC[12]);
+        adding = screen.getByRole("button", {
+            name: "Click to add 13"
+        });
+        adding.click();
+        userEvent.type(filter[2], "e");
+        adding = screen.getByRole("button", {
+            name: "Click to add 16"
+        });
+        adding.click();
+        text1 = screen.queryAllByText("CISC108");
+        text2 = screen.queryAllByText("MATH241");
+        text3 = screen.queryAllByText("EGGG101");
+        text4 = screen.queryByText("Degree plan 2 Total Credits: 9");
+        expect(text1[1]).toBeVisible();
+        expect(text2[1]).toBeVisible();
+        expect(text3[1]).toBeVisible();
+        expect(text1[2]).not.toBeUndefined();
+        expect(text2[2]).not.toBeUndefined();
+        expect(text3[2]).not.toBeUndefined();
+        expect(text4).toBeVisible();
+    });
+
+    /*
     test("Students can clear out semesters in a plan", () => {});
 
     */
