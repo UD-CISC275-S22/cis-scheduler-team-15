@@ -91,6 +91,10 @@ h6 {
     text-align: center;
 }
 
+.modal_course_info {
+    width: 700px;
+}
+
 @keyframes App-logo-spin {
     from {
         transform: rotate(0deg);
