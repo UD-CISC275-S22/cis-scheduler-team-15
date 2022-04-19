@@ -311,13 +311,13 @@ describe("Final Project Tests", () => {
         adding.click();
         userEvent.type(filter[2], "e");
         adding = screen.getByRole("button", {
-            name: "Click to add 1"
+            name: "Click to add 16"
         });
         adding.click();
         text1 = screen.queryAllByText("CISC108");
         text2 = screen.queryAllByText("MATH241");
         text3 = screen.queryAllByText("EGGG101");
-        text4 = screen.queryByText("Degree plan 2 Total Credits: 10");
+        text4 = screen.queryByText("Degree plan 2 Total Credits: 9");
         expect(text1[1]).toBeVisible();
         expect(text2[1]).toBeVisible();
         expect(text3[1]).toBeVisible();
