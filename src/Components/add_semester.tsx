@@ -36,7 +36,8 @@ export function AddSemester({
             semesterID: newID,
             season: season,
             year: year,
-            courses: []
+            courses: [],
+            errors: []
         };
         const sameSemesters = degree.semesters.filter(
             (semester: Semester): boolean =>

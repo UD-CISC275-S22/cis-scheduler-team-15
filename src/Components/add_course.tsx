@@ -66,7 +66,8 @@ export function AddCourse({
                 semesterID: semester.semesterID,
                 season: semester.season,
                 year: semester.year,
-                courses: [resultCourse, ...semester.courses]
+                courses: [resultCourse, ...semester.courses],
+                errors: Array(courses.length + 1).fill("")
             };
             const newSemesters: Semester[] = [
                 ...degree.semesters.filter(
@@ -262,6 +263,7 @@ export function AddCourse({
                                                 <option
                                                     key={course.courseID}
                                                     value={course.courseID}
+                                                    data-testid="add-course-select"
                                                 >
                                                     {course.listing}:{" "}
                                                     {course.courseID}
