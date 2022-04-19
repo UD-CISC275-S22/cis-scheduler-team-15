@@ -54,31 +54,31 @@
       at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22812:16)
       at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
 
-PASS src/App.test.tsx (5.126 s)
+PASS src/App.test.tsx (6.246 s)
   Final Project Tests
-    ✓ renders the course name somewhere (307 ms)
-    ✓ Insert and Remove a degree plan (683 ms)
-    ✓ Students can see a list of all the degree plans they have made (395 ms)
-    ✓ Students can see a list of degree requirements (203 ms)
+    ✓ renders the course name somewhere (399 ms)
+    ✓ Insert and Remove a degree plan (836 ms)
+    ✓ Students can see a list of all the degree plans they have made (460 ms)
+    ✓ Students can see a list of degree requirements (233 ms)
     ✓ Students can see a list of existing courses (398 ms)
-    ✓ Students can see a table that shows semesters and courses (315 ms)
-    ✓ Students can insert or remove a semester in a plan (501 ms)
+    ✓ Students can see a table that shows semesters and courses (340 ms)
+    ✓ Students can insert or remove a semester in a plan (582 ms)
 
 ---------------------------------|---------|----------|---------|---------|-------------------
 File                             | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ---------------------------------|---------|----------|---------|---------|-------------------
-All files                        |   41.32 |    39.74 |   46.56 |   39.83 |                   
+All files                        |   35.84 |    35.22 |   42.65 |   34.43 |                   
  src                             |     100 |      100 |     100 |     100 |                   
   App.tsx                        |     100 |      100 |     100 |     100 |                   
- src/Components                  |   41.07 |    39.74 |   46.15 |   39.57 |                   
+ src/Components                  |   35.61 |    35.22 |   42.25 |   34.19 |                   
   SemesterViewHome.tsx           |      80 |      100 |      80 |      80 | 46                
   SemesterViewModal.tsx          |       0 |      100 |       0 |       0 | 14-57             
   add_course.tsx                 |       0 |        0 |       0 |       0 | 19-262            
   add_semester.tsx               |      85 |    83.33 |      75 |      85 | 26-27,64          
   course_list.tsx                |     100 |      100 |     100 |     100 |                   
   course_list_view.tsx           |     100 |      100 |     100 |     100 |                   
-  course_list_view_info.tsx      |   85.71 |      100 |   77.77 |   85.71 | 45-49             
-  course_list_view_info_edit.tsx |    8.33 |        0 |    7.69 |    4.34 | 21-125            
+  course_list_view_info.tsx      |   85.71 |      100 |   77.77 |   85.71 | 46-53             
+  course_list_view_info_edit.tsx |    3.27 |        0 |       4 |    1.66 | 21-237            
   course_state.tsx               |   66.66 |        0 |      50 |      60 | 13-16             
   degree_plan_view.tsx           |   84.21 |      100 |   83.33 |   83.33 | 41-44             
   degree_plans.tsx               |     100 |    66.66 |     100 |     100 | 17-74             
@@ -93,5 +93,5 @@ All files                        |   41.32 |    39.74 |   46.56 |   39.83 |
 Test Suites: 1 passed, 1 total
 Tests:       7 passed, 7 total
 Snapshots:   0 total
-Time:        5.728 s
+Time:        6.946 s
 Ran all test suites.
