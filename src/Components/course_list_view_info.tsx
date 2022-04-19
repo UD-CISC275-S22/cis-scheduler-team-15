@@ -81,6 +81,10 @@ export function CourseListViewInfo({
                         {course.offered.join(", ")}
                     </div>
                     <div>
+                        <b>Degree Requirements Satified: </b>
+                        {course.reqsSatisfied.join(", ")}
+                    </div>
+                    <div>
                         <CourseListViewInfoEdit
                             course={course}
                             courses={courses}
