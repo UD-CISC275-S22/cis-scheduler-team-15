@@ -40,7 +40,7 @@
         at /home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/node_modules/react-bootstrap/cjs/Row.js:22:3
         at div
         at /home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/node_modules/react-bootstrap/cjs/Stack.js:23:7
-        at DegreePlans (/home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/src/Components/degree_plans.tsx:10:31)
+        at DegreePlans (/home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/src/Components/degree_plans.tsx:11:31)
         at div
         at CourseState (/home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/src/Components/course_state.tsx:11:35)
         at div
@@ -54,23 +54,23 @@
       at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22812:16)
       at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
 
-PASS src/App.test.tsx
+PASS src/App.test.tsx (5.126 s)
   Final Project Tests
-    ✓ renders the course name somewhere (293 ms)
-    ✓ Insert and Remove a degree plan (668 ms)
-    ✓ Students can see a list of all the degree plans they have made (388 ms)
-    ✓ Students can see a list of degree requirements (190 ms)
-    ✓ Students can see a list of existing courses (322 ms)
-    ✓ Students can see a table that shows semesters and courses (273 ms)
-    ✓ Students can insert or remove a semester in a plan (453 ms)
+    ✓ renders the course name somewhere (307 ms)
+    ✓ Insert and Remove a degree plan (683 ms)
+    ✓ Students can see a list of all the degree plans they have made (395 ms)
+    ✓ Students can see a list of degree requirements (203 ms)
+    ✓ Students can see a list of existing courses (398 ms)
+    ✓ Students can see a table that shows semesters and courses (315 ms)
+    ✓ Students can insert or remove a semester in a plan (501 ms)
 
 ---------------------------------|---------|----------|---------|---------|-------------------
 File                             | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ---------------------------------|---------|----------|---------|---------|-------------------
-All files                        |   40.08 |    42.68 |   45.73 |   38.52 |                   
+All files                        |   41.32 |    39.74 |   46.56 |   39.83 |                   
  src                             |     100 |      100 |     100 |     100 |                   
   App.tsx                        |     100 |      100 |     100 |     100 |                   
- src/Components                  |   39.83 |    42.68 |   45.31 |   38.26 |                   
+ src/Components                  |   41.07 |    39.74 |   46.15 |   39.57 |                   
   SemesterViewHome.tsx           |      80 |      100 |      80 |      80 | 46                
   SemesterViewModal.tsx          |       0 |      100 |       0 |       0 | 14-57             
   add_course.tsx                 |       0 |        0 |       0 |       0 | 19-262            
@@ -80,8 +80,8 @@ All files                        |   40.08 |    42.68 |   45.73 |   38.52 |
   course_list_view_info.tsx      |   85.71 |      100 |   77.77 |   85.71 | 45-49             
   course_list_view_info_edit.tsx |    8.33 |        0 |    7.69 |    4.34 | 21-125            
   course_state.tsx               |   66.66 |        0 |      50 |      60 | 13-16             
-  degree_plan_view.tsx           |   84.21 |      100 |   83.33 |   83.33 | 42-45             
-  degree_plans.tsx               |     100 |    66.66 |     100 |     100 | 16-53             
+  degree_plan_view.tsx           |   84.21 |      100 |   83.33 |   83.33 | 41-44             
+  degree_plans.tsx               |     100 |    66.66 |     100 |     100 | 17-74             
   degree_requirement_view.tsx    |     100 |      100 |     100 |     100 |                   
   degree_requirements.tsx        |     100 |      100 |     100 |     100 |                   
   edit_semester.tsx              |   13.33 |      100 |   11.11 |   13.33 | 25-56,63-93       
@@ -93,5 +93,5 @@ All files                        |   40.08 |    42.68 |   45.73 |   38.52 |
 Test Suites: 1 passed, 1 total
 Tests:       7 passed, 7 total
 Snapshots:   0 total
-Time:        5.481 s
+Time:        5.728 s
 Ran all test suites.
