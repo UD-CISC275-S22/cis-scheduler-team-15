@@ -3,6 +3,7 @@ import { Course } from "../Interfaces/course";
 import { Button, Modal } from "react-bootstrap";
 import { useState } from "react";
 import { CourseListViewInfoEdit } from "./course_list_view_info_edit";
+import "../App.css";
 
 export function CourseListViewInfo({
     course,
@@ -46,7 +47,11 @@ export function CourseListViewInfo({
             >
                 <i>i</i>
             </Button>
-            <Modal show={modal} onHide={() => setModal(false)}>
+            <Modal
+                dialogClassName="modal_course_info"
+                show={modal}
+                onHide={() => setModal(false)}
+            >
                 <Modal.Header closeButton>
                     <Modal.Title>
                         <div>
