@@ -54,17 +54,17 @@
       at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22812:16)
       at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
 
-PASS src/App.test.tsx (10.129 s)
+PASS src/App.test.tsx (7.346 s)
   Final Project Tests
-    ✓ renders the course name somewhere (338 ms)
-    ✓ Insert and Remove a degree plan (937 ms)
-    ✓ Students can see a list of all the degree plans they have made (565 ms)
-    ✓ Students can see a list of degree requirements (280 ms)
-    ✓ Students can see a list of existing courses (514 ms)
-    ✓ Students can see a table that shows semesters and courses (417 ms)
-    ✓ Students can insert or remove a semester in a plan (708 ms)
-    ✓ Students can clear out all the existing courses in a semester (1558 ms)
-    ✓ Students can clear out individual courses in a semester (1531 ms)
+    ✓ renders the course name somewhere (247 ms)
+    ✓ Insert and Remove a degree plan (703 ms)
+    ✓ Students can see a list of all the degree plans they have made (405 ms)
+    ✓ Students can see a list of degree requirements (194 ms)
+    ✓ Students can see a list of existing courses (349 ms)
+    ✓ Students can see a table that shows semesters and courses (309 ms)
+    ✓ Students can insert or remove a semester in a plan (470 ms)
+    ✓ Students can clear out all the existing courses in a semester (1062 ms)
+    ✓ Students can clear out individual courses in a semester (1029 ms)
 
 ---------------------------------|---------|----------|---------|---------|-------------------
 File                             | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
@@ -75,7 +75,7 @@ All files                        |   46.42 |     37.5 |   53.84 |   45.25 |
  src/Components                  |   46.23 |     37.5 |   53.52 |   45.05 |                   
   SemesterViewHome.tsx           |      80 |      100 |      80 |      80 | 46                
   SemesterViewModal.tsx          |     100 |      100 |     100 |     100 |                   
-  add_course.tsx                 |   14.13 |     5.55 |   11.11 |   14.13 | 42-226,236-266    
+  add_course.tsx                 |   14.13 |     5.55 |   11.11 |   14.13 | 42-226,233-263    
   add_semester.tsx               |      85 |    83.33 |      75 |      85 | 26-27,64          
   course_list.tsx                |     100 |      100 |     100 |     100 |                   
   course_list_view.tsx           |     100 |      100 |     100 |     100 |                   
@@ -95,5 +95,5 @@ All files                        |   46.42 |     37.5 |   53.84 |   45.25 |
 Test Suites: 1 passed, 1 total
 Tests:       9 passed, 9 total
 Snapshots:   0 total
-Time:        10.893 s
+Time:        7.959 s
 Ran all test suites.
