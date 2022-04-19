@@ -229,9 +229,6 @@ export function AddCourse({
 
     return (
         <div>
-            <div>resultID: {resultID}</div>
-            <div>resultCourse: {resultCourse.listing}</div>
-            <div>search: {search}</div>
             <Button
                 onClick={() => setCoursePromptVisible(!coursePromptVisible)}
             >
