@@ -4,6 +4,7 @@ import { Stack, ToggleButton, Col, Row, Button } from "react-bootstrap";
 import PlanData from "./../Data/plan_data.json";
 import { DegreePlanView } from "./degree_plan_view";
 import { Course } from "../Interfaces/course";
+import { Semester } from "../Interfaces/semester";
 
 const DEGREEPLANSTART = PlanData.map((degree): Degree => ({ ...degree }));
 
@@ -46,7 +47,27 @@ export function DegreePlans({ courses }: { courses: Course[] }): JSX.Element {
         );
     }
 
+    function sortSemesters(degree: Degree): Degree {
+        let newSemesters = [...degree.semesters];
+        newSemesters = newSemesters.sort(
+            (a: Semester, b: Semester): number =>
+                a.year -
+                b.year +
+                (["Winter", "Spring", "Summer", "Fall"].indexOf(a.season) / 4 -
+                    ["Winter", "Spring", "Summer", "Fall"].indexOf(b.season) /
+                        4)
+        );
+        return (
+            degree.degreeID,
+            {
+                ...degree,
+                semesters: newSemesters
+            }
+        );
+    }
+
     function editDegreePlan(degreeID: number, newDegreePlan: Degree) {
+        newDegreePlan = sortSemesters(newDegreePlan);
         setDegreePlans(
             degreePlans.map(
                 (degree: Degree): Degree =>

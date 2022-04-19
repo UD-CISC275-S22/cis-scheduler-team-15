@@ -29,13 +29,12 @@ export function DegreePlanView({
         .flat()
         .reduce((prev: number, num: number) => prev + num, 0);
 
-    const springSummer = degree.semesters.filter(
-        (semester: Semester): boolean =>
-            semester.season === "Spring" || semester.season === "Summer"
+    const oddSemesters = degree.semesters.filter(
+        (sem: Semester): boolean => degree.semesters.indexOf(sem) % 2 === 1
     );
-    const FallWinter = degree.semesters.filter(
-        (semester: Semester): boolean =>
-            semester.season === "Fall" || semester.season === "Winter"
+
+    const evenSemesters = degree.semesters.filter(
+        (sem: Semester): boolean => degree.semesters.indexOf(sem) % 2 === 0
     );
 
     function deleteSemester(semesterID: number) {
@@ -60,7 +59,7 @@ export function DegreePlanView({
             <Row>
                 <Col>
                     <div>
-                        {FallWinter.map((semester: Semester) => (
+                        {evenSemesters.map((semester: Semester) => (
                             <div
                                 key={semester.semesterID}
                                 className="App-table-left"
@@ -80,7 +79,7 @@ export function DegreePlanView({
                 </Col>
                 <Col>
                     <div>
-                        {springSummer.map((semester: Semester) => (
+                        {oddSemesters.map((semester: Semester) => (
                             <div
                                 key={semester.semesterID}
                                 className="App-table-right"
