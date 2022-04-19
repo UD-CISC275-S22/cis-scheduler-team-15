@@ -6,8 +6,9 @@ import AllCourses from "../Data/course_list.json";
 import { useState } from "react";
 import React from "react";
 
+const COURSES = AllCourses.map((course): Course => ({ ...course }));
+
 export function CourseState(): JSX.Element {
-    const COURSES = AllCourses.map((course): Course => ({ ...course }));
     const [courses, setCourses] = useState<Course[]>(COURSES); //had to move this state from course_list to here because DegreePlans needs it
     function editCourses(courseID: number, editedCourse: Course) {
         setCourses(

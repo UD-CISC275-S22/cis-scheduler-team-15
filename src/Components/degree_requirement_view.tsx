@@ -67,6 +67,7 @@ export function DegreeRequirementView(): JSX.Element {
                             CISC 260 - Machine Organization and Assembly
                             Language
                         </li>
+                        <li>CISC 275 - Introduction to Software Engineering</li>
                         <li>
                             15 credits of computer science tech electives 301 or
                             above except:
