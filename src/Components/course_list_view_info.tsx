@@ -48,6 +48,7 @@ export function CourseListViewInfo({
                 <i>i</i>
             </Button>
             <Modal
+                size="lg"
                 dialogClassName="modal_course_info"
                 show={modal}
                 onHide={() => setModal(false)}
@@ -82,7 +83,9 @@ export function CourseListViewInfo({
                     </div>
                     <div>
                         <b>Degree Requirements Satified: </b>
-                        {course.reqsSatisfied.join(", ")}
+                        {course.reqsSatisfied.length === 0
+                            ? "N/A"
+                            : course.reqsSatisfied.join(", ")}
                     </div>
                     <div>
                         <CourseListViewInfoEdit

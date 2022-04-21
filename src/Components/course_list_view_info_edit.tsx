@@ -1,14 +1,41 @@
 import * as React from "react";
 import { Course } from "../Interfaces/course";
 import { useState } from "react";
-import { Button, Form, InputGroup } from "react-bootstrap";
+import { Accordion, Button, Form, InputGroup, Row, Col } from "react-bootstrap";
 import AllCourses from "../Data/course_list.json";
+import AccordionHeader from "react-bootstrap/esm/AccordionHeader";
+import AccordionBody from "react-bootstrap/esm/AccordionBody";
+//import university_requirements from "../Data/required_course_names.json";
 
 type ChangeEvent = React.ChangeEvent<
     HTMLTextAreaElement | HTMLInputElement | HTMLSelectElement
 >;
 const defaultCourseData = AllCourses.map((course): Course => ({ ...course }));
-
+const universtiyCourses = [
+    "FYS",
+    "ENGL100",
+    "Breadth",
+    "DLE",
+    "Capstone",
+    "Multicultural",
+    "CAH",
+    "HCC",
+    "SBS",
+    "Science"
+];
+const college_requirements = ["FL", "SWR"];
+const major_requirements = [
+    "CISC108",
+    "CISC181",
+    "CISC210",
+    "CISC275",
+    "CISC220",
+    "CISC260",
+    "CISC300+",
+    "MATH210",
+    "MATH241",
+    "BREADTH300+"
+];
 export function CourseListViewInfoEdit({
     course,
     courses,
@@ -35,6 +62,8 @@ export function CourseListViewInfoEdit({
     const [doubleCo, setDoubleCo] = useState<boolean>(false);
     const [doubleCor, setDoubleCor] = useState<boolean>(false);
 
+    const [reqSat, setReqSat] = useState<string[]>(course.reqsSatisfied);
+
     function idInitialSetter(): number {
         if (course.courseID === 1) {
             return 2;
@@ -51,9 +80,40 @@ export function CourseListViewInfoEdit({
             coReqs: coursen.coReqs,
             offered: coursen.offered,
             credits: creditse,
-            reqsSatisfied: coursen.reqsSatisfied
+            reqsSatisfied: reqSat
         };
         return newCourse;
+    }
+
+    function updateReq(event: ChangeEvent) {
+        const req = event.target.value;
+        if (reqSat.includes(req)) {
+            setReqSat(reqSat.filter((e: string) => e !== req));
+            const newCourse: Course = {
+                courseID: course.courseID,
+                listing: listings,
+                title: titles,
+                preReqs: course.preReqs,
+                coReqs: course.coReqs,
+                offered: course.offered,
+                credits: creditse,
+                reqsSatisfied: reqSat.filter((e: string) => e !== req)
+            };
+            editCourses(course.courseID, newCourse);
+        } else {
+            const newCourse: Course = {
+                courseID: course.courseID,
+                listing: listings,
+                title: titles,
+                preReqs: course.preReqs,
+                coReqs: course.coReqs,
+                offered: course.offered,
+                credits: creditse,
+                reqsSatisfied: [...reqSat, req]
+            };
+            editCourses(course.courseID, newCourse);
+            setReqSat([...reqSat, req]);
+        }
     }
 
     function updateTitle(event: ChangeEvent) {
@@ -73,7 +133,9 @@ export function CourseListViewInfoEdit({
         setListing(defaultCourse[0].listing);
         setCredits(defaultCourse[0].credits);
         setPreReqs(defaultCourse[0].preReqs);
+        setReqSat(defaultCourse[0].reqsSatisfied);
         editCourses(courseID, defaultCourse[0]);
+
         setDouble(false);
         setDoubler(false);
         setDoubleCo(false);
@@ -206,167 +268,268 @@ export function CourseListViewInfoEdit({
             </Button>
             <div>
                 {edit && (
-                    <Form>
-                        <hr />
-                        <Form.Label>Edit Credits:</Form.Label>
-                        <InputGroup>
-                            <Form.Control
-                                type="number"
-                                placeholder="Enter number of credit(s)"
-                                value={creditse}
-                                onChange={updateCredits}
-                            />
+                    <Row>
+                        <Col>
+                            <Form>
+                                <hr />
+                                <Form.Label>
+                                    <b>
+                                        <u>Edit Credits:</u>
+                                    </b>
+                                </Form.Label>
+                                <InputGroup>
+                                    <Form.Control
+                                        type="number"
+                                        placeholder="Enter number of credit(s)"
+                                        value={creditse}
+                                        onChange={updateCredits}
+                                    />
+                                    <Button
+                                        onClick={() =>
+                                            editCourses(
+                                                course.courseID,
+                                                createNewCourse(course)
+                                            )
+                                        }
+                                    >
+                                        Update Credits
+                                    </Button>
+                                </InputGroup>
+                                <Form.Label>
+                                    <b>
+                                        <u>Edit Course Title:</u>
+                                    </b>
+                                </Form.Label>
+                                <InputGroup>
+                                    <Form.Control
+                                        placeholder="Enter new course title"
+                                        value={titles}
+                                        onChange={updateTitle}
+                                    />
+                                    <Button
+                                        onClick={() =>
+                                            editCourses(
+                                                course.courseID,
+                                                createNewCourse(course)
+                                            )
+                                        }
+                                    >
+                                        Update Title
+                                    </Button>
+                                </InputGroup>
+                                <Form.Label>Edit Course Listing:</Form.Label>
+                                <InputGroup>
+                                    <Form.Control
+                                        placeholder="Enter new listing"
+                                        value={listings}
+                                        onChange={updateListing}
+                                    />
+                                    <Button
+                                        onClick={() =>
+                                            editCourses(
+                                                course.courseID,
+                                                createNewCourse(course)
+                                            )
+                                        }
+                                    >
+                                        Update Listing
+                                    </Button>
+                                </InputGroup>
+                                <Form.Label>Edit Pre-Requisites:</Form.Label>
+                                <InputGroup>
+                                    <Form.Select
+                                        value={newID}
+                                        onChange={updateNewID}
+                                    >
+                                        {courses
+                                            .filter(
+                                                (coursef: Course) =>
+                                                    coursef.courseID !==
+                                                    course.courseID
+                                            )
+                                            .map((coursem: Course) => (
+                                                <option
+                                                    key={coursem.courseID}
+                                                    value={coursem.courseID}
+                                                >
+                                                    {coursem.listing}
+                                                </option>
+                                            ))}
+                                    </Form.Select>
+                                    <Button onClick={() => addNewPreReq(newID)}>
+                                        Add PreReq
+                                    </Button>
+                                </InputGroup>
+                                <InputGroup>
+                                    <Form.Select
+                                        value={removeID}
+                                        onChange={updateRemoveID}
+                                    >
+                                        {courses
+                                            .filter(
+                                                (coursef: Course) =>
+                                                    coursef.courseID !==
+                                                    course.courseID
+                                            )
+                                            .map((coursem: Course) => (
+                                                <option
+                                                    key={coursem.courseID}
+                                                    value={coursem.courseID}
+                                                >
+                                                    {coursem.listing}
+                                                </option>
+                                            ))}
+                                    </Form.Select>
+                                    <Button
+                                        onClick={() => removePreReq(removeID)}
+                                    >
+                                        Remove PreReq
+                                    </Button>
+                                </InputGroup>
+                                <div className="text-danger">
+                                    {double && "Course already a PreReq"}
+                                </div>
+                                <div className="text-danger">
+                                    {doubler && "Course not one of the PreReqs"}
+                                </div>
+                                <Form.Label>Edit Co-Requisites:</Form.Label>
+                                <InputGroup>
+                                    <Form.Select
+                                        value={newCoID}
+                                        onChange={updateNewCoID}
+                                    >
+                                        {courses
+                                            .filter(
+                                                (coursef: Course) =>
+                                                    coursef.courseID !==
+                                                    course.courseID
+                                            )
+                                            .map((coursem: Course) => (
+                                                <option
+                                                    key={coursem.courseID}
+                                                    value={coursem.courseID}
+                                                >
+                                                    {coursem.listing}
+                                                </option>
+                                            ))}
+                                    </Form.Select>
+                                    <Button
+                                        onClick={() => addNewCoReq(newCoID)}
+                                    >
+                                        Add CoReq
+                                    </Button>
+                                </InputGroup>
+                                <InputGroup>
+                                    <Form.Select
+                                        value={removeCoID}
+                                        onChange={updateRemoveCoID}
+                                    >
+                                        {courses
+                                            .filter(
+                                                (coursef: Course) =>
+                                                    coursef.courseID !==
+                                                    course.courseID
+                                            )
+                                            .map((coursem: Course) => (
+                                                <option
+                                                    key={coursem.courseID}
+                                                    value={coursem.courseID}
+                                                >
+                                                    {coursem.listing}
+                                                </option>
+                                            ))}
+                                    </Form.Select>
+                                    <Button
+                                        onClick={() => removeCoReq(removeCoID)}
+                                    >
+                                        Remove CoReq
+                                    </Button>
+                                </InputGroup>
+                                <div className="text-danger">
+                                    {doubleCo && "Course already a CoReq"}
+                                </div>
+                                <div className="text-danger">
+                                    {doubleCor &&
+                                        "Course not one of the CoReqs"}
+                                </div>
+                            </Form>
+                        </Col>
+                        <Col>
+                            <hr />
+                            <div>Edit Degree Requirements:</div>
+                            <Accordion>
+                                <Accordion.Item eventKey="0">
+                                    <AccordionHeader>
+                                        Adjust University Requirement Satisfied:
+                                    </AccordionHeader>
+                                    <AccordionBody>
+                                        {universtiyCourses.map(
+                                            (req: string, index: number) => (
+                                                <Form.Check
+                                                    key={index}
+                                                    type="checkbox"
+                                                    label={req}
+                                                    value={req}
+                                                    checked={reqSat.includes(
+                                                        req
+                                                    )}
+                                                    onChange={updateReq}
+                                                ></Form.Check>
+                                            )
+                                        )}
+                                    </AccordionBody>
+                                </Accordion.Item>
+                                <Accordion.Item eventKey="1">
+                                    <AccordionHeader>
+                                        Adjust College Requirement Satisfied:
+                                    </AccordionHeader>
+                                    <AccordionBody>
+                                        {college_requirements.map(
+                                            (req: string, index: number) => (
+                                                <Form.Check
+                                                    key={index}
+                                                    type="checkbox"
+                                                    label={req}
+                                                    value={req}
+                                                    checked={reqSat.includes(
+                                                        req
+                                                    )}
+                                                    onChange={updateReq}
+                                                ></Form.Check>
+                                            )
+                                        )}
+                                    </AccordionBody>
+                                </Accordion.Item>
+                                <Accordion.Item eventKey="2">
+                                    <AccordionHeader>
+                                        Adjust Major Requirements Satisfied:
+                                    </AccordionHeader>
+                                    <AccordionBody>
+                                        {major_requirements.map(
+                                            (req: string, index: number) => (
+                                                <Form.Check
+                                                    key={index}
+                                                    type="checkbox"
+                                                    label={req}
+                                                    value={req}
+                                                    checked={reqSat.includes(
+                                                        req
+                                                    )}
+                                                    onChange={updateReq}
+                                                ></Form.Check>
+                                            )
+                                        )}
+                                    </AccordionBody>
+                                </Accordion.Item>
+                            </Accordion>
+                            <hr />
                             <Button
-                                onClick={() =>
-                                    editCourses(
-                                        course.courseID,
-                                        createNewCourse(course)
-                                    )
-                                }
+                                onClick={() => resetDefault(course.courseID)}
                             >
-                                Update Credits
+                                Reset Course to Default
                             </Button>
-                        </InputGroup>
-                        <Form.Label>Edit Course Title:</Form.Label>
-                        <InputGroup>
-                            <Form.Control
-                                placeholder="Enter new course title"
-                                value={titles}
-                                onChange={updateTitle}
-                            />
-                            <Button
-                                onClick={() =>
-                                    editCourses(
-                                        course.courseID,
-                                        createNewCourse(course)
-                                    )
-                                }
-                            >
-                                Update Title
-                            </Button>
-                        </InputGroup>
-                        <Form.Label>Edit Course Listing:</Form.Label>
-                        <InputGroup>
-                            <Form.Control
-                                placeholder="Enter new listing"
-                                value={listings}
-                                onChange={updateListing}
-                            />
-                            <Button
-                                onClick={() =>
-                                    editCourses(
-                                        course.courseID,
-                                        createNewCourse(course)
-                                    )
-                                }
-                            >
-                                Update Listing
-                            </Button>
-                        </InputGroup>
-                        <Form.Label>Edit Pre-Requisites:</Form.Label>
-                        <InputGroup>
-                            <Form.Select value={newID} onChange={updateNewID}>
-                                {courses
-                                    .filter(
-                                        (coursef: Course) =>
-                                            coursef.courseID !== course.courseID
-                                    )
-                                    .map((coursem: Course) => (
-                                        <option
-                                            key={coursem.courseID}
-                                            value={coursem.courseID}
-                                        >
-                                            {coursem.listing}
-                                        </option>
-                                    ))}
-                            </Form.Select>
-                            <Button onClick={() => addNewPreReq(newID)}>
-                                Add PreReq
-                            </Button>
-                            <Form.Select
-                                value={removeID}
-                                onChange={updateRemoveID}
-                            >
-                                {courses
-                                    .filter(
-                                        (coursef: Course) =>
-                                            coursef.courseID !== course.courseID
-                                    )
-                                    .map((coursem: Course) => (
-                                        <option
-                                            key={coursem.courseID}
-                                            value={coursem.courseID}
-                                        >
-                                            {coursem.listing}
-                                        </option>
-                                    ))}
-                            </Form.Select>
-                            <Button onClick={() => removePreReq(removeID)}>
-                                Remove PreReq
-                            </Button>
-                        </InputGroup>
-                        <div className="text-danger">
-                            {double && "Course already a PreReq"}
-                        </div>
-                        <div className="text-danger">
-                            {doubler && "Course not one of the PreReqs"}
-                        </div>
-                        <Form.Label>Edit Co-Requisites:</Form.Label>
-                        <InputGroup>
-                            <Form.Select
-                                value={newCoID}
-                                onChange={updateNewCoID}
-                            >
-                                {courses
-                                    .filter(
-                                        (coursef: Course) =>
-                                            coursef.courseID !== course.courseID
-                                    )
-                                    .map((coursem: Course) => (
-                                        <option
-                                            key={coursem.courseID}
-                                            value={coursem.courseID}
-                                        >
-                                            {coursem.listing}
-                                        </option>
-                                    ))}
-                            </Form.Select>
-                            <Button onClick={() => addNewCoReq(newCoID)}>
-                                Add CoReq
-                            </Button>
-                            <Form.Select
-                                value={removeCoID}
-                                onChange={updateRemoveCoID}
-                            >
-                                {courses
-                                    .filter(
-                                        (coursef: Course) =>
-                                            coursef.courseID !== course.courseID
-                                    )
-                                    .map((coursem: Course) => (
-                                        <option
-                                            key={coursem.courseID}
-                                            value={coursem.courseID}
-                                        >
-                                            {coursem.listing}
-                                        </option>
-                                    ))}
-                            </Form.Select>
-                            <Button onClick={() => removeCoReq(removeCoID)}>
-                                Remove CoReq
-                            </Button>
-                        </InputGroup>
-                        <div className="text-danger">
-                            {doubleCo && "Course already a CoReq"}
-                        </div>
-                        <div className="text-danger">
-                            {doubleCor && "Course not one of the CoReqs"}
-                        </div>
-                        <hr />
-                        <Button onClick={() => resetDefault(course.courseID)}>
-                            Reset Course to Default
-                        </Button>
-                    </Form>
+                        </Col>
+                    </Row>
                 )}
             </div>
         </span>
