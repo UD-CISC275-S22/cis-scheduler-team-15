@@ -3,8 +3,6 @@ import { Course } from "../Interfaces/course";
 import { useState } from "react";
 import { Accordion, Button, Form, InputGroup, Row, Col } from "react-bootstrap";
 import AllCourses from "../Data/course_list.json";
-import AccordionHeader from "react-bootstrap/esm/AccordionHeader";
-import AccordionBody from "react-bootstrap/esm/AccordionBody";
 //import university_requirements from "../Data/required_course_names.json";
 
 type ChangeEvent = React.ChangeEvent<
@@ -459,10 +457,10 @@ export function CourseListViewInfoEdit({
                             <div>Edit Degree Requirements:</div>
                             <Accordion>
                                 <Accordion.Item eventKey="0">
-                                    <AccordionHeader>
+                                    <Accordion.Header>
                                         Adjust University Requirement Satisfied:
-                                    </AccordionHeader>
-                                    <AccordionBody>
+                                    </Accordion.Header>
+                                    <Accordion.Body>
                                         {universtiyCourses.map(
                                             (req: string, index: number) => (
                                                 <Form.Check
@@ -477,13 +475,13 @@ export function CourseListViewInfoEdit({
                                                 ></Form.Check>
                                             )
                                         )}
-                                    </AccordionBody>
+                                    </Accordion.Body>
                                 </Accordion.Item>
                                 <Accordion.Item eventKey="1">
-                                    <AccordionHeader>
+                                    <Accordion.Header>
                                         Adjust College Requirement Satisfied:
-                                    </AccordionHeader>
-                                    <AccordionBody>
+                                    </Accordion.Header>
+                                    <Accordion.Body>
                                         {college_requirements.map(
                                             (req: string, index: number) => (
                                                 <Form.Check
@@ -498,13 +496,13 @@ export function CourseListViewInfoEdit({
                                                 ></Form.Check>
                                             )
                                         )}
-                                    </AccordionBody>
+                                    </Accordion.Body>
                                 </Accordion.Item>
                                 <Accordion.Item eventKey="2">
-                                    <AccordionHeader>
+                                    <Accordion.Header>
                                         Adjust Major Requirements Satisfied:
-                                    </AccordionHeader>
-                                    <AccordionBody>
+                                    </Accordion.Header>
+                                    <Accordion.Body>
                                         {major_requirements.map(
                                             (req: string, index: number) => (
                                                 <Form.Check
@@ -519,7 +517,7 @@ export function CourseListViewInfoEdit({
                                                 ></Form.Check>
                                             )
                                         )}
-                                    </AccordionBody>
+                                    </Accordion.Body>
                                 </Accordion.Item>
                             </Accordion>
                             <hr />
