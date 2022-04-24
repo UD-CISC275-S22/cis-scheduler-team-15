@@ -8,13 +8,14 @@ import { Button } from "react-bootstrap";
 export function CheckRequirements({ degree }: { degree: Degree }): JSX.Element {
     const [check, setCheck] = useState<boolean>(false);
     const reqs = [
-        "E110",
+        "ENGL110",
         "FYS",
         "DLE",
         "Multicultural",
         "CAH",
         "HCC",
         "SBS",
+        "SWR",
         "Science",
         "FL",
         "Breadth",
@@ -37,6 +38,7 @@ export function CheckRequirements({ degree }: { degree: Degree }): JSX.Element {
     const CAH = 6;
     const HCC = 6;
     const SBS = 6;
+    const SWR = 3;
     const SCIENCE = 4;
     const LANG = 12;
     const BREADTH = 25;
@@ -67,7 +69,7 @@ export function CheckRequirements({ degree }: { degree: Degree }): JSX.Element {
     function unmetRequirements(): number[] {
         //Courses
         const E110Courses = allCoursesInPlan.filter((course: Course): boolean =>
-            course.reqsSatisfied.includes("E110")
+            course.reqsSatisfied.includes("ENGL110")
         );
         const FYSCourses = allCoursesInPlan.filter((course: Course): boolean =>
             course.reqsSatisfied.includes("FYS")
@@ -86,6 +88,9 @@ export function CheckRequirements({ degree }: { degree: Degree }): JSX.Element {
         );
         const SBSCourses = allCoursesInPlan.filter((course: Course): boolean =>
             course.reqsSatisfied.includes("SBS")
+        );
+        const SWRCourses = allCoursesInPlan.filter((course: Course): boolean =>
+            course.reqsSatisfied.includes("SWR")
         );
         const ScienceCourses = allCoursesInPlan.filter(
             (course: Course): boolean =>
@@ -168,6 +173,10 @@ export function CheckRequirements({ degree }: { degree: Degree }): JSX.Element {
             (credits: number, course: Course) => credits + course.credits,
             0
         );
+        const SWRCredits = SWRCourses.reduce(
+            (credits: number, course: Course) => credits + course.credits,
+            0
+        );
         const LangCredits = LangCourses.reduce(
             (credits: number, course: Course) => credits + course.credits,
             0
@@ -229,6 +238,7 @@ export function CheckRequirements({ degree }: { degree: Degree }): JSX.Element {
             CAH - CAHCredits,
             HCC - HCCCredits,
             SBS - SBSCredits,
+            SWR - SWRCredits,
             SCIENCE - ScienceCredits,
             LANG - LangCredits,
             BREADTH - BreadthCredits,

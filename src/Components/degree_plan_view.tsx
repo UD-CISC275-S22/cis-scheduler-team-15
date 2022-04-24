@@ -5,7 +5,7 @@ import "../App.css";
 import { Row, Col, Button } from "react-bootstrap";
 import { SemesterViewHome } from "./SemesterViewHome";
 import { AddSemester } from "./add_semester";
-//import { CheckRequirements } from "./check_requirements";
+import { CheckRequirements } from "./check_requirements";
 import { Course } from "../Interfaces/course";
 
 export function DegreePlanView({
@@ -106,9 +106,9 @@ export function DegreePlanView({
                     </h2>
                 </div>
             </Row>
-            {/* <Row>
+            <Row>
                 <CheckRequirements degree={degree}></CheckRequirements>
-            </Row> */}
+            </Row>
             <Row>
                 <AddSemester
                     degree={degree}

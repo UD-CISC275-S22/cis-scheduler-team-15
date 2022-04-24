@@ -7,10 +7,6 @@ describe("Final Project Tests", () => {
     beforeEach(() => {
         render(<App />);
     });
-    test("renders the course name somewhere", () => {
-        const linkElement = screen.getAllByText(/CISC275/i);
-        expect(linkElement[0]).toBeInTheDocument();
-    });
 
     test("Insert and Remove a degree plan", () => {
         const addEmpty = screen.getByRole("button", {
