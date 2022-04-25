@@ -54,17 +54,17 @@
       at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22812:16)
       at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
 
-PASS src/App.test.tsx (8.629 s)
+PASS src/App.test.tsx (13.439 s)
   Final Project Tests
-    ✓ Insert and Remove a degree plan (884 ms)
-    ✓ Students can see a list of all the degree plans they have made (409 ms)
-    ✓ Students can see a list of degree requirements (230 ms)
-    ✓ Students can see a list of existing courses (329 ms)
-    ✓ Students can see a table that shows semesters and courses (283 ms)
-    ✓ Students can insert or remove a semester in a plan (477 ms)
-    ✓ Students can clear out all the existing courses in a semester (1080 ms)
-    ✓ Students can clear out individual courses in a semester (1129 ms)
-    ✓ Students can insert a course in a semester (990 ms)
+    ✓ Insert and Remove a degree plan (1380 ms)
+    ✓ Students can see a list of all the degree plans they have made (666 ms)
+    ✓ Students can see a list of degree requirements (369 ms)
+    ✓ Students can see a list of existing courses (545 ms)
+    ✓ Students can see a table that shows semesters and courses (448 ms)
+    ✓ Students can insert or remove a semester in a plan (734 ms)
+    ✓ Students can clear out all the existing courses in a semester (1798 ms)
+    ✓ Students can clear out individual courses in a semester (1819 ms)
+    ✓ Students can insert a course in a semester (1623 ms)
 
 ---------------------------------|---------|----------|---------|---------|----------------------------------------------------
 File                             | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                  
@@ -81,7 +81,7 @@ All files                        |   68.66 |     56.6 |   71.42 |    68.4 |
   course_list.tsx                |     100 |      100 |     100 |     100 |                                                    
   course_list_view.tsx           |     100 |      100 |     100 |     100 |                                                    
   course_list_view_info.tsx      |   85.71 |      100 |   77.77 |   85.71 | 46-54                                              
-  course_list_view_info_edit.tsx |    4.06 |        0 |    2.38 |     3.3 | 46-525                                             
+  course_list_view_info_edit.tsx |    4.06 |        0 |    2.38 |     3.3 | 47-526                                             
   course_state.tsx               |   66.66 |        0 |      50 |      60 | 14-17                                              
   degree_plan_view.tsx           |   84.21 |      100 |   83.33 |   83.33 | 42-45                                              
   degree_plans.tsx               |     100 |       75 |     100 |     100 | 17-46                                              
@@ -96,5 +96,5 @@ All files                        |   68.66 |     56.6 |   71.42 |    68.4 |
 Test Suites: 1 passed, 1 total
 Tests:       9 passed, 9 total
 Snapshots:   0 total
-Time:        9.228 s
+Time:        14.315 s
 Ran all test suites.
