@@ -2,7 +2,7 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import App from "./App";
 import userEvent from "@testing-library/user-event";
-import CourseList from "./Data/course_list.json";
+//import CourseList from "./Data/course_list.json";
 
 describe("Final Project Tests", () => {
     beforeEach(() => {
@@ -328,7 +328,7 @@ describe("Final Project Tests", () => {
     test("Students can clear out semesters in a plan", () => {});
 
     */
-   
+
     /*
     test("Students can establish that a course fulfills a degree requirement", () => {
     });
@@ -338,10 +338,10 @@ describe("Final Project Tests", () => {
 
     test("Students can override course's info, but also reset a course back to its default information", () => {
     });
-    */
+    
     test("Students can see a list of existing courses", () => {
         
     });
-
+    */
     //test("Students can edit the course code, course title, and credits of a course in the plan", () => {});
 });
