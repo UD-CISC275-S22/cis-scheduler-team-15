@@ -21,6 +21,7 @@ const universtiyCourses = [
     "SBS",
     "Science"
 ];
+//Change these to all acronyms?
 const college_requirements = ["FL", "SWR"];
 const major_requirements = [
     "CISC108",
