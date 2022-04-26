@@ -323,8 +323,32 @@ describe("Final Project Tests", () => {
         expect(text4).toBeVisible();
     });
 
+    test("Students can clear out semesters in a plan", () => {
+        const firstDefault = screen.queryByRole("button", {
+            name: /1: Default/i
+        });
+        firstDefault?.click();
+        const editPlan = screen.queryByRole("button", {
+            name: /Edit Plan/i
+        });
+        editPlan?.click();
+        let planCredits = screen.queryByText("Default Total Credits: 121");
+        expect(planCredits).toBeVisible();
+        const delFirst = screen.queryAllByRole("button", {
+            name: "Delete"
+        });
+        delFirst[0]?.click();
+        planCredits = screen.queryByText("Default Total Credits: 121");
+        expect(planCredits).toBeNull();
+        planCredits = screen.queryByText("Default Total Credits: 106");
+        expect(planCredits).toBeVisible();
+    });
+
     /*
-    test("Students can clear out semesters in a plan", () => {});
+    test("Students can visualize the unfilled requirements of a plan")
+
+
+    test("Semesters are Automatically sorted in a degree plan")
 
     */
 });
