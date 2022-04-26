@@ -345,13 +345,102 @@ describe("Final Project Tests", () => {
         expect(planCredits).toBeVisible();
     });
 
-    /*
-    test("Students can visualize the unfilled requirements of a plan")
+    test("Students can visualize the unfilled requirements of a plan", () => {
+        const firstDefault = screen.queryByRole("button", {
+            name: /1: Default/i
+        });
+        firstDefault?.click();
+        const editPlan = screen.queryByRole("button", {
+            name: /Edit Plan/i
+        });
+        editPlan?.click();
+        const checkReqs = screen.queryByRole("button", {
+            name: /Check Plan Requirements/i
+        });
+        checkReqs?.click();
+        let totalWarning = screen.queryByText(
+            /.*Warning: You are missing 3 credits to satisfy your total credits..*/
+        );
+        let CISC108Warning = screen.queryByText(
+            /.*Warning: You are missing 3 credits as part of the CISC108 requirement..*/
+        );
+        expect(totalWarning).toBeVisible();
+        expect(CISC108Warning).toBeNull();
+        const delFirst = screen.queryAllByRole("button", {
+            name: "Delete"
+        });
+        delFirst[0]?.click();
+        totalWarning = screen.queryByText(
+            /.*Warning: You are missing 3 credits to satisfy your total credits..*/
+        );
+        expect(totalWarning).toBeNull();
+        totalWarning = screen.queryByText(
+            /.*Warning: You are missing 18 credits to satisfy your total credits..*/
+        );
+        CISC108Warning = screen.queryByText(
+            /.*Warning: You are missing 3 credits as part of the CISC108 requirement..*/
+        );
+        expect(totalWarning).toBeVisible();
+        expect(CISC108Warning).toBeVisible();
+    });
 
-
-    test("Semesters are Automatically sorted in a degree plan")
-
-    */
+    test("Semesters are Automatically sorted in a degree plan", () => {
+        const firstDefault = screen.queryByRole("button", {
+            name: /1: Default/i
+        });
+        firstDefault?.click();
+        const editPlan = screen.queryByRole("button", {
+            name: /Edit Plan/i
+        });
+        editPlan?.click();
+        let text1 = screen.queryByText("Summer 2020");
+        let text2 = screen.queryByText("Fall 2020");
+        expect(text1).toBeNull();
+        expect(text2).not.toBeNull();
+        let delFirst = screen.queryAllByRole("button", {
+            name: "Delete"
+        });
+        delFirst[0]?.click();
+        text2 = screen.queryByText("Fall 2020");
+        expect(text2).toBeNull();
+        let addSemester = screen.queryByRole("button", {
+            name: /Add Semester/i
+        });
+        addSemester?.click();
+        let seasonButton = screen.getAllByRole("combobox");
+        userEvent.selectOptions(seasonButton[1], "2020");
+        let createSemester = screen.queryByRole("button", {
+            name: /Create Semester/i
+        });
+        createSemester?.click();
+        let closeModal = screen.queryByRole("closebutton");
+        closeModal?.click();
+        text2 = screen.queryByText("Fall 2020");
+        expect(text2).not.toBeNull();
+        addSemester = screen.queryByRole("button", {
+            name: /Add Semester/i
+        });
+        addSemester?.click();
+        seasonButton = screen.getAllByRole("combobox");
+        userEvent.selectOptions(seasonButton[0], "Summer");
+        userEvent.selectOptions(seasonButton[1], "2020");
+        createSemester = screen.queryByRole("button", {
+            name: /Create Semester/i
+        });
+        createSemester?.click();
+        closeModal = screen.queryByRole("closebutton");
+        closeModal?.click();
+        text1 = screen.queryByText("Summer 2020");
+        expect(text1).not.toBeNull();
+        delFirst = screen.queryAllByRole("button", {
+            name: "Delete"
+        });
+        delFirst[0]?.click();
+        text1 = screen.queryByText("Summer 2020");
+        text2 = screen.queryByText("Fall 2020");
+        expect(text1).toBeNull();
+        expect(text2).not.toBeNull();
+    });
 
     /*
     test("Students can establish that a course fulfills a degree requirement", () => {
