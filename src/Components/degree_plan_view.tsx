@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Degree } from "../Interfaces/degree";
 import { Semester } from "../Interfaces/semester";
 import "../App.css";
@@ -7,7 +7,6 @@ import { SemesterViewHome } from "./SemesterViewHome";
 import { AddSemester } from "./add_semester";
 import { CheckRequirements } from "./check_requirements";
 import { Course } from "../Interfaces/course";
-import { CheckSemester } from "./check_semester";
 import { ShowAllErrors } from "./show_all_errors";
 
 export function DegreePlanView({
@@ -54,13 +53,6 @@ export function DegreePlanView({
         update();
     }
 
-    /*useEffect(() => {
-        degree.semesters.map((semester: Semester) =>
-            CheckSemester({ courses, semester, degree, editDegree })
-        );
-        console.log("useEffect in degreePlanView runs");
-    }, []);
-    console.log(updateCount);*/
     return (
         <div hidden={hidden}>
             <br></br>

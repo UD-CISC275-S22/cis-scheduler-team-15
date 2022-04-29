@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-import { DegreeRequirementView } from "./degree_requirement_view";
 import "../App.css";
 import { Degree } from "../Interfaces/degree";
 import { Semester } from "../Interfaces/semester";

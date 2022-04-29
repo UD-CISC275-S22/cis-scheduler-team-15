@@ -1,34 +1,16 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Course } from "../Interfaces/course";
 import { Semester } from "../Interfaces/semester";
 import { Button } from "react-bootstrap";
 import "../App.css";
-import { Degree } from "../Interfaces/degree";
-//import { CourseList } from "./course_list";
 
 export function SemesterViewModal({
     semester,
-    deleteCourse,
-    degree,
-    editDegree,
-    checkSemester,
-    courses
+    deleteCourse
 }: {
     semester: Semester;
     deleteCourse: (index: number, semster: Semester) => void;
-    degree: Degree;
-    editDegree: (degreeID: number, newDegree: Degree) => void;
-    checkSemester: (
-        courses: Course[],
-        degree: Degree,
-        editDegree: (degreeID: number, newDegree: Degree) => void
-    ) => void;
-    courses: Course[];
 }): JSX.Element {
-    /*useEffect(() => {
-        checkSemester(courses, semester, degree, editDegree);
-        console.log("useEffect in semesterViewModal runs");
-    }, []);*/
     return (
         <div>
             <table key={semester.semesterID}>

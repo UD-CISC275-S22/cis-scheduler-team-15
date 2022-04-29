@@ -1,12 +1,8 @@
-import React, { useState } from "react";
-//import { Button, Form, Row, Col } from "react-bootstrap";
 import { Degree } from "../Interfaces/degree";
 import { Semester } from "../Interfaces/semester";
 import { Course } from "../Interfaces/course";
-import { Button } from "react-bootstrap";
-import { SemesterViewHome } from "./SemesterViewHome";
 
-export function CheckSemester({
+export function CheckSemesters({
     courses,
     degree,
     editDegree
@@ -156,7 +152,6 @@ export function CheckSemester({
         }
         return errorMessage;
     }
-    //note: make the map take care of a new list of semesters, editDegree outside
     const newSemesters = degree.semesters.map((semester: Semester) => {
         console.log(
             "checkSemester running on " +
@@ -181,98 +176,7 @@ export function CheckSemester({
         console.log("errors for this semester: ");
         console.log(semesterWithError.errors);
         return semesterWithError;
-        /*const newSemesters: Semester[] = [
-            ...degree.semesters.filter(
-                (existingSemester: Semester): boolean =>
-                    semester.semesterID !== existingSemester.semesterID
-            ),
-            semesterWithError
-        ];*/
     });
     const newDegree: Degree = { ...degree, semesters: newSemesters };
     editDegree(degree.degreeID, newDegree);
 }
-/*const [preReqSatisfied, setPreReqSatisfied] = useState<boolean>(true);
-    const [coReqSatisfied, setCoReqSatisfied] = useState<boolean>(true);
-    const [resultCoReqs, setResultCoReqs] = useState<string>(
-        resultCourse.coReqs
-            .map(
-                (id: number) =>
-                    courses.filter(
-                        (course: Course): boolean => course.courseID === id
-                    )[0].listing
-            )
-            .join(", ")
-    );
-    const [resultPreReqs, setResultPreReqs] = useState<string>(
-        resultCourse.preReqs
-            .map(
-                (id: number) =>
-                    courses.filter(
-                        (course: Course): boolean => course.courseID === id
-                    )[0].listing
-            )
-            .join(", ")
-    );
-
-
-
-    function checkCoReqs() {
-        insertCourse();
-        const resultCourse = courses.find(
-            (course: Course): boolean => course.courseID === resultID
-        );
-        if (typeof resultCourse !== "undefined") {
-            const coReqs = resultCourse.coReqs;
-            const semestersBefore = degree.semesters.filter(
-                (checkSemester: Semester): boolean =>
-                    checkSemesterBefore(checkSemester)
-            );
-            const allCourses = semestersBefore.reduce(
-                (allCourses: Course[], currentSemester: Semester) => [
-                    ...allCourses,
-                    ...currentSemester.courses
-                ],
-                []
-            );
-            const allCoursesWithCurrentSem = [
-                ...allCourses,
-                ...semester.courses
-            ];
-            const coReqsTaken = allCoursesWithCurrentSem.reduce(
-                (sum: number, currentCourse: Course) =>
-                    (sum += coReqs.includes(currentCourse.courseID) ? 1 : 0),
-                0
-            );
-
-            if (coReqsTaken === coReqs.length) {
-                setCoReqSatisfied(true);
-            } else {
-                setCoReqSatisfied(false);
-            }
-        }
-    }
-
-
-            setResultCoReqs(
-            currCourse.coReqs
-                .map(
-                    (id: number) =>
-                        courses.filter(
-                            (course: Course): boolean => course.courseID === id
-                        )[0].listing
-                )
-                .join(", ")
-        );
-        setResultPreReqs(
-            currCourse.preReqs
-                .map(
-                    (id: number) =>
-                        courses.filter(
-                            (course: Course): boolean => course.courseID === id
-                        )[0].listing
-                )
-                .join(", ")
-        );
-
-*/

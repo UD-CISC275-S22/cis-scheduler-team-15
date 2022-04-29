@@ -1,11 +1,10 @@
-import React, { useEffect, useState, Component } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Modal, Row, Col } from "react-bootstrap";
 import { Degree } from "../Interfaces/degree";
 import { Semester } from "../Interfaces/semester";
 import { Course } from "../Interfaces/course";
 import { SemesterViewModal } from "./SemesterViewModal";
 import { AddCourse } from "./add_course";
-import { CheckSemester } from "./check_semester";
 
 export function EditSemester({
     semester,
@@ -28,7 +27,6 @@ export function EditSemester({
     ) => void;
     updateEditCount: () => void;
 }): JSX.Element {
-    //const [currentSemester, editCurrentSemester] = useState<Semester>(semester);
     const [modal, setModal] = useState<boolean>(false);
 
     function replaceSemesterInDegree(newSemester: Semester) {
@@ -77,10 +75,6 @@ export function EditSemester({
         );
     }, [semester.courses]);
 
-    /*useEffect(() => {
-        checkSemester(courses, semester, degree, editDegree);
-        console.log("useEffect in editSemester runs [] dependency");
-    }, []);*/
     return (
         <div>
             <Button
@@ -128,10 +122,6 @@ export function EditSemester({
                     <SemesterViewModal
                         semester={semester}
                         deleteCourse={deleteCourse}
-                        degree={degree}
-                        editDegree={editDegree}
-                        checkSemester={checkSemester}
-                        courses={courses}
                     ></SemesterViewModal>
                     <div>
                         {semester.courses

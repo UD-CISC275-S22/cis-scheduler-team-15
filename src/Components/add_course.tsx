@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Button, Form, Row, Col } from "react-bootstrap";
 import { Degree } from "../Interfaces/degree";
 import { Semester } from "../Interfaces/semester";
@@ -9,7 +9,6 @@ export function AddCourse({
     semester,
     degree,
     editDegree,
-    checkSemester,
     updateEditCount
 }: {
     courses: Course[];
@@ -92,12 +91,6 @@ export function AddCourse({
             course.listing.includes(search.toUpperCase())
         );
     }
-    /*useEffect(() => {
-        degree.semesters.map((semester: Semester) =>
-            checkSemester(courses, semester, degree, editDegree)
-        );
-        console.log("useEffect in addCourse runs");
-    }, []);*/
 
     return (
         <div>
