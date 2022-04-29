@@ -14,6 +14,7 @@ export function CourseList({
 }): JSX.Element {
     const [visible, setVisible] = useState<boolean>(false);
     //the state for courses is now an input because app.tsx needs to pass it to degree plans
+    const length = courses.length;
 
     return (
         <div>
@@ -25,7 +26,8 @@ export function CourseList({
                     <Col>
                         {courses
                             .filter(
-                                (course: Course, index: number) => index < 14
+                                (course: Course, index: number) =>
+                                    index < length / 3
                             )
                             .map((course: Course) => (
                                 <div key={course.courseID}>
@@ -41,7 +43,8 @@ export function CourseList({
                         {courses
                             .filter(
                                 (course: Course, index: number) =>
-                                    index > 14 && index < 30
+                                    index >= length / 3 &&
+                                    index < (2 * length) / 3
                             )
                             .map((course: Course) => (
                                 <div key={course.courseID}>
@@ -56,7 +59,8 @@ export function CourseList({
                     <Col>
                         {courses
                             .filter(
-                                (course: Course, index: number) => index > 30
+                                (course: Course, index: number) =>
+                                    index >= (2 * length) / 3
                             )
                             .map((course: Course) => (
                                 <div key={course.courseID}>

@@ -82,6 +82,12 @@ h6 {
     color: #61dafb;
 }
 
+.newLine {
+    margin-left: 33%;
+    text-align: left;
+    white-space: pre;
+}
+
 .btn-circle.btn-sm {
     width: 20px;
     height: 24px;

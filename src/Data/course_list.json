@@ -164,8 +164,8 @@
         "courseID": 17,
         "listing": "ENGL110",
         "title": "Seminar in Composition",
-        "preReqs": [3],
-        "coReqs": [13],
+        "preReqs": [],
+        "coReqs": [],
         "offered": ["Fall", "Winter", "Spring", "Summer"],
         "credits": 3,
         "reqsSatisfied": ["ENGL110"]

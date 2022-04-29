@@ -5,6 +5,7 @@ import "../App.css";
 import { Row, Col, Button } from "react-bootstrap";
 import { SemesterViewHome } from "./SemesterViewHome";
 import { AddSemester } from "./add_semester";
+import { CheckRequirements } from "./check_requirements";
 import { Course } from "../Interfaces/course";
 import { CheckSemester } from "./check_semester";
 
@@ -118,6 +119,9 @@ export function DegreePlanView({
                         {degree.name} Total Credits: {credits}
                     </h2>
                 </div>
+            </Row>
+            <Row>
+                <CheckRequirements degree={degree}></CheckRequirements>
             </Row>
             <Row>
                 <AddSemester

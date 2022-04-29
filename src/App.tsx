@@ -1,7 +1,5 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
-//import CourseList from "./Data/course_list.json";
-//import { Degree } from "./Interfaces/degree";
 import "./App.css";
 import { CourseState } from "./Components/course_state";
 
