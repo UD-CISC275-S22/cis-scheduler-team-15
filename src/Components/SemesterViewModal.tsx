@@ -1,16 +1,34 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Course } from "../Interfaces/course";
 import { Semester } from "../Interfaces/semester";
 import { Button } from "react-bootstrap";
 import "../App.css";
+import { Degree } from "../Interfaces/degree";
+//import { CourseList } from "./course_list";
 
 export function SemesterViewModal({
     semester,
-    deleteCourse
+    deleteCourse,
+    degree,
+    editDegree,
+    checkSemester,
+    courses
 }: {
     semester: Semester;
-    deleteCourse: (course: Course, semster: Semester) => void;
+    deleteCourse: (index: number, semster: Semester) => void;
+    degree: Degree;
+    editDegree: (degreeID: number, newDegree: Degree) => void;
+    checkSemester: (
+        courses: Course[],
+        degree: Degree,
+        editDegree: (degreeID: number, newDegree: Degree) => void
+    ) => void;
+    courses: Course[];
 }): JSX.Element {
+    /*useEffect(() => {
+        checkSemester(courses, semester, degree, editDegree);
+        console.log("useEffect in semesterViewModal runs");
+    }, []);*/
     return (
         <div>
             <table key={semester.semesterID}>
@@ -25,7 +43,7 @@ export function SemesterViewModal({
                         <b>Credits</b>
                     </td>
                 </tr>
-                {semester.courses.map((course: Course) => (
+                {semester.courses.map((course: Course, index) => (
                     <tr key={course.courseID}>
                         <td>{course.listing}</td>
                         <td>{course.title}</td>
@@ -37,7 +55,7 @@ export function SemesterViewModal({
                                 data-toggle="tooltip"
                                 title={"Click to delete " + course.listing}
                                 variant="danger"
-                                onClick={() => deleteCourse(course, semester)}
+                                onClick={() => deleteCourse(index, semester)}
                             >
                                 x
                             </Button>

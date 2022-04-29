@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Course } from "../Interfaces/course";
 import { Semester } from "../Interfaces/semester";
 import { Degree } from "../Interfaces/degree";
 import "../App.css";
 import { Button } from "react-bootstrap";
 import { EditSemester } from "./edit_semester";
+import { CheckSemester } from "./check_semester";
 
 export function SemesterViewHome({
     semester,
@@ -12,7 +13,8 @@ export function SemesterViewHome({
     deleteSemester,
     degree,
     editDegree,
-    courses
+    courses,
+    updateEditCount
 }: {
     semester: Semester;
     editMode: boolean;
@@ -20,7 +22,12 @@ export function SemesterViewHome({
     degree: Degree;
     editDegree: (degreeID: number, newDegree: Degree) => void;
     courses: Course[];
+    updateEditCount: () => void;
 }): JSX.Element {
+    /*useEffect(() => {
+        CheckSemester({ courses, semester, degree, editDegree });
+        console.log("useEffect in semesterViewHome runs");
+    }, []);*/
     return (
         <div>
             <table key={semester.semesterID}>
@@ -37,6 +44,15 @@ export function SemesterViewHome({
                             degree={degree}
                             editDegree={editDegree}
                             courses={courses}
+                            checkSemester={() =>
+                                CheckSemester({
+                                    courses,
+                                    //semester,
+                                    degree,
+                                    editDegree
+                                })
+                            }
+                            updateEditCount={updateEditCount}
                         ></EditSemester>
                     </th>
                     <th>

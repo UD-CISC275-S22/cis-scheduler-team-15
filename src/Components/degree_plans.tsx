@@ -75,7 +75,6 @@ export function DegreePlans({ courses }: { courses: Course[] }): JSX.Element {
             )
         );
     }
-
     return (
         <Stack gap={2}>
             <Row>
