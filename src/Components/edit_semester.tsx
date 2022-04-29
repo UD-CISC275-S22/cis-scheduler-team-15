@@ -1,24 +1,32 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Modal, Row, Col } from "react-bootstrap";
 import { Degree } from "../Interfaces/degree";
 import { Semester } from "../Interfaces/semester";
 import { Course } from "../Interfaces/course";
 import { SemesterViewModal } from "./SemesterViewModal";
 import { AddCourse } from "./add_course";
+
 export function EditSemester({
     semester,
     editMode,
     degree,
     editDegree,
-    courses
+    courses,
+    checkSemester,
+    updateEditCount
 }: {
     semester: Semester;
     editMode: boolean;
     degree: Degree;
     editDegree: (degreeID: number, newDegree: Degree) => void;
     courses: Course[];
+    checkSemester: (
+        courses: Course[],
+        degree: Degree,
+        editDegree: (degreeID: number, newDegree: Degree) => void
+    ) => void;
+    updateEditCount: () => void;
 }): JSX.Element {
-    //const [currentSemester, editCurrentSemester] = useState<Semester>(semester);
     const [modal, setModal] = useState<boolean>(false);
 
     function replaceSemesterInDegree(newSemester: Semester) {
@@ -42,12 +50,14 @@ export function EditSemester({
             errors: []
         };
         replaceSemesterInDegree(newSemester);
+        updateEditCount();
     }
 
-    function deleteCourse(removeCourse: Course, semester: Semester) {
-        const newCourses = semester.courses.filter(
-            (course: Course): boolean => removeCourse !== course
-        );
+    function deleteCourse(index: number, semester: Semester) {
+        const newCourses = [
+            ...semester.courses.slice(0, index),
+            ...semester.courses.slice(index + 1)
+        ];
         const newSemester: Semester = {
             semesterID: semester.semesterID,
             season: semester.season,
@@ -56,7 +66,15 @@ export function EditSemester({
             errors: Array(newCourses.length).fill("")
         };
         replaceSemesterInDegree(newSemester);
+        updateEditCount();
     }
+    useEffect(() => {
+        checkSemester(courses, degree, editDegree);
+        console.log(
+            "useEffect in editSemester runs with semester.courses dependency"
+        );
+    }, [semester.courses]);
+
     return (
         <div>
             <Button
@@ -86,6 +104,8 @@ export function EditSemester({
                             semester={semester}
                             degree={degree}
                             editDegree={editDegree}
+                            checkSemester={checkSemester}
+                            updateEditCount={updateEditCount}
                         ></AddCourse>
                     </Row>
                     <Row className="Align-right">
@@ -103,6 +123,25 @@ export function EditSemester({
                         semester={semester}
                         deleteCourse={deleteCourse}
                     ></SemesterViewModal>
+                    <div>
+                        {semester.courses
+                            .filter(
+                                (course: Course, index: number) =>
+                                    semester.errors[index] !== ""
+                            )
+                            .map((course: Course, index: number) => (
+                                <p key={index} className="line-break">
+                                    <span>
+                                        {course.listing}:{" "}
+                                        {
+                                            semester.errors.filter(
+                                                (error: string) => error !== ""
+                                            )[index]
+                                        }
+                                    </span>
+                                </p>
+                            ))}
+                    </div>
                 </Modal.Body>
             </Modal>
         </div>

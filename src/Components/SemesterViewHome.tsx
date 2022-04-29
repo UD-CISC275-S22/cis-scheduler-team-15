@@ -5,6 +5,7 @@ import { Degree } from "../Interfaces/degree";
 import "../App.css";
 import { Button } from "react-bootstrap";
 import { EditSemester } from "./edit_semester";
+import { CheckSemesters } from "./check_semesters";
 
 export function SemesterViewHome({
     semester,
@@ -12,7 +13,8 @@ export function SemesterViewHome({
     deleteSemester,
     degree,
     editDegree,
-    courses
+    courses,
+    updateEditCount
 }: {
     semester: Semester;
     editMode: boolean;
@@ -20,6 +22,7 @@ export function SemesterViewHome({
     degree: Degree;
     editDegree: (degreeID: number, newDegree: Degree) => void;
     courses: Course[];
+    updateEditCount: () => void;
 }): JSX.Element {
     return (
         <div>
@@ -37,6 +40,14 @@ export function SemesterViewHome({
                             degree={degree}
                             editDegree={editDegree}
                             courses={courses}
+                            checkSemester={() =>
+                                CheckSemesters({
+                                    courses,
+                                    degree,
+                                    editDegree
+                                })
+                            }
+                            updateEditCount={updateEditCount}
                         ></EditSemester>
                     </th>
                     <th>

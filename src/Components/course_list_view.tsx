@@ -1,5 +1,4 @@
 import * as React from "react";
-//import { useState } from "react";
 import { Container } from "react-bootstrap";
 import { Course } from "../Interfaces/course";
 import { CourseListViewInfo } from "./course_list_view_info";

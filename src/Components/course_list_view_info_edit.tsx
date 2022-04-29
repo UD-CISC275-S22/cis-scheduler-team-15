@@ -3,7 +3,6 @@ import { Course } from "../Interfaces/course";
 import { useState } from "react";
 import { Accordion, Button, Form, InputGroup, Row, Col } from "react-bootstrap";
 import AllCourses from "../Data/course_list.json";
-//import university_requirements from "../Data/required_course_names.json";
 
 type ChangeEvent = React.ChangeEvent<
     HTMLTextAreaElement | HTMLInputElement | HTMLSelectElement

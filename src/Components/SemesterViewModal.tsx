@@ -9,7 +9,7 @@ export function SemesterViewModal({
     deleteCourse
 }: {
     semester: Semester;
-    deleteCourse: (course: Course, semster: Semester) => void;
+    deleteCourse: (index: number, semster: Semester) => void;
 }): JSX.Element {
     return (
         <div>
@@ -25,7 +25,7 @@ export function SemesterViewModal({
                         <b>Credits</b>
                     </td>
                 </tr>
-                {semester.courses.map((course: Course) => (
+                {semester.courses.map((course: Course, index) => (
                     <tr key={course.courseID}>
                         <td>{course.listing}</td>
                         <td>{course.title}</td>
@@ -37,7 +37,7 @@ export function SemesterViewModal({
                                 data-toggle="tooltip"
                                 title={"Click to delete " + course.listing}
                                 variant="danger"
-                                onClick={() => deleteCourse(course, semester)}
+                                onClick={() => deleteCourse(index, semester)}
                             >
                                 x
                             </Button>
