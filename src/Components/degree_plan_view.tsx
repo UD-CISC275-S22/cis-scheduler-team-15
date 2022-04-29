@@ -8,6 +8,7 @@ import { AddSemester } from "./add_semester";
 import { CheckRequirements } from "./check_requirements";
 import { Course } from "../Interfaces/course";
 import { CheckSemester } from "./check_semester";
+import { ShowAllErrors } from "./show_all_errors";
 
 export function DegreePlanView({
     degree,
@@ -121,7 +122,12 @@ export function DegreePlanView({
                 </div>
             </Row>
             <Row>
-                <CheckRequirements degree={degree}></CheckRequirements>
+                <Col>
+                    <CheckRequirements degree={degree}></CheckRequirements>
+                </Col>
+                <Col>
+                    <ShowAllErrors degree={degree}></ShowAllErrors>
+                </Col>
             </Row>
             <Row>
                 <AddSemester
