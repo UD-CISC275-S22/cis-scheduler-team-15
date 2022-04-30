@@ -2,11 +2,18 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import App from "./App";
 import userEvent from "@testing-library/user-event";
-//import CourseList from "./Data/course_list.json";
+import AllCourses from "./Data/course_list.json";
+import { Course } from "./Interfaces/course";
+
+const COURSES = AllCourses.map((course): Course => ({ ...course }));
 
 describe("Final Project Tests", () => {
     beforeEach(() => {
         render(<App />);
+    });
+    test("renders the course name somewhere", () => {
+        const linkElement = screen.getAllByText(/CISC275/i);
+        expect(linkElement[0]).toBeInTheDocument();
     });
 
     test("Insert and Remove a degree plan", () => {
@@ -245,14 +252,14 @@ describe("Final Project Tests", () => {
         editSemesterButtons[1].click();
 
         let allButtons = screen.queryAllByRole("button");
-        const numButtons = allButtons.length;
+        expect(allButtons.length).toBe(32);
 
         const deleteButton = screen.queryAllByRole("button", {
             name: /Click to delete/i
         })[0];
         deleteButton.click();
         allButtons = screen.queryAllByRole("button");
-        expect(allButtons.length).toBe(numButtons - 1);
+        expect(allButtons.length).toBe(31);
     });
 
     test("Students can insert a course in a semester", () => {
@@ -324,137 +331,170 @@ describe("Final Project Tests", () => {
         expect(text4).toBeVisible();
     });
 
-    test("Students can clear out semesters in a plan", () => {
-        const firstDefault = screen.queryByRole("button", {
-            name: /1: Default/i
-        });
-        firstDefault?.click();
-        const editPlan = screen.queryByRole("button", {
-            name: /Edit Plan/i
-        });
-        editPlan?.click();
-        let planCredits = screen.queryByText("Default Total Credits: 121");
-        expect(planCredits).toBeVisible();
-        const delFirst = screen.queryAllByRole("button", {
-            name: "Delete"
-        });
-        delFirst[0]?.click();
-        planCredits = screen.queryByText("Default Total Credits: 121");
-        expect(planCredits).toBeNull();
-        planCredits = screen.queryByText("Default Total Credits: 106");
-        expect(planCredits).toBeVisible();
-    });
-
-    test("Students can visualize the unfilled requirements of a plan", () => {
-        const firstDefault = screen.queryByRole("button", {
-            name: /1: Default/i
-        });
-        firstDefault?.click();
-        const editPlan = screen.queryByRole("button", {
-            name: /Edit Plan/i
-        });
-        editPlan?.click();
-        const checkReqs = screen.queryByRole("button", {
-            name: /Check Plan Requirements/i
-        });
-        checkReqs?.click();
-        let totalWarning = screen.queryByText(
-            /.*Warning: You are missing 3 credits to satisfy your total credits..*/
-        );
-        let CISC108Warning = screen.queryByText(
-            /.*Warning: You are missing 3 credits as part of the CISC108 requirement..*/
-        );
-        expect(totalWarning).toBeVisible();
-        expect(CISC108Warning).toBeNull();
-        const delFirst = screen.queryAllByRole("button", {
-            name: "Delete"
-        });
-        delFirst[0]?.click();
-        totalWarning = screen.queryByText(
-            /.*Warning: You are missing 3 credits to satisfy your total credits..*/
-        );
-        expect(totalWarning).toBeNull();
-        totalWarning = screen.queryByText(
-            /.*Warning: You are missing 18 credits to satisfy your total credits..*/
-        );
-        CISC108Warning = screen.queryByText(
-            /.*Warning: You are missing 3 credits as part of the CISC108 requirement..*/
-        );
-        expect(totalWarning).toBeVisible();
-        expect(CISC108Warning).toBeVisible();
-    });
-
-    test("Semesters are Automatically sorted in a degree plan", () => {
-        const firstDefault = screen.queryByRole("button", {
-            name: /1: Default/i
-        });
-        firstDefault?.click();
-        const editPlan = screen.queryByRole("button", {
-            name: /Edit Plan/i
-        });
-        editPlan?.click();
-        let text1 = screen.queryByText("Summer 2020");
-        let text2 = screen.queryByText("Fall 2020");
-        expect(text1).toBeNull();
-        expect(text2).not.toBeNull();
-        let delFirst = screen.queryAllByRole("button", {
-            name: "Delete"
-        });
-        delFirst[0]?.click();
-        text2 = screen.queryByText("Fall 2020");
-        expect(text2).toBeNull();
-        let addSemester = screen.queryByRole("button", {
-            name: /Add Semester/i
-        });
-        addSemester?.click();
-        let seasonButton = screen.getAllByRole("combobox");
-        userEvent.selectOptions(seasonButton[1], "2020");
-        let createSemester = screen.queryByRole("button", {
-            name: /Create Semester/i
-        });
-        createSemester?.click();
-        let closeModal = screen.queryByRole("closebutton");
-        closeModal?.click();
-        text2 = screen.queryByText("Fall 2020");
-        expect(text2).not.toBeNull();
-        addSemester = screen.queryByRole("button", {
-            name: /Add Semester/i
-        });
-        addSemester?.click();
-        seasonButton = screen.getAllByRole("combobox");
-        userEvent.selectOptions(seasonButton[0], "Summer");
-        userEvent.selectOptions(seasonButton[1], "2020");
-        createSemester = screen.queryByRole("button", {
-            name: /Create Semester/i
-        });
-        createSemester?.click();
-        closeModal = screen.queryByRole("closebutton");
-        closeModal?.click();
-        text1 = screen.queryByText("Summer 2020");
-        expect(text1).not.toBeNull();
-        delFirst = screen.queryAllByRole("button", {
-            name: "Delete"
-        });
-        delFirst[0]?.click();
-        text1 = screen.queryByText("Summer 2020");
-        text2 = screen.queryByText("Fall 2020");
-        expect(text1).toBeNull();
-        expect(text2).not.toBeNull();
-    });
-
     /*
+    test("Students can clear out semesters in a plan", () => {});
+
+    */
+
+    /*Mike's Tests
     test("Students can establish that a course fulfills a degree requirement", () => {
     });
 
     test("Students can establish that a course meets another course's prerequisite", () => {
     });
 
+    test("Students can establish that a course meets another course's corequisite", () => {
+    });
+
+    /*
+    //Ask about the below test
     test("Students can override course's info, but also reset a course back to its default information", () => {
     });
-    
-    test("Students can see a list of existing courses", () => {
-        
+    */
+
+    /*
+    test("Students can reset course's info back to default", () => {
+        const showHides = screen.getAllByRole("button", {
+            name: /Show/i
+        });
+        showHides[1].click();
+        const infoButtons = screen.queryAllByRole("button", {
+            name: / i/i
+        });
+
+        infoButtons[0].click();
+        const editButton = screen.getAllByRole("button", {
+            name: /Edit/i
+        });
+        editButton[0].click();
+
+        const listingBox = screen.getByTestId("edit-listing");
+        userEvent.type(listingBox, "CISC118");
+        const listingButton = screen.getByRole("button", {
+            name: /Update Listing/i
+        });
+        listingButton.click();
+
+        const titleBox = screen.getByTestId("edit-title");
+        userEvent.type(titleBox, "Intro to Computers");
+        const titleButton = screen.getByRole("button", {
+            name: /Update Title/i
+        });
+        titleButton.click();
+
+        const creditBox = screen.getByTestId("edit-credits");
+        userEvent.type(creditBox, "6");
+        const creditButton = screen.getByRole("button", {
+            name: /Update Credits/i
+        });
+        creditButton.click();
     });
     */
-    //test("Students can edit the course code, course title, and credits of a course in the plan", () => {});
+    test("Students can see a list of existing courses", () => {
+        const showHides = screen.getAllByRole("button", {
+            name: /Show/i
+        });
+        showHides[1].click();
+
+        const infoButtons = screen.queryAllByRole("button", {
+            name: / i/i
+        });
+        expect(infoButtons.length).toBe(45);
+    });
+
+    test("Students can edit the course code", () => {
+        const showHides = screen.getAllByRole("button", {
+            name: /Show/i
+        });
+        showHides[1].click();
+
+        const infoButtons = screen.queryAllByRole("button", {
+            name: / i/i
+        });
+
+        infoButtons[0].click();
+        const editButton = screen.getAllByRole("button", {
+            name: /Edit/i
+        });
+        editButton[0].click();
+        const listingBox = screen.getByTestId("edit-listing");
+        userEvent.type(listingBox, "CISC118");
+        const listingButton = screen.getByRole("button", {
+            name: /Update Listing/i
+        });
+        listingButton.click();
+        const hideButton = screen.getAllByRole("button", {
+            name: /Hide/i
+        });
+        hideButton[0].click();
+
+        const text = screen.queryByText("CISC118");
+        const text1 = screen.queryAllByText(COURSES[0].listing);
+        expect(text1[0]).not.toBeVisible();
+        expect(text).toBeVisible;
+    });
+
+    test("Student can edit the course title ", () => {
+        const showHides = screen.getAllByRole("button", {
+            name: /Show/i
+        });
+        showHides[1].click();
+
+        const infoButtons = screen.queryAllByRole("button", {
+            name: / i/i
+        });
+
+        infoButtons[0].click();
+        const editButton = screen.getAllByRole("button", {
+            name: /Edit/i
+        });
+        editButton[0].click();
+        const titleBox = screen.getByTestId("edit-title");
+        userEvent.type(titleBox, "Intro to Computers");
+        const titleButton = screen.getByRole("button", {
+            name: /Update Title/i
+        });
+        titleButton.click();
+        const hideButton = screen.getAllByRole("button", {
+            name: /Hide/i
+        });
+        hideButton[0].click();
+
+        const text = screen.queryByText("Intro to Computers");
+        const text1 = screen.queryAllByText(COURSES[0].title);
+        expect(text1[0]).not.toBeVisible();
+        expect(text).toBeVisible;
+    });
+
+    test("Student can edit credits of a course", () => {
+        const showHides = screen.getAllByRole("button", {
+            name: /Show/i
+        });
+        showHides[1].click();
+
+        const infoButtons = screen.queryAllByRole("button", {
+            name: / i/i
+        });
+
+        infoButtons[0].click();
+        const editButton = screen.getAllByRole("button", {
+            name: /Edit/i
+        });
+        editButton[0].click();
+        const creditBox = screen.getByTestId("edit-credits");
+        userEvent.type(creditBox, "6");
+        const creditButton = screen.getByRole("button", {
+            name: /Update Credits/i
+        });
+        creditButton.click();
+        const hideButton = screen.getAllByRole("button", {
+            name: /Hide/i
+        });
+        hideButton[0].click();
+
+        const text = screen.queryByText("6");
+        const text1 = screen.queryAllByText(COURSES[0].credits);
+        expect(text1[0]).not.toBeVisible();
+        expect(text).toBeVisible;
+    });
 });

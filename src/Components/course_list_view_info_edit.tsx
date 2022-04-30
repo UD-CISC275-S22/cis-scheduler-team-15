@@ -277,6 +277,7 @@ export function CourseListViewInfoEdit({
                                 </Form.Label>
                                 <InputGroup>
                                     <Form.Control
+                                        data-testid={"edit-credits"}
                                         type="number"
                                         placeholder="Enter number of credit(s)"
                                         value={creditse}
@@ -300,6 +301,7 @@ export function CourseListViewInfoEdit({
                                 </Form.Label>
                                 <InputGroup>
                                     <Form.Control
+                                        data-testid={"edit-title"}
                                         placeholder="Enter new course title"
                                         value={titles}
                                         onChange={updateTitle}
@@ -318,6 +320,7 @@ export function CourseListViewInfoEdit({
                                 <Form.Label>Edit Course Listing:</Form.Label>
                                 <InputGroup>
                                     <Form.Control
+                                        data-testid={"edit-listing"}
                                         placeholder="Enter new listing"
                                         value={listings}
                                         onChange={updateListing}
@@ -336,6 +339,7 @@ export function CourseListViewInfoEdit({
                                 <Form.Label>Edit Pre-Requisites:</Form.Label>
                                 <InputGroup>
                                     <Form.Select
+                                        data-testid={"edit-add-preReq"}
                                         value={newID}
                                         onChange={updateNewID}
                                     >
@@ -360,6 +364,7 @@ export function CourseListViewInfoEdit({
                                 </InputGroup>
                                 <InputGroup>
                                     <Form.Select
+                                        data-testid={"edit-remove-preReq"}
                                         value={removeID}
                                         onChange={updateRemoveID}
                                     >
@@ -393,6 +398,7 @@ export function CourseListViewInfoEdit({
                                 <Form.Label>Edit Co-Requisites:</Form.Label>
                                 <InputGroup>
                                     <Form.Select
+                                        data-testid={"edit-add-coReq"}
                                         value={newCoID}
                                         onChange={updateNewCoID}
                                     >
@@ -419,6 +425,7 @@ export function CourseListViewInfoEdit({
                                 </InputGroup>
                                 <InputGroup>
                                     <Form.Select
+                                        data-testid={"edit-remove-preReq"}
                                         value={removeCoID}
                                         onChange={updateRemoveCoID}
                                     >
