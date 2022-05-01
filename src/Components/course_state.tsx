@@ -5,11 +5,19 @@ import { Course } from "../Interfaces/course";
 import AllCourses from "../Data/course_list.json";
 import { useState } from "react";
 import React from "react";
+import { Button, Stack, Row } from "react-bootstrap";
 
 const COURSES = AllCourses.map((course): Course => ({ ...course }));
+const saveCoursesKey = "COURSE-DATA";
 
 export function CourseState(): JSX.Element {
-    const [courses, setCourses] = useState<Course[]>(COURSES); //had to move this state from course_list to here because DegreePlans needs it
+    let courseInput = COURSES;
+    const previousData = localStorage.getItem(saveCoursesKey);
+    if (previousData !== null) {
+        courseInput = JSON.parse(previousData);
+    }
+    const [courses, setCourses] = useState<Course[]>(courseInput); //had to move this state from course_list to here because DegreePlans needs it
+
     function editCourses(courseID: number, editedCourse: Course) {
         setCourses(
             courses.map(
@@ -18,21 +26,48 @@ export function CourseState(): JSX.Element {
             )
         );
     }
+    function saveData() {
+        localStorage.setItem(saveCoursesKey, JSON.stringify(courses));
+    }
+    function revert() {
+        localStorage.setItem(saveCoursesKey, JSON.stringify(COURSES));
+    }
+
     return (
         <div>
             <hr></hr>
-            <h3>Degree Plans</h3>
-            <DegreePlans courses={courses}></DegreePlans>
-            <hr></hr>
-            <h3>Degree Requirements</h3>
-            <DegreeRequirements></DegreeRequirements>
-            <hr></hr>
-            <h3>Course List</h3>
-            <CourseList
-                courses={courses}
-                editCourses={editCourses}
-            ></CourseList>
-            <hr></hr>
+            <Stack gap={2}>
+                <Row>
+                    <h3>Degree Plans</h3>
+                    <DegreePlans courses={courses}></DegreePlans>
+                </Row>
+                <Row>
+                    <hr></hr>
+                    <h3>Degree Requirements</h3>
+                    <DegreeRequirements></DegreeRequirements>
+                </Row>
+                <Row>
+                    <hr></hr>
+                    <h3>Course List</h3>
+                    <div>
+                        <span>
+                            <Button onClick={saveData}>Save Course List</Button>
+                        </span>
+                        <span>
+                            <Button onClick={revert}>
+                                Default Course List
+                            </Button>
+                        </span>
+                    </div>
+                </Row>
+                <Row>
+                    <CourseList
+                        courses={courses}
+                        editCourses={editCourses}
+                    ></CourseList>
+                </Row>
+                <hr></hr>
+            </Stack>
         </div>
     );
 }
