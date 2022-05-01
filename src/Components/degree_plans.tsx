@@ -7,10 +7,23 @@ import { Course } from "../Interfaces/course";
 import { Semester } from "../Interfaces/semester";
 
 const DEGREEPLANSTART = PlanData.map((degree): Degree => ({ ...degree }));
+const saveDegreesKey = "DEGREE-DATA";
 
 export function DegreePlans({ courses }: { courses: Course[] }): JSX.Element {
-    const [degreePlans, setDegreePlans] = useState<Degree[]>(DEGREEPLANSTART);
+    let degreeInput = DEGREEPLANSTART;
+    const previousData = localStorage.getItem(saveDegreesKey);
+    if (previousData !== null) {
+        degreeInput = JSON.parse(previousData);
+    }
+    const [degreePlans, setDegreePlans] = useState<Degree[]>(degreeInput);
     const [currentDegreePlanID, setCurrentDegreePlanID] = useState<number>(0);
+
+    function saveData() {
+        localStorage.setItem(saveDegreesKey, JSON.stringify(degreePlans));
+    }
+    function revert() {
+        localStorage.setItem(saveDegreesKey, JSON.stringify(DEGREEPLANSTART));
+    }
 
     function addEmptyDegreePlan(): void {
         const IDList = degreePlans.map((degree: Degree) => degree.degreeID);
@@ -77,6 +90,16 @@ export function DegreePlans({ courses }: { courses: Course[] }): JSX.Element {
     }
     return (
         <Stack gap={2}>
+            <Row>
+                <div>
+                    <span>
+                        <Button onClick={saveData}>Save Degree Plans</Button>
+                    </span>
+                    <span>
+                        <Button onClick={revert}>Default Degree Plans</Button>
+                    </span>
+                </div>
+            </Row>
             <Row>
                 <Col>
                     <Button onClick={addEmptyDegreePlan}>Add Empty plan</Button>
