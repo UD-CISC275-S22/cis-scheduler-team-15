@@ -40,6 +40,7 @@ export function CourseListViewInfo({
         <span>
             <Button
                 className="btn btn-secondary btn-circle btn-sm"
+                data-testid={"info-button"}
                 data-bs-toggle="modal"
                 data-toggle="tooltip"
                 title={"Click for more info on " + course.listing}
