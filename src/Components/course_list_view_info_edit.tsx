@@ -339,7 +339,7 @@ export function CourseListViewInfoEdit({
                                 <Form.Label>Edit Pre-Requisites:</Form.Label>
                                 <InputGroup>
                                     <Form.Select
-                                        data-testid={"edit-add-preReq"}
+                                        //data-testid={"edit-add-preReq"}
                                         value={newID}
                                         onChange={updateNewID}
                                     >
@@ -353,6 +353,7 @@ export function CourseListViewInfoEdit({
                                                 <option
                                                     key={coursem.courseID}
                                                     value={coursem.courseID}
+                                                    data-testid="add-preReq"
                                                 >
                                                     {coursem.listing}
                                                 </option>
@@ -378,6 +379,7 @@ export function CourseListViewInfoEdit({
                                                 <option
                                                     key={coursem.courseID}
                                                     value={coursem.courseID}
+                                                    data-testid="remove-preReq"
                                                 >
                                                     {coursem.listing}
                                                 </option>
@@ -463,7 +465,10 @@ export function CourseListViewInfoEdit({
                             <hr />
                             <div>Edit Degree Requirements:</div>
                             <Accordion>
-                                <Accordion.Item eventKey="0">
+                                <Accordion.Item
+                                    eventKey="0"
+                                    data-testid={"edit-univ-req-accordian"}
+                                >
                                     <Accordion.Header>
                                         Adjust University Requirement Satisfied:
                                     </Accordion.Header>
@@ -471,6 +476,9 @@ export function CourseListViewInfoEdit({
                                         {universtiyCourses.map(
                                             (req: string, index: number) => (
                                                 <Form.Check
+                                                    data-testid={
+                                                        "edit-univ-req-options"
+                                                    }
                                                     key={index}
                                                     type="checkbox"
                                                     label={req}
@@ -484,7 +492,10 @@ export function CourseListViewInfoEdit({
                                         )}
                                     </Accordion.Body>
                                 </Accordion.Item>
-                                <Accordion.Item eventKey="1">
+                                <Accordion.Item
+                                    eventKey="1"
+                                    data-testid={"edit-coll-req-accordian"}
+                                >
                                     <Accordion.Header>
                                         Adjust College Requirement Satisfied:
                                     </Accordion.Header>
@@ -492,6 +503,9 @@ export function CourseListViewInfoEdit({
                                         {college_requirements.map(
                                             (req: string, index: number) => (
                                                 <Form.Check
+                                                    data-testid={
+                                                        "edit-coll-req-options"
+                                                    }
                                                     key={index}
                                                     type="checkbox"
                                                     label={req}
@@ -505,7 +519,10 @@ export function CourseListViewInfoEdit({
                                         )}
                                     </Accordion.Body>
                                 </Accordion.Item>
-                                <Accordion.Item eventKey="2">
+                                <Accordion.Item
+                                    eventKey="2"
+                                    data-testid={"edit-coll-major-accordian"}
+                                >
                                     <Accordion.Header>
                                         Adjust Major Requirements Satisfied:
                                     </Accordion.Header>
@@ -513,6 +530,9 @@ export function CourseListViewInfoEdit({
                                         {major_requirements.map(
                                             (req: string, index: number) => (
                                                 <Form.Check
+                                                    data-testid={
+                                                        "edit-major-req-options"
+                                                    }
                                                     key={index}
                                                     type="checkbox"
                                                     label={req}
