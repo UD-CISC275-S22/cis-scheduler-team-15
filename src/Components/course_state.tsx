@@ -30,6 +30,7 @@ export function CourseState(): JSX.Element {
         localStorage.setItem(saveCoursesKey, JSON.stringify(courses));
     }
     function revert() {
+        setCourses(COURSES);
         localStorage.setItem(saveCoursesKey, JSON.stringify(COURSES));
     }
 
@@ -51,11 +52,16 @@ export function CourseState(): JSX.Element {
                     <h3>Course List</h3>
                     <div>
                         <span>
-                            <Button onClick={saveData}>Save Course List</Button>
+                            <Button
+                                onClick={saveData}
+                                variant="outline-primary"
+                            >
+                                Save Course List
+                            </Button>
                         </span>
                         <span>
-                            <Button onClick={revert}>
-                                Default Course List
+                            <Button onClick={revert} variant="outline-warning">
+                                Revert to Default
                             </Button>
                         </span>
                     </div>
