@@ -828,23 +828,23 @@
 
       at src/Components/edit_semester.tsx:73:17
 
-FAIL src/App.test.tsx (25.084 s)
+FAIL src/App.test.tsx (18.458 s)
   Final Project Tests
-    ✓ renders the course name somewhere (420 ms)
-    ✓ Insert and Remove a degree plan (1460 ms)
-    ✓ Students can see a list of all the degree plans they have made (944 ms)
-    ✓ Students can see a list of degree requirements (401 ms)
-    ✓ Students can see a list of existing courses (575 ms)
-    ✓ Students can see a table that shows semesters and courses (495 ms)
-    ✓ Students can insert or remove a semester in a plan (892 ms)
-    ✓ Students can clear out all the existing courses in a semester (2032 ms)
-    ✓ Students can clear out individual courses in a semester (1921 ms)
-    ✓ Students can insert a course in a semester (2080 ms)
-    ✓ Students will be prevented from inserting a duplicate course into the plan (2634 ms)
-    ✕ Students can establish that a course meets another course's prerequisite and not add an already prerequisite (2592 ms)
-    ✓ Students can see a list of existing courses (1398 ms)
-    ✓ Students can edit the course code (1583 ms)
-    ✓ Student can edit the course title  (1708 ms)
+    ✓ renders the course name somewhere (337 ms)
+    ✓ Insert and Remove a degree plan (1086 ms)
+    ✓ Students can see a list of all the degree plans they have made (714 ms)
+    ✓ Students can see a list of degree requirements (295 ms)
+    ✓ Students can see a list of existing courses (427 ms)
+    ✓ Students can see a table that shows semesters and courses (371 ms)
+    ✓ Students can insert or remove a semester in a plan (679 ms)
+    ✓ Students can clear out all the existing courses in a semester (1461 ms)
+    ✓ Students can clear out individual courses in a semester (1312 ms)
+    ✓ Students can insert a course in a semester (1458 ms)
+    ✓ Students will be prevented from inserting a duplicate course into the plan (1895 ms)
+    ✕ Students can establish that a course meets another course's prerequisite and not add an already prerequisite (1836 ms)
+    ✓ Students can see a list of existing courses (932 ms)
+    ✓ Students can edit the course code (1165 ms)
+    ✓ Student can edit the course title  (1257 ms)
 
   ● Final Project Tests › Students can establish that a course meets another course's prerequisite and not add an already prerequisite
 
@@ -870,10 +870,10 @@ FAIL src/App.test.tsx (25.084 s)
 ---------------------------------|---------|----------|---------|---------|---------------------------------------------------------------
 File                             | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                             
 ---------------------------------|---------|----------|---------|---------|---------------------------------------------------------------
-All files                        |    77.5 |    71.81 |   80.91 |    77.3 |                                                               
+All files                        |   77.35 |    71.81 |   80.91 |   77.15 |                                                               
  src                             |     100 |      100 |     100 |     100 |                                                               
   App.tsx                        |     100 |      100 |     100 |     100 |                                                               
- src/Components                  |   77.46 |    71.81 |   80.83 |   77.26 |                                                               
+ src/Components                  |   77.31 |    71.81 |   80.83 |   77.11 |                                                               
   SemesterViewHome.tsx           |   83.33 |      100 |   83.33 |   83.33 | 57                                                            
   SemesterViewModal.tsx          |     100 |      100 |     100 |     100 |                                                               
   add_course.tsx                 |     100 |       90 |     100 |     100 | 58                                                            
@@ -884,7 +884,7 @@ All files                        |    77.5 |    71.81 |   80.91 |    77.3 |
   course_list_view.tsx           |     100 |      100 |     100 |     100 |                                                               
   course_list_view_info.tsx      |   92.85 |      100 |   88.88 |   92.85 | 55                                                            
   course_list_view_info_edit.tsx |   39.83 |    41.66 |   54.76 |   39.66 | 69,87-113,124-140,146-153,158-159,179-258,288,389,423,450,552 
-  course_state.tsx               |   76.92 |       75 |   66.66 |      75 | 17,30-33                                                      
+  course_state.tsx               |   71.42 |       75 |   66.66 |   69.23 | 17,30-34                                                      
   degree_plan_view.tsx           |   51.42 |      100 |      55 |      50 | 46-149,158                                                    
   degree_plans.tsx               |      75 |    54.54 |   80.95 |   73.17 | 17-19,26-38,132                                               
   degree_requirement_view.tsx    |     100 |      100 |     100 |     100 |                                                               
@@ -899,5 +899,5 @@ All files                        |    77.5 |    71.81 |   80.91 |    77.3 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 14 passed, 15 total
 Snapshots:   0 total
-Time:        25.984 s
+Time:        19.173 s
 Ran all test suites.
