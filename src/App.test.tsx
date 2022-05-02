@@ -251,14 +251,14 @@ describe("Final Project Tests", () => {
 
         editSemesterButtons[1].click();
 
-        const allButtonsOld = screen.queryAllByRole("button");
-
+        let allButtons = screen.queryAllByRole("button");
+        const initialButtons = allButtons.length;
         const deleteButton = screen.queryAllByRole("button", {
             name: /Click to delete/i
         })[0];
         deleteButton.click();
-        const allButtonsNew = screen.queryAllByRole("button");
-        expect(allButtonsNew.length).toBe(allButtonsOld.length - 1);
+        allButtons = screen.queryAllByRole("button");
+        expect(allButtons.length).toBe(initialButtons - 1);
     });
 
     test("Students can insert a course in a semester", () => {
