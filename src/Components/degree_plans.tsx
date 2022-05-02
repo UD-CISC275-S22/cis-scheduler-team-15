@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Degree } from "../Interfaces/degree";
-import { Stack, ToggleButton, Col, Row, Button } from "react-bootstrap";
+import { Stack, ToggleButton, Col, Row, Button, Form } from "react-bootstrap";
 import PlanData from "./../Data/plan_data.json";
 import { DegreePlanView } from "./degree_plan_view";
 import { Course } from "../Interfaces/course";
@@ -12,17 +12,31 @@ const saveDegreesKey = "DEGREE-DATA";
 export function DegreePlans({ courses }: { courses: Course[] }): JSX.Element {
     let degreeInput = DEGREEPLANSTART;
     const previousData = localStorage.getItem(saveDegreesKey);
+
     if (previousData !== null) {
+        console.log(JSON.parse(previousData));
+
         degreeInput = JSON.parse(previousData);
     }
     const [degreePlans, setDegreePlans] = useState<Degree[]>(degreeInput);
     const [currentDegreePlanID, setCurrentDegreePlanID] = useState<number>(0);
+    const [addingFile, setAddingFile] = useState<boolean>(false);
 
     function saveData() {
+        console.log(JSON.stringify(degreePlans));
         localStorage.setItem(saveDegreesKey, JSON.stringify(degreePlans));
     }
     function revert() {
+        setDegreePlans(DEGREEPLANSTART);
         localStorage.setItem(saveDegreesKey, JSON.stringify(DEGREEPLANSTART));
+    }
+
+    function uploadFile(event: React.ChangeEvent<HTMLInputElement>) {
+        if (event.target.files && event.target.files.length) {
+            const filename = event.target.files[0];
+            const reader = new FileReader();
+            reader.readAsText(filename);
+        }
     }
 
     function addEmptyDegreePlan(): void {
@@ -93,10 +107,14 @@ export function DegreePlans({ courses }: { courses: Course[] }): JSX.Element {
             <Row>
                 <div>
                     <span>
-                        <Button onClick={saveData}>Save Degree Plans</Button>
+                        <Button onClick={saveData} variant="outline-primary">
+                            Save Degree Plans
+                        </Button>
                     </span>
                     <span>
-                        <Button onClick={revert}>Default Degree Plans</Button>
+                        <Button onClick={revert} variant="outline-warning">
+                            Revert to Default
+                        </Button>
                     </span>
                 </div>
             </Row>
@@ -111,6 +129,14 @@ export function DegreePlans({ courses }: { courses: Course[] }): JSX.Element {
                 </Col>
                 <Col>
                     <Button
+                        onClick={() => setAddingFile(!addingFile)}
+                        variant={addingFile ? "warning" : "primary"}
+                    >
+                        {addingFile ? "Stop Uploading" : "Upload Degree Plan"}
+                    </Button>
+                </Col>
+                <Col>
+                    <Button
                         onClick={() => removeDegreePlan(currentDegreePlanID)}
                         variant={
                             currentDegreePlanID === 0
@@ -121,6 +147,13 @@ export function DegreePlans({ courses }: { courses: Course[] }): JSX.Element {
                         Delete selected plan
                     </Button>
                 </Col>
+            </Row>
+            <Row hidden={!addingFile}>
+                <span>
+                    <Form.Group controlId="exampleForm">
+                        <Form.Control type="file" onChange={uploadFile} />
+                    </Form.Group>
+                </span>
             </Row>
             <Row>
                 <Col>

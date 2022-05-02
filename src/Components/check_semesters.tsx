@@ -153,11 +153,11 @@ export function CheckSemesters({
         return errorMessage;
     }
     const newSemesters = degree.semesters.map((semester: Semester) => {
-        console.log(
-            "checkSemester running on " +
-                semester.season +
-                semester.year.toString()
-        );
+        // console.log(
+        //     "checkSemester running on " +
+        //         semester.season +
+        //         semester.year.toString()
+        // );
         const prereqBool = checkPreReqs(semester);
         const coreqBool = checkCoReqs(semester);
         const newErrors = [
@@ -173,8 +173,8 @@ export function CheckSemesters({
             courses: semester.courses,
             errors: [...newErrors]
         };
-        console.log("errors for this semester: ");
-        console.log(semesterWithError.errors);
+        // console.log("errors for this semester: ");
+        // console.log(semesterWithError.errors);
         return semesterWithError;
     });
     const newDegree: Degree = { ...degree, semesters: newSemesters };
