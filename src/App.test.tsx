@@ -251,15 +251,14 @@ describe("Final Project Tests", () => {
 
         editSemesterButtons[1].click();
 
-        let allButtons = screen.queryAllByRole("button");
-        expect(allButtons.length).toBe(32);
+        const allButtonsOld = screen.queryAllByRole("button");
 
         const deleteButton = screen.queryAllByRole("button", {
             name: /Click to delete/i
         })[0];
         deleteButton.click();
-        allButtons = screen.queryAllByRole("button");
-        expect(allButtons.length).toBe(31);
+        const allButtonsNew = screen.queryAllByRole("button");
+        expect(allButtonsNew.length).toBe(allButtonsOld.length - 1);
     });
 
     test("Students can insert a course in a semester", () => {
@@ -328,6 +327,77 @@ describe("Final Project Tests", () => {
         expect(text1[2]).not.toBeUndefined();
         expect(text2[2]).not.toBeUndefined();
         expect(text3[2]).not.toBeUndefined();
+        expect(text4).toBeVisible();
+    });
+
+    test("Students will be prevented from inserting a duplicate course into the plan", () => {
+        const addEmpty = screen.getByRole("button", {
+            name: /Add Empty Plan/i
+        });
+        addEmpty.click();
+        const firstEmpty = screen.queryByRole("button", {
+            name: /2: Degree Plan 2/i
+        });
+        firstEmpty?.click();
+        const editButton = screen.queryByRole("button", {
+            name: /Edit Plan/i
+        });
+        editButton?.click();
+        const addSemester = screen.queryByRole("button", {
+            name: /Add Semester/i
+        });
+        addSemester?.click();
+        const createSemester = screen.queryByRole("button", {
+            name: /Create Semester/i
+        });
+        createSemester?.click();
+        const seasonButton = screen.getAllByRole("combobox");
+        userEvent.selectOptions(seasonButton[0], "Winter");
+        createSemester?.click();
+        const closeModal = screen.queryByRole("closebutton");
+        closeModal?.click();
+        let editSemester = screen.getAllByRole("button", {
+            name: "Edit"
+        })[0];
+        editSemester.click();
+        let addCourse = screen.getByRole("button", {
+            name: /Add Course/i
+        });
+        addCourse.click();
+        let adding = screen.getByRole("button", {
+            name: "Click to add 1"
+        });
+        adding.click();
+        const selectCourses = screen.getAllByRole("combobox");
+        const newC = screen.getAllByTestId("add-course-select");
+        userEvent.selectOptions(selectCourses[2], newC[12]);
+        adding = screen.getByRole("button", {
+            name: "Click to add 13"
+        });
+        adding.click();
+        const closeModal2 = screen.queryByRole("closebutton");
+        closeModal2?.click();
+
+        editSemester = screen.getAllByRole("button", {
+            name: "Edit"
+        })[1];
+        editSemester.click();
+        addCourse = screen.getByRole("button", {
+            name: /Add Course/i
+        });
+        addCourse.click();
+        adding = screen.getByRole("button", {
+            name: "Click to add 1"
+        });
+        adding.click();
+        const filter = screen.getAllByRole("textbox");
+        userEvent.type(filter[2], "e");
+        adding = screen.getByRole("button", {
+            name: "Click to add 16"
+        });
+        adding.click();
+
+        const text4 = screen.queryByText("Degree plan 2 Total Credits: 9");
         expect(text4).toBeVisible();
     });
 
