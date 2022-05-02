@@ -53,8 +53,115 @@ export function DegreePlanView({
         update();
     }
 
+    function planToCSV(): string {
+        /* const header = [
+            Object.keys(degree),
+            Object.keys(degree.semesters),
+            Object.keys(degree.semesters[0].courses)
+        ].flat();
+        const exportCSV = [
+            header.join(","), // header row first
+            degree.degreeID,
+            degree.name,
+            degree.semesters.map((semester: Semester) =>
+                header
+                    .map((semester.semesterID) => JSON.stringify(semester["semesterID"]))
+                    .join(",")
+            )
+        ].join("\r\n"); */
+        const exportCSV = [
+            "{",
+            "degreeID",
+            ":",
+            degree.degreeID.toString(),
+            "name",
+            ":",
+            degree.name,
+            "semesters",
+            ":",
+            degree.semesters
+                .map((semester: Semester): string[] => [
+                    "{",
+                    "semesterID",
+                    ":",
+                    semester.semesterID.toString(),
+                    "season",
+                    ":",
+                    semester.season,
+                    "year",
+                    ":",
+                    semester.year.toString(),
+                    "courses",
+                    ":",
+                    semester.courses
+                        .map((course: Course): string[] => [
+                            "{",
+                            "courseID",
+                            ":",
+                            course.courseID.toString(),
+                            "listing",
+                            ":",
+                            course.listing,
+                            "title",
+                            ":",
+                            course.title,
+                            "preReqs",
+                            ":",
+                            course.preReqs
+                                .map((preReq: number) => preReq.toString())
+                                .join(","),
+                            "coReqs",
+                            ":",
+                            course.coReqs
+                                .map((coReq: number) => coReq.toString())
+                                .join(","),
+                            "offered",
+                            ":",
+                            course.offered.join(","),
+                            "credits",
+                            ":",
+                            course.credits.toString(),
+                            "reqsSatisfied",
+                            ":",
+                            course.reqsSatisfied.join(",")
+                        ])
+                        .join(","),
+                    "errors",
+                    ":",
+                    semester.errors.join(",")
+                ])
+                .join("\r\n")
+        ].join("\r\n"); // New row for each degree plan
+        return exportCSV;
+    }
+
+    function downloadBlob() {
+        // Create a blob
+        const blob = new Blob([planToCSV()], {
+            type: "text/csv;charset=utf-8;"
+        });
+        const url = URL.createObjectURL(blob);
+
+        // Create a link to download it
+        const pom = document.createElement("a");
+        pom.href = url;
+        pom.setAttribute("download", "degreePlan" + degree.degreeID.toString());
+        pom.click();
+    }
+
     return (
         <div hidden={hidden}>
+            <br></br>
+            <Row>
+                <div>
+                    <Button
+                        onClick={() => downloadBlob()}
+                        variant={"outline-primary"}
+                    >
+                        Download Degree Plan
+                    </Button>
+                </div>
+            </Row>
             <br></br>
             <Button
                 onClick={() => setEditMode(!editMode)}
