@@ -17641,7 +17641,7 @@
       at src/Components/edit_semester.tsx:73:17
 
   console.log
-    checkSemester running on Fall2020
+    checkSemester running on Fall2022
 
       at map (src/Components/check_semesters.tsx:156:17)
           at Array.map (<anonymous>)
@@ -17653,13 +17653,18 @@
           at Array.map (<anonymous>)
 
   console.log
-    [ '', '', '', '', '' ]
+    []
 
       at map (src/Components/check_semesters.tsx:177:17)
           at Array.map (<anonymous>)
 
   console.log
-    checkSemester running on Spring2021
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    checkSemester running on Winter2022
 
       at map (src/Components/check_semesters.tsx:156:17)
           at Array.map (<anonymous>)
@@ -17671,43 +17676,7 @@
           at Array.map (<anonymous>)
 
   console.log
-    [ '', '', '', '', '' ]
-
-      at map (src/Components/check_semesters.tsx:177:17)
-          at Array.map (<anonymous>)
-
-  console.log
-    checkSemester running on Fall2021
-
-      at map (src/Components/check_semesters.tsx:156:17)
-          at Array.map (<anonymous>)
-
-  console.log
-    errors for this semester:
-
-      at map (src/Components/check_semesters.tsx:176:17)
-          at Array.map (<anonymous>)
-
-  console.log
-    [ '', '', '', '', '' ]
-
-      at map (src/Components/check_semesters.tsx:177:17)
-          at Array.map (<anonymous>)
-
-  console.log
-    checkSemester running on Spring2022
-
-      at map (src/Components/check_semesters.tsx:156:17)
-          at Array.map (<anonymous>)
-
-  console.log
-    errors for this semester:
-
-      at map (src/Components/check_semesters.tsx:176:17)
-          at Array.map (<anonymous>)
-
-  console.log
-    [ '', '', '', '', '' ]
+    []
 
       at map (src/Components/check_semesters.tsx:177:17)
           at Array.map (<anonymous>)
@@ -17725,13 +17694,18 @@
           at Array.map (<anonymous>)
 
   console.log
-    [ '', '', '', '', '' ]
+    []
 
       at map (src/Components/check_semesters.tsx:177:17)
           at Array.map (<anonymous>)
 
   console.log
-    checkSemester running on Spring2023
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    checkSemester running on Winter2022
 
       at map (src/Components/check_semesters.tsx:156:17)
           at Array.map (<anonymous>)
@@ -17743,13 +17717,36 @@
           at Array.map (<anonymous>)
 
   console.log
-    [ '', '', '', '', '' ]
+    []
 
       at map (src/Components/check_semesters.tsx:177:17)
           at Array.map (<anonymous>)
 
   console.log
-    checkSemester running on Fall2023
+    checkSemester running on Fall2022
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    []
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    checkSemester running on Winter2022
 
       at map (src/Components/check_semesters.tsx:156:17)
           at Array.map (<anonymous>)
@@ -17762,18 +17759,14 @@
 
   console.log
     [
-      '',
-      '',
-      '',
-      'There are unsatisfied prerequisites for this course. Unsatisfied prerequisite(s): CISC320\n',
-      ''
+      'There are unsatisfied corequisites for this course. Unsatisfied corequisite(s): MATH241'
     ]
 
       at map (src/Components/check_semesters.tsx:177:17)
           at Array.map (<anonymous>)
 
   console.log
-    checkSemester running on Spring2024
+    checkSemester running on Fall2022
 
       at map (src/Components/check_semesters.tsx:156:17)
           at Array.map (<anonymous>)
@@ -17785,7 +17778,89 @@
           at Array.map (<anonymous>)
 
   console.log
-    [ '', '', '', '', '' ]
+    []
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    checkSemester running on Winter2022
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Fall2022
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    []
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    checkSemester running on Winter2022
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Fall2022
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    []
 
       at map (src/Components/check_semesters.tsx:177:17)
           at Array.map (<anonymous>)
@@ -21360,33 +21435,1429 @@
 
       at src/Components/edit_semester.tsx:73:17
 
-PASS src/App.test.tsx (18.895 s)
+  console.log
+    checkSemester running on Fall2020
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Spring2021
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Fall2021
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Spring2022
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Fall2022
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Spring2023
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Fall2023
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [
+      '',
+      '',
+      '',
+      'There are unsatisfied prerequisites for this course. Unsatisfied prerequisite(s): CISC320\n',
+      ''
+    ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Spring2024
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    checkSemester running on Fall2020
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Spring2021
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Fall2021
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Spring2022
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Fall2022
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Spring2023
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Fall2023
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [
+      '',
+      '',
+      '',
+      'There are unsatisfied prerequisites for this course. Unsatisfied prerequisite(s): CISC320\n',
+      ''
+    ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Spring2024
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    checkSemester running on Fall2020
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Spring2021
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Fall2021
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Spring2022
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Fall2022
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Spring2023
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Fall2023
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [
+      '',
+      '',
+      '',
+      'There are unsatisfied prerequisites for this course. Unsatisfied prerequisite(s): CISC320\n',
+      ''
+    ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Spring2024
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    checkSemester running on Fall2020
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Spring2021
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Fall2021
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Spring2022
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Fall2022
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Spring2023
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Fall2023
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [
+      '',
+      '',
+      '',
+      'There are unsatisfied prerequisites for this course. Unsatisfied prerequisite(s): CISC320\n',
+      ''
+    ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Spring2024
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    checkSemester running on Fall2020
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Spring2021
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Fall2021
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Spring2022
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Fall2022
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Spring2023
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Fall2023
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [
+      '',
+      '',
+      '',
+      'There are unsatisfied prerequisites for this course. Unsatisfied prerequisite(s): CISC320\n',
+      ''
+    ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Spring2024
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    checkSemester running on Fall2020
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Spring2021
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Fall2021
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Spring2022
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Fall2022
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Spring2023
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Fall2023
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [
+      '',
+      '',
+      '',
+      'There are unsatisfied prerequisites for this course. Unsatisfied prerequisite(s): CISC320\n',
+      ''
+    ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Spring2024
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    checkSemester running on Fall2020
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Spring2021
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Fall2021
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Spring2022
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Fall2022
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Spring2023
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Fall2023
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [
+      '',
+      '',
+      '',
+      'There are unsatisfied prerequisites for this course. Unsatisfied prerequisite(s): CISC320\n',
+      ''
+    ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Spring2024
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    checkSemester running on Fall2020
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Spring2021
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Fall2021
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Spring2022
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Fall2022
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Spring2023
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Fall2023
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [
+      '',
+      '',
+      '',
+      'There are unsatisfied prerequisites for this course. Unsatisfied prerequisite(s): CISC320\n',
+      ''
+    ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Spring2024
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    checkSemester running on Fall2020
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Spring2021
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Fall2021
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Spring2022
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Fall2022
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Spring2023
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Fall2023
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [
+      '',
+      '',
+      '',
+      'There are unsatisfied prerequisites for this course. Unsatisfied prerequisite(s): CISC320\n',
+      ''
+    ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    checkSemester running on Spring2024
+
+      at map (src/Components/check_semesters.tsx:156:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    errors for this semester:
+
+      at map (src/Components/check_semesters.tsx:176:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    [ '', '', '', '', '' ]
+
+      at map (src/Components/check_semesters.tsx:177:17)
+          at Array.map (<anonymous>)
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+PASS src/App.test.tsx (18.957 s)
   Final Project Tests
-    ✓ renders the course name somewhere (511 ms)
-    ✓ Insert and Remove a degree plan (1253 ms)
-    ✓ Students can see a list of all the degree plans they have made (865 ms)
-    ✓ Students can see a list of degree requirements (374 ms)
-    ✓ Students can see a list of existing courses (517 ms)
-    ✓ Students can see a table that shows semesters and courses (474 ms)
-    ✓ Students can insert or remove a semester in a plan (840 ms)
-    ✓ Students can clear out all the existing courses in a semester (1490 ms)
-    ✓ Students can clear out individual courses in a semester (1377 ms)
-    ✓ Students can insert a course in a semester (1466 ms)
-    ✓ Students can see a list of existing courses (1009 ms)
-    ✓ Students can edit the course code (1882 ms)
-    ✓ Student can edit the course title  (1930 ms)
-    ✓ Student can edit credits of a course (1834 ms)
+    ✓ renders the course name somewhere (483 ms)
+    ✓ Insert and Remove a degree plan (1238 ms)
+    ✓ Students can see a list of all the degree plans they have made (882 ms)
+    ✓ Students can see a list of degree requirements (363 ms)
+    ✓ Students can see a list of existing courses (500 ms)
+    ✓ Students can see a table that shows semesters and courses (427 ms)
+    ✓ Students can insert or remove a semester in a plan (749 ms)
+    ✓ Students can clear out all the existing courses in a semester (1319 ms)
+    ✓ Students can clear out individual courses in a semester (1221 ms)
+    ✓ Students can insert a course in a semester (1311 ms)
+    ✓ Students will be prevented from inserting a duplicate course into the plan (1631 ms)
+    ✓ Students can see a list of existing courses (922 ms)
+    ✓ Students can edit the course code (1620 ms)
+    ✓ Student can edit the course title  (1723 ms)
+    ✓ Student can edit credits of a course (1702 ms)
 
 ---------------------------------|---------|----------|---------|---------|---------------------------------------
 File                             | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                     
 ---------------------------------|---------|----------|---------|---------|---------------------------------------
-All files                        |   79.41 |    72.54 |   83.62 |   79.24 |                                       
+All files                        |    79.6 |     74.5 |   83.62 |   79.44 |                                       
  src                             |     100 |      100 |     100 |     100 |                                       
   App.tsx                        |     100 |      100 |     100 |     100 |                                       
- src/Components                  |   79.37 |    72.54 |   83.54 |    79.2 |                                       
+ src/Components                  |   79.56 |     74.5 |   83.54 |    79.4 |                                       
   SemesterViewHome.tsx           |   83.33 |      100 |   83.33 |   83.33 | 57                                    
   SemesterViewModal.tsx          |     100 |      100 |     100 |     100 |                                       
-  add_course.tsx                 |   96.87 |       70 |     100 |   96.87 | 83                                    
+  add_course.tsx                 |     100 |       90 |     100 |     100 | 58                                    
   add_semester.tsx               |      85 |      100 |      75 |      85 | 26-27,65                              
   check_requirements.tsx         |   98.38 |    66.66 |      96 |   98.38 | 181,287                               
   check_semesters.tsx            |   98.59 |    92.85 |     100 |   98.55 | 20                                    
@@ -21407,7 +22878,7 @@ All files                        |   79.41 |    72.54 |   83.62 |   79.24 |
   semester.ts                    |       0 |        0 |       0 |       0 |                                       
 ---------------------------------|---------|----------|---------|---------|---------------------------------------
 Test Suites: 1 passed, 1 total
-Tests:       14 passed, 14 total
+Tests:       15 passed, 15 total
 Snapshots:   0 total
-Time:        19.701 s
+Time:        19.587 s
 Ran all test suites.
