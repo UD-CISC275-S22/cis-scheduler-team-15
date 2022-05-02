@@ -22830,55 +22830,76 @@
 
       at src/Components/edit_semester.tsx:73:17
 
-PASS src/App.test.tsx (18.957 s)
+FAIL src/App.test.tsx (26.28 s)
   Final Project Tests
-    ✓ renders the course name somewhere (483 ms)
-    ✓ Insert and Remove a degree plan (1238 ms)
-    ✓ Students can see a list of all the degree plans they have made (882 ms)
-    ✓ Students can see a list of degree requirements (363 ms)
-    ✓ Students can see a list of existing courses (500 ms)
-    ✓ Students can see a table that shows semesters and courses (427 ms)
-    ✓ Students can insert or remove a semester in a plan (749 ms)
-    ✓ Students can clear out all the existing courses in a semester (1319 ms)
-    ✓ Students can clear out individual courses in a semester (1221 ms)
-    ✓ Students can insert a course in a semester (1311 ms)
-    ✓ Students will be prevented from inserting a duplicate course into the plan (1631 ms)
-    ✓ Students can see a list of existing courses (922 ms)
-    ✓ Students can edit the course code (1620 ms)
-    ✓ Student can edit the course title  (1723 ms)
-    ✓ Student can edit credits of a course (1702 ms)
+    ✓ renders the course name somewhere (648 ms)
+    ✓ Insert and Remove a degree plan (1602 ms)
+    ✓ Students can see a list of all the degree plans they have made (1110 ms)
+    ✓ Students can see a list of degree requirements (479 ms)
+    ✓ Students can see a list of existing courses (698 ms)
+    ✓ Students can see a table that shows semesters and courses (586 ms)
+    ✓ Students can insert or remove a semester in a plan (1081 ms)
+    ✓ Students can clear out all the existing courses in a semester (1985 ms)
+    ✓ Students can clear out individual courses in a semester (1901 ms)
+    ✓ Students can insert a course in a semester (2035 ms)
+    ✓ Students will be prevented from inserting a duplicate course into the plan (2594 ms)
+    ✕ Students can establish that a course meets another course's prerequisite and not add an already prerequisite (2654 ms)
+    ✓ Students can see a list of existing courses (1375 ms)
+    ✓ Students can edit the course code (1638 ms)
+    ✓ Student can edit the course title  (1838 ms)
 
----------------------------------|---------|----------|---------|---------|---------------------------------------
-File                             | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                     
----------------------------------|---------|----------|---------|---------|---------------------------------------
-All files                        |    79.6 |     74.5 |   83.62 |   79.44 |                                       
- src                             |     100 |      100 |     100 |     100 |                                       
-  App.tsx                        |     100 |      100 |     100 |     100 |                                       
- src/Components                  |   79.56 |     74.5 |   83.54 |    79.4 |                                       
-  SemesterViewHome.tsx           |   83.33 |      100 |   83.33 |   83.33 | 57                                    
-  SemesterViewModal.tsx          |     100 |      100 |     100 |     100 |                                       
-  add_course.tsx                 |     100 |       90 |     100 |     100 | 58                                    
-  add_semester.tsx               |      85 |      100 |      75 |      85 | 26-27,65                              
-  check_requirements.tsx         |   98.38 |    66.66 |      96 |   98.38 | 181,287                               
-  check_semesters.tsx            |   98.59 |    92.85 |     100 |   98.55 | 20                                    
-  course_list.tsx                |     100 |      100 |     100 |     100 |                                       
-  course_list_view.tsx           |     100 |      100 |     100 |     100 |                                       
-  course_list_view_info.tsx      |   92.85 |      100 |   88.88 |   92.85 | 54                                    
-  course_list_view_info_edit.tsx |   34.95 |     37.5 |   52.38 |   34.71 | 69,87-113,127-258,361,387,421,448,532 
-  course_state.tsx               |   76.92 |       75 |   66.66 |      75 | 17,30-33                              
-  degree_plan_view.tsx           |   81.81 |      100 |   84.61 |   80.95 | 46-53                                 
-  degree_plans.tsx               |   91.42 |    71.42 |   89.47 |   90.62 | 16,22-25                              
-  degree_requirement_view.tsx    |     100 |      100 |     100 |     100 |                                       
-  degree_requirements.tsx        |     100 |      100 |     100 |     100 |                                       
-  edit_semester.tsx              |   95.45 |      100 |   91.66 |   95.45 | 91                                    
-  show_all_errors.tsx            |   28.57 |       50 |   16.66 |   28.57 | 13-32                                 
- src/Interfaces                  |       0 |        0 |       0 |       0 |                                       
-  course.ts                      |       0 |        0 |       0 |       0 |                                       
-  degree.ts                      |       0 |        0 |       0 |       0 |                                       
-  semester.ts                    |       0 |        0 |       0 |       0 |                                       
----------------------------------|---------|----------|---------|---------|---------------------------------------
-Test Suites: 1 passed, 1 total
-Tests:       15 passed, 15 total
+  ● Final Project Tests › Students can establish that a course meets another course's prerequisite and not add an already prerequisite
+
+    expect(element).toBeVisible()
+
+    Received element is not visible:
+      <td />
+
+      443 |         const text1 = screen.queryAllByText("N/A");
+      444 |         expect(text1[0]).not.toBeDefined();
+    > 445 |         expect(text).toBeVisible();
+          |                      ^
+      446 |
+      447 |         hideButton[0].click();
+      448 |         addPreReqButton.click();
+
+      at Object.<anonymous> (src/App.test.tsx:445:22)
+      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
+      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
+      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
+      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
+
+---------------------------------|---------|----------|---------|---------|---------------------------------------------------------------
+File                             | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                             
+---------------------------------|---------|----------|---------|---------|---------------------------------------------------------------
+All files                        |   80.78 |    75.49 |   84.05 |   80.63 |                                                               
+ src                             |     100 |      100 |     100 |     100 |                                                               
+  App.tsx                        |     100 |      100 |     100 |     100 |                                                               
+ src/Components                  |   80.74 |    75.49 |   83.98 |    80.6 |                                                               
+  SemesterViewHome.tsx           |   83.33 |      100 |   83.33 |   83.33 | 57                                                            
+  SemesterViewModal.tsx          |     100 |      100 |     100 |     100 |                                                               
+  add_course.tsx                 |     100 |       90 |     100 |     100 | 58                                                            
+  add_semester.tsx               |      85 |      100 |      75 |      85 | 26-27,65                                                      
+  check_requirements.tsx         |   98.38 |    66.66 |      96 |   98.38 | 181,287                                                       
+  check_semesters.tsx            |   98.59 |    92.85 |     100 |   98.55 | 20                                                            
+  course_list.tsx                |     100 |      100 |     100 |     100 |                                                               
+  course_list_view.tsx           |     100 |      100 |     100 |     100 |                                                               
+  course_list_view_info.tsx      |   92.85 |      100 |   88.88 |   92.85 | 55                                                            
+  course_list_view_info_edit.tsx |   39.83 |    41.66 |   54.76 |   39.66 | 69,87-113,124-140,146-153,158-159,179-258,288,389,423,450,552 
+  course_state.tsx               |   76.92 |       75 |   66.66 |      75 | 17,30-33                                                      
+  degree_plan_view.tsx           |   81.81 |      100 |   84.61 |   80.95 | 46-53                                                         
+  degree_plans.tsx               |   91.42 |    71.42 |   89.47 |   90.62 | 16,22-25                                                      
+  degree_requirement_view.tsx    |     100 |      100 |     100 |     100 |                                                               
+  degree_requirements.tsx        |     100 |      100 |     100 |     100 |                                                               
+  edit_semester.tsx              |   95.45 |      100 |   91.66 |   95.45 | 91                                                            
+  show_all_errors.tsx            |   28.57 |       50 |   16.66 |   28.57 | 13-32                                                         
+ src/Interfaces                  |       0 |        0 |       0 |       0 |                                                               
+  course.ts                      |       0 |        0 |       0 |       0 |                                                               
+  degree.ts                      |       0 |        0 |       0 |       0 |                                                               
+  semester.ts                    |       0 |        0 |       0 |       0 |                                                               
+---------------------------------|---------|----------|---------|---------|---------------------------------------------------------------
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 14 passed, 15 total
 Snapshots:   0 total
-Time:        19.587 s
+Time:        27.069 s
 Ran all test suites.
