@@ -131,6 +131,7 @@ export function CourseListViewInfoEdit({
         setListing(defaultCourse[0].listing);
         setCredits(defaultCourse[0].credits);
         setPreReqs(defaultCourse[0].preReqs);
+        setCoReqs(defaultCourse[0].coReqs);
         setReqSat(defaultCourse[0].reqsSatisfied);
         editCourses(courseID, defaultCourse[0]);
 
