@@ -828,23 +828,923 @@
 
       at src/Components/edit_semester.tsx:73:17
 
-FAIL src/App.test.tsx (18.458 s)
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.error
+    Warning: Received NaN for the `value` attribute. If this is expected, cast the value to a string.
+        at input
+        at /home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/node_modules/react-bootstrap/cjs/FormControl.js:27:3
+        at div
+        at /home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/node_modules/react-bootstrap/cjs/InputGroup.js:51:3
+        at form
+        at /home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/node_modules/react-bootstrap/cjs/Form.js:59:3
+        at div
+        at /home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/node_modules/react-bootstrap/cjs/Col.js:72:8
+        at div
+        at /home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/node_modules/react-bootstrap/cjs/Row.js:22:3
+        at div
+        at span
+        at CourseListViewInfoEdit (/home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/src/Components/course_list_view_info_edit.tsx:38:5)
+        at div
+        at div
+        at /home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/node_modules/react-bootstrap/cjs/createWithBsPrefix.js:31:5
+        at div
+        at div
+        at /home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/node_modules/react-bootstrap/cjs/ModalDialog.js:21:3
+        at div
+        at Transition (/home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/node_modules/react-transition-group/cjs/Transition.js:133:30)
+        at /home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/node_modules/react-bootstrap/cjs/TransitionWrapper.js:24:3
+        at /home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/node_modules/react-bootstrap/cjs/Fade.js:38:3
+        at DialogTransition
+        at /home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/node_modules/@restart/ui/cjs/Modal.js:75:5
+        at /home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/node_modules/react-bootstrap/cjs/Modal.js:85:3
+        at span
+        at CourseListViewInfo (/home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/src/Components/course_list_view_info.tsx:9:5)
+        at div
+        at div
+        at div
+        at /home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/node_modules/react-bootstrap/cjs/Container.js:24:3
+        at CourseListView (/home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/src/Components/course_list_view.tsx:7:5)
+        at div
+        at div
+        at /home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/node_modules/react-bootstrap/cjs/Col.js:72:8
+        at div
+        at /home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/node_modules/react-bootstrap/cjs/Row.js:22:3
+        at div
+        at CourseList (/home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/src/Components/course_list.tsx:9:5)
+        at div
+        at /home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/node_modules/react-bootstrap/cjs/Row.js:22:3
+        at div
+        at /home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/node_modules/react-bootstrap/cjs/Stack.js:23:7
+        at div
+        at CourseState (/home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/src/Components/course_state.tsx:19:35)
+        at div
+        at App
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at validateProperty$1 (node_modules/react-dom/cjs/react-dom.development.js:3492:7)
+      at warnUnknownProperties (node_modules/react-dom/cjs/react-dom.development.js:3559:21)
+      at validateProperties$2 (node_modules/react-dom/cjs/react-dom.development.js:3583:3)
+      at validatePropertiesInDevelopment (node_modules/react-dom/cjs/react-dom.development.js:8765:5)
+      at diffProperties (node_modules/react-dom/cjs/react-dom.development.js:9172:5)
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+  console.log
+    useEffect in editSemester runs with semester.courses dependency
+
+      at src/Components/edit_semester.tsx:73:17
+
+FAIL src/App.test.tsx (19.315 s)
   Final Project Tests
-    ✓ renders the course name somewhere (337 ms)
-    ✓ Insert and Remove a degree plan (1086 ms)
-    ✓ Students can see a list of all the degree plans they have made (714 ms)
-    ✓ Students can see a list of degree requirements (295 ms)
-    ✓ Students can see a list of existing courses (427 ms)
-    ✓ Students can see a table that shows semesters and courses (371 ms)
-    ✓ Students can insert or remove a semester in a plan (679 ms)
-    ✓ Students can clear out all the existing courses in a semester (1461 ms)
-    ✓ Students can clear out individual courses in a semester (1312 ms)
-    ✓ Students can insert a course in a semester (1458 ms)
-    ✓ Students will be prevented from inserting a duplicate course into the plan (1895 ms)
-    ✕ Students can establish that a course meets another course's prerequisite and not add an already prerequisite (1836 ms)
-    ✓ Students can see a list of existing courses (932 ms)
-    ✓ Students can edit the course code (1165 ms)
-    ✓ Student can edit the course title  (1257 ms)
+    ✓ renders the course name somewhere (374 ms)
+    ✓ Insert and Remove a degree plan (1046 ms)
+    ✓ Students can see a list of all the degree plans they have made (696 ms)
+    ✓ Students can see a list of degree requirements (307 ms)
+    ✓ Students can see a list of existing courses (411 ms)
+    ✓ Students can see a table that shows semesters and courses (370 ms)
+    ✓ Students can insert or remove a semester in a plan (665 ms)
+    ✓ Students can clear out all the existing courses in a semester (1455 ms)
+    ✓ Students can clear out individual courses in a semester (1318 ms)
+    ✓ Students can insert a course in a semester (1421 ms)
+    ✓ Students will be prevented from inserting a duplicate course into the plan (1874 ms)
+    ✕ Students can establish that a course meets another course's prerequisite and not add an already prerequisite (1820 ms)
+    ✓ Students can see a list of existing courses (917 ms)
+    ✓ Students can edit the course code (1167 ms)
+    ✓ Student can edit the course title  (1262 ms)
+    ✓ Student can edit credits of a course (1071 ms)
 
   ● Final Project Tests › Students can establish that a course meets another course's prerequisite and not add an already prerequisite
 
@@ -853,51 +1753,51 @@ FAIL src/App.test.tsx (18.458 s)
     Received element is not visible:
       <td />
 
-      443 |         const text1 = screen.queryAllByText("N/A");
-      444 |         expect(text1[0]).not.toBeDefined();
-    > 445 |         expect(text).toBeVisible();
+      444 |         const text1 = screen.queryAllByText("N/A");
+      445 |         expect(text1[0]).not.toBeDefined();
+    > 446 |         expect(text).toBeVisible();
           |                      ^
-      446 |
-      447 |         hideButton[0].click();
-      448 |         addPreReqButton.click();
+      447 |
+      448 |         hideButton[0].click();
+      449 |         addPreReqButton.click();
 
-      at Object.<anonymous> (src/App.test.tsx:445:22)
+      at Object.<anonymous> (src/App.test.tsx:446:22)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
----------------------------------|---------|----------|---------|---------|---------------------------------------------------------------
-File                             | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                             
----------------------------------|---------|----------|---------|---------|---------------------------------------------------------------
-All files                        |   77.35 |    71.81 |   80.91 |   77.15 |                                                               
- src                             |     100 |      100 |     100 |     100 |                                                               
-  App.tsx                        |     100 |      100 |     100 |     100 |                                                               
- src/Components                  |   77.31 |    71.81 |   80.83 |   77.11 |                                                               
-  SemesterViewHome.tsx           |   83.33 |      100 |   83.33 |   83.33 | 57                                                            
-  SemesterViewModal.tsx          |     100 |      100 |     100 |     100 |                                                               
-  add_course.tsx                 |     100 |       90 |     100 |     100 | 58                                                            
-  add_semester.tsx               |      85 |      100 |      75 |      85 | 26-27,65                                                      
-  check_requirements.tsx         |   98.38 |    66.66 |      96 |   98.38 | 181,287                                                       
-  check_semesters.tsx            |   98.52 |    92.85 |     100 |   98.48 | 20                                                            
-  course_list.tsx                |     100 |      100 |     100 |     100 |                                                               
-  course_list_view.tsx           |     100 |      100 |     100 |     100 |                                                               
-  course_list_view_info.tsx      |   92.85 |      100 |   88.88 |   92.85 | 55                                                            
-  course_list_view_info_edit.tsx |   39.83 |    41.66 |   54.76 |   39.66 | 69,87-113,124-140,146-153,158-159,179-258,288,389,423,450,552 
-  course_state.tsx               |   71.42 |       75 |   66.66 |   69.23 | 17,30-34                                                      
-  degree_plan_view.tsx           |   51.42 |      100 |      55 |      50 | 46-149,158                                                    
-  degree_plans.tsx               |      75 |    54.54 |   80.95 |   73.17 | 17-19,26-38,132                                               
-  degree_requirement_view.tsx    |     100 |      100 |     100 |     100 |                                                               
-  degree_requirements.tsx        |     100 |      100 |     100 |     100 |                                                               
-  edit_semester.tsx              |   95.45 |      100 |   91.66 |   95.45 | 91                                                            
-  show_all_errors.tsx            |   28.57 |       50 |   16.66 |   28.57 | 13-32                                                         
- src/Interfaces                  |       0 |        0 |       0 |       0 |                                                               
-  course.ts                      |       0 |        0 |       0 |       0 |                                                               
-  degree.ts                      |       0 |        0 |       0 |       0 |                                                               
-  semester.ts                    |       0 |        0 |       0 |       0 |                                                               
----------------------------------|---------|----------|---------|---------|---------------------------------------------------------------
+---------------------------------|---------|----------|---------|---------|-----------------------------------------------------------
+File                             | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                         
+---------------------------------|---------|----------|---------|---------|-----------------------------------------------------------
+All files                        |   78.04 |    72.72 |   82.25 |   77.77 |                                                           
+ src                             |     100 |      100 |     100 |     100 |                                                           
+  App.tsx                        |     100 |      100 |     100 |     100 |                                                           
+ src/Components                  |      78 |    72.72 |   82.18 |   77.73 |                                                           
+  SemesterViewHome.tsx           |   83.33 |      100 |   83.33 |   83.33 | 57                                                        
+  SemesterViewModal.tsx          |     100 |      100 |     100 |     100 |                                                           
+  add_course.tsx                 |     100 |       90 |     100 |     100 | 58                                                        
+  add_semester.tsx               |      85 |      100 |      75 |      85 | 26-27,65                                                  
+  check_requirements.tsx         |   98.38 |    83.33 |      96 |   98.38 | 181,287                                                   
+  check_semesters.tsx            |   98.52 |    92.85 |     100 |   98.48 | 20                                                        
+  course_list.tsx                |     100 |      100 |     100 |     100 |                                                           
+  course_list_view.tsx           |     100 |      100 |     100 |     100 |                                                           
+  course_list_view_info.tsx      |   92.85 |      100 |   88.88 |   92.85 | 56                                                        
+  course_list_view_info_edit.tsx |   41.12 |    41.66 |   59.52 |   40.98 | 69,87-113,127-141,147-154,159-160,180-259,390,424,451,553 
+  course_state.tsx               |   71.42 |       75 |   66.66 |   69.23 | 17,30-34                                                  
+  degree_plan_view.tsx           |   51.42 |      100 |      55 |      50 | 46-149,158                                                
+  degree_plans.tsx               |      80 |    54.54 |   85.71 |      78 | 17-19,50-62,156                                           
+  degree_requirement_view.tsx    |     100 |      100 |     100 |     100 |                                                           
+  degree_requirements.tsx        |     100 |      100 |     100 |     100 |                                                           
+  edit_semester.tsx              |   95.45 |      100 |   91.66 |   95.45 | 91                                                        
+  show_all_errors.tsx            |   28.57 |       50 |   16.66 |   28.57 | 13-32                                                     
+ src/Interfaces                  |       0 |        0 |       0 |       0 |                                                           
+  course.ts                      |       0 |        0 |       0 |       0 |                                                           
+  degree.ts                      |       0 |        0 |       0 |       0 |                                                           
+  semester.ts                    |       0 |        0 |       0 |       0 |                                                           
+---------------------------------|---------|----------|---------|---------|-----------------------------------------------------------
 Test Suites: 1 failed, 1 total
-Tests:       1 failed, 14 passed, 15 total
+Tests:       1 failed, 15 passed, 16 total
 Snapshots:   0 total
-Time:        19.173 s
+Time:        20.002 s
 Ran all test suites.
