@@ -9,15 +9,7 @@ import { Semester } from "../Interfaces/semester";
 const DEGREEPLANSTART = PlanData.map((degree): Degree => ({ ...degree }));
 const saveDegreesKey = "DEGREE-DATA";
 
-export function DegreePlans({
-    courses,
-    update,
-    updateUpdate
-}: {
-    courses: Course[];
-    update: boolean;
-    updateUpdate: (input: boolean) => void;
-}): JSX.Element {
+export function DegreePlans({ courses }: { courses: Course[] }): JSX.Element {
     let degreeInput = DEGREEPLANSTART;
     const previousData = localStorage.getItem(saveDegreesKey);
 
@@ -52,21 +44,6 @@ export function DegreePlans({
         const index = courseIDS.findIndex((x) => x === coursenum);
         const newCourse = courses[index];
         return newCourse;
-    }
-
-    function updateDegreePlans(ucourses: Course[]) {
-        const updateDegreeP: Degree[] = degreePlans.map((degree: Degree) => ({
-            ...degree,
-            semesters: degree.semesters.map((semester: Semester) => ({
-                ...semester,
-                courses: semester.courses.map(
-                    (course: Course): Course => ({
-                        ...course
-                    })
-                )
-            }))
-        }));
-        setDegreePlans(updateDegreeP);
     }
 
     function saveData() {
