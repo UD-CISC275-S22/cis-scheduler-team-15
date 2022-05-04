@@ -17,11 +17,6 @@ export function CourseState(): JSX.Element {
         courseInput = JSON.parse(previousData);
     }
     const [courses, setCourses] = useState<Course[]>(courseInput); //had to move this state from course_list to here because DegreePlans needs it
-    const [update, setUpdate] = useState<boolean>(false);
-
-    function updateUpdate(input: boolean) {
-        setUpdate(input);
-    }
 
     function editCourses(courseID: number, editedCourse: Course) {
         setCourses(
@@ -30,7 +25,6 @@ export function CourseState(): JSX.Element {
                     courseID === course.courseID ? editedCourse : course
             )
         );
-        setUpdate(true);
     }
     function saveData() {
         localStorage.setItem(saveCoursesKey, JSON.stringify(courses));
@@ -46,11 +40,7 @@ export function CourseState(): JSX.Element {
             <Stack gap={2}>
                 <Row>
                     <h3>Degree Plans</h3>
-                    <DegreePlans
-                        courses={courses}
-                        update={update}
-                        updateUpdate={updateUpdate}
-                    ></DegreePlans>
+                    <DegreePlans courses={courses}></DegreePlans>
                 </Row>
                 <Row>
                     <hr></hr>
