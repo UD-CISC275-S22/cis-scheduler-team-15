@@ -401,6 +401,61 @@ describe("Final Project Tests", () => {
         expect(text4).toBeVisible();
     });
 
+    test("Students will get an error in the semester view when a course with an unsatisfied prerequisite or corequisite is added", () => {
+        const addEmpty = screen.getByRole("button", {
+            name: /Add Empty Plan/i
+        });
+        addEmpty.click();
+        const firstEmpty = screen.queryByRole("button", {
+            name: /2: Degree Plan 2/i
+        });
+        firstEmpty?.click();
+        const editButton = screen.queryByRole("button", {
+            name: /Edit Plan/i
+        });
+        editButton?.click();
+        const addSemester = screen.queryByRole("button", {
+            name: /Add Semester/i
+        });
+        addSemester?.click();
+        const createSemester = screen.queryByRole("button", {
+            name: /Create Semester/i
+        });
+        createSemester?.click();
+        const closeModal = screen.queryByRole("closebutton");
+        closeModal?.click();
+        const editSemester = screen.getAllByRole("button", {
+            name: "Edit"
+        })[0];
+        editSemester.click();
+        const addCourse = screen.getByRole("button", {
+            name: /Add Course/i
+        });
+        addCourse.click();
+        const filter = screen.getAllByRole("textbox");
+        userEvent.type(filter[2], "181");
+        let prereqMessage = screen.queryByText(
+            "There are unsatisfied prerequisites for this course. Unsatisfied prerequisite(s): CISC108"
+        );
+        let coreqMessage = screen.queryByText(
+            "There are unsatisfied corequisites for this course. Unsatisfied corequisite(s): MATH241"
+        );
+        expect(prereqMessage).toBeNull();
+        expect(coreqMessage).toBeNull();
+
+        const adding = screen.getByRole("button", {
+            name: "Click to add 2"
+        });
+        adding.click();
+        prereqMessage = screen.queryByText(
+            "There are unsatisfied prerequisites for this course. Unsatisfied prerequisite(s): CISC108"
+        );
+        coreqMessage = screen.queryByText(
+            "There are unsatisfied corequisites for this course. Unsatisfied corequisite(s): MATH241"
+        );
+        expect(prereqMessage).toBeVisible();
+        expect(coreqMessage).toBeVisible();
+    });
     /*
     test("Students can clear out semesters in a plan", () => {});
 
