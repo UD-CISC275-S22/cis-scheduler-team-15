@@ -78,6 +78,21 @@ export function SemesterViewHome({
                         <td>{course.credits}</td>
                     </tr>
                 ))}
+
+                {/*
+                {courses
+                    .filter(
+                        (course: Course) =>
+                            semester.courses.includes(course) === true
+                    )
+                    .map((course: Course) => (
+                        <tr key={course.courseID}>
+                            <td>{course.listing}</td>
+                            <td>{course.title}</td>
+                            <td>{course.credits}</td>
+                        </tr>
+                    ))}
+                    */}
                 <tr>
                     <td colSpan={2}>
                         <b>Total Credits</b>

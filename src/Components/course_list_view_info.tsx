@@ -49,6 +49,7 @@ export function CourseListViewInfo({
                 <i>i</i>
             </Button>
             <Modal
+                data-testid={"info-modal"}
                 size="lg"
                 dialogClassName="modal_course_info"
                 show={modal}

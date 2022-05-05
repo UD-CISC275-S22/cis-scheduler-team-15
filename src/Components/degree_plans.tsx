@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Degree } from "../Interfaces/degree";
 import { Stack, ToggleButton, Col, Row, Button, Form } from "react-bootstrap";
 import PlanData from "./../Data/plan_data.json";
@@ -18,9 +18,33 @@ export function DegreePlans({ courses }: { courses: Course[] }): JSX.Element {
 
         degreeInput = JSON.parse(previousData);
     }
+
     const [degreePlans, setDegreePlans] = useState<Degree[]>(degreeInput);
     const [currentDegreePlanID, setCurrentDegreePlanID] = useState<number>(0);
     const [addingFile, setAddingFile] = useState<boolean>(false);
+
+    useEffect(() => {
+        setDegreePlans(
+            degreePlans.map((degree: Degree) => ({
+                ...degree,
+                semesters: degree.semesters.map((semester: Semester) => ({
+                    ...semester,
+                    courses: semester.courses.map(
+                        (course: Course): Course => ({
+                            ...replaceCourse(course.courseID)
+                        })
+                    )
+                }))
+            }))
+        );
+    }, [courses]);
+
+    function replaceCourse(coursenum: number): Course {
+        const courseIDS = courses.map((course: Course) => course.courseID);
+        const index = courseIDS.findIndex((x) => x === coursenum);
+        const newCourse = courses[index];
+        return newCourse;
+    }
 
     function saveData() {
         console.log(JSON.stringify(degreePlans));

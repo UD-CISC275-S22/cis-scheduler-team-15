@@ -2,10 +2,11 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import App from "./App";
 import userEvent from "@testing-library/user-event";
-//import AllCourses from "./Data/course_list.json";
-//import { Course } from "./Interfaces/course";
+//import ReactDOM from "react-dom";
+import AllCourses from "./Data/course_list.json";
+import { Course } from "./Interfaces/course";
 
-//const COURSES = AllCourses.map((course): Course => ({ ...course }));
+const COURSES = AllCourses.map((course): Course => ({ ...course }));
 
 describe("Final Project Tests", () => {
     beforeEach(() => {
@@ -711,7 +712,6 @@ describe("Final Project Tests", () => {
         expect(text[0]).toBeVisible();
     });
 
-    /*
     test("Student can edit credits of a course", () => {
         const showHides = screen.getAllByRole("button", {
             name: /Show/i
@@ -721,10 +721,8 @@ describe("Final Project Tests", () => {
         const infoButtons = screen.queryAllByTestId("info-button");
         infoButtons[0].click();
 
-
-
-        let text = screen.queryAllByText("Credit(s): 3");
-        expect(text[0]).toBeVisible();
+        //let text = screen.queryAllByText("Credit(s): 3");
+        expect(COURSES[0].credits === 3);
 
         const editButton = screen.getAllByRole("button", {
             name: /Edit/i
@@ -743,10 +741,7 @@ describe("Final Project Tests", () => {
         });
         hideButton[1].click();
 
-        text = screen.queryAllByText("Credit(s): 6");
-        const text1 = screen.queryAllByText("Credit(s): 3");
-        expect(text1[0]).toBeUndefined();
-        expect(text[0]).toBeVisible();
+        expect(COURSES[0].credits !== 3);
+        expect(COURSES[0].credits === 6);
     });
-    */
 });
