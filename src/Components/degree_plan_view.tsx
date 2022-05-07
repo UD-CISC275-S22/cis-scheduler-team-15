@@ -21,7 +21,6 @@ export function DegreePlanView({
     courses: Course[];
 }): JSX.Element {
     const [editMode, setEditMode] = useState<boolean>(false);
-    const [updateCount, setUpdateCount] = useState<number>(0);
     const courseList = degree.semesters.map(
         (semester: Semester) => semester.courses
     );
@@ -40,9 +39,6 @@ export function DegreePlanView({
     const evenSemesters = degree.semesters.filter(
         (sem: Semester): boolean => degree.semesters.indexOf(sem) % 2 === 0
     );
-    function update() {
-        setUpdateCount(updateCount + 1);
-    }
     function deleteSemester(semesterID: number) {
         const newSemesters = degree.semesters.filter(
             (semester: Semester): boolean => semester.semesterID !== semesterID
@@ -51,7 +47,6 @@ export function DegreePlanView({
             ...degree,
             semesters: newSemesters
         });
-        update();
     }
 
     return (
@@ -78,7 +73,6 @@ export function DegreePlanView({
                                     degree={degree}
                                     editDegree={editDegree}
                                     courses={courses}
-                                    updateEditCount={update}
                                 ></SemesterViewHome>
                                 <br></br>
                             </div>
@@ -99,7 +93,6 @@ export function DegreePlanView({
                                     degree={degree}
                                     editDegree={editDegree}
                                     courses={courses}
-                                    updateEditCount={update}
                                 ></SemesterViewHome>
                                 <br></br>
                             </div>
