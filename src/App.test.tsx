@@ -434,7 +434,7 @@ describe("Final Project Tests", () => {
         });
         addCourse.click();
         const filter = screen.getAllByRole("textbox");
-        userEvent.type(filter[2], "181");/*
+        userEvent.type(filter[2], "181"); /*
         let prereqMessage = screen.queryAllByText("CISC108");
         let coreqMessage = screen.queryByText(
             "Unsatisfied corequisite(s): MATH241"
