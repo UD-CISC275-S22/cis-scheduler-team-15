@@ -8,8 +8,7 @@ export function AddCourse({
     courses,
     semester,
     degree,
-    editDegree,
-    updateEditCount
+    editDegree
 }: {
     courses: Course[];
     semester: Semester;
@@ -20,7 +19,6 @@ export function AddCourse({
         degree: Degree,
         editDegree: (degreeID: number, newDegree: Degree) => void
     ) => void;
-    updateEditCount: () => void;
 }): JSX.Element {
     const [coursePromptVisible, setCoursePromptVisible] =
         useState<boolean>(false);
@@ -83,7 +81,6 @@ export function AddCourse({
                 setDuplicateError(true);
             }
         }
-        updateEditCount();
     }
 
     function searchCourses(search: string): Course[] {

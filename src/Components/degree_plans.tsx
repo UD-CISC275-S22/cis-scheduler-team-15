@@ -119,6 +119,11 @@ export function DegreePlans({ courses }: { courses: Course[] }): JSX.Element {
 
     function editDegreePlan(degreeID: number, newDegreePlan: Degree) {
         newDegreePlan = sortSemesters(newDegreePlan);
+        newDegreePlan.semesters.map((semester: Semester) =>
+            semester.courses.sort((course1, course2) =>
+                course1.listing < course2.listing ? -1 : 1
+            )
+        );
         setDegreePlans(
             degreePlans.map(
                 (degree: Degree): Degree =>
