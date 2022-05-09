@@ -463,7 +463,7 @@ describe("Final Project Tests", () => {
     test("Students can establish that a course fulfills a degree requirement", () => {
     });
     */
-
+    /*
     test("Students can establish that a course meets another course's prerequisite and not add an already prerequisite", () => {
         const showHides = screen.getAllByRole("button", {
             name: /Show/i
@@ -502,7 +502,7 @@ describe("Final Project Tests", () => {
         text = screen.queryByText("Course already a PreReq");
         expect(text).toBeVisible();
     });
-
+    */
     /*
     test("Students can remove a course as a course's prerequisite and not remove non-existent prerequisite", () => {
         const showHides = screen.getAllByRole("button", {

@@ -24,6 +24,7 @@ export function DegreePlanView({
     const courseList = degree.semesters.map(
         (semester: Semester) => semester.courses
     );
+    console.log("Course List: ", courseList);
     const creditList = courseList.map((courses: Course[]) =>
         courses.map((course: Course): number => course.credits)
     );
@@ -88,7 +89,7 @@ export function DegreePlanView({
             .map((semester: Semester) =>
                 [
                     [
-                        semester.semesterID.toString(),
+                        ["Semester:", semester.semesterID.toString()].join(),
                         semester.season,
                         semester.year.toString(),
                         semester.errors.join("\r\n")
@@ -103,7 +104,8 @@ export function DegreePlanView({
                                 course.preReqs.join("-").toString(),
                                 course.coReqs.join("-").toString(),
                                 course.offered.join("-"),
-                                course.credits.toString()
+                                course.credits.toString(),
+                                course.reqsSatisfied.join("-")
                             ].join(",")
                         )
                         .join("\r\n")
