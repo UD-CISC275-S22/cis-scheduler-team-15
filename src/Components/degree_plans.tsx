@@ -14,14 +14,13 @@ export function DegreePlans({ courses }: { courses: Course[] }): JSX.Element {
     const previousData = localStorage.getItem(saveDegreesKey);
 
     if (previousData !== null) {
-        console.log(JSON.parse(previousData));
-
         degreeInput = JSON.parse(previousData);
     }
 
     const [degreePlans, setDegreePlans] = useState<Degree[]>(degreeInput);
     const [currentDegreePlanID, setCurrentDegreePlanID] = useState<number>(0);
     const [addingFile, setAddingFile] = useState<boolean>(false);
+    const [content, setContent] = useState<string>("No file data uploaded");
 
     useEffect(() => {
         setDegreePlans(
@@ -58,9 +57,120 @@ export function DegreePlans({ courses }: { courses: Course[] }): JSX.Element {
     function uploadFile(event: React.ChangeEvent<HTMLInputElement>) {
         if (event.target.files && event.target.files.length) {
             const filename = event.target.files[0];
-            const reader = new FileReader();
-            reader.readAsText(filename);
+            if (filename.name.endsWith(".csv")) {
+                const reader = new FileReader();
+                reader.onload = (loadEvent) => {
+                    const newContent =
+                        loadEvent.target?.result || "Data was not loaded";
+                    setContent(newContent as string);
+                };
+                reader.readAsText(filename);
+            } else {
+                setContent("Data was not loaded");
+            }
         }
+    }
+    function setCoursesCSV(sem: string): Course[] {
+        const semArray = sem.split(",");
+        const reducedArray = [...semArray.slice(2)];
+        const startingInd =
+            reducedArray.findIndex((str: string) => str === semArray[1]) + 1;
+        const courseInds = [
+            ...reducedArray.filter(
+                (str: string, ind: number) => ind % 9 === (startingInd - 1) % 9
+            )
+        ];
+        const numCourses = [
+            ...courseInds.filter((str: string) => str === semArray[1])
+        ].length;
+        let courses: Course[] = [];
+        for (let i = 0; i < numCourses; i++) {
+            console.log("CourseID: ", reducedArray[startingInd + 9 * i]);
+            courses = [
+                ...courses,
+                replaceCourse(parseInt(reducedArray[startingInd + 9 * i]))
+            ];
+        }
+        return courses;
+    }
+
+    /*
+    function setCoursesCSV(sem: string): Course[] {
+        const semArray = sem.split(",");
+        const reducedArray = [...semArray.slice(2)];
+        console.log(semArray);
+        console.log(reducedArray);
+        const startingInd =
+            reducedArray.findIndex((str: string) => str === semArray[1]) + 1;
+        const courseInds = [
+            ...reducedArray.filter(
+                (str: string, ind: number) => ind % 9 === (startingInd - 1) % 9
+            )
+        ];
+        const numCourses = [
+            ...courseInds.filter((str: string) => str === semArray[1])
+        ].length;
+        console.log("courseInds: ", courseInds);
+        console.log("NumCourses:", numCourses);
+        let courses: Course[] = [];
+        for (let i = 0; i < numCourses; i++) {
+            console.log("i = ", i);
+            const newCourse: Course = {
+                courseID: parseInt(reducedArray[startingInd + 8 * i]),
+                listing: reducedArray[startingInd + 1 + 8 * i],
+                title: reducedArray[startingInd + 2 + 8 * i],
+                preReqs: [
+                    ...reducedArray[startingInd + 3 + 8 * i]
+                        .split("-")
+                        .map((str: string) => parseInt(str))
+                ],
+                coReqs: [
+                    ...reducedArray[startingInd + 4 + 8 * i]
+                        .split("-")
+                        .map((str: string) => parseInt(str))
+                ],
+                offered: [...reducedArray[startingInd + 5 + 8 * i].split("-")],
+                credits: parseInt(reducedArray[startingInd + 6 + 8 * i]),
+                reqsSatisfied: [
+                    ...reducedArray[startingInd + 7 + 8 * i].split("-")
+                ]
+            };
+            courses = [...courses, newCourse];
+        }
+        return courses;
+    }
+    */
+    function addUploadedDegree() {
+        const IDList = degreePlans.map((degree: Degree) => degree.degreeID);
+        const newID = degreePlans.length > 0 ? Math.max(...IDList) + 1 : 1;
+        const newDegree = content.split(/[,\n]/);
+        const newSemestersString = newDegree.slice(2).join().split("Semester:"); // Only semester data
+        const latterSemString = [...newSemestersString.slice(1)];
+        const semesters = latterSemString.map(
+            (sem: string): Semester => ({
+                semesterID: parseInt(sem.split(",")[1]),
+                season: sem.split(",")[2],
+                year: parseInt(sem.split(",")[3]),
+                courses: setCoursesCSV(sem),
+                errors: Array(setCoursesCSV(sem).length)
+            })
+        );
+        let newPlan: Degree = {
+            name: newDegree[1],
+            degreeID: parseInt(newDegree[0]),
+            semesters: [...semesters]
+        };
+        if (
+            degreePlans
+                .map((degree: Degree) => degree.degreeID)
+                .includes(newPlan.degreeID)
+        ) {
+            newPlan = {
+                ...newPlan,
+                degreeID: newID
+            };
+        }
+        setDegreePlans([...degreePlans, newPlan]);
     }
 
     function addEmptyDegreePlan(): void {
@@ -129,6 +239,11 @@ export function DegreePlans({ courses }: { courses: Course[] }): JSX.Element {
 
     function editDegreePlan(degreeID: number, newDegreePlan: Degree) {
         newDegreePlan = sortSemesters(newDegreePlan);
+        newDegreePlan.semesters.map((semester: Semester) =>
+            semester.courses.sort((course1, course2) =>
+                course1.listing < course2.listing ? -1 : 1
+            )
+        );
         setDegreePlans(
             degreePlans.map(
                 (degree: Degree): Degree =>
@@ -136,6 +251,7 @@ export function DegreePlans({ courses }: { courses: Course[] }): JSX.Element {
             )
         );
     }
+
     return (
         <Stack gap={2}>
             <Row>
@@ -183,11 +299,26 @@ export function DegreePlans({ courses }: { courses: Course[] }): JSX.Element {
                 </Col>
             </Row>
             <Row hidden={!addingFile}>
-                <span>
-                    <Form.Group controlId="exampleForm">
-                        <Form.Control type="file" onChange={uploadFile} />
-                    </Form.Group>
-                </span>
+                <Col>
+                    <span>
+                        <Form.Group controlId="exampleForm">
+                            <Form.Control type="file" onChange={uploadFile} />
+                        </Form.Group>
+                    </span>
+                </Col>
+                <Col>
+                    <div>
+                        <Button
+                            hidden={
+                                content === "Data was not loaded" ||
+                                content === "No file data uploaded"
+                            }
+                            onClick={addUploadedDegree}
+                        >
+                            Add Uploaded Plan
+                        </Button>
+                    </div>
+                </Col>
             </Row>
             <Row>
                 <Col>

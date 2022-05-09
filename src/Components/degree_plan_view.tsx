@@ -21,13 +21,14 @@ export function DegreePlanView({
     courses: Course[];
 }): JSX.Element {
     const [editMode, setEditMode] = useState<boolean>(false);
-    const [updateCount, setUpdateCount] = useState<number>(0);
     const courseList = degree.semesters.map(
         (semester: Semester) => semester.courses
     );
+    console.log("Course List: ", courseList);
     const creditList = courseList.map((courses: Course[]) =>
         courses.map((course: Course): number => course.credits)
     );
+
     const credits = creditList
         .flat()
         .reduce((prev: number, num: number) => prev + num, 0);
@@ -39,9 +40,6 @@ export function DegreePlanView({
     const evenSemesters = degree.semesters.filter(
         (sem: Semester): boolean => degree.semesters.indexOf(sem) % 2 === 0
     );
-    function update() {
-        setUpdateCount(updateCount + 1);
-    }
     function deleteSemester(semesterID: number) {
         const newSemesters = degree.semesters.filter(
             (semester: Semester): boolean => semester.semesterID !== semesterID
@@ -50,94 +48,80 @@ export function DegreePlanView({
             ...degree,
             semesters: newSemesters
         });
-        update();
     }
 
-    function planToCSV(): string {
-        /* const header = [
-            Object.keys(degree),
-            Object.keys(degree.semesters),
-            Object.keys(degree.semesters[0].courses)
-        ].flat();
-        const exportCSV = [
-            header.join(","), // header row first
-            degree.degreeID,
-            degree.name,
-            degree.semesters.map((semester: Semester) =>
-                header
-                    .map((semester.semesterID) => JSON.stringify(semester["semesterID"]))
-                    .join(",")
-            )
-        ].join("\r\n"); */
-        const exportCSV = [
-            "{",
-            "degreeID",
-            ":",
-            degree.degreeID.toString(),
-            "name",
-            ":",
-            degree.name,
-            "semesters",
-            ":",
-            degree.semesters
-                .map((semester: Semester): string[] => [
-                    "{",
-                    "semesterID",
-                    ":",
-                    semester.semesterID.toString(),
-                    "season",
-                    ":",
-                    semester.season,
-                    "year",
-                    ":",
-                    semester.year.toString(),
-                    "courses",
-                    ":",
+    function arrayToCSV(): string {
+        /*
+        const headers = [
+            { label: "DegreeID", key: "degreeID" },
+            { label: "Name", key: "name" },
+            { label: "SemesterID", key: "semesterID" },
+            { label: "Season", key: "season" },
+            { label: "Year", key: "year" },
+            { label: "Semester", key: "semesterID" },
+            { label: "CourseID", key: "courseID" },
+            { label: "Course Listing", key: "listing" },
+            { label: "Course Title", key: "title" },
+            { label: "PreReqs", key: "preReqs" },
+            { label: "CoReqs", key: "coReqs" },
+            { label: "Seasons Offered", key: "offered" },
+            { label: "Credits", key: "credits" },
+            { label: "Errors", key: "errors" }
+        ];
+        
+        const heading = [
+            "DegreeID",
+            "Name",
+            "SemesterID",
+            "Season",
+            "Year",
+            "Semester",
+            "CourseID",
+            "Course Listing",
+            "Course Title",
+            "PreReqs",
+            "CoReqs",
+            "Seasons Offered",
+            "Credits",
+            "Errors"
+        ].join(",");*/
+        const semesterString = degree.semesters
+            .map((semester: Semester) =>
+                [
+                    [
+                        ["Semester:", semester.semesterID.toString()].join(),
+                        semester.season,
+                        semester.year.toString(),
+                        semester.errors.join("\r\n")
+                    ].join(","),
                     semester.courses
-                        .map((course: Course): string[] => [
-                            "{",
-                            "courseID",
-                            ":",
-                            course.courseID.toString(),
-                            "listing",
-                            ":",
-                            course.listing,
-                            "title",
-                            ":",
-                            course.title,
-                            "preReqs",
-                            ":",
-                            course.preReqs
-                                .map((preReq: number) => preReq.toString())
-                                .join(","),
-                            "coReqs",
-                            ":",
-                            course.coReqs
-                                .map((coReq: number) => coReq.toString())
-                                .join(","),
-                            "offered",
-                            ":",
-                            course.offered.join(","),
-                            "credits",
-                            ":",
-                            course.credits.toString(),
-                            "reqsSatisfied",
-                            ":",
-                            course.reqsSatisfied.join(",")
-                        ])
-                        .join(","),
-                    "errors",
-                    ":",
-                    semester.errors.join(",")
-                ])
-                .join("\r\n")
-        ].join("\r\n"); // New row for each degree plan
-        return exportCSV;
+                        .map((course: Course) =>
+                            [
+                                semester.semesterID.toString(),
+                                course.courseID.toString(),
+                                course.listing,
+                                course.title,
+                                course.preReqs.join("-").toString(),
+                                course.coReqs.join("-").toString(),
+                                course.offered.join("-"),
+                                course.credits.toString(),
+                                course.reqsSatisfied.join("-")
+                            ].join(",")
+                        )
+                        .join("\r\n")
+                ].join("\r\n")
+            )
+            .join("\r\n");
+        const degreeString = [
+            [degree.degreeID.toString(), degree.name].join(","),
+            semesterString
+        ].join("\r\n");
+        return degreeString;
     }
 
     function downloadBlob() {
         // Create a blob
-        const blob = new Blob([planToCSV()], {
+        const blob = new Blob([arrayToCSV()], {
             type: "text/csv;charset=utf-8;"
         });
         const url = URL.createObjectURL(blob);
@@ -145,23 +129,17 @@ export function DegreePlanView({
         // Create a link to download it
         const pom = document.createElement("a");
         pom.href = url;
-        pom.setAttribute("download", "degreePlan" + degree.degreeID.toString());
+        pom.setAttribute(
+            "download",
+            ["degree", degree.degreeID, ".csv"].join("")
+        );
         pom.click();
     }
 
     return (
         <div hidden={hidden}>
             <br></br>
-            <Row>
-                <div>
-                    <Button
-                        onClick={() => downloadBlob()}
-                        variant={"outline-primary"}
-                    >
-                        Download Degree Plan
-                    </Button>
-                </div>
-            </Row>
+            <Button onClick={downloadBlob}>Export Degree Plan</Button>
             <br></br>
             <Button
                 onClick={() => setEditMode(!editMode)}
@@ -184,7 +162,6 @@ export function DegreePlanView({
                                     degree={degree}
                                     editDegree={editDegree}
                                     courses={courses}
-                                    updateEditCount={update}
                                 ></SemesterViewHome>
                                 <br></br>
                             </div>
@@ -205,7 +182,6 @@ export function DegreePlanView({
                                     degree={degree}
                                     editDegree={editDegree}
                                     courses={courses}
-                                    updateEditCount={update}
                                 ></SemesterViewHome>
                                 <br></br>
                             </div>

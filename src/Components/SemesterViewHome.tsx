@@ -13,8 +13,7 @@ export function SemesterViewHome({
     deleteSemester,
     degree,
     editDegree,
-    courses,
-    updateEditCount
+    courses
 }: {
     semester: Semester;
     editMode: boolean;
@@ -22,7 +21,6 @@ export function SemesterViewHome({
     degree: Degree;
     editDegree: (degreeID: number, newDegree: Degree) => void;
     courses: Course[];
-    updateEditCount: () => void;
 }): JSX.Element {
     return (
         <div>
@@ -47,7 +45,6 @@ export function SemesterViewHome({
                                     editDegree
                                 })
                             }
-                            updateEditCount={updateEditCount}
                         ></EditSemester>
                     </th>
                     <th>

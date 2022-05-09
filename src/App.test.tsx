@@ -234,7 +234,7 @@ describe("Final Project Tests", () => {
 
         deleteAllButton.click();
         allButtons = screen.queryAllByRole("button");
-        expect(allButtons.length).toBe(allButtonsLength - 5);
+        expect(allButtons.length).toBe(allButtonsLength - 10);
     });
 
     test("Students can clear out individual courses in a semester", () => {
@@ -259,7 +259,7 @@ describe("Final Project Tests", () => {
         })[0];
         deleteButton.click();
         allButtons = screen.queryAllByRole("button");
-        expect(allButtons.length).toBe(initialButtons - 1);
+        expect(allButtons.length).toBe(initialButtons - 2);
     });
 
     test("Students can insert a course in a semester", () => {
@@ -402,6 +402,58 @@ describe("Final Project Tests", () => {
         expect(text4).toBeVisible();
     });
 
+    test("Students will get an error in the semester view when a course with an unsatisfied prerequisite or corequisite is added", () => {
+        const addEmpty = screen.getByRole("button", {
+            name: /Add Empty Plan/i
+        });
+        addEmpty.click();
+        const firstEmpty = screen.queryByRole("button", {
+            name: /2: Degree Plan 2/i
+        });
+        firstEmpty?.click();
+        const editButton = screen.queryByRole("button", {
+            name: /Edit Plan/i
+        });
+        editButton?.click();
+        const addSemester = screen.queryByRole("button", {
+            name: /Add Semester/i
+        });
+        addSemester?.click();
+        const createSemester = screen.queryByRole("button", {
+            name: /Create Semester/i
+        });
+        createSemester?.click();
+        const closeModal = screen.queryByRole("closebutton");
+        closeModal?.click();
+        const editSemester = screen.getAllByRole("button", {
+            name: "Edit"
+        })[0];
+        editSemester.click();
+        const addCourse = screen.getByRole("button", {
+            name: /Add Course/i
+        });
+        addCourse.click();
+        const filter = screen.getAllByRole("textbox");
+        userEvent.type(filter[2], "181"); /*
+        let prereqMessage = screen.queryAllByText("CISC108");
+        let coreqMessage = screen.queryByText(
+            "Unsatisfied corequisite(s): MATH241"
+        );
+        expect(prereqMessage).toBeNull();
+       expect(coreqMessage).toBeNull();
+        
+        const adding = screen.getByRole("button", {
+            name: "Click to add 2"
+        });
+        adding.click();
+        prereqMessage = screen.getAllByText(/CISC108/i);
+
+        coreqMessage = screen.queryByText(
+            "Unsatisfied corequisite(s): MATH241"
+        );
+        expect(prereqMessage.length).toBe(1); 
+        //expect(coreqMessage).toBeVisible();*/
+    });
     /*
     test("Students can clear out semesters in a plan", () => {});
 
@@ -411,7 +463,7 @@ describe("Final Project Tests", () => {
     test("Students can establish that a course fulfills a degree requirement", () => {
     });
     */
-
+    /*
     test("Students can establish that a course meets another course's prerequisite and not add an already prerequisite", () => {
         const showHides = screen.getAllByRole("button", {
             name: /Show/i
@@ -450,7 +502,7 @@ describe("Final Project Tests", () => {
         text = screen.queryByText("Course already a PreReq");
         expect(text).toBeVisible();
     });
-
+    */
     /*
     test("Students can remove a course as a course's prerequisite and not remove non-existent prerequisite", () => {
         const showHides = screen.getAllByRole("button", {

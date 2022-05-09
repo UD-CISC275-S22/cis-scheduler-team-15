@@ -12,8 +12,7 @@ export function EditSemester({
     degree,
     editDegree,
     courses,
-    checkSemester,
-    updateEditCount
+    checkSemester
 }: {
     semester: Semester;
     editMode: boolean;
@@ -25,10 +24,8 @@ export function EditSemester({
         degree: Degree,
         editDegree: (degreeID: number, newDegree: Degree) => void
     ) => void;
-    updateEditCount: () => void;
 }): JSX.Element {
     const [modal, setModal] = useState<boolean>(false);
-
     function replaceSemesterInDegree(newSemester: Semester) {
         const newSemesters: Semester[] = [
             ...degree.semesters.filter(
@@ -50,7 +47,6 @@ export function EditSemester({
             errors: []
         };
         replaceSemesterInDegree(newSemester);
-        updateEditCount();
     }
 
     function deleteCourse(index: number, semester: Semester) {
@@ -66,13 +62,9 @@ export function EditSemester({
             errors: Array(newCourses.length).fill("")
         };
         replaceSemesterInDegree(newSemester);
-        updateEditCount();
     }
     useEffect(() => {
         checkSemester(courses, degree, editDegree);
-        console.log(
-            "useEffect in editSemester runs with semester.courses dependency"
-        );
     }, [semester.courses]);
 
     return (
@@ -90,7 +82,7 @@ export function EditSemester({
                 show={modal}
                 onHide={() => setModal(false)}
                 scrollable={true}
-                dialogClassName="modal-1000h"
+                dialogClassName="modal_edit_semester"
             >
                 <Modal.Header closeButton>
                     <Modal.Title>
@@ -105,11 +97,10 @@ export function EditSemester({
                             degree={degree}
                             editDegree={editDegree}
                             checkSemester={checkSemester}
-                            updateEditCount={updateEditCount}
                         ></AddCourse>
                     </Row>
-                    <Row className="Align-right">
-                        <Col>
+                    <Row>
+                        <Col className="Align-right">
                             <Button
                                 variant="danger"
                                 onClick={() => deleteAll(semester)}
@@ -118,11 +109,18 @@ export function EditSemester({
                             </Button>
                         </Col>
                     </Row>
-                    <br></br>
-                    <SemesterViewModal
-                        semester={semester}
-                        deleteCourse={deleteCourse}
-                    ></SemesterViewModal>
+                    <Row>
+                        <Col className="Align-right">
+                            <SemesterViewModal
+                                semester={semester}
+                                degree={degree}
+                                editDegree={editDegree}
+                                deleteCourse={deleteCourse}
+                            ></SemesterViewModal>
+                        </Col>
+                        <br></br>
+                    </Row>
+
                     <div>
                         {semester.courses
                             .filter(
@@ -130,8 +128,12 @@ export function EditSemester({
                                     semester.errors[index] !== ""
                             )
                             .map((course: Course, index: number) => (
-                                <p key={index} className="line-break">
-                                    <span>
+                                <p
+                                    key={index}
+                                    className="line-break"
+                                    data-testid="error_message"
+                                >
+                                    <span data-testid="error_message">
                                         {course.listing}:{" "}
                                         {
                                             semester.errors.filter(

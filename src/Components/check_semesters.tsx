@@ -73,14 +73,20 @@ export function CheckSemesters({
     }
     function checkCoReqs(semester: Semester): boolean[][] {
         const semesterCourses = semester.courses;
-        const allCoursesInPlan = degree.semesters.reduce(
+        const semestersBeforeAndCurrent = [
+            ...degree.semesters.filter((checkSemester: Semester): boolean =>
+                checkSemesterBefore(semester, checkSemester)
+            ),
+            semester
+        ];
+        const allCoursesBeforeAndCurrent = semestersBeforeAndCurrent.reduce(
             (allCourses: Course[], currentSemester: Semester) => [
                 ...allCourses,
                 ...currentSemester.courses
             ],
             []
         );
-        const allCourseIDInPlan = allCoursesInPlan.map(
+        const allCourseIDBeforeAndCurrent = allCoursesBeforeAndCurrent.map(
             (course: Course): number => course.courseID
         );
         const semesterCoreqIDs = semesterCourses.map(
@@ -88,7 +94,7 @@ export function CheckSemesters({
         );
         const coreqBool = semesterCoreqIDs.map((coreqs: number[]): boolean[] =>
             coreqs.map((coreq: number): boolean =>
-                allCourseIDInPlan.includes(coreq)
+                allCourseIDBeforeAndCurrent.includes(coreq)
             )
         );
         return coreqBool;
@@ -98,6 +104,7 @@ export function CheckSemesters({
         prereqSatisfied: boolean[],
         index: number
     ): string {
+        console.log("Semester:", semester.semesterID);
         const prereqIDs = semester.courses[index].preReqs;
         const unsatisfiedPrereqIDs = prereqIDs.filter(
             (ID: number, index: number): boolean => !prereqSatisfied[index]
@@ -153,11 +160,6 @@ export function CheckSemesters({
         return errorMessage;
     }
     const newSemesters = degree.semesters.map((semester: Semester) => {
-        // console.log(
-        //     "checkSemester running on " +
-        //         semester.season +
-        //         semester.year.toString()
-        // );
         const prereqBool = checkPreReqs(semester);
         const coreqBool = checkCoReqs(semester);
         const newErrors = [
@@ -173,8 +175,6 @@ export function CheckSemesters({
             courses: semester.courses,
             errors: [...newErrors]
         };
-        // console.log("errors for this semester: ");
-        // console.log(semesterWithError.errors);
         return semesterWithError;
     });
     const newDegree: Degree = { ...degree, semesters: newSemesters };
