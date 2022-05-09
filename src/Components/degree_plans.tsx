@@ -94,52 +94,6 @@ export function DegreePlans({ courses }: { courses: Course[] }): JSX.Element {
         return courses;
     }
 
-    /*
-    function setCoursesCSV(sem: string): Course[] {
-        const semArray = sem.split(",");
-        const reducedArray = [...semArray.slice(2)];
-        console.log(semArray);
-        console.log(reducedArray);
-        const startingInd =
-            reducedArray.findIndex((str: string) => str === semArray[1]) + 1;
-        const courseInds = [
-            ...reducedArray.filter(
-                (str: string, ind: number) => ind % 9 === (startingInd - 1) % 9
-            )
-        ];
-        const numCourses = [
-            ...courseInds.filter((str: string) => str === semArray[1])
-        ].length;
-        console.log("courseInds: ", courseInds);
-        console.log("NumCourses:", numCourses);
-        let courses: Course[] = [];
-        for (let i = 0; i < numCourses; i++) {
-            console.log("i = ", i);
-            const newCourse: Course = {
-                courseID: parseInt(reducedArray[startingInd + 8 * i]),
-                listing: reducedArray[startingInd + 1 + 8 * i],
-                title: reducedArray[startingInd + 2 + 8 * i],
-                preReqs: [
-                    ...reducedArray[startingInd + 3 + 8 * i]
-                        .split("-")
-                        .map((str: string) => parseInt(str))
-                ],
-                coReqs: [
-                    ...reducedArray[startingInd + 4 + 8 * i]
-                        .split("-")
-                        .map((str: string) => parseInt(str))
-                ],
-                offered: [...reducedArray[startingInd + 5 + 8 * i].split("-")],
-                credits: parseInt(reducedArray[startingInd + 6 + 8 * i]),
-                reqsSatisfied: [
-                    ...reducedArray[startingInd + 7 + 8 * i].split("-")
-                ]
-            };
-            courses = [...courses, newCourse];
-        }
-        return courses;
-    }
-    */
     function addUploadedDegree() {
         const IDList = degreePlans.map((degree: Degree) => degree.degreeID);
         const newID = degreePlans.length > 0 ? Math.max(...IDList) + 1 : 1;
