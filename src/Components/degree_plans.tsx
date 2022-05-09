@@ -145,7 +145,17 @@ export function DegreePlans({ courses }: { courses: Course[] }): JSX.Element {
             ...degreePlans,
             {
                 ...DEGREEPLANSTART[0],
-                degreeID: degreePlans.length > 0 ? Math.max(...IDList) + 1 : 1
+                degreeID: degreePlans.length > 0 ? Math.max(...IDList) + 1 : 1,
+                semesters: DEGREEPLANSTART[0].semesters.map(
+                    (semester: Semester) => ({
+                        ...semester,
+                        courses: semester.courses.map(
+                            (course: Course): Course => ({
+                                ...replaceCourse(course.courseID)
+                            })
+                        )
+                    })
+                )
             }
         ]);
     }
