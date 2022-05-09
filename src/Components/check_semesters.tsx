@@ -104,6 +104,7 @@ export function CheckSemesters({
         prereqSatisfied: boolean[],
         index: number
     ): string {
+        console.log("Semester:", semester.semesterID);
         const prereqIDs = semester.courses[index].preReqs;
         const unsatisfiedPrereqIDs = prereqIDs.filter(
             (ID: number, index: number): boolean => !prereqSatisfied[index]
