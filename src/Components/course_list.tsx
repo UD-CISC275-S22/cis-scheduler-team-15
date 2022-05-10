@@ -20,7 +20,7 @@ export function CourseList({
                     {courses
                         .filter(
                             (course: Course, index: number) =>
-                                index < length / 3
+                                index < length / 2
                         )
                         .map((course: Course) => (
                             <div key={course.courseID}>
@@ -36,23 +36,7 @@ export function CourseList({
                     {courses
                         .filter(
                             (course: Course, index: number) =>
-                                index >= length / 3 && index < (2 * length) / 3
-                        )
-                        .map((course: Course) => (
-                            <div key={course.courseID}>
-                                <CourseListView
-                                    course={course}
-                                    courses={courses}
-                                    editCourses={editCourses}
-                                ></CourseListView>
-                            </div>
-                        ))}
-                </Col>
-                <Col>
-                    {courses
-                        .filter(
-                            (course: Course, index: number) =>
-                                index >= (2 * length) / 3
+                                index >= length / 2
                         )
                         .map((course: Course) => (
                             <div key={course.courseID}>
