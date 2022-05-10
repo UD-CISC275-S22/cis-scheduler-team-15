@@ -38,7 +38,6 @@ export function SemesterViewModal({
                         <td>{course.credits}</td>
                         <td width={25}>
                             <Button
-                                className="btn btn-secondary btn-circle btn-sm"
                                 data-bs-toggle="modal"
                                 data-toggle="tooltip"
                                 title={"Click to delete " + course.listing}

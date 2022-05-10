@@ -209,21 +209,30 @@ export function DegreePlans({ courses }: { courses: Course[] }): JSX.Element {
     return (
         <Stack gap={0} className="App">
             <div className="App-special2">
-                <Row className="justify-content-center">
-                    <Col xs={2}>
-                        <Button onClick={addEmptyDegreePlan}>
-                            <b>Add Empty plan ➕</b>
+                <Row>
+                    <div className="App-break"></div>
+                    <Col xs={1}></Col>
+                    <Col xs={4}>
+                        <Button
+                            onClick={addEmptyDegreePlan}
+                            style={{ margin: "5px 0px" }}
+                        >
+                            <b>Add Empty ➕</b>
                         </Button>
                     </Col>
-                    <Col xs={3}>
-                        <Button onClick={addStartDegreePlan}>
-                            <b>Add Default Plan (8 semesters) ➕</b>
+                    <Col xs={5}>
+                        <Button
+                            onClick={addStartDegreePlan}
+                            style={{ margin: "5px 0px" }}
+                        >
+                            <b>Add Default (8 semesters) ➕</b>
                         </Button>
                     </Col>
-                    <Col xs={2}>
+                    <Col>
                         <Button
                             onClick={() => setAddingFile(!addingFile)}
                             variant={addingFile ? "warning" : "primary"}
+                            style={{ margin: "5px 0px" }}
                         >
                             <b>
                                 {addingFile
@@ -259,11 +268,19 @@ export function DegreePlans({ courses }: { courses: Course[] }): JSX.Element {
                     </Col>
                     <Col xs={1}></Col>
                     <Col xs={2}>
-                        <Button onClick={saveData}>Save 💾</Button>
+                        <Button
+                            onClick={saveData}
+                            style={{ margin: "5px 0px" }}
+                        >
+                            <b>Save 💾</b>
+                        </Button>
                     </Col>
                     <Col xs={2}>
-                        <Button onClick={revert}>Revert to Default</Button>
+                        <Button onClick={revert} style={{ margin: "5px 0px" }}>
+                            <b>Revert to Default</b>
+                        </Button>
                     </Col>
+                    <div className="App-break"></div>
                 </Row>
             </div>
 
