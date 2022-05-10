@@ -76,7 +76,7 @@ export function EditSemester({
                 hidden={!editMode}
                 variant="success"
             >
-                Edit
+                🖉
             </Button>
             <Modal
                 show={modal}
@@ -86,7 +86,9 @@ export function EditSemester({
             >
                 <Modal.Header closeButton>
                     <Modal.Title>
-                        <div>Edit Semester</div>
+                        <div>
+                            {semester.season} {semester.year}
+                        </div>
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
@@ -105,7 +107,7 @@ export function EditSemester({
                                 variant="danger"
                                 onClick={() => deleteAll(semester)}
                             >
-                                Delete All
+                                Delete All 🗑️
                             </Button>
                         </Col>
                     </Row>

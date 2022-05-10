@@ -10,8 +10,12 @@ export function ShowAllErrors({ degree }: { degree: Degree }): JSX.Element {
 
     return (
         <div>
-            <Button onClick={() => setVisible(!visible)}>
-                {!visible ? "Show All Errors" : "Stop Showing"}
+            <Button
+                onClick={() => setVisible(!visible)}
+                variant={visible ? "warning" : "primary"}
+                style={{ margin: "5px" }}
+            >
+                {!visible ? "⚠ Show Errors ⚠" : "🛑 Hide Errors 🛑"}
             </Button>
             {visible && (
                 <div>

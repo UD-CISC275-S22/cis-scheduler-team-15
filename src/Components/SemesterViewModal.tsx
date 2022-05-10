@@ -45,7 +45,7 @@ export function SemesterViewModal({
                                 variant="danger"
                                 onClick={() => deleteCourse(index, semester)}
                             >
-                                x
+                                🗑️
                             </Button>
                         </td>
                         <td width={125}>

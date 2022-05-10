@@ -207,17 +207,17 @@ export function DegreePlans({ courses }: { courses: Course[] }): JSX.Element {
     }
 
     return (
-        <Stack gap={0}>
+        <Stack gap={0} className="App">
             <div className="App-special2">
                 <Row className="justify-content-center">
                     <Col xs={2}>
                         <Button onClick={addEmptyDegreePlan}>
-                            <b>Add Empty plan</b>
+                            <b>Add Empty plan ➕</b>
                         </Button>
                     </Col>
                     <Col xs={3}>
                         <Button onClick={addStartDegreePlan}>
-                            <b>Add Default Plan (8 semesters)</b>
+                            <b>Add Default Plan (8 semesters) ➕</b>
                         </Button>
                     </Col>
                     <Col xs={2}>
@@ -227,8 +227,8 @@ export function DegreePlans({ courses }: { courses: Course[] }): JSX.Element {
                         >
                             <b>
                                 {addingFile
-                                    ? "Stop Uploading"
-                                    : "Upload Degree Plan"}
+                                    ? "Stop Uploading 🛑"
+                                    : "Upload Plan ↥"}
                             </b>
                         </Button>
                     </Col>
@@ -253,12 +253,13 @@ export function DegreePlans({ courses }: { courses: Course[] }): JSX.Element {
                                 }
                                 onClick={addUploadedDegree}
                             >
-                                Add Uploaded Plan
+                                <b>Add ➕</b>
                             </Button>
                         </div>
                     </Col>
+                    <Col xs={1}></Col>
                     <Col xs={2}>
-                        <Button onClick={saveData}>Save Degree Plans</Button>
+                        <Button onClick={saveData}>Save 💾</Button>
                     </Col>
                     <Col xs={2}>
                         <Button onClick={revert}>Revert to Default</Button>
@@ -294,7 +295,7 @@ export function DegreePlans({ courses }: { courses: Course[] }): JSX.Element {
                 <div>
                     {degreePlans.map((degree: Degree) => (
                         <span key={degree.degreeID}>
-                            <div className="Align-right">
+                            <div className="App-special3-right">
                                 <Button
                                     onClick={() =>
                                         removeDegreePlan(currentDegreePlanID)
@@ -305,10 +306,10 @@ export function DegreePlans({ courses }: { courses: Course[] }): JSX.Element {
                                     }
                                     style={{ margin: "5px" }}
                                 >
-                                    Delete selected plan
+                                    Delete Plan 🗑️
                                 </Button>
                             </div>
-                            <div className="App">
+                            <div className="App-special3">
                                 <DegreePlanView
                                     courses={courses}
                                     degree={degree}

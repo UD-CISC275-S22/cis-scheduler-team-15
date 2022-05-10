@@ -131,7 +131,7 @@ export function CourseState(): JSX.Element {
                     <Row>
                         <Col>
                             <Button onClick={movePlanView}>
-                                Move to Degree Plans
+                                Move to Degree Plans 📖
                             </Button>
                         </Col>
                         <Col>
@@ -150,7 +150,7 @@ export function CourseState(): JSX.Element {
                         </Col>
                         <Col>
                             <Button onClick={moveCourseView}>
-                                Move to Course List
+                                Move to Course List 📄
                             </Button>
                         </Col>
                     </Row>
@@ -200,17 +200,20 @@ export function CourseState(): JSX.Element {
                     <div className="App-header2">
                         <Row>
                             <Col>
-                                <Button onClick={moveHome}>Move to Home</Button>
+                                <Button onClick={moveHome}>
+                                    Move to Home 🏠
+                                </Button>
                             </Col>
                             <Col xs={6}>
                                 <h3>Degree Plans</h3>
                             </Col>
                             <Col>
                                 <Button onClick={moveCourseView}>
-                                    Move to Course List
+                                    Move to Course List 📄
                                 </Button>
                             </Col>
                         </Row>
+                        <br></br>
                     </div>
                     <Row>
                         <DegreePlans courses={courses}></DegreePlans>
@@ -220,14 +223,16 @@ export function CourseState(): JSX.Element {
                     <div className="App-header2">
                         <Row>
                             <Col>
-                                <Button onClick={moveHome}>Move to Home</Button>
+                                <Button onClick={moveHome}>
+                                    Move to Home 🏠
+                                </Button>
                             </Col>
                             <Col xs={6}>
                                 <h3>Course List</h3>
                             </Col>
                             <Col>
                                 <Button onClick={movePlanView}>
-                                    Move to Plan View
+                                    Move to Degree Plans 📖
                                 </Button>
                             </Col>
                         </Row>
@@ -237,9 +242,7 @@ export function CourseState(): JSX.Element {
                         <Row className="justify-content-center">
                             <Col xs={2}></Col>
                             <Col xs={3}>
-                                <Button onClick={saveData}>
-                                    Save Course List
-                                </Button>
+                                <Button onClick={saveData}>Save 💾</Button>
                             </Col>
                             <Col xs={3}>
                                 <Button onClick={revert}>
