@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Degree } from "../Interfaces/degree";
-import { Stack, ToggleButton, Col, Row, Button, Form } from "react-bootstrap";
+import { Stack, Col, Row, Button, Form } from "react-bootstrap";
 import PlanData from "./../Data/plan_data.json";
 import { DegreePlanView } from "./degree_plan_view";
 import { Course } from "../Interfaces/course";
@@ -207,100 +207,108 @@ export function DegreePlans({ courses }: { courses: Course[] }): JSX.Element {
     }
 
     return (
-        <Stack gap={2}>
-            <Row>
-                <div>
-                    <span>
-                        <Button onClick={saveData} variant="outline-primary">
-                            Save Degree Plans
+        <Stack gap={0}>
+            <div className="App-special2">
+                <Row className="justify-content-center">
+                    <Col xs={2}>
+                        <Button onClick={addEmptyDegreePlan}>
+                            <b>Add Empty plan</b>
                         </Button>
-                    </span>
-                    <span>
-                        <Button onClick={revert} variant="outline-warning">
-                            Revert to Default
+                    </Col>
+                    <Col xs={3}>
+                        <Button onClick={addStartDegreePlan}>
+                            <b>Add Default Plan (8 semesters)</b>
                         </Button>
-                    </span>
-                </div>
-            </Row>
-            <Row>
-                <Col>
-                    <Button onClick={addEmptyDegreePlan}>Add Empty plan</Button>
-                </Col>
-                <Col xs={3}>
-                    <Button onClick={addStartDegreePlan}>
-                        Add Default Plan (8 semesters)
-                    </Button>
-                </Col>
-                <Col>
-                    <Button
-                        onClick={() => setAddingFile(!addingFile)}
-                        variant={addingFile ? "warning" : "primary"}
-                    >
-                        {addingFile ? "Stop Uploading" : "Upload Degree Plan"}
-                    </Button>
-                </Col>
-                <Col>
-                    <Button
-                        onClick={() => removeDegreePlan(currentDegreePlanID)}
-                        variant={
-                            currentDegreePlanID === 0
-                                ? "outline-danger"
-                                : "danger"
-                        }
-                    >
-                        Delete selected plan
-                    </Button>
-                </Col>
-            </Row>
-            <Row hidden={!addingFile}>
-                <Col>
-                    <span>
-                        <Form.Group controlId="exampleForm">
-                            <Form.Control type="file" onChange={uploadFile} />
-                        </Form.Group>
-                    </span>
-                </Col>
-                <Col>
-                    <div>
+                    </Col>
+                    <Col xs={2}>
                         <Button
-                            hidden={
-                                content === "Data was not loaded" ||
-                                content === "No file data uploaded"
-                            }
-                            onClick={addUploadedDegree}
+                            onClick={() => setAddingFile(!addingFile)}
+                            variant={addingFile ? "warning" : "primary"}
                         >
-                            Add Uploaded Plan
+                            <b>
+                                {addingFile
+                                    ? "Stop Uploading"
+                                    : "Upload Degree Plan"}
+                            </b>
                         </Button>
-                    </div>
-                </Col>
-            </Row>
-            <Row>
-                <Col>
-                    <div className="App">
-                        {degreePlans.map((degree: Degree) => (
-                            <span
-                                key={degree.degreeID}
-                                style={{ margin: "5px" }}
+                    </Col>
+                </Row>
+                <Row className="justify-content-center">
+                    <Col xs={3} hidden={!addingFile}>
+                        <span>
+                            <Form.Group controlId="exampleForm">
+                                <Form.Control
+                                    type="file"
+                                    onChange={uploadFile}
+                                />
+                            </Form.Group>
+                        </span>
+                    </Col>
+                    <Col hidden={!addingFile}>
+                        <div>
+                            <Button
+                                hidden={
+                                    content === "Data was not loaded" ||
+                                    content === "No file data uploaded"
+                                }
+                                onClick={addUploadedDegree}
                             >
-                                <ToggleButton
-                                    value={degree.degreeID}
+                                Add Uploaded Plan
+                            </Button>
+                        </div>
+                    </Col>
+                    <Col xs={2}>
+                        <Button onClick={saveData}>Save Degree Plans</Button>
+                    </Col>
+                    <Col xs={2}>
+                        <Button onClick={revert}>Revert to Default</Button>
+                    </Col>
+                </Row>
+            </div>
+
+            <Row>
+                <div className="tab">
+                    <Col>
+                        <div>
+                            {degreePlans.map((degree: Degree) => (
+                                <Button
                                     key={degree.degreeID}
-                                    variant={
-                                        degree.degreeID === currentDegreePlanID
-                                            ? "primary"
-                                            : "outline-primary"
-                                    }
-                                    checked={
-                                        degree.degreeID === currentDegreePlanID
-                                    }
+                                    value={degree.degreeID}
+                                    style={{ margin: "0px 5px" }}
+                                    className="tablinks"
                                     onClick={() => selectDegreePlan(degree)}
+                                    active={
+                                        degree.degreeID === currentDegreePlanID
+                                    }
                                 >
-                                    {degree.degreeID}: {degree.name}
-                                </ToggleButton>
+                                    {degree.name}
+                                </Button>
+                            ))}
+                            <span hidden={currentDegreePlanID !== 0}>
+                                <b>🠘 Select a Degree Plan to View/Edit</b>
                             </span>
-                        ))}
-                        {degreePlans.map((degree: Degree) => (
-                            <span key={degree.degreeID}>
+                        </div>
+                    </Col>
+                </div>
+
+                <div>
+                    {degreePlans.map((degree: Degree) => (
+                        <span key={degree.degreeID}>
+                            <div className="Align-right">
+                                <Button
+                                    onClick={() =>
+                                        removeDegreePlan(currentDegreePlanID)
+                                    }
+                                    variant="danger"
+                                    hidden={
+                                        degree.degreeID !== currentDegreePlanID
+                                    }
+                                    style={{ margin: "5px" }}
+                                >
+                                    Delete selected plan
+                                </Button>
+                            </div>
+                            <div className="App">
                                 <DegreePlanView
                                     courses={courses}
                                     degree={degree}
@@ -309,10 +317,10 @@ export function DegreePlans({ courses }: { courses: Course[] }): JSX.Element {
                                         degree.degreeID !== currentDegreePlanID
                                     }
                                 ></DegreePlanView>
-                            </span>
-                        ))}
-                    </div>
-                </Col>
+                            </div>
+                        </span>
+                    ))}
+                </div>
             </Row>
         </Stack>
     );
