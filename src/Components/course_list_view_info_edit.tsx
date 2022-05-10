@@ -262,7 +262,7 @@ export function CourseListViewInfoEdit({
 
     return (
         <span>
-            <Button onClick={() => setEdit(!edit)}>
+            <Button data-testid={"edit-button"} onClick={() => setEdit(!edit)}>
                 {edit ? "Hide" : "Edit"}
             </Button>
             <div>
@@ -340,7 +340,6 @@ export function CourseListViewInfoEdit({
                                 <Form.Label>Edit Pre-Requisites:</Form.Label>
                                 <InputGroup>
                                     <Form.Select
-                                        //data-testid={"edit-add-preReq"}
                                         value={newID}
                                         onChange={updateNewID}
                                     >
@@ -366,7 +365,6 @@ export function CourseListViewInfoEdit({
                                 </InputGroup>
                                 <InputGroup>
                                     <Form.Select
-                                        data-testid={"edit-remove-preReq"}
                                         value={removeID}
                                         onChange={updateRemoveID}
                                     >
@@ -401,7 +399,6 @@ export function CourseListViewInfoEdit({
                                 <Form.Label>Edit Co-Requisites:</Form.Label>
                                 <InputGroup>
                                     <Form.Select
-                                        data-testid={"edit-add-coReq"}
                                         value={newCoID}
                                         onChange={updateNewCoID}
                                     >
@@ -415,6 +412,7 @@ export function CourseListViewInfoEdit({
                                                 <option
                                                     key={coursem.courseID}
                                                     value={coursem.courseID}
+                                                    data-testid={"add-coReq"}
                                                 >
                                                     {coursem.listing}
                                                 </option>
@@ -428,7 +426,6 @@ export function CourseListViewInfoEdit({
                                 </InputGroup>
                                 <InputGroup>
                                     <Form.Select
-                                        data-testid={"edit-remove-preReq"}
                                         value={removeCoID}
                                         onChange={updateRemoveCoID}
                                     >
@@ -442,6 +439,7 @@ export function CourseListViewInfoEdit({
                                                 <option
                                                     key={coursem.courseID}
                                                     value={coursem.courseID}
+                                                    data-testid="remove-coReq"
                                                 >
                                                     {coursem.listing}
                                                 </option>
@@ -478,7 +476,7 @@ export function CourseListViewInfoEdit({
                                             (req: string, index: number) => (
                                                 <Form.Check
                                                     data-testid={
-                                                        "edit-univ-req-options"
+                                                        "edit-univ-req-option"
                                                     }
                                                     key={index}
                                                     type="checkbox"
@@ -505,7 +503,7 @@ export function CourseListViewInfoEdit({
                                             (req: string, index: number) => (
                                                 <Form.Check
                                                     data-testid={
-                                                        "edit-coll-req-options"
+                                                        "edit-coll-req-option"
                                                     }
                                                     key={index}
                                                     type="checkbox"
@@ -532,7 +530,7 @@ export function CourseListViewInfoEdit({
                                             (req: string, index: number) => (
                                                 <Form.Check
                                                     data-testid={
-                                                        "edit-major-req-options"
+                                                        "edit-major-req-option"
                                                     }
                                                     key={index}
                                                     type="checkbox"

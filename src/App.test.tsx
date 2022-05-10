@@ -3,10 +3,6 @@ import { render, screen } from "@testing-library/react";
 import App from "./App";
 import userEvent from "@testing-library/user-event";
 //import ReactDOM from "react-dom";
-import AllCourses from "./Data/course_list.json";
-import { Course } from "./Interfaces/course";
-
-const COURSES = AllCourses.map((course): Course => ({ ...course }));
 
 describe("Final Project Tests", () => {
     beforeEach(() => {
@@ -459,10 +455,92 @@ describe("Final Project Tests", () => {
 
     */
 
-    /*Mike's Tests
+    //Mike's Tests
     test("Students can establish that a course fulfills a degree requirement", () => {
+        const showHides = screen.getAllByRole("button", {
+            name: /Show/i
+        });
+        showHides[1].click();
+
+        const infoButtons = screen.queryAllByRole("button", {
+            name: / i/i
+        });
+
+        infoButtons[0].click();
+        const editButton = screen.getAllByRole("button", {
+            name: /Edit/i
+        });
+        editButton[0].click();
+
+        /*
+        const uAccordian = screen.queryByTestId("edit-univ-req-accordian");
+        uAccordian?.click();
+        expect(COURSES[0].reqsSatisfied.includes("CISC108"));
+        const uOptions = screen.queryAllByTestId("edit-univ-req-option");
+        uOptions[0].click();
+        expect(COURSES[0].reqsSatisfied.includes("FYS"));
+        uOptions[0].click();
+        expect(!COURSES[0].reqsSatisfied.includes("FYS"));
+
+        const cAccordian = screen.queryByTestId("edit-coll-req-accordian");
+        cAccordian?.click();
+        expect(COURSES[0].reqsSatisfied.includes("CISC108"));
+        const cOptions = screen.queryAllByTestId("edit-coll-req-option");
+        cOptions[0].click();
+        expect(COURSES[0].reqsSatisfied.includes("FL"));
+        cOptions[0].click();
+        expect(!COURSES[0].reqsSatisfied.includes("FL"));
+
+        const mAccordian = screen.queryByTestId("edit-major-req-accordian");
+        mAccordian?.click();
+        expect(COURSES[0].reqsSatisfied.includes("CISC108"));
+        const mOptions = screen.queryAllByTestId("edit-major-req-option");
+        mOptions[0].click();
+        expect(!COURSES[0].reqsSatisfied.includes("CISC108"));
+        mOptions[0].click();
+        expect(COURSES[0].reqsSatisfied.includes("CISC108"));
+        mOptions[1].click();
+        expect(COURSES[0].reqsSatisfied.includes("CISC181"));
+        mOptions[1].click();
+        expect(!COURSES[0].reqsSatisfied.includes("CISC181"));
+        */
     });
-    */
+
+    test("Update courses in existing degree plans when course list is updated", () => {
+        const showHides = screen.getAllByRole("button", {
+            name: /Show/i
+        });
+        const addDefault = screen.getByRole("button", {
+            name: /Add Default Plan \(8 semesters\)/i
+        });
+        addDefault.click();
+        const plans = screen.getAllByRole("button", {
+            name: /1: Default/i
+        });
+        plans[0].click();
+        showHides[1].click();
+
+        const infoButtons = screen.queryAllByTestId("info-button");
+        infoButtons[0].click();
+
+        const text1 = screen.queryAllByText(
+            "CISC108: Introduction to Computer Science I"
+        );
+        expect(text1[0]).toBeVisible();
+
+        const editButton = screen.queryAllByTestId("edit-button");
+        editButton[0].click();
+        const titleBox = screen.getByTestId("edit-title");
+        userEvent.clear(titleBox);
+        userEvent.type(titleBox, "Intro to Computers");
+        const titleButton = screen.getByRole("button", {
+            name: /Update Title/i
+        });
+        titleButton.click();
+        const newTitle = screen.queryAllByText("CISC108: Intro to Computers");
+        expect(newTitle.length).toBe(2);
+    });
+
     /*
     test("Students can establish that a course meets another course's prerequisite and not add an already prerequisite", () => {
         const showHides = screen.getAllByRole("button", {
@@ -479,6 +557,8 @@ describe("Final Project Tests", () => {
             name: /Edit/i
         });
         editButton[0].click();
+
+        expect(courseInput[0].preReqs.length === 0);
         const preReqOptions = screen.getAllByTestId("add-preReq");
         const preReqBox = screen.getAllByRole("combobox");
         userEvent.selectOptions(preReqBox[0], preReqOptions[1]);
@@ -492,18 +572,14 @@ describe("Final Project Tests", () => {
         });
         hideButton[0].click();
 
-        let text = screen.queryByText("CISC210");
-        const text1 = screen.queryAllByText("N/A");
-        expect(text1[0]).not.toBeDefined();
-        expect(text).toBeVisible();
+        expect(COURSES[0].preReqs.length).toBe(1);
+        expect(COURSES[0].preReqs[0]).toBe(1);
 
         hideButton[0].click();
         addPreReqButton.click();
-        text = screen.queryByText("Course already a PreReq");
-        expect(text).toBeVisible();
+        expect(COURSES[0].preReqs.length).toBe(1);
     });
-    */
-    /*
+
     test("Students can remove a course as a course's prerequisite and not remove non-existent prerequisite", () => {
         const showHides = screen.getAllByRole("button", {
             name: /Show/i
@@ -519,9 +595,11 @@ describe("Final Project Tests", () => {
             name: /Edit/i
         });
         editButton[0].click();
-        let preReqOptions = screen.getAllByTestId("remove-preReq");
+
+        expect(COURSES[0].preReqs.length).toBe(0);
+        const preReqOptionsRem = screen.getAllByTestId("remove-preReq");
         const preReqBox = screen.getAllByRole("combobox");
-        userEvent.selectOptions(preReqBox[0], preReqOptions[1]);
+        userEvent.selectOptions(preReqBox[1], preReqOptionsRem[1]);
         const removePreReqButton = screen.getByRole("button", {
             name: /Remove PreReq/i
         });
@@ -530,48 +608,24 @@ describe("Final Project Tests", () => {
         });
 
         removePreReqButton.click();
-        let text = screen.queryByText("Course not one of the PreReqs");
-        expect(text).toBeVisible();
+        expect(COURSES[0].preReqs.length).toBe(0);
 
-        preReqOptions = screen.getAllByTestId("add-preReq");
-        userEvent.selectOptions(preReqBox[0], preReqOptions[1]);
-
+        const preReqOptionsAdd = screen.getAllByTestId("add-preReq");
+        userEvent.selectOptions(preReqBox[0], preReqOptionsAdd[1]);
         addPreReqButton.click();
 
-        text = screen.queryByText("Course not one of the PreReqs");
-        expect(text).not.toBeVisible();
-
+        expect(COURSES[0].preReqs.length).toBe(1);
+        expect(COURSES[0].preReqs[0]).toBe(1);
         removePreReqButton.click();
-        expect(text).not.toBeVisible();
-
-        const hideButton = screen.getAllByRole("button", {
-            name: /Hide/i
-        });
-        hideButton[0].click();
-
-        text = screen.queryByText("CISC210");
-        const text1 = screen.queryAllByText("N/A");
-        expect(text1[0]).not.toBeDefined();
-        expect(text).not.toBeVisible();
-
-        removePreReqButton.click();
+        expect(COURSES[0].preReqs.length).toBe(0);
     });
-    */
-    /*
-    test("Students can establish that a course meets another course's corequisite", () => {});
 
-    
-    //Ask about the below test
-    test("Students can override course's info, but also reset a course back to its default information", () => {
-    });
-    */
-
-    /*
-    test("Students can reset course's info back to default", () => {
+    test("Students can establish that a course meets another course's corequisite and not add an already corequisite", () => {
         const showHides = screen.getAllByRole("button", {
             name: /Show/i
         });
         showHides[1].click();
+
         const infoButtons = screen.queryAllByRole("button", {
             name: / i/i
         });
@@ -582,41 +636,74 @@ describe("Final Project Tests", () => {
         });
         editButton[0].click();
 
-        const listingBox = screen.getByTestId("edit-listing");
-        userEvent.type(listingBox, "CISC118");
-        const listingButton = screen.getByRole("button", {
-            name: /Update Listing/i
+        expect(COURSES[0].coReqs.length).toBe(1);
+        expect(COURSES[0].coReqs[0]).toBe(13);
+        const coReqOptions = screen.getAllByTestId("add-coReq");
+        const coReqBox = screen.getAllByRole("combobox");
+        userEvent.selectOptions(coReqBox[2], coReqOptions[1]);
+        const addPreReqButton = screen.getByRole("button", {
+            name: /Add CoReq/i
         });
-        listingButton.click();
-        let text = screen.queryByText("CISC118");
-        let text1 = screen.queryAllByText(COURSES[0].listing);
-        expect(text1[0]).not.toBeVisible();
-        expect(text).toBeVisible;
+        addPreReqButton.click();
 
-        const titleBox = screen.getByTestId("edit-title");
-        userEvent.type(titleBox, "Intro to Computers");
-        const titleButton = screen.getByRole("button", {
-            name: /Update Title/i
+        const hideButton = screen.getAllByRole("button", {
+            name: /Hide/i
         });
-        titleButton.click();
-        text = screen.queryByText("Intro to Computers");
-        text1 = screen.queryAllByText(COURSES[0].title);
-        expect(text1[0]).not.toBeVisible();
-        expect(text).toBeVisible;
+        hideButton[0].click();
 
-        const creditBox = screen.getByTestId("edit-credits");
-        userEvent.type(creditBox, "6");
-        const creditButton = screen.getByRole("button", {
-            name: /Update Credits/i
-        });
-        creditButton.click();
-        text = screen.queryByText("6");
-        text1 = screen.queryAllByText(COURSES[0].credits);
-        expect(text1[0]).not.toBeVisible();
-        expect(text).toBeVisible;
+        expect(COURSES[0].preReqs.length).toBe(2);
+        expect(COURSES[0].preReqs[0]).toBe(13);
+        expect(COURSES[0].preReqs[1]).toBe(1);
+
+        hideButton[0].click();
+        addPreReqButton.click();
+        expect(COURSES[0].preReqs.length).toBe(2);
     });
-    */
 
+    test("Students can remove a course as a course's corequisite and not remove non-existent corequisite", () => {
+        const showHides = screen.getAllByRole("button", {
+            name: /Show/i
+        });
+        showHides[1].click();
+
+        const infoButtons = screen.queryAllByRole("button", {
+            name: / i/i
+        });
+
+        infoButtons[0].click();
+        const editButton = screen.getAllByRole("button", {
+            name: /Edit/i
+        });
+        editButton[0].click();
+
+        expect(COURSES[0].coReqs.length).toBe(1);
+        const coReqOptionsRem = screen.getAllByTestId("remove-coReq");
+        const coReqBox = screen.getAllByRole("combobox");
+        userEvent.selectOptions(coReqBox[3], coReqOptionsRem[1]);
+        const removeCoReqButton = screen.getByRole("button", {
+            name: /Remove CoReq/i
+        });
+        const addCoReqButton = screen.getByRole("button", {
+            name: /Add CoReq/i
+        });
+
+        removeCoReqButton.click();
+        expect(COURSES[0].coReqs.length).toBe(1);
+
+        const coReqOptionsAdd = screen.getAllByTestId("add-coReq");
+        userEvent.selectOptions(coReqBox[2], coReqOptionsAdd[1]);
+        addCoReqButton.click();
+
+        expect(COURSES[0].coReqs.length).toBe(2);
+        expect(COURSES[0].coReqs[0]).toBe(13);
+        expect(COURSES[0].coReqs[1]).toBe(1);
+        removeCoReqButton.click();
+        expect(COURSES[0].coReqs.length).toBe(1);
+        expect(COURSES[0].coReqs[0]).toBe(13);
+    });
+
+    //test("Students can reset course's info back to default", () => {});
+    */
     test("Students can see a list of existing courses", () => {
         const showHides = screen.getAllByRole("button", {
             name: /Show/i
@@ -718,15 +805,13 @@ describe("Final Project Tests", () => {
         const infoButtons = screen.queryAllByTestId("info-button");
         infoButtons[0].click();
 
-        //let text = screen.queryAllByText("Credit(s): 3");
-        expect(COURSES[0].credits === 3);
-
         const editButton = screen.getAllByRole("button", {
             name: /Edit/i
         });
         editButton[0].click();
 
-        const creditBox = screen.getByTestId("edit-credits");
+        const creditBox: HTMLInputElement = screen.getByTestId("edit-credits");
+        expect(parseInt(creditBox.value)).toBe(3);
         userEvent.clear(creditBox);
         userEvent.type(creditBox, "6");
         const creditButton = screen.getByRole("button", {
@@ -738,7 +823,6 @@ describe("Final Project Tests", () => {
         });
         hideButton[1].click();
 
-        expect(COURSES[0].credits !== 3);
-        expect(COURSES[0].credits === 6);
+        expect(parseInt(creditBox.value)).toBe(6);
     });
 });
