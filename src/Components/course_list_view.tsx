@@ -2,7 +2,7 @@ import * as React from "react";
 import { Container } from "react-bootstrap";
 import { Course } from "../Interfaces/course";
 import { CourseListViewInfo } from "./course_list_view_info";
-
+//{course.listing}: {course.title}{" "} from below
 export function CourseListView({
     course,
     courses,
@@ -16,7 +16,6 @@ export function CourseListView({
         <Container>
             <div>
                 <div>
-                    {course.listing}: {course.title}{" "}
                     <CourseListViewInfo
                         course={course}
                         courses={courses}
