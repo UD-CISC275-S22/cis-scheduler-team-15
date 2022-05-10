@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Course } from "../Interfaces/course";
-import { Button, Modal } from "react-bootstrap";
+import { Button, Modal, Accordion } from "react-bootstrap";
 import { useState } from "react";
 import { CourseListViewInfoEdit } from "./course_list_view_info_edit";
 import "../App.css";
@@ -38,31 +38,11 @@ export function CourseListViewInfo({
 
     return (
         <span>
-            <Button
-                className="btn btn-secondary btn-circle btn-sm"
-                data-testid={"info-button"}
-                data-bs-toggle="modal"
-                data-toggle="tooltip"
-                title={"Click for more info on " + course.listing}
-                onClick={() => setModal(true)}
-            >
-                <i>i</i>
-            </Button>
-            <Modal
-                data-testid={"info-modal"}
-                size="lg"
-                dialogClassName="modal_course_info"
-                show={modal}
-                onHide={() => setModal(false)}
-            >
-                <Modal.Header closeButton>
-                    <Modal.Title>
-                        <div>
-                            {course.listing}: {course.title}
-                        </div>
-                    </Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
+            <Accordion className="accordian">
+                <Accordion.Header>
+                    {course.listing}: {course.title}
+                </Accordion.Header>
+                <Accordion.Body>
                     <div>
                         <b>Credit(s): </b>
                         {course.credits}
@@ -96,8 +76,8 @@ export function CourseListViewInfo({
                             editCourses={editCourses}
                         ></CourseListViewInfoEdit>
                     </div>
-                </Modal.Body>
-            </Modal>
+                </Accordion.Body>
+            </Accordion>
         </span>
     );
 }
