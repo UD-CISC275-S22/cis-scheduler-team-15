@@ -1,7 +1,7 @@
 import React from "react";
 import { Course } from "../Interfaces/course";
 import { Semester } from "../Interfaces/semester";
-import { Button } from "react-bootstrap";
+import { Button, Accordion } from "react-bootstrap";
 import "../App.css";
 import { MoveCourse } from "./move_course";
 import { Degree } from "../Interfaces/degree";
@@ -34,7 +34,16 @@ export function SemesterViewModal({
                 {semester.courses.map((course: Course, index) => (
                     <tr key={course.courseID}>
                         <td>{course.listing}</td>
-                        <td>{course.title}</td>
+                        <td>
+                            <Accordion>
+                                <Accordion.Header>
+                                    {course.title}
+                                </Accordion.Header>
+                                <Accordion.Body>
+                                    <div>Prerequisites: </div>
+                                </Accordion.Body>
+                            </Accordion>
+                        </td>
                         <td>{course.credits}</td>
                         <td width={25}>
                             <Button
