@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Degree } from "../Interfaces/degree";
 import { Semester } from "../Interfaces/semester";
 import "../App.css";
-import { Row, Col, Button } from "react-bootstrap";
+import { Row, Col, Button, Form } from "react-bootstrap";
 import { SemesterViewHome } from "./SemesterViewHome";
 import { AddSemester } from "./add_semester";
 import { CheckRequirements } from "./check_requirements";
@@ -40,6 +40,18 @@ export function DegreePlanView({
     const evenSemesters = degree.semesters.filter(
         (sem: Semester): boolean => degree.semesters.indexOf(sem) % 2 === 0
     );
+
+    function updateName(event: React.ChangeEvent<HTMLInputElement>) {
+        let newName = "Default";
+        if (event.target.value !== "") {
+            newName = event.target.value;
+        }
+        editDegree(degree.degreeID, {
+            ...degree,
+            name: newName
+        });
+    }
+
     function deleteSemester(semesterID: number) {
         const newSemesters = degree.semesters.filter(
             (semester: Semester): boolean => semester.semesterID !== semesterID
@@ -51,40 +63,6 @@ export function DegreePlanView({
     }
 
     function arrayToCSV(): string {
-        /*
-        const headers = [
-            { label: "DegreeID", key: "degreeID" },
-            { label: "Name", key: "name" },
-            { label: "SemesterID", key: "semesterID" },
-            { label: "Season", key: "season" },
-            { label: "Year", key: "year" },
-            { label: "Semester", key: "semesterID" },
-            { label: "CourseID", key: "courseID" },
-            { label: "Course Listing", key: "listing" },
-            { label: "Course Title", key: "title" },
-            { label: "PreReqs", key: "preReqs" },
-            { label: "CoReqs", key: "coReqs" },
-            { label: "Seasons Offered", key: "offered" },
-            { label: "Credits", key: "credits" },
-            { label: "Errors", key: "errors" }
-        ];
-        
-        const heading = [
-            "DegreeID",
-            "Name",
-            "SemesterID",
-            "Season",
-            "Year",
-            "Semester",
-            "CourseID",
-            "Course Listing",
-            "Course Title",
-            "PreReqs",
-            "CoReqs",
-            "Seasons Offered",
-            "Credits",
-            "Errors"
-        ].join(",");*/
         const semesterString = degree.semesters
             .map((semester: Semester) =>
                 [
@@ -138,12 +116,42 @@ export function DegreePlanView({
 
     return (
         <div hidden={hidden}>
-            <div className="Align-right" style={{ margin: "5px" }}>
-                <Button onClick={downloadBlob} variant="info">
-                    Export Degree Plan
-                </Button>
+            <div className="Align-right">
+                <div>
+                    <Button
+                        onClick={downloadBlob}
+                        variant="primary"
+                        style={{ margin: "5px" }}
+                    >
+                        Download Plan ↧
+                    </Button>
+                </div>
+                <div>
+                    <Button
+                        onClick={() => setEditMode(!editMode)}
+                        variant={editMode ? "warning" : "success"}
+                        style={{ margin: "5px" }}
+                    >
+                        {editMode ? "Stop Editing 🛑" : "Edit Plan 🖉"}
+                    </Button>
+                </div>
             </div>
 
+            <br></br>
+            <Row hidden={!editMode} className="App-thin2">
+                <Col>
+                    <Form.Group className="mb-3" controlId="degreeName">
+                        <Form.Label>Degree Plan Name:</Form.Label>
+                        <Form.Control
+                            type="name"
+                            placeholder={degree.name}
+                            onChange={updateName}
+                        />
+                    </Form.Group>
+                </Col>
+
+                <Col></Col>
+            </Row>
             <Row>
                 <Col>
                     <CheckRequirements degree={degree}></CheckRequirements>
@@ -152,13 +160,6 @@ export function DegreePlanView({
                     <ShowAllErrors degree={degree}></ShowAllErrors>
                 </Col>
             </Row>
-            <br></br>
-            <Button
-                onClick={() => setEditMode(!editMode)}
-                variant={editMode ? "warning" : "success"}
-            >
-                {editMode ? "Stop Edit" : "Edit Plan"}
-            </Button>
             <Row>
                 <Col>
                     <div>
@@ -202,7 +203,7 @@ export function DegreePlanView({
                 </Col>
             </Row>
             <Row>
-                <div>
+                <div style={{ margin: "10px" }}>
                     <h2>
                         {degree.name} Total Credits: {credits}
                     </h2>

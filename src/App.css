@@ -1,11 +1,22 @@
 .App {
     text-align: center;
+    background-color: rgb(240, 240, 240);
+}
+
+.App-break {
+    height: 2px;
+    background-color: rgb(0, 0, 0);
 }
 
 .App-thin {
     width: 80%;
     margin-left: 10%;
     text-align: justify;
+}
+
+.App-thin2 {
+    width: 40%;
+    margin-left: 30%;
 }
 
 .Align-right {
@@ -58,11 +69,12 @@ h6 {
 .App-special2 {
     align-items: center;
     text-align: center;
-    background-color: #787d88;
+    background-color: #254d9c;
 }
 
 .App-special2 button {
-    background-color: #abbac392;
+    background-color: #fad506b4;
+    color: black;
     float: left;
     outline: none;
     cursor: pointer;
@@ -85,6 +97,17 @@ h6 {
     pointer-events: none;
 }
 
+.App-special3 {
+    text-align: center;
+
+    background-color: rgb(240, 240, 240);
+}
+.App-special3-right {
+    text-align: right;
+
+    background-color: rgb(240, 240, 240);
+}
+
 @media (prefers-reduced-motion: no-preference) {
     .App-logo {
         animation: App-logo-spin infinite 20s linear;
@@ -93,7 +116,7 @@ h6 {
 
 .App-header {
     width: 100%;
-    background-color: #282c34;
+    background-color: #254d9c;
     min-height: 25vh;
     display: flex;
     flex-direction: column;
@@ -104,11 +127,11 @@ h6 {
 }
 .App-header2 {
     width: 100%;
-    background-color: #282c34;
+    background-color: #254d9c;
     min-height: 10vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    text-align: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: gold;
@@ -165,13 +188,13 @@ h6 {
 }
 
 .tab {
-    background-color: #8ba8d4;
+    background-color: rgb(225, 225, 225);
     text-align: left;
 }
 
 .tab button {
-    background-color: #7096e165;
-    color: white;
+    background-color: #5d5d5d;
+    color: rgb(255, 255, 255);
     border-radius: 0px;
     float: left;
     outline: black;
@@ -185,7 +208,7 @@ h6 {
 }
 
 .tab button.active {
-    background-color: rgb(120, 182, 118);
+    background-color: #7699b6;
     color: black;
 }
 

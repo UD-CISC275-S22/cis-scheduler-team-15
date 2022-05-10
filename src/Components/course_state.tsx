@@ -131,7 +131,7 @@ export function CourseState(): JSX.Element {
                     <Row>
                         <Col>
                             <Button onClick={movePlanView}>
-                                Move to Degree Plans
+                                Move to Degree Plans 📖
                             </Button>
                         </Col>
                         <Col>
@@ -150,7 +150,7 @@ export function CourseState(): JSX.Element {
                         </Col>
                         <Col>
                             <Button onClick={moveCourseView}>
-                                Move to Course List
+                                Move to Course List 📄
                             </Button>
                         </Col>
                     </Row>
@@ -199,19 +199,22 @@ export function CourseState(): JSX.Element {
                 <div hidden={!planView}>
                     <div className="App-header2">
                         <Row>
-                            <Col>
-                                <Button onClick={moveHome}>Move to Home</Button>
+                            <Col xs={5}>
+                                <Button onClick={moveHome}>
+                                    Move to Home 🏠
+                                </Button>
                             </Col>
-                            <Col xs={6}>
+                            <Col xs={2}>
                                 <h3>Degree Plans</h3>
                             </Col>
-                            <Col>
+                            <Col xs={5}>
                                 <Button onClick={moveCourseView}>
-                                    Move to Course List
+                                    Move to Course List 📄
                                 </Button>
                             </Col>
                         </Row>
                     </div>
+
                     <Row>
                         <DegreePlans courses={courses}></DegreePlans>
                     </Row>
@@ -220,14 +223,16 @@ export function CourseState(): JSX.Element {
                     <div className="App-header2">
                         <Row>
                             <Col>
-                                <Button onClick={moveHome}>Move to Home</Button>
+                                <Button onClick={moveHome}>
+                                    Move to Home 🏠
+                                </Button>
                             </Col>
                             <Col xs={6}>
                                 <h3>Course List</h3>
                             </Col>
                             <Col>
                                 <Button onClick={movePlanView}>
-                                    Move to Plan View
+                                    Move to Degree Plans 📖
                                 </Button>
                             </Col>
                         </Row>
@@ -235,17 +240,26 @@ export function CourseState(): JSX.Element {
 
                     <div className="App-special2">
                         <Row className="justify-content-center">
+                            <div className="App-break"></div>
+
                             <Col xs={2}></Col>
                             <Col xs={3}>
-                                <Button onClick={saveData}>
-                                    Save Course List
+                                <Button
+                                    onClick={saveData}
+                                    style={{ margin: "5px 0px" }}
+                                >
+                                    <b>Save 💾</b>
                                 </Button>
                             </Col>
                             <Col xs={3}>
-                                <Button onClick={revert}>
-                                    Revert to Default
+                                <Button
+                                    onClick={revert}
+                                    style={{ margin: "5px 0px" }}
+                                >
+                                    <b>Revert to Default</b>
                                 </Button>
                             </Col>
+                            <div className="App-break"></div>
                         </Row>
                     </div>
                     <Row>

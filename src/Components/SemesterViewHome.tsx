@@ -47,13 +47,13 @@ export function SemesterViewHome({
                             }
                         ></EditSemester>
                     </th>
-                    <th>
+                    <th className="Align-right">
                         <Button
                             hidden={!editMode}
                             variant="danger"
                             onClick={() => deleteSemester(semester.semesterID)}
                         >
-                            Delete
+                            🗑️
                         </Button>
                     </th>
                 </tr>

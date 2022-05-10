@@ -143,7 +143,7 @@ export function AddCourse({
                                     title={"Click to add " + resultID}
                                     variant="success"
                                 >
-                                    +
+                                    ➕
                                 </Button>{" "}
                             </Col>
                         </Row>
