@@ -24846,26 +24846,26 @@
 
       at DegreePlanView (src/Components/degree_plan_view.tsx:27:13)
 
-FAIL src/App.test.tsx (368.3 s)
+FAIL src/App.test.tsx (234.003 s)
   Final Project Tests
-    ✓ renders the course name somewhere (867 ms)
-    ✕ Insert and Remove a degree plan (45090 ms)
-    ✕ Students can see a list of all the degree plans they have made (45241 ms)
-    ✓ Students can see a list of degree requirements (1294 ms)
-    ✕ Students can see a list of existing courses (497 ms)
-    ✕ Students can see a table that shows semesters and courses (1053 ms)
-    ✕ Students can insert or remove a semester in a plan (2491 ms)
-    ✕ Students can clear out all the existing courses in a semester (44010 ms)
-    ✕ Students can clear out individual courses in a semester (43961 ms)
-    ✕ Students can insert a course in a semester (43435 ms)
-    ✕ Students will be prevented from inserting a duplicate course into the plan (43230 ms)
-    ✕ Students will get an error in the semester view when a course with an unsatisfied prerequisite or corequisite is added (43160 ms)
-    ✕ Students can establish that a course fulfills a degree requirement (832 ms)
-    ✕ Update courses in existing degree plans when course list is updated (45316 ms)
-    ✕ Students can see a list of existing courses (866 ms)
-    ✕ Students can edit the course code (878 ms)
-    ✕ Student can edit the course title  (862 ms)
-    ✕ Student can edit credits of a course (866 ms)
+    ✓ renders the course name somewhere (643 ms)
+    ✕ Insert and Remove a degree plan (28427 ms)
+    ✕ Students can see a list of all the degree plans they have made (27747 ms)
+    ✓ Students can see a list of degree requirements (874 ms)
+    ✕ Students can see a list of existing courses (318 ms)
+    ✕ Students can see a table that shows semesters and courses (697 ms)
+    ✕ Students can insert or remove a semester in a plan (1588 ms)
+    ✕ Students can clear out all the existing courses in a semester (27753 ms)
+    ✕ Students can clear out individual courses in a semester (27785 ms)
+    ✕ Students can insert a course in a semester (27885 ms)
+    ✕ Students will be prevented from inserting a duplicate course into the plan (27855 ms)
+    ✕ Students will get an error in the semester view when a course with an unsatisfied prerequisite or corequisite is added (27863 ms)
+    ✕ Students can establish that a course fulfills a degree requirement (573 ms)
+    ✕ Update courses in existing degree plans when course list is updated (28368 ms)
+    ✕ Students can see a list of existing courses (572 ms)
+    ✕ Students can edit the course code (579 ms)
+    ✕ Student can edit the course title  (613 ms)
+    ✕ Student can edit credits of a course (591 ms)
 
   ● Final Project Tests › Insert and Remove a degree plan
 
@@ -24924,13 +24924,13 @@ FAIL src/App.test.tsx (368.3 s)
       --------------------------------------------------
       button:
 
-      Name "Move to Degree Plans":
+      Name "Move to Degree Plans 📖":
       [36m<button[39m
         [33mclass[39m=[32m"btn btn-primary"[39m
         [33mtype[39m=[32m"button"[39m
       [36m/>[39m
 
-      Name "Move to Course List":
+      Name "Move to Course List 📄":
       [36m<button[39m
         [33mclass[39m=[32m"btn btn-primary"[39m
         [33mtype[39m=[32m"button"[39m
@@ -25121,7 +25121,7 @@ FAIL src/App.test.tsx (368.3 s)
                       [33mclass[39m=[32m"btn btn-primary"[39m
                       [33mtype[39m=[32m"button"[39m
                     [36m>[39m
-                      [0mMove to Degree Plans[0m
+                      [0mMove to Degree Plans 📖[0m
                     [36m</button>[39m
                   [36m</div>[39m
                   [36m<div[39m
@@ -25182,7 +25182,7 @@ FAIL src/App.test.tsx (368.3 s)
                       [33mclass[39m=[32m"btn btn-primary"[39m
                       [33mtype[39m=[32m"button"[39m
                     [36m>[39m
-                      [0mMove to Course List[0m
+                      [0mMove to Course List 📄[0m
                     [36m</button>[39m
                   [36m</div>[39m
                 [36m</div>[39m
@@ -25191,7 +25191,7 @@ FAIL src/App.test.tsx (368.3 s)
                   [33mclass[39m=[32m"row"[39m
                 [36m>[39m
                   [36m<h3>[39m
-                   ...
+             ...
 
       15 |
       16 |     test("Insert and Remove a degree plan", () => {
@@ -25268,13 +25268,13 @@ FAIL src/App.test.tsx (368.3 s)
       --------------------------------------------------
       button:
 
-      Name "Move to Degree Plans":
+      Name "Move to Degree Plans 📖":
       [36m<button[39m
         [33mclass[39m=[32m"btn btn-primary"[39m
         [33mtype[39m=[32m"button"[39m
       [36m/>[39m
 
-      Name "Move to Course List":
+      Name "Move to Course List 📄":
       [36m<button[39m
         [33mclass[39m=[32m"btn btn-primary"[39m
         [33mtype[39m=[32m"button"[39m
@@ -25465,7 +25465,7 @@ FAIL src/App.test.tsx (368.3 s)
                       [33mclass[39m=[32m"btn btn-primary"[39m
                       [33mtype[39m=[32m"button"[39m
                     [36m>[39m
-                      [0mMove to Degree Plans[0m
+                      [0mMove to Degree Plans 📖[0m
                     [36m</button>[39m
                   [36m</div>[39m
                   [36m<div[39m
@@ -25526,7 +25526,7 @@ FAIL src/App.test.tsx (368.3 s)
                       [33mclass[39m=[32m"btn btn-primary"[39m
                       [33mtype[39m=[32m"button"[39m
                     [36m>[39m
-                      [0mMove to Course List[0m
+                      [0mMove to Course List 📄[0m
                     [36m</button>[39m
                   [36m</div>[39m
                 [36m</div>[39m
@@ -25535,7 +25535,7 @@ FAIL src/App.test.tsx (368.3 s)
                   [33mclass[39m=[32m"row"[39m
                 [36m>[39m
                   [36m<h3>[39m
-                   ...
+             ...
 
       67 |
       68 |     test("Students can see a list of all the degree plans they have made", () => {
@@ -25709,7 +25709,7 @@ FAIL src/App.test.tsx (368.3 s)
                       [33mclass[39m=[32m"btn btn-primary"[39m
                       [33mtype[39m=[32m"button"[39m
                     [36m>[39m
-                      [0mMove to Degree Plans[0m
+                      [0mMove to Degree Plans 📖[0m
                     [36m</button>[39m
                   [36m</div>[39m
                   [36m<div[39m
@@ -25770,7 +25770,7 @@ FAIL src/App.test.tsx (368.3 s)
                       [33mclass[39m=[32m"btn btn-primary"[39m
                       [33mtype[39m=[32m"button"[39m
                     [36m>[39m
-                      [0mMove to Course List[0m
+                      [0mMove to Course List 📄[0m
                     [36m</button>[39m
                   [36m</div>[39m
                 [36m</div>[39m
@@ -25779,7 +25779,7 @@ FAIL src/App.test.tsx (368.3 s)
                   [33mclass[39m=[32m"row"[39m
                 [36m>[39m
                   [36m<h3>[39m
-                   ...
+             ...
 
       163 |         const text1 = screen.queryByText("Fall 2020");
       164 |         const text2 = screen.queryByText("Spring 2022");
@@ -25926,13 +25926,13 @@ FAIL src/App.test.tsx (368.3 s)
       --------------------------------------------------
       button:
 
-      Name "Move to Degree Plans":
+      Name "Move to Degree Plans 📖":
       [36m<button[39m
         [33mclass[39m=[32m"btn btn-primary"[39m
         [33mtype[39m=[32m"button"[39m
       [36m/>[39m
 
-      Name "Move to Course List":
+      Name "Move to Course List 📄":
       [36m<button[39m
         [33mclass[39m=[32m"btn btn-primary"[39m
         [33mtype[39m=[32m"button"[39m
@@ -26123,7 +26123,7 @@ FAIL src/App.test.tsx (368.3 s)
                       [33mclass[39m=[32m"btn btn-primary"[39m
                       [33mtype[39m=[32m"button"[39m
                     [36m>[39m
-                      [0mMove to Degree Plans[0m
+                      [0mMove to Degree Plans 📖[0m
                     [36m</button>[39m
                   [36m</div>[39m
                   [36m<div[39m
@@ -26184,7 +26184,7 @@ FAIL src/App.test.tsx (368.3 s)
                       [33mclass[39m=[32m"btn btn-primary"[39m
                       [33mtype[39m=[32m"button"[39m
                     [36m>[39m
-                      [0mMove to Course List[0m
+                      [0mMove to Course List 📄[0m
                     [36m</button>[39m
                   [36m</div>[39m
                 [36m</div>[39m
@@ -26193,7 +26193,7 @@ FAIL src/App.test.tsx (368.3 s)
                   [33mclass[39m=[32m"row"[39m
                 [36m>[39m
                   [36m<h3>[39m
-                   ...
+             ...
 
       208 |
       209 |     test("Students can clear out all the existing courses in a semester", () => {
@@ -26270,13 +26270,13 @@ FAIL src/App.test.tsx (368.3 s)
       --------------------------------------------------
       button:
 
-      Name "Move to Degree Plans":
+      Name "Move to Degree Plans 📖":
       [36m<button[39m
         [33mclass[39m=[32m"btn btn-primary"[39m
         [33mtype[39m=[32m"button"[39m
       [36m/>[39m
 
-      Name "Move to Course List":
+      Name "Move to Course List 📄":
       [36m<button[39m
         [33mclass[39m=[32m"btn btn-primary"[39m
         [33mtype[39m=[32m"button"[39m
@@ -26467,7 +26467,7 @@ FAIL src/App.test.tsx (368.3 s)
                       [33mclass[39m=[32m"btn btn-primary"[39m
                       [33mtype[39m=[32m"button"[39m
                     [36m>[39m
-                      [0mMove to Degree Plans[0m
+                      [0mMove to Degree Plans 📖[0m
                     [36m</button>[39m
                   [36m</div>[39m
                   [36m<div[39m
@@ -26528,7 +26528,7 @@ FAIL src/App.test.tsx (368.3 s)
                       [33mclass[39m=[32m"btn btn-primary"[39m
                       [33mtype[39m=[32m"button"[39m
                     [36m>[39m
-                      [0mMove to Course List[0m
+                      [0mMove to Course List 📄[0m
                     [36m</button>[39m
                   [36m</div>[39m
                 [36m</div>[39m
@@ -26537,7 +26537,7 @@ FAIL src/App.test.tsx (368.3 s)
                   [33mclass[39m=[32m"row"[39m
                 [36m>[39m
                   [36m<h3>[39m
-                   ...
+             ...
 
       235 |
       236 |     test("Students can clear out individual courses in a semester", () => {
@@ -26614,13 +26614,13 @@ FAIL src/App.test.tsx (368.3 s)
       --------------------------------------------------
       button:
 
-      Name "Move to Degree Plans":
+      Name "Move to Degree Plans 📖":
       [36m<button[39m
         [33mclass[39m=[32m"btn btn-primary"[39m
         [33mtype[39m=[32m"button"[39m
       [36m/>[39m
 
-      Name "Move to Course List":
+      Name "Move to Course List 📄":
       [36m<button[39m
         [33mclass[39m=[32m"btn btn-primary"[39m
         [33mtype[39m=[32m"button"[39m
@@ -26811,7 +26811,7 @@ FAIL src/App.test.tsx (368.3 s)
                       [33mclass[39m=[32m"btn btn-primary"[39m
                       [33mtype[39m=[32m"button"[39m
                     [36m>[39m
-                      [0mMove to Degree Plans[0m
+                      [0mMove to Degree Plans 📖[0m
                     [36m</button>[39m
                   [36m</div>[39m
                   [36m<div[39m
@@ -26872,7 +26872,7 @@ FAIL src/App.test.tsx (368.3 s)
                       [33mclass[39m=[32m"btn btn-primary"[39m
                       [33mtype[39m=[32m"button"[39m
                     [36m>[39m
-                      [0mMove to Course List[0m
+                      [0mMove to Course List 📄[0m
                     [36m</button>[39m
                   [36m</div>[39m
                 [36m</div>[39m
@@ -26881,7 +26881,7 @@ FAIL src/App.test.tsx (368.3 s)
                   [33mclass[39m=[32m"row"[39m
                 [36m>[39m
                   [36m<h3>[39m
-                   ...
+             ...
 
       260 |
       261 |     test("Students can insert a course in a semester", () => {
@@ -26958,13 +26958,13 @@ FAIL src/App.test.tsx (368.3 s)
       --------------------------------------------------
       button:
 
-      Name "Move to Degree Plans":
+      Name "Move to Degree Plans 📖":
       [36m<button[39m
         [33mclass[39m=[32m"btn btn-primary"[39m
         [33mtype[39m=[32m"button"[39m
       [36m/>[39m
 
-      Name "Move to Course List":
+      Name "Move to Course List 📄":
       [36m<button[39m
         [33mclass[39m=[32m"btn btn-primary"[39m
         [33mtype[39m=[32m"button"[39m
@@ -27155,7 +27155,7 @@ FAIL src/App.test.tsx (368.3 s)
                       [33mclass[39m=[32m"btn btn-primary"[39m
                       [33mtype[39m=[32m"button"[39m
                     [36m>[39m
-                      [0mMove to Degree Plans[0m
+                      [0mMove to Degree Plans 📖[0m
                     [36m</button>[39m
                   [36m</div>[39m
                   [36m<div[39m
@@ -27216,7 +27216,7 @@ FAIL src/App.test.tsx (368.3 s)
                       [33mclass[39m=[32m"btn btn-primary"[39m
                       [33mtype[39m=[32m"button"[39m
                     [36m>[39m
-                      [0mMove to Course List[0m
+                      [0mMove to Course List 📄[0m
                     [36m</button>[39m
                   [36m</div>[39m
                 [36m</div>[39m
@@ -27225,7 +27225,7 @@ FAIL src/App.test.tsx (368.3 s)
                   [33mclass[39m=[32m"row"[39m
                 [36m>[39m
                   [36m<h3>[39m
-                   ...
+             ...
 
       329 |
       330 |     test("Students will be prevented from inserting a duplicate course into the plan", () => {
@@ -27302,13 +27302,13 @@ FAIL src/App.test.tsx (368.3 s)
       --------------------------------------------------
       button:
 
-      Name "Move to Degree Plans":
+      Name "Move to Degree Plans 📖":
       [36m<button[39m
         [33mclass[39m=[32m"btn btn-primary"[39m
         [33mtype[39m=[32m"button"[39m
       [36m/>[39m
 
-      Name "Move to Course List":
+      Name "Move to Course List 📄":
       [36m<button[39m
         [33mclass[39m=[32m"btn btn-primary"[39m
         [33mtype[39m=[32m"button"[39m
@@ -27499,7 +27499,7 @@ FAIL src/App.test.tsx (368.3 s)
                       [33mclass[39m=[32m"btn btn-primary"[39m
                       [33mtype[39m=[32m"button"[39m
                     [36m>[39m
-                      [0mMove to Degree Plans[0m
+                      [0mMove to Degree Plans 📖[0m
                     [36m</button>[39m
                   [36m</div>[39m
                   [36m<div[39m
@@ -27560,7 +27560,7 @@ FAIL src/App.test.tsx (368.3 s)
                       [33mclass[39m=[32m"btn btn-primary"[39m
                       [33mtype[39m=[32m"button"[39m
                     [36m>[39m
-                      [0mMove to Course List[0m
+                      [0mMove to Course List 📄[0m
                     [36m</button>[39m
                   [36m</div>[39m
                 [36m</div>[39m
@@ -27569,7 +27569,7 @@ FAIL src/App.test.tsx (368.3 s)
                   [33mclass[39m=[32m"row"[39m
                 [36m>[39m
                   [36m<h3>[39m
-                   ...
+             ...
 
       400 |
       401 |     test("Students will get an error in the semester view when a course with an unsatisfied prerequisite or corequisite is added", () => {
@@ -27664,13 +27664,13 @@ FAIL src/App.test.tsx (368.3 s)
       --------------------------------------------------
       button:
 
-      Name "Move to Degree Plans":
+      Name "Move to Degree Plans 📖":
       [36m<button[39m
         [33mclass[39m=[32m"btn btn-primary"[39m
         [33mtype[39m=[32m"button"[39m
       [36m/>[39m
 
-      Name "Move to Course List":
+      Name "Move to Course List 📄":
       [36m<button[39m
         [33mclass[39m=[32m"btn btn-primary"[39m
         [33mtype[39m=[32m"button"[39m
@@ -27861,7 +27861,7 @@ FAIL src/App.test.tsx (368.3 s)
                       [33mclass[39m=[32m"btn btn-primary"[39m
                       [33mtype[39m=[32m"button"[39m
                     [36m>[39m
-                      [0mMove to Degree Plans[0m
+                      [0mMove to Degree Plans 📖[0m
                     [36m</button>[39m
                   [36m</div>[39m
                   [36m<div[39m
@@ -27922,7 +27922,7 @@ FAIL src/App.test.tsx (368.3 s)
                       [33mclass[39m=[32m"btn btn-primary"[39m
                       [33mtype[39m=[32m"button"[39m
                     [36m>[39m
-                      [0mMove to Course List[0m
+                      [0mMove to Course List 📄[0m
                     [36m</button>[39m
                   [36m</div>[39m
                 [36m</div>[39m
@@ -27931,7 +27931,7 @@ FAIL src/App.test.tsx (368.3 s)
                   [33mclass[39m=[32m"row"[39m
                 [36m>[39m
                   [36m<h3>[39m
-                   ...
+             ...
 
       511 |             name: /Show/i
       512 |         });
@@ -28026,28 +28026,28 @@ FAIL src/App.test.tsx (368.3 s)
 ---------------------------------|---------|----------|---------|---------|-----------------------
 File                             | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s     
 ---------------------------------|---------|----------|---------|---------|-----------------------
-All files                        |   52.42 |    36.84 |   51.32 |    52.3 |                       
+All files                        |   52.07 |    36.66 |   51.12 |   51.95 |                       
  src                             |     100 |      100 |     100 |     100 |                       
   App.tsx                        |     100 |      100 |     100 |     100 |                       
- src/Components                  |   52.34 |    36.84 |   51.13 |   52.22 |                       
+ src/Components                  |   51.99 |    36.66 |   50.94 |   51.87 |                       
   SemesterViewHome.tsx           |   83.33 |      100 |   83.33 |   83.33 | 54                    
-  SemesterViewModal.tsx          |       0 |      100 |       0 |       0 | 20-71                 
+  SemesterViewModal.tsx          |       0 |      100 |       0 |       0 | 20-70                 
   add_course.tsx                 |       0 |        0 |       0 |       0 | 24-125                
   add_semester.tsx               |      25 |        0 |    12.5 |      25 | 21-52,61-65           
-  check_requirements.tsx         |   98.38 |    66.66 |      96 |   98.38 | 181,287               
+  check_requirements.tsx         |   98.38 |     62.5 |      96 |   98.38 | 181,288               
   check_semesters.tsx            |   87.32 |    78.57 |   87.09 |   86.95 | 16,20,126-134,155     
   course_list.tsx                |     100 |      100 |     100 |     100 |                       
   course_list_view.tsx           |     100 |      100 |     100 |     100 |                       
   course_list_view_info.tsx      |     100 |      100 |     100 |     100 |                       
   course_list_view_info_edit.tsx |   19.35 |    16.66 |    7.14 |   18.85 | 73-259,265-551        
   course_state.tsx               |   46.66 |       25 |   27.27 |   44.82 | 27,40-74              
-  degree_plan_view.tsx           |   51.61 |       50 |   56.25 |      50 | 44-136,157            
-  degree_plans.tsx               |   36.95 |    26.66 |   41.46 |    36.9 | 16,49-170,225,279,300 
+  degree_plan_view.tsx           |   45.71 |    33.33 |   52.94 |   44.11 | 45-114,131            
+  degree_plans.tsx               |   36.95 |    26.66 |   41.46 |    36.9 | 16,49-170,233,297,318 
   degree_requirement_view.tsx    |     100 |      100 |     100 |     100 |                       
   degree_requirements.tsx        |     100 |      100 |     100 |     100 |                       
-  edit_semester.tsx              |   36.84 |      100 |   41.66 |   36.84 | 30-64,75-106          
+  edit_semester.tsx              |   36.84 |      100 |   41.66 |   36.84 | 30-64,75-108          
   move_course.tsx                |       0 |        0 |       0 |       0 | 18-63                 
-  show_all_errors.tsx            |   28.57 |       50 |   16.66 |   28.57 | 13-32                 
+  show_all_errors.tsx            |   28.57 |       50 |   16.66 |   28.57 | 14-36                 
  src/Interfaces                  |       0 |        0 |       0 |       0 |                       
   course.ts                      |       0 |        0 |       0 |       0 |                       
   degree.ts                      |       0 |        0 |       0 |       0 |                       
@@ -28056,5 +28056,5 @@ All files                        |   52.42 |    36.84 |   51.32 |    52.3 |
 Test Suites: 1 failed, 1 total
 Tests:       16 failed, 2 passed, 18 total
 Snapshots:   0 total
-Time:        369.143 s
+Time:        234.618 s
 Ran all test suites.
