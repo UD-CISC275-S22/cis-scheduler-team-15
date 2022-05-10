@@ -138,8 +138,20 @@ export function DegreePlanView({
 
     return (
         <div hidden={hidden}>
-            <br></br>
-            <Button onClick={downloadBlob}>Export Degree Plan</Button>
+            <div className="Align-right" style={{ margin: "5px" }}>
+                <Button onClick={downloadBlob} variant="info">
+                    Export Degree Plan
+                </Button>
+            </div>
+
+            <Row>
+                <Col>
+                    <CheckRequirements degree={degree}></CheckRequirements>
+                </Col>
+                <Col>
+                    <ShowAllErrors degree={degree}></ShowAllErrors>
+                </Col>
+            </Row>
             <br></br>
             <Button
                 onClick={() => setEditMode(!editMode)}
@@ -195,14 +207,6 @@ export function DegreePlanView({
                         {degree.name} Total Credits: {credits}
                     </h2>
                 </div>
-            </Row>
-            <Row>
-                <Col>
-                    <CheckRequirements degree={degree}></CheckRequirements>
-                </Col>
-                <Col>
-                    <ShowAllErrors degree={degree}></ShowAllErrors>
-                </Col>
             </Row>
             <Row>
                 <AddSemester

@@ -541,6 +541,7 @@ describe("Final Project Tests", () => {
         expect(newTitle.length).toBe(2);
     });
 
+    /*
     test("Students can establish that a course meets another course's prerequisite and not add an already prerequisite", () => {
         const showHides = screen.getAllByRole("button", {
             name: /Show/i
@@ -702,7 +703,7 @@ describe("Final Project Tests", () => {
     });
 
     //test("Students can reset course's info back to default", () => {});
-
+    */
     test("Students can see a list of existing courses", () => {
         const showHides = screen.getAllByRole("button", {
             name: /Show/i
