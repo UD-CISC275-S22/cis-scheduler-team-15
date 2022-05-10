@@ -22090,24 +22090,2782 @@
 
       at DegreePlanView (src/Components/degree_plan_view.tsx:27:13)
 
-FAIL src/App.test.tsx (132.266 s)
+  console.log
+    Course List:  [
+      [
+        {
+          courseID: 1,
+          listing: 'CISC108',
+          title: 'Introduction to Computer Science I',
+          preReqs: [],
+          coReqs: [Array],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 16,
+          listing: 'EGGG101',
+          title: 'Introduction to Engineering',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 2,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 17,
+          listing: 'ENGL110',
+          title: 'Seminar in Composition',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 13,
+          listing: 'MATH241',
+          title: 'Analytic Geometry and Calculus A',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 4,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 23,
+          listing: 'UNIV167',
+          title: 'Breadth I (Multicultural)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        }
+      ],
+      [
+        {
+          courseID: 2,
+          listing: 'CISC181',
+          title: 'Introduction to Computer Science II',
+          preReqs: [Array],
+          coReqs: [Array],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 3,
+          listing: 'CISC210',
+          title: 'Introduction to Systems Programming',
+          preReqs: [Array],
+          coReqs: [Array],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 12,
+          listing: 'MATH210',
+          title: 'Discrete Mathematics I',
+          preReqs: [],
+          coReqs: [Array],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 30,
+          listing: 'UNIV167',
+          title: 'Breadth I (Natural Sciences Lab)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 4,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 31,
+          listing: 'UNIV167',
+          title: 'Free I',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        }
+      ],
+      [
+        {
+          courseID: 5,
+          listing: 'CISC220',
+          title: 'Data Structures',
+          preReqs: [Array],
+          coReqs: [Array],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 6,
+          listing: 'CISC260',
+          title: 'Machine Organization and Assembly Language',
+          preReqs: [Array],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 24,
+          listing: 'UNIV167',
+          title: 'Breadth I (Creative Arts and Humanities)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 26,
+          listing: 'UNIV167',
+          title: 'Breadth I (History and Cultural Change)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 32,
+          listing: 'UNIV167',
+          title: 'Free II',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        }
+      ],
+      [
+        {
+          courseID: 4,
+          listing: 'CISC275',
+          title: 'Introduction to Software Engineering',
+          preReqs: [Array],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 29,
+          listing: 'UNIV167',
+          title: 'Breadth II (Social and Behavioral Sciences)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 25,
+          listing: 'UNIV167',
+          title: 'Breadth II (Creative Arts and Humanities)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 33,
+          listing: 'UNIV167',
+          title: 'Free III',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        },
+        {
+          courseID: 34,
+          listing: 'UNIV167',
+          title: 'Free IV',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        }
+      ],
+      [
+        {
+          courseID: 7,
+          listing: 'CISC367',
+          title: 'CISC Placeholder I (upper-level)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 42,
+          listing: 'ENGL167',
+          title: 'Second Writing Requirement',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 27,
+          listing: 'UNIV167',
+          title: 'Breadth II (History and Cultural Change)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 29,
+          listing: 'UNIV167',
+          title: 'Breadth II (Social and Behavioral Sciences)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 35,
+          listing: 'UNIV167',
+          title: 'Free V',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        }
+      ],
+      [
+        {
+          courseID: 8,
+          listing: 'CISC367',
+          title: 'CISC Placeholder II (upper-level)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 44,
+          listing: 'UNIV167',
+          title: 'Breadth I (General)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 45,
+          listing: 'UNIV167',
+          title: 'Breadth II (General)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 36,
+          listing: 'UNIV167',
+          title: 'Free VI',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        },
+        {
+          courseID: 37,
+          listing: 'UNIV167',
+          title: 'Free VII',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        }
+      ],
+      [
+        {
+          courseID: 9,
+          listing: 'CISC367',
+          title: 'CISC Placeholder III (upper-level)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 10,
+          listing: 'CISC367',
+          title: 'CISC Placeholder IV (upper-level)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 21,
+          listing: 'CISC498',
+          title: 'Computer Science Senior Design Project I',
+          preReqs: [Array],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 38,
+          listing: 'UNIV167',
+          title: 'Free VIII',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        },
+        {
+          courseID: 18,
+          listing: 'UNIV367',
+          title: 'Breadth I (upper-level)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        }
+      ],
+      [
+        {
+          courseID: 22,
+          listing: 'CISC499',
+          title: 'Computer Science Senior Design Project II (Capstone)',
+          preReqs: [Array],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 39,
+          listing: 'UNIV167',
+          title: 'Free IX',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        },
+        {
+          courseID: 40,
+          listing: 'UNIV167',
+          title: 'Free X',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        },
+        {
+          courseID: 41,
+          listing: 'UNIV167',
+          title: 'Free XI',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        },
+        {
+          courseID: 19,
+          listing: 'UNIV367',
+          title: 'Breadth II (upper-level)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        }
+      ]
+    ]
+
+      at DegreePlanView (src/Components/degree_plan_view.tsx:27:13)
+
+  console.log
+    Semester: 7
+
+      at findPrereqs (src/Components/check_semesters.tsx:107:17)
+          at Array.map (<anonymous>)
+          at Array.map (<anonymous>)
+
+  console.log
+    Semester: 7
+
+      at findPrereqs (src/Components/check_semesters.tsx:107:17)
+          at Array.map (<anonymous>)
+          at Array.map (<anonymous>)
+
+  console.log
+    Semester: 7
+
+      at findPrereqs (src/Components/check_semesters.tsx:107:17)
+          at Array.map (<anonymous>)
+          at Array.map (<anonymous>)
+
+  console.log
+    Semester: 7
+
+      at findPrereqs (src/Components/check_semesters.tsx:107:17)
+          at Array.map (<anonymous>)
+          at Array.map (<anonymous>)
+
+  console.log
+    Semester: 7
+
+      at findPrereqs (src/Components/check_semesters.tsx:107:17)
+          at Array.map (<anonymous>)
+          at Array.map (<anonymous>)
+
+  console.log
+    Semester: 7
+
+      at findPrereqs (src/Components/check_semesters.tsx:107:17)
+          at Array.map (<anonymous>)
+          at Array.map (<anonymous>)
+
+  console.log
+    Semester: 7
+
+      at findPrereqs (src/Components/check_semesters.tsx:107:17)
+          at Array.map (<anonymous>)
+          at Array.map (<anonymous>)
+
+  console.log
+    Semester: 7
+
+      at findPrereqs (src/Components/check_semesters.tsx:107:17)
+          at Array.map (<anonymous>)
+          at Array.map (<anonymous>)
+
+  console.log
+    Course List:  [
+      [
+        {
+          courseID: 1,
+          listing: 'CISC108',
+          title: 'Introduction to Computer Science I',
+          preReqs: [],
+          coReqs: [Array],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 16,
+          listing: 'EGGG101',
+          title: 'Introduction to Engineering',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 2,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 17,
+          listing: 'ENGL110',
+          title: 'Seminar in Composition',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 13,
+          listing: 'MATH241',
+          title: 'Analytic Geometry and Calculus A',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 4,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 23,
+          listing: 'UNIV167',
+          title: 'Breadth I (Multicultural)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        }
+      ],
+      [
+        {
+          courseID: 2,
+          listing: 'CISC181',
+          title: 'Introduction to Computer Science II',
+          preReqs: [Array],
+          coReqs: [Array],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 3,
+          listing: 'CISC210',
+          title: 'Introduction to Systems Programming',
+          preReqs: [Array],
+          coReqs: [Array],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 12,
+          listing: 'MATH210',
+          title: 'Discrete Mathematics I',
+          preReqs: [],
+          coReqs: [Array],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 30,
+          listing: 'UNIV167',
+          title: 'Breadth I (Natural Sciences Lab)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 4,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 31,
+          listing: 'UNIV167',
+          title: 'Free I',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        }
+      ],
+      [
+        {
+          courseID: 5,
+          listing: 'CISC220',
+          title: 'Data Structures',
+          preReqs: [Array],
+          coReqs: [Array],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 6,
+          listing: 'CISC260',
+          title: 'Machine Organization and Assembly Language',
+          preReqs: [Array],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 24,
+          listing: 'UNIV167',
+          title: 'Breadth I (Creative Arts and Humanities)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 26,
+          listing: 'UNIV167',
+          title: 'Breadth I (History and Cultural Change)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 32,
+          listing: 'UNIV167',
+          title: 'Free II',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        }
+      ],
+      [
+        {
+          courseID: 4,
+          listing: 'CISC275',
+          title: 'Introduction to Software Engineering',
+          preReqs: [Array],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 29,
+          listing: 'UNIV167',
+          title: 'Breadth II (Social and Behavioral Sciences)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 25,
+          listing: 'UNIV167',
+          title: 'Breadth II (Creative Arts and Humanities)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 33,
+          listing: 'UNIV167',
+          title: 'Free III',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        },
+        {
+          courseID: 34,
+          listing: 'UNIV167',
+          title: 'Free IV',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        }
+      ],
+      [
+        {
+          courseID: 7,
+          listing: 'CISC367',
+          title: 'CISC Placeholder I (upper-level)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 42,
+          listing: 'ENGL167',
+          title: 'Second Writing Requirement',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 27,
+          listing: 'UNIV167',
+          title: 'Breadth II (History and Cultural Change)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 29,
+          listing: 'UNIV167',
+          title: 'Breadth II (Social and Behavioral Sciences)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 35,
+          listing: 'UNIV167',
+          title: 'Free V',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        }
+      ],
+      [
+        {
+          courseID: 8,
+          listing: 'CISC367',
+          title: 'CISC Placeholder II (upper-level)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 44,
+          listing: 'UNIV167',
+          title: 'Breadth I (General)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 45,
+          listing: 'UNIV167',
+          title: 'Breadth II (General)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 36,
+          listing: 'UNIV167',
+          title: 'Free VI',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        },
+        {
+          courseID: 37,
+          listing: 'UNIV167',
+          title: 'Free VII',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        }
+      ],
+      [
+        {
+          courseID: 9,
+          listing: 'CISC367',
+          title: 'CISC Placeholder III (upper-level)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 10,
+          listing: 'CISC367',
+          title: 'CISC Placeholder IV (upper-level)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 21,
+          listing: 'CISC498',
+          title: 'Computer Science Senior Design Project I',
+          preReqs: [Array],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 38,
+          listing: 'UNIV167',
+          title: 'Free VIII',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        },
+        {
+          courseID: 18,
+          listing: 'UNIV367',
+          title: 'Breadth I (upper-level)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        }
+      ],
+      [
+        {
+          courseID: 22,
+          listing: 'CISC499',
+          title: 'Computer Science Senior Design Project II (Capstone)',
+          preReqs: [Array],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 39,
+          listing: 'UNIV167',
+          title: 'Free IX',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        },
+        {
+          courseID: 40,
+          listing: 'UNIV167',
+          title: 'Free X',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        },
+        {
+          courseID: 41,
+          listing: 'UNIV167',
+          title: 'Free XI',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        },
+        {
+          courseID: 19,
+          listing: 'UNIV367',
+          title: 'Breadth II (upper-level)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        }
+      ]
+    ]
+
+      at DegreePlanView (src/Components/degree_plan_view.tsx:27:13)
+
+  console.log
+    Semester: 7
+
+      at findPrereqs (src/Components/check_semesters.tsx:107:17)
+          at Array.map (<anonymous>)
+          at Array.map (<anonymous>)
+
+  console.log
+    Semester: 7
+
+      at findPrereqs (src/Components/check_semesters.tsx:107:17)
+          at Array.map (<anonymous>)
+          at Array.map (<anonymous>)
+
+  console.log
+    Semester: 7
+
+      at findPrereqs (src/Components/check_semesters.tsx:107:17)
+          at Array.map (<anonymous>)
+          at Array.map (<anonymous>)
+
+  console.log
+    Semester: 7
+
+      at findPrereqs (src/Components/check_semesters.tsx:107:17)
+          at Array.map (<anonymous>)
+          at Array.map (<anonymous>)
+
+  console.log
+    Semester: 7
+
+      at findPrereqs (src/Components/check_semesters.tsx:107:17)
+          at Array.map (<anonymous>)
+          at Array.map (<anonymous>)
+
+  console.log
+    Semester: 7
+
+      at findPrereqs (src/Components/check_semesters.tsx:107:17)
+          at Array.map (<anonymous>)
+          at Array.map (<anonymous>)
+
+  console.log
+    Semester: 7
+
+      at findPrereqs (src/Components/check_semesters.tsx:107:17)
+          at Array.map (<anonymous>)
+          at Array.map (<anonymous>)
+
+  console.log
+    Semester: 7
+
+      at findPrereqs (src/Components/check_semesters.tsx:107:17)
+          at Array.map (<anonymous>)
+          at Array.map (<anonymous>)
+
+  console.log
+    Course List:  [
+      [
+        {
+          courseID: 1,
+          listing: 'CISC108',
+          title: 'Introduction to Computer Science I',
+          preReqs: [],
+          coReqs: [Array],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 16,
+          listing: 'EGGG101',
+          title: 'Introduction to Engineering',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 2,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 17,
+          listing: 'ENGL110',
+          title: 'Seminar in Composition',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 13,
+          listing: 'MATH241',
+          title: 'Analytic Geometry and Calculus A',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 4,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 23,
+          listing: 'UNIV167',
+          title: 'Breadth I (Multicultural)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        }
+      ],
+      [
+        {
+          courseID: 2,
+          listing: 'CISC181',
+          title: 'Introduction to Computer Science II',
+          preReqs: [Array],
+          coReqs: [Array],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 3,
+          listing: 'CISC210',
+          title: 'Introduction to Systems Programming',
+          preReqs: [Array],
+          coReqs: [Array],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 12,
+          listing: 'MATH210',
+          title: 'Discrete Mathematics I',
+          preReqs: [],
+          coReqs: [Array],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 30,
+          listing: 'UNIV167',
+          title: 'Breadth I (Natural Sciences Lab)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 4,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 31,
+          listing: 'UNIV167',
+          title: 'Free I',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        }
+      ],
+      [
+        {
+          courseID: 5,
+          listing: 'CISC220',
+          title: 'Data Structures',
+          preReqs: [Array],
+          coReqs: [Array],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 6,
+          listing: 'CISC260',
+          title: 'Machine Organization and Assembly Language',
+          preReqs: [Array],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 24,
+          listing: 'UNIV167',
+          title: 'Breadth I (Creative Arts and Humanities)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 26,
+          listing: 'UNIV167',
+          title: 'Breadth I (History and Cultural Change)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 32,
+          listing: 'UNIV167',
+          title: 'Free II',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        }
+      ],
+      [
+        {
+          courseID: 4,
+          listing: 'CISC275',
+          title: 'Introduction to Software Engineering',
+          preReqs: [Array],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 29,
+          listing: 'UNIV167',
+          title: 'Breadth II (Social and Behavioral Sciences)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 25,
+          listing: 'UNIV167',
+          title: 'Breadth II (Creative Arts and Humanities)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 33,
+          listing: 'UNIV167',
+          title: 'Free III',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        },
+        {
+          courseID: 34,
+          listing: 'UNIV167',
+          title: 'Free IV',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        }
+      ],
+      [
+        {
+          courseID: 7,
+          listing: 'CISC367',
+          title: 'CISC Placeholder I (upper-level)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 42,
+          listing: 'ENGL167',
+          title: 'Second Writing Requirement',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 27,
+          listing: 'UNIV167',
+          title: 'Breadth II (History and Cultural Change)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 29,
+          listing: 'UNIV167',
+          title: 'Breadth II (Social and Behavioral Sciences)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 35,
+          listing: 'UNIV167',
+          title: 'Free V',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        }
+      ],
+      [
+        {
+          courseID: 8,
+          listing: 'CISC367',
+          title: 'CISC Placeholder II (upper-level)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 44,
+          listing: 'UNIV167',
+          title: 'Breadth I (General)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 45,
+          listing: 'UNIV167',
+          title: 'Breadth II (General)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 36,
+          listing: 'UNIV167',
+          title: 'Free VI',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        },
+        {
+          courseID: 37,
+          listing: 'UNIV167',
+          title: 'Free VII',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        }
+      ],
+      [
+        {
+          courseID: 9,
+          listing: 'CISC367',
+          title: 'CISC Placeholder III (upper-level)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 10,
+          listing: 'CISC367',
+          title: 'CISC Placeholder IV (upper-level)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 21,
+          listing: 'CISC498',
+          title: 'Computer Science Senior Design Project I',
+          preReqs: [Array],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 38,
+          listing: 'UNIV167',
+          title: 'Free VIII',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        },
+        {
+          courseID: 18,
+          listing: 'UNIV367',
+          title: 'Breadth I (upper-level)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        }
+      ],
+      [
+        {
+          courseID: 22,
+          listing: 'CISC499',
+          title: 'Computer Science Senior Design Project II (Capstone)',
+          preReqs: [Array],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 39,
+          listing: 'UNIV167',
+          title: 'Free IX',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        },
+        {
+          courseID: 40,
+          listing: 'UNIV167',
+          title: 'Free X',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        },
+        {
+          courseID: 41,
+          listing: 'UNIV167',
+          title: 'Free XI',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        },
+        {
+          courseID: 19,
+          listing: 'UNIV367',
+          title: 'Breadth II (upper-level)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        }
+      ]
+    ]
+
+      at DegreePlanView (src/Components/degree_plan_view.tsx:27:13)
+
+  console.log
+    Course List:  [
+      [
+        {
+          courseID: 1,
+          listing: 'CISC108',
+          title: 'Introduction to Computer Science I',
+          preReqs: [],
+          coReqs: [Array],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 16,
+          listing: 'EGGG101',
+          title: 'Introduction to Engineering',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 2,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 17,
+          listing: 'ENGL110',
+          title: 'Seminar in Composition',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 13,
+          listing: 'MATH241',
+          title: 'Analytic Geometry and Calculus A',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 4,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 23,
+          listing: 'UNIV167',
+          title: 'Breadth I (Multicultural)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        }
+      ],
+      [
+        {
+          courseID: 2,
+          listing: 'CISC181',
+          title: 'Introduction to Computer Science II',
+          preReqs: [Array],
+          coReqs: [Array],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 3,
+          listing: 'CISC210',
+          title: 'Introduction to Systems Programming',
+          preReqs: [Array],
+          coReqs: [Array],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 12,
+          listing: 'MATH210',
+          title: 'Discrete Mathematics I',
+          preReqs: [],
+          coReqs: [Array],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 30,
+          listing: 'UNIV167',
+          title: 'Breadth I (Natural Sciences Lab)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 4,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 31,
+          listing: 'UNIV167',
+          title: 'Free I',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        }
+      ],
+      [
+        {
+          courseID: 5,
+          listing: 'CISC220',
+          title: 'Data Structures',
+          preReqs: [Array],
+          coReqs: [Array],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 6,
+          listing: 'CISC260',
+          title: 'Machine Organization and Assembly Language',
+          preReqs: [Array],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 24,
+          listing: 'UNIV167',
+          title: 'Breadth I (Creative Arts and Humanities)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 26,
+          listing: 'UNIV167',
+          title: 'Breadth I (History and Cultural Change)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 32,
+          listing: 'UNIV167',
+          title: 'Free II',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        }
+      ],
+      [
+        {
+          courseID: 4,
+          listing: 'CISC275',
+          title: 'Introduction to Software Engineering',
+          preReqs: [Array],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 29,
+          listing: 'UNIV167',
+          title: 'Breadth II (Social and Behavioral Sciences)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 25,
+          listing: 'UNIV167',
+          title: 'Breadth II (Creative Arts and Humanities)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 33,
+          listing: 'UNIV167',
+          title: 'Free III',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        },
+        {
+          courseID: 34,
+          listing: 'UNIV167',
+          title: 'Free IV',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        }
+      ],
+      [
+        {
+          courseID: 7,
+          listing: 'CISC367',
+          title: 'CISC Placeholder I (upper-level)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 42,
+          listing: 'ENGL167',
+          title: 'Second Writing Requirement',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 27,
+          listing: 'UNIV167',
+          title: 'Breadth II (History and Cultural Change)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 29,
+          listing: 'UNIV167',
+          title: 'Breadth II (Social and Behavioral Sciences)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 35,
+          listing: 'UNIV167',
+          title: 'Free V',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        }
+      ],
+      [
+        {
+          courseID: 8,
+          listing: 'CISC367',
+          title: 'CISC Placeholder II (upper-level)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 44,
+          listing: 'UNIV167',
+          title: 'Breadth I (General)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 45,
+          listing: 'UNIV167',
+          title: 'Breadth II (General)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 36,
+          listing: 'UNIV167',
+          title: 'Free VI',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        },
+        {
+          courseID: 37,
+          listing: 'UNIV167',
+          title: 'Free VII',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        }
+      ],
+      [
+        {
+          courseID: 9,
+          listing: 'CISC367',
+          title: 'CISC Placeholder III (upper-level)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 10,
+          listing: 'CISC367',
+          title: 'CISC Placeholder IV (upper-level)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 21,
+          listing: 'CISC498',
+          title: 'Computer Science Senior Design Project I',
+          preReqs: [Array],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 38,
+          listing: 'UNIV167',
+          title: 'Free VIII',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        },
+        {
+          courseID: 18,
+          listing: 'UNIV367',
+          title: 'Breadth I (upper-level)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        }
+      ],
+      [
+        {
+          courseID: 22,
+          listing: 'CISC499',
+          title: 'Computer Science Senior Design Project II (Capstone)',
+          preReqs: [Array],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 39,
+          listing: 'UNIV167',
+          title: 'Free IX',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        },
+        {
+          courseID: 40,
+          listing: 'UNIV167',
+          title: 'Free X',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        },
+        {
+          courseID: 41,
+          listing: 'UNIV167',
+          title: 'Free XI',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        },
+        {
+          courseID: 19,
+          listing: 'UNIV367',
+          title: 'Breadth II (upper-level)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        }
+      ]
+    ]
+
+      at DegreePlanView (src/Components/degree_plan_view.tsx:27:13)
+
+  console.log
+    Semester: 7
+
+      at findPrereqs (src/Components/check_semesters.tsx:107:17)
+          at Array.map (<anonymous>)
+          at Array.map (<anonymous>)
+
+  console.log
+    Semester: 7
+
+      at findPrereqs (src/Components/check_semesters.tsx:107:17)
+          at Array.map (<anonymous>)
+          at Array.map (<anonymous>)
+
+  console.log
+    Semester: 7
+
+      at findPrereqs (src/Components/check_semesters.tsx:107:17)
+          at Array.map (<anonymous>)
+          at Array.map (<anonymous>)
+
+  console.log
+    Semester: 7
+
+      at findPrereqs (src/Components/check_semesters.tsx:107:17)
+          at Array.map (<anonymous>)
+          at Array.map (<anonymous>)
+
+  console.log
+    Semester: 7
+
+      at findPrereqs (src/Components/check_semesters.tsx:107:17)
+          at Array.map (<anonymous>)
+          at Array.map (<anonymous>)
+
+  console.log
+    Semester: 7
+
+      at findPrereqs (src/Components/check_semesters.tsx:107:17)
+          at Array.map (<anonymous>)
+          at Array.map (<anonymous>)
+
+  console.log
+    Semester: 7
+
+      at findPrereqs (src/Components/check_semesters.tsx:107:17)
+          at Array.map (<anonymous>)
+          at Array.map (<anonymous>)
+
+  console.log
+    Semester: 7
+
+      at findPrereqs (src/Components/check_semesters.tsx:107:17)
+          at Array.map (<anonymous>)
+          at Array.map (<anonymous>)
+
+  console.log
+    Course List:  [
+      [
+        {
+          courseID: 1,
+          listing: 'CISC108',
+          title: 'Introduction to Computer Science I',
+          preReqs: [],
+          coReqs: [Array],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 16,
+          listing: 'EGGG101',
+          title: 'Introduction to Engineering',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 2,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 17,
+          listing: 'ENGL110',
+          title: 'Seminar in Composition',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 13,
+          listing: 'MATH241',
+          title: 'Analytic Geometry and Calculus A',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 4,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 23,
+          listing: 'UNIV167',
+          title: 'Breadth I (Multicultural)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        }
+      ],
+      [
+        {
+          courseID: 2,
+          listing: 'CISC181',
+          title: 'Introduction to Computer Science II',
+          preReqs: [Array],
+          coReqs: [Array],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 3,
+          listing: 'CISC210',
+          title: 'Introduction to Systems Programming',
+          preReqs: [Array],
+          coReqs: [Array],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 12,
+          listing: 'MATH210',
+          title: 'Discrete Mathematics I',
+          preReqs: [],
+          coReqs: [Array],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 30,
+          listing: 'UNIV167',
+          title: 'Breadth I (Natural Sciences Lab)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 4,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 31,
+          listing: 'UNIV167',
+          title: 'Free I',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        }
+      ],
+      [
+        {
+          courseID: 5,
+          listing: 'CISC220',
+          title: 'Data Structures',
+          preReqs: [Array],
+          coReqs: [Array],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 6,
+          listing: 'CISC260',
+          title: 'Machine Organization and Assembly Language',
+          preReqs: [Array],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 24,
+          listing: 'UNIV167',
+          title: 'Breadth I (Creative Arts and Humanities)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 26,
+          listing: 'UNIV167',
+          title: 'Breadth I (History and Cultural Change)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 32,
+          listing: 'UNIV167',
+          title: 'Free II',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        }
+      ],
+      [
+        {
+          courseID: 4,
+          listing: 'CISC275',
+          title: 'Introduction to Software Engineering',
+          preReqs: [Array],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 29,
+          listing: 'UNIV167',
+          title: 'Breadth II (Social and Behavioral Sciences)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 25,
+          listing: 'UNIV167',
+          title: 'Breadth II (Creative Arts and Humanities)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 33,
+          listing: 'UNIV167',
+          title: 'Free III',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        },
+        {
+          courseID: 34,
+          listing: 'UNIV167',
+          title: 'Free IV',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        }
+      ],
+      [
+        {
+          courseID: 7,
+          listing: 'CISC367',
+          title: 'CISC Placeholder I (upper-level)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 42,
+          listing: 'ENGL167',
+          title: 'Second Writing Requirement',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 27,
+          listing: 'UNIV167',
+          title: 'Breadth II (History and Cultural Change)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 29,
+          listing: 'UNIV167',
+          title: 'Breadth II (Social and Behavioral Sciences)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 35,
+          listing: 'UNIV167',
+          title: 'Free V',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        }
+      ],
+      [
+        {
+          courseID: 8,
+          listing: 'CISC367',
+          title: 'CISC Placeholder II (upper-level)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 44,
+          listing: 'UNIV167',
+          title: 'Breadth I (General)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 45,
+          listing: 'UNIV167',
+          title: 'Breadth II (General)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 36,
+          listing: 'UNIV167',
+          title: 'Free VI',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        },
+        {
+          courseID: 37,
+          listing: 'UNIV167',
+          title: 'Free VII',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        }
+      ],
+      [
+        {
+          courseID: 9,
+          listing: 'CISC367',
+          title: 'CISC Placeholder III (upper-level)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 10,
+          listing: 'CISC367',
+          title: 'CISC Placeholder IV (upper-level)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 21,
+          listing: 'CISC498',
+          title: 'Computer Science Senior Design Project I',
+          preReqs: [Array],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 38,
+          listing: 'UNIV167',
+          title: 'Free VIII',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        },
+        {
+          courseID: 18,
+          listing: 'UNIV367',
+          title: 'Breadth I (upper-level)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        }
+      ],
+      [
+        {
+          courseID: 22,
+          listing: 'CISC499',
+          title: 'Computer Science Senior Design Project II (Capstone)',
+          preReqs: [Array],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 39,
+          listing: 'UNIV167',
+          title: 'Free IX',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        },
+        {
+          courseID: 40,
+          listing: 'UNIV167',
+          title: 'Free X',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        },
+        {
+          courseID: 41,
+          listing: 'UNIV167',
+          title: 'Free XI',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        },
+        {
+          courseID: 19,
+          listing: 'UNIV367',
+          title: 'Breadth II (upper-level)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        }
+      ]
+    ]
+
+      at DegreePlanView (src/Components/degree_plan_view.tsx:27:13)
+
+  console.log
+    Semester: 7
+
+      at findPrereqs (src/Components/check_semesters.tsx:107:17)
+          at Array.map (<anonymous>)
+          at Array.map (<anonymous>)
+
+  console.log
+    Semester: 7
+
+      at findPrereqs (src/Components/check_semesters.tsx:107:17)
+          at Array.map (<anonymous>)
+          at Array.map (<anonymous>)
+
+  console.log
+    Semester: 7
+
+      at findPrereqs (src/Components/check_semesters.tsx:107:17)
+          at Array.map (<anonymous>)
+          at Array.map (<anonymous>)
+
+  console.log
+    Semester: 7
+
+      at findPrereqs (src/Components/check_semesters.tsx:107:17)
+          at Array.map (<anonymous>)
+          at Array.map (<anonymous>)
+
+  console.log
+    Semester: 7
+
+      at findPrereqs (src/Components/check_semesters.tsx:107:17)
+          at Array.map (<anonymous>)
+          at Array.map (<anonymous>)
+
+  console.log
+    Semester: 7
+
+      at findPrereqs (src/Components/check_semesters.tsx:107:17)
+          at Array.map (<anonymous>)
+          at Array.map (<anonymous>)
+
+  console.log
+    Semester: 7
+
+      at findPrereqs (src/Components/check_semesters.tsx:107:17)
+          at Array.map (<anonymous>)
+          at Array.map (<anonymous>)
+
+  console.log
+    Semester: 7
+
+      at findPrereqs (src/Components/check_semesters.tsx:107:17)
+          at Array.map (<anonymous>)
+          at Array.map (<anonymous>)
+
+  console.log
+    Course List:  [
+      [
+        {
+          courseID: 1,
+          listing: 'CISC108',
+          title: 'Introduction to Computer Science I',
+          preReqs: [],
+          coReqs: [Array],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 16,
+          listing: 'EGGG101',
+          title: 'Introduction to Engineering',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 2,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 17,
+          listing: 'ENGL110',
+          title: 'Seminar in Composition',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 13,
+          listing: 'MATH241',
+          title: 'Analytic Geometry and Calculus A',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 4,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 23,
+          listing: 'UNIV167',
+          title: 'Breadth I (Multicultural)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        }
+      ],
+      [
+        {
+          courseID: 2,
+          listing: 'CISC181',
+          title: 'Introduction to Computer Science II',
+          preReqs: [Array],
+          coReqs: [Array],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 3,
+          listing: 'CISC210',
+          title: 'Introduction to Systems Programming',
+          preReqs: [Array],
+          coReqs: [Array],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 12,
+          listing: 'MATH210',
+          title: 'Discrete Mathematics I',
+          preReqs: [],
+          coReqs: [Array],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 30,
+          listing: 'UNIV167',
+          title: 'Breadth I (Natural Sciences Lab)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 4,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 31,
+          listing: 'UNIV167',
+          title: 'Free I',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        }
+      ],
+      [
+        {
+          courseID: 5,
+          listing: 'CISC220',
+          title: 'Data Structures',
+          preReqs: [Array],
+          coReqs: [Array],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 6,
+          listing: 'CISC260',
+          title: 'Machine Organization and Assembly Language',
+          preReqs: [Array],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 24,
+          listing: 'UNIV167',
+          title: 'Breadth I (Creative Arts and Humanities)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 26,
+          listing: 'UNIV167',
+          title: 'Breadth I (History and Cultural Change)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 32,
+          listing: 'UNIV167',
+          title: 'Free II',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        }
+      ],
+      [
+        {
+          courseID: 4,
+          listing: 'CISC275',
+          title: 'Introduction to Software Engineering',
+          preReqs: [Array],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 29,
+          listing: 'UNIV167',
+          title: 'Breadth II (Social and Behavioral Sciences)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 25,
+          listing: 'UNIV167',
+          title: 'Breadth II (Creative Arts and Humanities)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 33,
+          listing: 'UNIV167',
+          title: 'Free III',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        },
+        {
+          courseID: 34,
+          listing: 'UNIV167',
+          title: 'Free IV',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        }
+      ],
+      [
+        {
+          courseID: 7,
+          listing: 'CISC367',
+          title: 'CISC Placeholder I (upper-level)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 42,
+          listing: 'ENGL167',
+          title: 'Second Writing Requirement',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 27,
+          listing: 'UNIV167',
+          title: 'Breadth II (History and Cultural Change)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 29,
+          listing: 'UNIV167',
+          title: 'Breadth II (Social and Behavioral Sciences)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 35,
+          listing: 'UNIV167',
+          title: 'Free V',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        }
+      ],
+      [
+        {
+          courseID: 8,
+          listing: 'CISC367',
+          title: 'CISC Placeholder II (upper-level)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 44,
+          listing: 'UNIV167',
+          title: 'Breadth I (General)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 45,
+          listing: 'UNIV167',
+          title: 'Breadth II (General)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 36,
+          listing: 'UNIV167',
+          title: 'Free VI',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        },
+        {
+          courseID: 37,
+          listing: 'UNIV167',
+          title: 'Free VII',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        }
+      ],
+      [
+        {
+          courseID: 9,
+          listing: 'CISC367',
+          title: 'CISC Placeholder III (upper-level)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 10,
+          listing: 'CISC367',
+          title: 'CISC Placeholder IV (upper-level)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 21,
+          listing: 'CISC498',
+          title: 'Computer Science Senior Design Project I',
+          preReqs: [Array],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 38,
+          listing: 'UNIV167',
+          title: 'Free VIII',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        },
+        {
+          courseID: 18,
+          listing: 'UNIV367',
+          title: 'Breadth I (upper-level)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        }
+      ],
+      [
+        {
+          courseID: 22,
+          listing: 'CISC499',
+          title: 'Computer Science Senior Design Project II (Capstone)',
+          preReqs: [Array],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        },
+        {
+          courseID: 39,
+          listing: 'UNIV167',
+          title: 'Free IX',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        },
+        {
+          courseID: 40,
+          listing: 'UNIV167',
+          title: 'Free X',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        },
+        {
+          courseID: 41,
+          listing: 'UNIV167',
+          title: 'Free XI',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: []
+        },
+        {
+          courseID: 19,
+          listing: 'UNIV367',
+          title: 'Breadth II (upper-level)',
+          preReqs: [],
+          coReqs: [],
+          offered: [Array],
+          credits: 3,
+          reqsSatisfied: [Array]
+        }
+      ]
+    ]
+
+      at DegreePlanView (src/Components/degree_plan_view.tsx:27:13)
+
+FAIL src/App.test.tsx (368.3 s)
   Final Project Tests
-    ✓ renders the course name somewhere (746 ms)
-    ✕ Insert and Remove a degree plan (17621 ms)
-    ✕ Students can see a list of all the degree plans they have made (17230 ms)
-    ✓ Students can see a list of degree requirements (879 ms)
-    ✕ Students can see a list of existing courses (391 ms)
-    ✕ Students can see a table that shows semesters and courses (691 ms)
-    ✕ Students can insert or remove a semester in a plan (1386 ms)
-    ✕ Students can clear out all the existing courses in a semester (17242 ms)
-    ✕ Students can clear out individual courses in a semester (17362 ms)
-    ✕ Students can insert a course in a semester (17350 ms)
-    ✕ Students will be prevented from inserting a duplicate course into the plan (17279 ms)
-    ✕ Students will get an error in the semester view when a course with an unsatisfied prerequisite or corequisite is added (17376 ms)
-    ✕ Students can see a list of existing courses (564 ms)
-    ✕ Students can edit the course code (584 ms)
-    ✕ Student can edit the course title  (579 ms)
-    ✕ Student can edit credits of a course (593 ms)
+    ✓ renders the course name somewhere (867 ms)
+    ✕ Insert and Remove a degree plan (45090 ms)
+    ✕ Students can see a list of all the degree plans they have made (45241 ms)
+    ✓ Students can see a list of degree requirements (1294 ms)
+    ✕ Students can see a list of existing courses (497 ms)
+    ✕ Students can see a table that shows semesters and courses (1053 ms)
+    ✕ Students can insert or remove a semester in a plan (2491 ms)
+    ✕ Students can clear out all the existing courses in a semester (44010 ms)
+    ✕ Students can clear out individual courses in a semester (43961 ms)
+    ✕ Students can insert a course in a semester (43435 ms)
+    ✕ Students will be prevented from inserting a duplicate course into the plan (43230 ms)
+    ✕ Students will get an error in the semester view when a course with an unsatisfied prerequisite or corequisite is added (43160 ms)
+    ✕ Students can establish that a course fulfills a degree requirement (832 ms)
+    ✕ Update courses in existing degree plans when course list is updated (45316 ms)
+    ✕ Students can see a list of existing courses (866 ms)
+    ✕ Students can edit the course code (878 ms)
+    ✕ Student can edit the course title  (862 ms)
+    ✕ Student can edit credits of a course (866 ms)
 
   ● Final Project Tests › Insert and Remove a degree plan
 
@@ -22435,19 +25193,19 @@ FAIL src/App.test.tsx (132.266 s)
                   [36m<h3>[39m
                    ...
 
-      19 |
-      20 |     test("Insert and Remove a degree plan", () => {
-    > 21 |         const addEmpty = screen.getByRole("button", {
+      15 |
+      16 |     test("Insert and Remove a degree plan", () => {
+    > 17 |         const addEmpty = screen.getByRole("button", {
          |                                 ^
-      22 |             name: /Add Empty Plan/i
-      23 |         });
-      24 |         const addDefault = screen.getByRole("button", {
+      18 |             name: /Add Empty Plan/i
+      19 |         });
+      20 |         const addDefault = screen.getByRole("button", {
 
       at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
       at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
       at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
       at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/App.test.tsx:21:33)
+      at Object.<anonymous> (src/App.test.tsx:17:33)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -22779,19 +25537,19 @@ FAIL src/App.test.tsx (132.266 s)
                   [36m<h3>[39m
                    ...
 
-      71 |
-      72 |     test("Students can see a list of all the degree plans they have made", () => {
-    > 73 |         const addEmpty = screen.getByRole("button", {
+      67 |
+      68 |     test("Students can see a list of all the degree plans they have made", () => {
+    > 69 |         const addEmpty = screen.getByRole("button", {
          |                                 ^
-      74 |             name: /Add Empty Plan/i
-      75 |         });
-      76 |         const addDefault = screen.getByRole("button", {
+      70 |             name: /Add Empty Plan/i
+      71 |         });
+      72 |         const addDefault = screen.getByRole("button", {
 
       at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
       at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
       at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
       at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/App.test.tsx:73:33)
+      at Object.<anonymous> (src/App.test.tsx:69:33)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -22801,17 +25559,17 @@ FAIL src/App.test.tsx (132.266 s)
 
     expect(received).toBeNull()
 
-    Received: <div>CISC108: Introduction to Computer Science I <span><button class="btn btn-secondary btn-circle btn-sm btn btn-primary" data-bs-toggle="modal" data-testid="info-button" data-toggle="tooltip" title="Click for more info on CISC108" type="button"><i>i</i></button></span></div>
+    Received: <button aria-expanded="false" class="accordion-button collapsed" type="button">CISC108: Introduction to Computer Science I</button>
 
-      136 |             "CISC499: Computer Science Senior Design Project II (Capstone)"
-      137 |         );
-    > 138 |         expect(text1).toBeNull();
+      132 |             "CISC499: Computer Science Senior Design Project II (Capstone)"
+      133 |         );
+    > 134 |         expect(text1).toBeNull();
           |                       ^
-      139 |         expect(text2).toBeNull();
-      140 |         expect(text3).toBeNull();
-      141 |         expect(text4).toBeNull();
+      135 |         expect(text2).toBeNull();
+      136 |         expect(text3).toBeNull();
+      137 |         expect(text4).toBeNull();
 
-      at Object.<anonymous> (src/App.test.tsx:138:23)
+      at Object.<anonymous> (src/App.test.tsx:134:23)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -22819,20 +25577,224 @@ FAIL src/App.test.tsx (132.266 s)
 
   ● Final Project Tests › Students can see a table that shows semesters and courses
 
-    expect(element).toBeVisible()
+    TestingLibraryElementError: Found multiple elements with the text: CISC108
 
-    Received element is not visible:
-      <b />
+    Here are the matching elements:
 
-      171 |         const text5 = screen.queryAllByText("Total Credits");
-      172 |         const text6 = screen.queryByText("Default Total Credits: 121");
-    > 173 |         expect(text1).toBeVisible();
-          |                       ^
-      174 |         expect(text2).toBeVisible();
-      175 |         expect(text3).toBeVisible();
-      176 |         expect(text4).toBeVisible();
+    Ignored nodes: comments, <script />, <style />
+    [36m<td>[39m
+      [0mCISC108[0m
+    [36m</td>[39m
 
-      at Object.<anonymous> (src/App.test.tsx:173:23)
+    Ignored nodes: comments, <script />, <style />
+    [36m<div>[39m
+      [36m<b>[39m
+        [0mDegree Requirements Satified: [0m
+      [36m</b>[39m
+      [0mCISC108[0m
+    [36m</div>[39m
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<div>[39m
+      [36m<b>[39m
+        [0mPre-Requistie Courses: [0m
+      [36m</b>[39m
+      [0mCISC108[0m
+    [36m</div>[39m
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<div>[39m
+      [36m<b>[39m
+        [0mPre-Requistie Courses: [0m
+      [36m</b>[39m
+      [0mCISC108[0m
+    [36m</div>[39m
+
+    (If this is intentional, then use the `*AllBy*` variant of the query (like `queryAllByText`, `getAllByText`, or `findAllByText`)).
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"App"[39m
+        [36m>[39m
+          [36m<div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"vstack gap-2"[39m
+            [36m>[39m
+              [36m<div>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"App-header"[39m
+                [36m>[39m
+                  [36m<h1>[39m
+                    [0mUD Degree Plan Tester[0m
+                  [36m</h1>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"App-special"[39m
+                  [36m>[39m
+                    [36m<img[39m
+                      [33mheight[39m=[32m"100"[39m
+                      [33msrc[39m=[32m"https://clipartix.com/wp-content/uploads/2016/04/Paper-clip-art-free-free-clipart-images-clipartcow.png"[39m
+                      [33mwidth[39m=[32m"100"[39m
+                    [36m/>[39m
+                  [36m</div>[39m
+                [36m</div>[39m
+                [36m<div />[39m
+                [36m<h3>[39m
+                  [0mInstructions:[0m
+                [36m</h3>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"App-thin"[39m
+                [36m>[39m
+                  [0mThis application is developed with the intent of helping University of Delaware Computer Science (CISC) majors determine the degree plan best suited to their interests, while still meeting degree requirements. To navigate this page, select an existing or new degree plan. Within the plan you can edit and view the semesters and classes you would like. When you are satisfied with the plan, you can check to see if all the degree requirements have been met. A list of commonly offered CISC courses has been provided. For further information on available breadth and technical elective courses, you can refer to the following links. Best of luck in navigating your future![0m
+                [36m</div>[39m
+                [36m<hr />[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"row"[39m
+                [36m>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"col"[39m
+                  [36m>[39m
+                    [36m<b>[39m
+                      [0mStart Making a Degree Plan[0m
+                    [36m</b>[39m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"col"[39m
+                  [36m>[39m
+                    [36m<b>[39m
+                      [0mSelect a Degree Concentration[0m
+                    [36m</b>[39m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"col"[39m
+                  [36m>[39m
+                    [36m<b>[39m
+                      [0mInvestigate Existing Courses[0m
+                    [36m</b>[39m
+                  [36m</div>[39m
+                [36m</div>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"row"[39m
+                [36m>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"col"[39m
+                  [36m>[39m
+                    [36m<h1>[39m
+                      [0m⬇[0m
+                    [36m</h1>[39m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"col"[39m
+                  [36m>[39m
+                    [36m<h1>[39m
+                      [0m⬇[0m
+                    [36m</h1>[39m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"col"[39m
+                  [36m>[39m
+                    [36m<h1>[39m
+                      [0m⬇[0m
+                    [36m</h1>[39m
+                  [36m</div>[39m
+                [36m</div>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"row"[39m
+                [36m>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"col"[39m
+                  [36m>[39m
+                    [36m<button[39m
+                      [33mclass[39m=[32m"btn btn-primary"[39m
+                      [33mtype[39m=[32m"button"[39m
+                    [36m>[39m
+                      [0mMove to Degree Plans[0m
+                    [36m</button>[39m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"col"[39m
+                  [36m>[39m
+                    [36m<div>[39m
+                      [36m<select[39m
+                        [33mclass[39m=[32m"form-select"[39m
+                        [33mid[39m=[32m"concentration"[39m
+                      [36m>[39m
+                        [36m<option[39m
+                          [33mvalue[39m=[32m"General (BA)"[39m
+                        [36m>[39m
+                          [0mGeneral (BA)[0m
+                        [36m</option>[39m
+                        [36m<option[39m
+                          [33mvalue[39m=[32m"Artific Intelligence and Robotics (BS)"[39m
+                        [36m>[39m
+                          [0mArtific Intelligence and Robotics (BS)[0m
+                        [36m</option>[39m
+                        [36m<option[39m
+                          [33mvalue[39m=[32m"Bioinformtics (BS)"[39m
+                        [36m>[39m
+                          [0mBioinformtics (BS)[0m
+                        [36m</option>[39m
+                        [36m<option[39m
+                          [33mvalue[39m=[32m"Cybersecurity (BS)"[39m
+                        [36m>[39m
+                          [0mCybersecurity (BS)[0m
+                        [36m</option>[39m
+                        [36m<option[39m
+                          [33mvalue[39m=[32m"Data Science (BS)"[39m
+                        [36m>[39m
+                          [0mData Science (BS)[0m
+                        [36m</option>[39m
+                        [36m<option[39m
+                          [33mvalue[39m=[32m"High Performance Computing (BS)"[39m
+                        [36m>[39m
+                          [0mHigh Performance Computing (BS)[0m
+                        [36m</option>[39m
+                        [36m<option[39m
+                          [33mvalue[39m=[32m"Systems and Networks (BS)"[39m
+                        [36m>[39m
+                          [0mSystems and Networks (BS)[0m
+                        [36m</option>[39m
+                        [36m<option[39m
+                          [33mvalue[39m=[32m"Theory and Computation (BS)"[39m
+                        [36m>[39m
+                          [0mTheory and Computation (BS)[0m
+                        [36m</option>[39m
+                      [36m</select>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"col"[39m
+                  [36m>[39m
+                    [36m<button[39m
+                      [33mclass[39m=[32m"btn btn-primary"[39m
+                      [33mtype[39m=[32m"button"[39m
+                    [36m>[39m
+                      [0mMove to Course List[0m
+                    [36m</button>[39m
+                  [36m</div>[39m
+                [36m</div>[39m
+                [36m<hr />[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"row"[39m
+                [36m>[39m
+                  [36m<h3>[39m
+                   ...
+
+      163 |         const text1 = screen.queryByText("Fall 2020");
+      164 |         const text2 = screen.queryByText("Spring 2022");
+    > 165 |         const text3 = screen.queryByText("CISC108");
+          |                              ^
+      166 |         const text4 = screen.queryByText("Introduction to Computer Science I");
+      167 |         const text5 = screen.queryAllByText("Total Credits");
+      168 |         const text6 = screen.queryByText("Default Total Credits: 121");
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at getElementError (node_modules/@testing-library/dom/dist/query-helpers.js:25:35)
+      at getMultipleElementsFoundError (node_modules/@testing-library/dom/dist/query-helpers.js:29:10)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:66:13
+      at queryByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/App.test.tsx:165:30)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -22889,19 +25851,19 @@ FAIL src/App.test.tsx (132.266 s)
       [36m</option>[39m
     [36m</select>[39m
 
-      205 |         expect(text2[0]).not.toBeUndefined();
-      206 |         const seasonButton = screen.getAllByRole("combobox");
-    > 207 |         userEvent.selectOptions(seasonButton[0], "Winter");
+      201 |         expect(text2[0]).not.toBeUndefined();
+      202 |         const seasonButton = screen.getAllByRole("combobox");
+    > 203 |         userEvent.selectOptions(seasonButton[0], "Winter");
           |                   ^
-      208 |         createSemester?.click();
-      209 |         text1 = screen.queryByText("Winter 2022");
-      210 |         expect(text1).not.toBeNull();
+      204 |         createSemester?.click();
+      205 |         text1 = screen.queryByText("Winter 2022");
+      206 |         expect(text1).not.toBeNull();
 
       at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
       at node_modules/@testing-library/user-event/dist/select-options.js:36:37
           at Array.map (<anonymous>)
       at selectOptions (node_modules/@testing-library/user-event/dist/select-options.js:27:36)
-      at Object.<anonymous> (src/App.test.tsx:207:19)
+      at Object.<anonymous> (src/App.test.tsx:203:19)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -23233,19 +26195,19 @@ FAIL src/App.test.tsx (132.266 s)
                   [36m<h3>[39m
                    ...
 
-      212 |
-      213 |     test("Students can clear out all the existing courses in a semester", () => {
-    > 214 |         const degreePlanButton = screen.getByRole("button", {
+      208 |
+      209 |     test("Students can clear out all the existing courses in a semester", () => {
+    > 210 |         const degreePlanButton = screen.getByRole("button", {
           |                                         ^
-      215 |             name: /1: Default/i
-      216 |         });
-      217 |         degreePlanButton.click();
+      211 |             name: /1: Default/i
+      212 |         });
+      213 |         degreePlanButton.click();
 
       at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
       at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
       at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
       at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/App.test.tsx:214:41)
+      at Object.<anonymous> (src/App.test.tsx:210:41)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -23577,19 +26539,19 @@ FAIL src/App.test.tsx (132.266 s)
                   [36m<h3>[39m
                    ...
 
-      239 |
-      240 |     test("Students can clear out individual courses in a semester", () => {
-    > 241 |         const degreePlanButton = screen.getByRole("button", {
+      235 |
+      236 |     test("Students can clear out individual courses in a semester", () => {
+    > 237 |         const degreePlanButton = screen.getByRole("button", {
           |                                         ^
-      242 |             name: /1: Default/i
-      243 |         });
-      244 |         degreePlanButton.click();
+      238 |             name: /1: Default/i
+      239 |         });
+      240 |         degreePlanButton.click();
 
       at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
       at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
       at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
       at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/App.test.tsx:241:41)
+      at Object.<anonymous> (src/App.test.tsx:237:41)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -23921,19 +26883,19 @@ FAIL src/App.test.tsx (132.266 s)
                   [36m<h3>[39m
                    ...
 
-      264 |
-      265 |     test("Students can insert a course in a semester", () => {
-    > 266 |         const addEmpty = screen.getByRole("button", {
+      260 |
+      261 |     test("Students can insert a course in a semester", () => {
+    > 262 |         const addEmpty = screen.getByRole("button", {
           |                                 ^
-      267 |             name: /Add Empty Plan/i
-      268 |         });
-      269 |         addEmpty.click();
+      263 |             name: /Add Empty Plan/i
+      264 |         });
+      265 |         addEmpty.click();
 
       at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
       at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
       at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
       at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/App.test.tsx:266:33)
+      at Object.<anonymous> (src/App.test.tsx:262:33)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -24265,19 +27227,19 @@ FAIL src/App.test.tsx (132.266 s)
                   [36m<h3>[39m
                    ...
 
-      333 |
-      334 |     test("Students will be prevented from inserting a duplicate course into the plan", () => {
-    > 335 |         const addEmpty = screen.getByRole("button", {
+      329 |
+      330 |     test("Students will be prevented from inserting a duplicate course into the plan", () => {
+    > 331 |         const addEmpty = screen.getByRole("button", {
           |                                 ^
-      336 |             name: /Add Empty Plan/i
-      337 |         });
-      338 |         addEmpty.click();
+      332 |             name: /Add Empty Plan/i
+      333 |         });
+      334 |         addEmpty.click();
 
       at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
       at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
       at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
       at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/App.test.tsx:335:33)
+      at Object.<anonymous> (src/App.test.tsx:331:33)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -24609,19 +27571,381 @@ FAIL src/App.test.tsx (132.266 s)
                   [36m<h3>[39m
                    ...
 
-      404 |
-      405 |     test("Students will get an error in the semester view when a course with an unsatisfied prerequisite or corequisite is added", () => {
-    > 406 |         const addEmpty = screen.getByRole("button", {
+      400 |
+      401 |     test("Students will get an error in the semester view when a course with an unsatisfied prerequisite or corequisite is added", () => {
+    > 402 |         const addEmpty = screen.getByRole("button", {
           |                                 ^
-      407 |             name: /Add Empty Plan/i
-      408 |         });
-      409 |         addEmpty.click();
+      403 |             name: /Add Empty Plan/i
+      404 |         });
+      405 |         addEmpty.click();
 
       at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
       at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
       at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
       at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/App.test.tsx:406:33)
+      at Object.<anonymous> (src/App.test.tsx:402:33)
+      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
+      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
+      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
+      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
+
+  ● Final Project Tests › Students can establish that a course fulfills a degree requirement
+
+    TypeError: Cannot read properties of undefined (reading 'click')
+
+      461 |             name: /Show/i
+      462 |         });
+    > 463 |         showHides[1].click();
+          |                      ^
+      464 |
+      465 |         const infoButtons = screen.queryAllByRole("button", {
+      466 |             name: / i/i
+
+      at Object.<anonymous> (src/App.test.tsx:463:22)
+      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
+      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
+      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
+      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
+
+  ● Final Project Tests › Update courses in existing degree plans when course list is updated
+
+    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name `/Add Default Plan \(8 semesters\)/i`
+
+    Here are the accessible roles:
+
+      heading:
+
+      Name "UD Degree Plan Tester":
+      [36m<h1 />[39m
+
+      Name "Instructions:":
+      [36m<h3 />[39m
+
+      Name "⬇":
+      [36m<h1 />[39m
+
+      Name "⬇":
+      [36m<h1 />[39m
+
+      Name "⬇":
+      [36m<h1 />[39m
+
+      Name "Degree Requirements":
+      [36m<h3 />[39m
+
+      Name "External Links:":
+      [36m<h3 />[39m
+
+      --------------------------------------------------
+      img:
+
+      Name "":
+      [36m<img[39m
+        [33mheight[39m=[32m"100"[39m
+        [33msrc[39m=[32m"https://clipartix.com/wp-content/uploads/2016/04/Paper-clip-art-free-free-clipart-images-clipartcow.png"[39m
+        [33mwidth[39m=[32m"100"[39m
+      [36m/>[39m
+
+      --------------------------------------------------
+      separator:
+
+      Name "":
+      [36m<hr />[39m
+
+      Name "":
+      [36m<hr />[39m
+
+      Name "":
+      [36m<hr />[39m
+
+      Name "":
+      [36m<hr />[39m
+
+      --------------------------------------------------
+      button:
+
+      Name "Move to Degree Plans":
+      [36m<button[39m
+        [33mclass[39m=[32m"btn btn-primary"[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m/>[39m
+
+      Name "Move to Course List":
+      [36m<button[39m
+        [33mclass[39m=[32m"btn btn-primary"[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m/>[39m
+
+      Name "Show":
+      [36m<button[39m
+        [33mclass[39m=[32m"btn btn-primary"[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m/>[39m
+
+      --------------------------------------------------
+      combobox:
+
+      Name "":
+      [36m<select[39m
+        [33mclass[39m=[32m"form-select"[39m
+        [33mid[39m=[32m"concentration"[39m
+      [36m/>[39m
+
+      --------------------------------------------------
+      option:
+
+      Name "General (BA)":
+      [36m<option[39m
+        [33mvalue[39m=[32m"General (BA)"[39m
+      [36m/>[39m
+
+      Name "Artific Intelligence and Robotics (BS)":
+      [36m<option[39m
+        [33mvalue[39m=[32m"Artific Intelligence and Robotics (BS)"[39m
+      [36m/>[39m
+
+      Name "Bioinformtics (BS)":
+      [36m<option[39m
+        [33mvalue[39m=[32m"Bioinformtics (BS)"[39m
+      [36m/>[39m
+
+      Name "Cybersecurity (BS)":
+      [36m<option[39m
+        [33mvalue[39m=[32m"Cybersecurity (BS)"[39m
+      [36m/>[39m
+
+      Name "Data Science (BS)":
+      [36m<option[39m
+        [33mvalue[39m=[32m"Data Science (BS)"[39m
+      [36m/>[39m
+
+      Name "High Performance Computing (BS)":
+      [36m<option[39m
+        [33mvalue[39m=[32m"High Performance Computing (BS)"[39m
+      [36m/>[39m
+
+      Name "Systems and Networks (BS)":
+      [36m<option[39m
+        [33mvalue[39m=[32m"Systems and Networks (BS)"[39m
+      [36m/>[39m
+
+      Name "Theory and Computation (BS)":
+      [36m<option[39m
+        [33mvalue[39m=[32m"Theory and Computation (BS)"[39m
+      [36m/>[39m
+
+      --------------------------------------------------
+      link:
+
+      Name "UD Course Search":
+      [36m<a[39m
+        [33mhref[39m=[32m"https://udapps.nss.udel.edu/CoursesSearch/"[39m
+      [36m/>[39m
+
+      Name "Detailed List of Requirements":
+      [36m<a[39m
+        [33mhref[39m=[32m"https://catalog.udel.edu/preview_program.php?catoid=47&poid=34726&returnto=8860"[39m
+      [36m/>[39m
+
+      Name "Concentrations Offered":
+      [36m<a[39m
+        [33mhref[39m=[32m"https://www.cis.udel.edu/academics/undergraduate-programs/bscs/"[39m
+      [36m/>[39m
+
+      Name "Research Opportunities":
+      [36m<a[39m
+        [33mhref[39m=[32m"https://www.cis.udel.edu/academics/undergraduate-programs/undergraduate-research/"[39m
+      [36m/>[39m
+
+      Name "More Resources":
+      [36m<a[39m
+        [33mhref[39m=[32m"https://www.cis.udel.edu/academics/undergraduate-programs/resources/"[39m
+      [36m/>[39m
+
+      --------------------------------------------------
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"App"[39m
+        [36m>[39m
+          [36m<div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"vstack gap-2"[39m
+            [36m>[39m
+              [36m<div>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"App-header"[39m
+                [36m>[39m
+                  [36m<h1>[39m
+                    [0mUD Degree Plan Tester[0m
+                  [36m</h1>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"App-special"[39m
+                  [36m>[39m
+                    [36m<img[39m
+                      [33mheight[39m=[32m"100"[39m
+                      [33msrc[39m=[32m"https://clipartix.com/wp-content/uploads/2016/04/Paper-clip-art-free-free-clipart-images-clipartcow.png"[39m
+                      [33mwidth[39m=[32m"100"[39m
+                    [36m/>[39m
+                  [36m</div>[39m
+                [36m</div>[39m
+                [36m<div />[39m
+                [36m<h3>[39m
+                  [0mInstructions:[0m
+                [36m</h3>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"App-thin"[39m
+                [36m>[39m
+                  [0mThis application is developed with the intent of helping University of Delaware Computer Science (CISC) majors determine the degree plan best suited to their interests, while still meeting degree requirements. To navigate this page, select an existing or new degree plan. Within the plan you can edit and view the semesters and classes you would like. When you are satisfied with the plan, you can check to see if all the degree requirements have been met. A list of commonly offered CISC courses has been provided. For further information on available breadth and technical elective courses, you can refer to the following links. Best of luck in navigating your future![0m
+                [36m</div>[39m
+                [36m<hr />[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"row"[39m
+                [36m>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"col"[39m
+                  [36m>[39m
+                    [36m<b>[39m
+                      [0mStart Making a Degree Plan[0m
+                    [36m</b>[39m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"col"[39m
+                  [36m>[39m
+                    [36m<b>[39m
+                      [0mSelect a Degree Concentration[0m
+                    [36m</b>[39m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"col"[39m
+                  [36m>[39m
+                    [36m<b>[39m
+                      [0mInvestigate Existing Courses[0m
+                    [36m</b>[39m
+                  [36m</div>[39m
+                [36m</div>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"row"[39m
+                [36m>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"col"[39m
+                  [36m>[39m
+                    [36m<h1>[39m
+                      [0m⬇[0m
+                    [36m</h1>[39m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"col"[39m
+                  [36m>[39m
+                    [36m<h1>[39m
+                      [0m⬇[0m
+                    [36m</h1>[39m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"col"[39m
+                  [36m>[39m
+                    [36m<h1>[39m
+                      [0m⬇[0m
+                    [36m</h1>[39m
+                  [36m</div>[39m
+                [36m</div>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"row"[39m
+                [36m>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"col"[39m
+                  [36m>[39m
+                    [36m<button[39m
+                      [33mclass[39m=[32m"btn btn-primary"[39m
+                      [33mtype[39m=[32m"button"[39m
+                    [36m>[39m
+                      [0mMove to Degree Plans[0m
+                    [36m</button>[39m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"col"[39m
+                  [36m>[39m
+                    [36m<div>[39m
+                      [36m<select[39m
+                        [33mclass[39m=[32m"form-select"[39m
+                        [33mid[39m=[32m"concentration"[39m
+                      [36m>[39m
+                        [36m<option[39m
+                          [33mvalue[39m=[32m"General (BA)"[39m
+                        [36m>[39m
+                          [0mGeneral (BA)[0m
+                        [36m</option>[39m
+                        [36m<option[39m
+                          [33mvalue[39m=[32m"Artific Intelligence and Robotics (BS)"[39m
+                        [36m>[39m
+                          [0mArtific Intelligence and Robotics (BS)[0m
+                        [36m</option>[39m
+                        [36m<option[39m
+                          [33mvalue[39m=[32m"Bioinformtics (BS)"[39m
+                        [36m>[39m
+                          [0mBioinformtics (BS)[0m
+                        [36m</option>[39m
+                        [36m<option[39m
+                          [33mvalue[39m=[32m"Cybersecurity (BS)"[39m
+                        [36m>[39m
+                          [0mCybersecurity (BS)[0m
+                        [36m</option>[39m
+                        [36m<option[39m
+                          [33mvalue[39m=[32m"Data Science (BS)"[39m
+                        [36m>[39m
+                          [0mData Science (BS)[0m
+                        [36m</option>[39m
+                        [36m<option[39m
+                          [33mvalue[39m=[32m"High Performance Computing (BS)"[39m
+                        [36m>[39m
+                          [0mHigh Performance Computing (BS)[0m
+                        [36m</option>[39m
+                        [36m<option[39m
+                          [33mvalue[39m=[32m"Systems and Networks (BS)"[39m
+                        [36m>[39m
+                          [0mSystems and Networks (BS)[0m
+                        [36m</option>[39m
+                        [36m<option[39m
+                          [33mvalue[39m=[32m"Theory and Computation (BS)"[39m
+                        [36m>[39m
+                          [0mTheory and Computation (BS)[0m
+                        [36m</option>[39m
+                      [36m</select>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"col"[39m
+                  [36m>[39m
+                    [36m<button[39m
+                      [33mclass[39m=[32m"btn btn-primary"[39m
+                      [33mtype[39m=[32m"button"[39m
+                    [36m>[39m
+                      [0mMove to Course List[0m
+                    [36m</button>[39m
+                  [36m</div>[39m
+                [36m</div>[39m
+                [36m<hr />[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"row"[39m
+                [36m>[39m
+                  [36m<h3>[39m
+                   ...
+
+      511 |             name: /Show/i
+      512 |         });
+    > 513 |         const addDefault = screen.getByRole("button", {
+          |                                   ^
+      514 |             name: /Add Default Plan \(8 semesters\)/i
+      515 |         });
+      516 |         addDefault.click();
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/App.test.tsx:513:35)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -24631,15 +27955,15 @@ FAIL src/App.test.tsx (132.266 s)
 
     TypeError: Cannot read properties of undefined (reading 'click')
 
-      622 |             name: /Show/i
-      623 |         });
-    > 624 |         showHides[1].click();
+      709 |             name: /Show/i
+      710 |         });
+    > 711 |         showHides[1].click();
           |                      ^
-      625 |
-      626 |         const infoButtons = screen.queryAllByRole("button", {
-      627 |             name: / i/i
+      712 |
+      713 |         const infoButtons = screen.queryAllByRole("button", {
+      714 |             name: / i/i
 
-      at Object.<anonymous> (src/App.test.tsx:624:22)
+      at Object.<anonymous> (src/App.test.tsx:711:22)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -24649,15 +27973,15 @@ FAIL src/App.test.tsx (132.266 s)
 
     TypeError: Cannot read properties of undefined (reading 'click')
 
-      634 |             name: /Show/i
-      635 |         });
-    > 636 |         showHides[1].click();
+      721 |             name: /Show/i
+      722 |         });
+    > 723 |         showHides[1].click();
           |                      ^
-      637 |
-      638 |         const infoButtons = screen.queryAllByTestId("info-button");
-      639 |
+      724 |
+      725 |         const infoButtons = screen.queryAllByTestId("info-button");
+      726 |
 
-      at Object.<anonymous> (src/App.test.tsx:636:22)
+      at Object.<anonymous> (src/App.test.tsx:723:22)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -24667,15 +27991,15 @@ FAIL src/App.test.tsx (132.266 s)
 
     TypeError: Cannot read properties of undefined (reading 'click')
 
-      675 |             name: /Show/i
-      676 |         });
-    > 677 |         showHides[1].click();
+      762 |             name: /Show/i
+      763 |         });
+    > 764 |         showHides[1].click();
           |                      ^
-      678 |
-      679 |         const infoButtons = screen.queryAllByTestId("info-button");
-      680 |
+      765 |
+      766 |         const infoButtons = screen.queryAllByTestId("info-button");
+      767 |
 
-      at Object.<anonymous> (src/App.test.tsx:677:22)
+      at Object.<anonymous> (src/App.test.tsx:764:22)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -24685,15 +28009,15 @@ FAIL src/App.test.tsx (132.266 s)
 
     TypeError: Cannot read properties of undefined (reading 'click')
 
-      714 |             name: /Show/i
-      715 |         });
-    > 716 |         showHides[1].click();
+      801 |             name: /Show/i
+      802 |         });
+    > 803 |         showHides[1].click();
           |                      ^
-      717 |
-      718 |         const infoButtons = screen.queryAllByTestId("info-button");
-      719 |         infoButtons[0].click();
+      804 |
+      805 |         const infoButtons = screen.queryAllByTestId("info-button");
+      806 |         infoButtons[0].click();
 
-      at Object.<anonymous> (src/App.test.tsx:716:22)
+      at Object.<anonymous> (src/App.test.tsx:803:22)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -24702,10 +28026,10 @@ FAIL src/App.test.tsx (132.266 s)
 ---------------------------------|---------|----------|---------|---------|-----------------------
 File                             | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s     
 ---------------------------------|---------|----------|---------|---------|-----------------------
-All files                        |   49.33 |    34.48 |   50.55 |   49.15 |                       
+All files                        |   52.42 |    36.84 |   51.32 |    52.3 |                       
  src                             |     100 |      100 |     100 |     100 |                       
   App.tsx                        |     100 |      100 |     100 |     100 |                       
- src/Components                  |   49.25 |    34.48 |   50.37 |   49.06 |                       
+ src/Components                  |   52.34 |    36.84 |   51.13 |   52.22 |                       
   SemesterViewHome.tsx           |   83.33 |      100 |   83.33 |   83.33 | 54                    
   SemesterViewModal.tsx          |       0 |      100 |       0 |       0 | 20-71                 
   add_course.tsx                 |       0 |        0 |       0 |       0 | 24-125                
@@ -24714,8 +28038,8 @@ All files                        |   49.33 |    34.48 |   50.55 |   49.15 |
   check_semesters.tsx            |   87.32 |    78.57 |   87.09 |   86.95 | 16,20,126-134,155     
   course_list.tsx                |     100 |      100 |     100 |     100 |                       
   course_list_view.tsx           |     100 |      100 |     100 |     100 |                       
-  course_list_view_info.tsx      |   85.71 |      100 |   77.77 |   85.71 | 47-56                 
-  course_list_view_info_edit.tsx |    4.03 |        0 |    2.38 |    3.27 | 46-553                
+  course_list_view_info.tsx      |     100 |      100 |     100 |     100 |                       
+  course_list_view_info_edit.tsx |   19.35 |    16.66 |    7.14 |   18.85 | 73-259,265-551        
   course_state.tsx               |   46.66 |       25 |   27.27 |   44.82 | 27,40-74              
   degree_plan_view.tsx           |   51.61 |       50 |   56.25 |      50 | 44-136,157            
   degree_plans.tsx               |   36.95 |    26.66 |   41.46 |    36.9 | 16,49-170,225,279,300 
@@ -24730,7 +28054,7 @@ All files                        |   49.33 |    34.48 |   50.55 |   49.15 |
   semester.ts                    |       0 |        0 |       0 |       0 |                       
 ---------------------------------|---------|----------|---------|---------|-----------------------
 Test Suites: 1 failed, 1 total
-Tests:       14 failed, 2 passed, 16 total
+Tests:       16 failed, 2 passed, 18 total
 Snapshots:   0 total
-Time:        133.109 s
+Time:        369.143 s
 Ran all test suites.
