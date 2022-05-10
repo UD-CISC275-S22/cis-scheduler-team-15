@@ -6,21 +6,35 @@ import AllCourses from "../Data/course_list.json";
 import { useState } from "react";
 import React from "react";
 import "../App.css";
-import { Button, Stack, Row, Col } from "react-bootstrap";
+import { Button, Stack, Row, Col, Form } from "react-bootstrap";
 
 const COURSES = AllCourses.map((course): Course => ({ ...course }));
+const CONCENTRATONS = [
+    "General (BA)",
+    "Artific Intelligence and Robotics (BS)",
+    "Bioinformtics (BS)",
+    "Cybersecurity (BS)",
+    "Data Science (BS)",
+    "High Performance Computing (BS)",
+    "Systems and Networks (BS)",
+    "Theory and Computation (BS)"
+];
 const saveCoursesKey = "COURSE-DATA";
+let courseInput = COURSES;
+
+const previousData = localStorage.getItem(saveCoursesKey);
+if (previousData !== null) {
+    courseInput = JSON.parse(previousData);
+}
 
 export function CourseState(): JSX.Element {
-    let courseInput = COURSES;
-    const previousData = localStorage.getItem(saveCoursesKey);
-    if (previousData !== null) {
-        courseInput = JSON.parse(previousData);
-    }
     const [courses, setCourses] = useState<Course[]>(courseInput); //had to move this state from course_list to here because DegreePlans needs it
     const [home, setHome] = useState<boolean>(true);
     const [planView, setPlanView] = useState<boolean>(false);
     const [courseView, setCourseView] = useState<boolean>(false);
+    const [concentration, setConcentration] = useState<string>(
+        CONCENTRATONS[0]
+    );
 
     function editCourses(courseID: number, editedCourse: Course) {
         setCourses(
@@ -54,6 +68,10 @@ export function CourseState(): JSX.Element {
         setHome(false);
         setPlanView(false);
         setCourseView(true);
+    }
+
+    function updateConcentration(event: React.ChangeEvent<HTMLSelectElement>) {
+        setConcentration(event.target.value);
     }
 
     return (
@@ -117,7 +135,18 @@ export function CourseState(): JSX.Element {
                             </Button>
                         </Col>
                         <Col>
-                            <Button>Implement Dropdown</Button>
+                            <Form.Group controlId="concentration">
+                                <Form.Select
+                                    value={concentration}
+                                    onChange={updateConcentration}
+                                >
+                                    {CONCENTRATONS.map((conc: string) => (
+                                        <option key={conc} value={conc}>
+                                            {conc}
+                                        </option>
+                                    ))}
+                                </Form.Select>
+                            </Form.Group>
                         </Col>
                         <Col>
                             <Button onClick={moveCourseView}>
@@ -203,26 +232,22 @@ export function CourseState(): JSX.Element {
                             </Col>
                         </Row>
                     </div>
-                    <Row>
-                        <div>
-                            <span>
-                                <Button
-                                    onClick={saveData}
-                                    variant="outline-primary"
-                                >
+
+                    <div className="App-special2">
+                        <Row className="justify-content-center">
+                            <Col xs={2}></Col>
+                            <Col xs={3}>
+                                <Button onClick={saveData}>
                                     Save Course List
                                 </Button>
-                            </span>
-                            <span>
-                                <Button
-                                    onClick={revert}
-                                    variant="outline-warning"
-                                >
+                            </Col>
+                            <Col xs={3}>
+                                <Button onClick={revert}>
                                     Revert to Default
                                 </Button>
-                            </span>
-                        </div>
-                    </Row>
+                            </Col>
+                        </Row>
+                    </div>
                     <Row>
                         <CourseList
                             courses={courses}

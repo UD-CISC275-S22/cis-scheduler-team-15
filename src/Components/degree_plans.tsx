@@ -8,15 +8,15 @@ import { Semester } from "../Interfaces/semester";
 
 const DEGREEPLANSTART = PlanData.map((degree): Degree => ({ ...degree }));
 const saveDegreesKey = "DEGREE-DATA";
+let degreeInput = DEGREEPLANSTART;
+
+const previousData = localStorage.getItem(saveDegreesKey);
+
+if (previousData !== null) {
+    degreeInput = JSON.parse(previousData);
+}
 
 export function DegreePlans({ courses }: { courses: Course[] }): JSX.Element {
-    let degreeInput = DEGREEPLANSTART;
-    const previousData = localStorage.getItem(saveDegreesKey);
-
-    if (previousData !== null) {
-        degreeInput = JSON.parse(previousData);
-    }
-
     const [degreePlans, setDegreePlans] = useState<Degree[]>(degreeInput);
     const [currentDegreePlanID, setCurrentDegreePlanID] = useState<number>(0);
     const [addingFile, setAddingFile] = useState<boolean>(false);
