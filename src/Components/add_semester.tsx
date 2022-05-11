@@ -55,13 +55,18 @@ export function AddSemester({
 
     return (
         <span hidden={!editMode}>
-            <Button
-                data-bs-toggle="modal"
-                data-toggle="tooltip"
-                onClick={() => setModal(true)}
-            >
-                Add Semester
-            </Button>
+            <div>
+                <Button
+                    data-bs-toggle="modal"
+                    data-toggle="tooltip"
+                    onClick={() => setModal(true)}
+                    style={{ margin: "5px" }}
+                    variant="success"
+                >
+                    Add Semester ➕
+                </Button>
+            </div>
+
             <Modal show={modal} onHide={() => setModal(false)}>
                 <Modal.Header closeButton>
                     <Modal.Title>
