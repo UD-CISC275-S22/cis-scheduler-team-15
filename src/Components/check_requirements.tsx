@@ -284,8 +284,12 @@ export function CheckRequirements({ degree }: { degree: Degree }): JSX.Element {
 
     return (
         <div>
-            <Button onClick={() => setCheck(!check)}>
-                {!check ? "Check Plan Requirements" : "Stop Checking"}
+            <Button
+                onClick={() => setCheck(!check)}
+                variant={check ? "warning" : "primary"}
+                style={{ margin: "5px" }}
+            >
+                {!check ? "⚠ Check Requirements ⚠" : "🛑 Stop Checking 🛑"}
             </Button>
             <div hidden={!check}>
                 <div className="newLine">{printMissing().join("\r\n")}</div>
