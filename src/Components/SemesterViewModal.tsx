@@ -5,7 +5,6 @@ import { Button, Accordion } from "react-bootstrap";
 import "../App.css";
 import { MoveCourse } from "./move_course";
 import { Degree } from "../Interfaces/degree";
-import { findAllByDisplayValue } from "@testing-library/react";
 
 export function SemesterViewModal({
     semester,
