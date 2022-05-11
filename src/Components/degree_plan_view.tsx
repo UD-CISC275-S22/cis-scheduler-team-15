@@ -20,7 +20,12 @@ export function DegreePlanView({
     hidden: boolean;
     courses: Course[];
 }): JSX.Element {
+    let initialYear = 2020;
+    if (degree.semesters.length > 0) {
+        initialYear = degree.semesters[0].year;
+    }
     const [editMode, setEditMode] = useState<boolean>(false);
+    const [startYear, setStartYear] = useState<number>(initialYear);
     const courseList = degree.semesters.map(
         (semester: Semester) => semester.courses
     );
@@ -49,6 +54,28 @@ export function DegreePlanView({
         editDegree(degree.degreeID, {
             ...degree,
             name: newName
+        });
+    }
+
+    function updateStartYear(event: React.ChangeEvent<HTMLSelectElement>) {
+        setStartYear(parseInt(event.target.value));
+    }
+
+    function updatePlanStartYear() {
+        let offset = 0;
+        if (degree.semesters.length > 0) {
+            offset = startYear - degree.semesters[0].year;
+        }
+        let newSemesters = [...degree.semesters];
+        newSemesters = newSemesters.map(
+            (sem: Semester): Semester => ({
+                ...sem,
+                year: sem.year + offset
+            })
+        );
+        editDegree(degree.degreeID, {
+            ...degree,
+            semesters: newSemesters
         });
     }
 
@@ -116,6 +143,12 @@ export function DegreePlanView({
 
     return (
         <div hidden={hidden}>
+            <div style={{ margin: "5px" }} className="App-thin3 Align-center">
+                <div>
+                    {credits}/124
+                    {credits < 124 ? "❌" : "✔️"}
+                </div>
+            </div>
             <div className="Align-right">
                 <div>
                     <Button
@@ -136,7 +169,6 @@ export function DegreePlanView({
                     </Button>
                 </div>
             </div>
-
             <br></br>
             <Row hidden={!editMode} className="App-thin2">
                 <Col>
@@ -149,12 +181,50 @@ export function DegreePlanView({
                         />
                     </Form.Group>
                 </Col>
-
-                <Col></Col>
+                <Col>
+                    <Form.Group controlId="startYear">
+                        <Form.Label>Choose Year</Form.Label>
+                        <Form.Select
+                            value={startYear}
+                            onChange={updateStartYear}
+                        >
+                            <option value="2018">2018</option>
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                        </Form.Select>
+                    </Form.Group>
+                </Col>
+                <Col>
+                    <Button
+                        disabled={
+                            degree.semesters.length > 0 &&
+                            startYear === degree.semesters[0].year
+                        }
+                        onClick={updatePlanStartYear}
+                        variant="success"
+                        style={{ marginTop: "31px", marginBottom: "0px" }}
+                    >
+                        Update Start Year
+                    </Button>
+                </Col>
             </Row>
-            <Row>
+
+            <Row className="App-thin">
                 <Col>
                     <CheckRequirements degree={degree}></CheckRequirements>
+                </Col>
+                <Col>
+                    <AddSemester
+                        degree={degree}
+                        editDegree={editDegree}
+                        editMode={editMode}
+                    ></AddSemester>
                 </Col>
                 <Col>
                     <ShowAllErrors degree={degree}></ShowAllErrors>
@@ -201,20 +271,6 @@ export function DegreePlanView({
                         ))}
                     </div>
                 </Col>
-            </Row>
-            <Row>
-                <div style={{ margin: "10px" }}>
-                    <h2>
-                        {degree.name} Total Credits: {credits}
-                    </h2>
-                </div>
-            </Row>
-            <Row>
-                <AddSemester
-                    degree={degree}
-                    editDegree={editDegree}
-                    editMode={editMode}
-                ></AddSemester>
             </Row>
         </div>
     );
