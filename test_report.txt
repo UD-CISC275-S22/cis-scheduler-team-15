@@ -42,26 +42,26 @@
       at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22812:16)
       at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
 
-FAIL src/App.test.tsx (235.261 s)
+FAIL src/App.test.tsx (282.126 s)
   Final Project Tests
-    ✓ renders the course name somewhere (617 ms)
-    ✕ Insert and Remove a degree plan (28487 ms)
-    ✕ Students can see a list of all the degree plans they have made (27899 ms)
-    ✓ Students can see a list of degree requirements (870 ms)
-    ✕ Students can see a list of existing courses (301 ms)
-    ✕ Students can see a table that shows semesters and courses (686 ms)
-    ✕ Students can insert or remove a semester in a plan (1621 ms)
-    ✕ Students can clear out all the existing courses in a semester (27942 ms)
-    ✕ Students can clear out individual courses in a semester (28094 ms)
-    ✕ Students can insert a course in a semester (27939 ms)
-    ✕ Students will be prevented from inserting a duplicate course into the plan (27945 ms)
-    ✕ Students will get an error in the semester view when a course with an unsatisfied prerequisite or corequisite is added (28119 ms)
-    ✕ Students can establish that a course fulfills a degree requirement (586 ms)
-    ✕ Update courses in existing degree plans when course list is updated (28390 ms)
-    ✕ Students can see a list of existing courses (567 ms)
-    ✕ Students can edit the course code (596 ms)
-    ✕ Student can edit the course title  (595 ms)
-    ✕ Student can edit credits of a course (582 ms)
+    ✓ renders the course name somewhere (738 ms)
+    ✕ Insert and Remove a degree plan (33717 ms)
+    ✕ Students can see a list of all the degree plans they have made (33292 ms)
+    ✓ Students can see a list of degree requirements (1037 ms)
+    ✕ Students can see a list of existing courses (356 ms)
+    ✕ Students can see a table that shows semesters and courses (826 ms)
+    ✕ Students can insert or remove a semester in a plan (1973 ms)
+    ✕ Students can clear out all the existing courses in a semester (33520 ms)
+    ✕ Students can clear out individual courses in a semester (33522 ms)
+    ✕ Students can insert a course in a semester (33764 ms)
+    ✕ Students will be prevented from inserting a duplicate course into the plan (33791 ms)
+    ✕ Students will get an error in the semester view when a course with an unsatisfied prerequisite or corequisite is added (33780 ms)
+    ✕ Students can establish that a course fulfills a degree requirement (749 ms)
+    ✕ Update courses in existing degree plans when course list is updated (34151 ms)
+    ✕ Students can see a list of existing courses (715 ms)
+    ✕ Students can edit the course code (721 ms)
+    ✕ Student can edit the course title  (735 ms)
+    ✕ Student can edit credits of a course (719 ms)
 
   ● Final Project Tests › Insert and Remove a degree plan
 
@@ -1994,7 +1994,37 @@ FAIL src/App.test.tsx (235.261 s)
                   [36m>[39m
                     [36m<h1>[39m
                       [0m⬇[0m
-                    [36m</h1>[39m
+                    [36m<---------------------------------|---------|----------|---------|---------|-----------------------
+File                             | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s     
+---------------------------------|---------|----------|---------|---------|-----------------------
+All files                        |   50.88 |    35.21 |   48.92 |   50.73 |                       
+ src                             |     100 |      100 |     100 |     100 |                       
+  App.tsx                        |     100 |      100 |     100 |     100 |                       
+ src/Components                  |    50.8 |    35.21 |   48.74 |   50.65 |                       
+  SemesterViewHome.tsx           |   83.33 |      100 |   83.33 |   83.33 | 54                    
+  SemesterViewModal.tsx          |       0 |        0 |       0 |       0 | 22-167                
+  add_course.tsx                 |       0 |        0 |       0 |       0 | 24-125                
+  add_semester.tsx               |      25 |        0 |    12.5 |      25 | 21-52,62-70           
+  check_requirements.tsx         |   98.38 |     62.5 |      96 |   98.38 | 181,288               
+  check_semesters.tsx            |   87.14 |    78.57 |   87.09 |   86.76 | 16,20,125-133,154     
+  course_list.tsx                |     100 |      100 |     100 |     100 |                       
+  course_list_view.tsx           |     100 |      100 |     100 |     100 |                       
+  course_list_view_info.tsx      |     100 |      100 |     100 |     100 |                       
+  course_list_view_info_edit.tsx |   19.35 |    16.66 |    7.14 |   18.85 | 73-259,265-551        
+  course_state.tsx               |   46.66 |       25 |   27.27 |   44.82 | 27,40-74              
+  degree_plan_view.tsx           |    41.3 |    42.85 |      45 |      40 | 49-140,163            
+  degree_plans.tsx               |   36.95 |    26.66 |   41.46 |    36.9 | 16,49-170,233,297,337 
+  degree_requirement_view.tsx    |     100 |      100 |     100 |     100 |                       
+  degree_requirements.tsx        |     100 |      100 |     100 |     100 |                       
+  edit_semester.tsx              |      40 |      100 |   46.15 |      40 | 30-64,75-108          
+  move_course.tsx                |       0 |        0 |       0 |       0 | 18-74                 
+  show_all_errors.tsx            |   28.57 |       50 |   16.66 |   28.57 | 14-36                 
+ src/Interfaces                  |       0 |        0 |       0 |       0 |                       
+  course.ts                      |       0 |        0 |       0 |       0 |                       
+  degree.ts                      |       0 |        0 |       0 |       0 |                       
+  semester.ts                    |       0 |        0 |       0 |       0 |                       
+---------------------------------|---------|----------|---------|---------|-----------------------
+/h1>[39m
                   [36m</div>[39m
                 [36m</div>[39m
                 [36m<div[39m
@@ -3219,38 +3249,8 @@ FAIL src/App.test.tsx (235.261 s)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
----------------------------------|---------|----------|---------|---------|-----------------------
-File                             | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s     
----------------------------------|---------|----------|---------|---------|-----------------------
-All files                        |    50.8 |    34.28 |   48.74 |   50.65 |                       
- src                             |     100 |      100 |     100 |     100 |                       
-  App.tsx                        |     100 |      100 |     100 |     100 |                       
- src/Components                  |   50.72 |    34.28 |   48.56 |   50.57 |                       
-  SemesterViewHome.tsx           |   83.33 |      100 |   83.33 |   83.33 | 54                    
-  SemesterViewModal.tsx          |       0 |        0 |       0 |       0 | 22-167                
-  add_course.tsx                 |       0 |        0 |       0 |       0 | 24-125                
-  add_semester.tsx               |      25 |        0 |    12.5 |      25 | 21-52,62-70           
-  check_requirements.tsx         |   98.38 |     62.5 |      96 |   98.38 | 181,288               
-  check_semesters.tsx            |   87.14 |    78.57 |   87.09 |   86.76 | 16,20,125-133,154     
-  course_list.tsx                |     100 |      100 |     100 |     100 |                       
-  course_list_view.tsx           |     100 |      100 |     100 |     100 |                       
-  course_list_view_info.tsx      |     100 |      100 |     100 |     100 |                       
-  course_list_view_info_edit.tsx |   19.35 |    16.66 |    7.14 |   18.85 | 73-259,265-551        
-  course_state.tsx               |   46.66 |       25 |   27.27 |   44.82 | 27,40-74              
-  degree_plan_view.tsx           |    41.3 |    42.85 |      45 |      40 | 49-140,163            
-  degree_plans.tsx               |   36.95 |    26.66 |   41.46 |    36.9 | 16,49-170,233,297,337 
-  degree_requirement_view.tsx    |     100 |      100 |     100 |     100 |                       
-  degree_requirements.tsx        |     100 |      100 |     100 |     100 |                       
-  edit_semester.tsx              |   36.84 |      100 |   41.66 |   36.84 | 30-64,75-108          
-  move_course.tsx                |       0 |        0 |       0 |       0 | 18-74                 
-  show_all_errors.tsx            |   28.57 |       50 |   16.66 |   28.57 | 14-36                 
- src/Interfaces                  |       0 |        0 |       0 |       0 |                       
-  course.ts                      |       0 |        0 |       0 |       0 |                       
-  degree.ts                      |       0 |        0 |       0 |       0 |                       
-  semester.ts                    |       0 |        0 |       0 |       0 |                       
----------------------------------|---------|----------|---------|---------|-----------------------
 Test Suites: 1 failed, 1 total
 Tests:       16 failed, 2 passed, 18 total
 Snapshots:   0 total
-Time:        236.037 s
+Time:        282.89 s
 Ran all test suites.
