@@ -195,7 +195,7 @@ h6 {
 }
 
 .modal-dialog{
-    max-width: 40%;
+    max-width: 800px;
 }
 .modal-dialog table{
     margin-left: auto;
