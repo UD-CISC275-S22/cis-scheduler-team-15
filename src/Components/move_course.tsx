@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Form } from "react-bootstrap";
+import { Button, Col, Form, Row } from "react-bootstrap";
 import { Degree } from "../Interfaces/degree";
 import { Semester } from "../Interfaces/semester";
 import { Course } from "../Interfaces/course";
@@ -54,22 +54,35 @@ export function MoveCourse({
     }
     return (
         <div>
-            <Button disabled={sameSemester} onClick={moveCourse}>
-                Move
-            </Button>
-            <Form.Group controlId="semester_dropdown">
-                <Form.Select value={moveSemesterID} onChange={updateSemesterID}>
-                    {degree.semesters.map((semester: Semester) => (
-                        <option
-                            key={semester.semesterID}
-                            value={semester.semesterID}
-                            data-testid="change-semester-select"
-                        >
-                            {semester.season} {semester.year.toString()}
-                        </option>
-                    ))}
-                </Form.Select>
-            </Form.Group>
+            <Row>
+                <Form.Group
+                    controlId="semester_dropdown"
+                    className="dropdown_semesters"
+                >
+                    <Form.Select
+                        value={moveSemesterID}
+                        onChange={updateSemesterID}
+                    >
+                        {degree.semesters.map((semester: Semester) => (
+                            <option
+                                key={semester.semesterID}
+                                value={semester.semesterID}
+                                data-testid="change-semester-select"
+                            >
+                                {semester.season} {semester.year.toString()}
+                            </option>
+                        ))}
+                    </Form.Select>
+                </Form.Group>
+                <Button
+                    disabled={sameSemester}
+                    onClick={moveCourse}
+                    title={"Click to move"}
+                    className="button_move_semester"
+                >
+                    ⬌
+                </Button>
+            </Row>
         </div>
     );
 }

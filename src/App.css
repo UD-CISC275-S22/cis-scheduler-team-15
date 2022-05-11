@@ -160,9 +160,17 @@ h6 {
     white-space: pre-line;
 }
 
-.modal_edit_semester {
-    max-width: 700px;
+.modal-dialog{
+    max-width: 50%;
 }
+.modal-dialog table{
+    margin-left: auto;
+    margin-right: auto;
+}
+/*
+.modal table.Align-center{
+    min-width: 50%;
+}*/
 
 .tab {
     background-color: #8ba8d4;
@@ -193,4 +201,32 @@ h6 {
     display: none;
     border: 20px solid #ccc;
     border-top: none;
+}
+
+.panel {
+    border: 0px;
+    background-color: inherit;
+    color: inherit;
+}
+.panel button{
+    border: 0px;
+    background-color: inherit;
+    color: inherit;
+    outline: none;
+}
+.panel :focus{
+    border: 0px;
+    background-color: inherit;
+    color: inherit;
+    outline: none;
+    box-shadow: none;
+}
+.dropdown_semesters{
+    width: 160px;
+    padding-right: 0px;
+}
+.button_move_semester{
+    width: 25px;
+    padding-left: 0px;
+    padding-right: 0px;
 }

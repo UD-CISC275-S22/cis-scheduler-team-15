@@ -82,7 +82,7 @@ export function EditSemester({
                 show={modal}
                 onHide={() => setModal(false)}
                 scrollable={true}
-                dialogClassName="modal_edit_semester"
+                className="modal"
             >
                 <Modal.Header closeButton>
                     <Modal.Title>
@@ -114,6 +114,7 @@ export function EditSemester({
                             <SemesterViewModal
                                 semester={semester}
                                 degree={degree}
+                                courses={courses}
                                 editDegree={editDegree}
                                 deleteCourse={deleteCourse}
                             ></SemesterViewModal>
