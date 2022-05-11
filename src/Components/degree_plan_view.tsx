@@ -143,6 +143,12 @@ export function DegreePlanView({
 
     return (
         <div hidden={hidden}>
+            <div style={{ margin: "5px" }} className="App-thin3 Align-center">
+                <div>
+                    {credits}/124
+                    {credits < 124 ? "❌" : "✔️"}
+                </div>
+            </div>
             <div className="Align-right">
                 <div>
                     <Button
@@ -163,7 +169,6 @@ export function DegreePlanView({
                     </Button>
                 </div>
             </div>
-
             <br></br>
             <Row hidden={!editMode} className="App-thin2">
                 <Col>
@@ -266,13 +271,6 @@ export function DegreePlanView({
                         ))}
                     </div>
                 </Col>
-            </Row>
-            <Row>
-                <div style={{ margin: "10px" }}>
-                    <h2>
-                        {degree.name} Total Credits: {credits}
-                    </h2>
-                </div>
             </Row>
         </div>
     );

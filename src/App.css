@@ -19,8 +19,8 @@
 }
 
 .App-thin3 {
-    width: 14%;
-    margin-left: 40%;
+    width: 20%;
+    margin-left: 10%;
 }
 
 .Align-right {
@@ -28,6 +28,12 @@
 }
 
 .Align-left {
+    text-align: left;
+}
+
+.Align-left2 {
+    width: 80%;
+    margin-left: 10%;
     text-align: left;
 }
 

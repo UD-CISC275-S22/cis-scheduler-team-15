@@ -312,20 +312,41 @@ export function DegreePlans({ courses }: { courses: Course[] }): JSX.Element {
                 <div>
                     {degreePlans.map((degree: Degree) => (
                         <span key={degree.degreeID}>
-                            <div className="App-special3-right">
-                                <Button
-                                    onClick={() =>
-                                        removeDegreePlan(currentDegreePlanID)
-                                    }
-                                    variant="danger"
-                                    hidden={
-                                        degree.degreeID !== currentDegreePlanID
-                                    }
-                                    style={{ margin: "5px" }}
-                                >
-                                    Delete Plan 🗑️
-                                </Button>
-                            </div>
+                            <Row>
+                                <Col>
+                                    <div
+                                        hidden={
+                                            degree.degreeID !==
+                                            currentDegreePlanID
+                                        }
+                                        className="Align-left2"
+                                    >
+                                        <h3>Total Credits</h3>
+                                    </div>
+                                </Col>
+                                <Col>
+                                    <div
+                                        hidden={
+                                            degree.degreeID !==
+                                            currentDegreePlanID
+                                        }
+                                        className="App-special3-right"
+                                    >
+                                        <Button
+                                            onClick={() =>
+                                                removeDegreePlan(
+                                                    currentDegreePlanID
+                                                )
+                                            }
+                                            variant="danger"
+                                            style={{ margin: "5px" }}
+                                        >
+                                            Delete Plan 🗑️
+                                        </Button>
+                                    </div>
+                                </Col>
+                            </Row>
+
                             <div className="App-special3">
                                 <DegreePlanView
                                     courses={courses}
