@@ -63,6 +63,7 @@ export function SemesterViewModal({
                                             )
                                         )
                                     }
+                                    className="button button-accordion"
                                 >
                                     {hovering[index] ? (
                                         <i>

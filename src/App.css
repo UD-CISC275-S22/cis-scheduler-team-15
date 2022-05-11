@@ -230,20 +230,29 @@ h6 {
     border: 0px;
     background-color: inherit;
     color: inherit;
+    background: inherit;
+    box-shadow: none;
 }
+
+.panel :focus{
+    outline: none;
+    box-shadow: none;
+    color: inherit;
+    background: inherit;
+
+}
+.panel button-accordion:not(.collapsed)::before {
+    background-color: inherit;
+}
+
 .panel button{
     border: 0px;
-    background-color: inherit;
-    color: inherit;
-    outline: none;
-}
-.panel :focus{
-    border: 0px;
-    background-color: inherit;
     color: inherit;
     outline: none;
     box-shadow: none;
+    background: inherit;
 }
+
 .dropdown_semesters{
     width: 160px;
     padding-right: 0px;
