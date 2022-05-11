@@ -9,14 +9,18 @@
 }
 
 .App-thin {
-    width: 80%;
-    margin-left: 10%;
-    text-align: justify;
+    width: 60%;
+    margin-left: 20%;
 }
 
 .App-thin2 {
     width: 40%;
     margin-left: 30%;
+}
+
+.App-thin3 {
+    width: 14%;
+    margin-left: 40%;
 }
 
 .Align-right {
