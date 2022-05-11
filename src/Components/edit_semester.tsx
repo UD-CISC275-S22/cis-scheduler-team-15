@@ -123,7 +123,10 @@ export function EditSemester({
                         </Col>
                         <br></br>
                     </Row>
-
+                    <br></br>
+                    {!semester.errors.every(
+                        (error: string) => error === ""
+                    ) && <b style={{ color: "red" }}>Errors: </b>}
                     <div>
                         {semester.courses
                             .filter(
@@ -136,7 +139,10 @@ export function EditSemester({
                                     className="line-break"
                                     data-testid="error_message"
                                 >
-                                    <span data-testid="error_message">
+                                    <span
+                                        data-testid="error_message"
+                                        style={{ color: "red" }}
+                                    >
                                         {course.listing}:{" "}
                                         {
                                             semester.errors.filter(
