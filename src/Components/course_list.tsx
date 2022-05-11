@@ -10,7 +10,6 @@ export function CourseList({
     courses: Course[];
     editCourses: (courseID: number, editedCourse: Course) => void;
 }): JSX.Element {
-    //the state for courses is now an input because app.tsx needs to pass it to degree plans
     const length = courses.length;
 
     return (

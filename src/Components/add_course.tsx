@@ -127,8 +127,7 @@ export function AddCourse({
                                                     value={course.courseID}
                                                     data-testid="add-course-select"
                                                 >
-                                                    {course.listing}:{" "}
-                                                    {course.courseID}
+                                                    {course.listing}
                                                 </option>
                                             )
                                         )}

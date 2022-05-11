@@ -58,6 +58,7 @@ td {
     text-align: justify;
 }
 
+
 tr:nth-child(even) {
     background-color: #f2f2f2;
 }
@@ -193,9 +194,17 @@ h6 {
     white-space: pre-line;
 }
 
-.modal_edit_semester {
-    max-width: 700px;
+.modal-dialog{
+    max-width: 40%;
 }
+.modal-dialog table{
+    margin-left: auto;
+    margin-right: auto;
+}
+/*
+.modal table.Align-center{
+    min-width: 50%;
+}*/
 
 .tab {
     background-color: rgb(225, 225, 225);
@@ -226,4 +235,53 @@ h6 {
     display: none;
     border: 20px solid #ccc;
     border-top: none;
+}
+
+.accordion-modal {
+    border: 0px;
+    background-color: inherit;
+    color: inherit;
+    background: inherit;
+    box-shadow: none;
+}
+
+.accordion-modal :focus{
+    outline: none;
+    box-shadow: none;
+    color: inherit;
+    background: inherit;
+
+}
+
+
+.accordion-modal header{
+    border: 0px;
+    color: inherit;
+    outline: none;
+    box-shadow: none;
+    background: inherit;
+}
+
+ .accordion-modal button :focus, .accordion-modal button, .accordion-modal button:not(.collapsed) {
+    outline: none;
+    box-shadow: none;
+    color: inherit;
+    background: inherit;
+
+}
+
+.dropdown_semesters{
+    width: 160px;
+    padding-right: 0px;
+}
+.button_move_semester{
+    width: 25px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.trash_button{
+    text-align:center;
+    width: 30px;
+    padding: 0px;
 }
