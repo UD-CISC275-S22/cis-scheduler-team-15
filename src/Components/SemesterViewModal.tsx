@@ -41,7 +41,7 @@ export function SemesterViewModal({
                     <tr key={course.courseID}>
                         <td>{course.listing}</td>
                         <td>
-                            <Accordion className="panel">
+                            <Accordion className="accordion-modal">
                                 <Accordion.Header
                                     onMouseOver={() =>
                                         setHovering(
@@ -63,7 +63,6 @@ export function SemesterViewModal({
                                             )
                                         )
                                     }
-                                    className="button button-accordion"
                                 >
                                     {hovering[index] ? (
                                         <i>
@@ -120,17 +119,28 @@ export function SemesterViewModal({
                                             </span>
                                         </div>
                                     )}
+                                    {course.reqsSatisfied.length !== 0 && (
+                                        <div>
+                                            Requirement(s) satisfied:{" "}
+                                            <span>
+                                                {course.reqsSatisfied.join(
+                                                    ", "
+                                                )}
+                                            </span>
+                                        </div>
+                                    )}
                                 </Accordion.Body>
                             </Accordion>
                         </td>
                         <td>{course.credits}</td>
-                        <td width={25}>
+                        <td width={40} style={{ textAlign: "center" }}>
                             <Button
                                 data-bs-toggle="modal"
                                 data-toggle="tooltip"
                                 title={"Click to delete " + course.listing}
                                 variant="danger"
                                 onClick={() => deleteCourse(index, semester)}
+                                className="trash_button"
                             >
                                 🗑️
                             </Button>

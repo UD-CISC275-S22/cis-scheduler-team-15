@@ -15,13 +15,14 @@ export function MoveCourse({
     editDegree: (degreeID: number, newDegree: Degree) => void;
     course: Course;
 }): JSX.Element {
-    const [moveSemesterID, setMoveSemesterID] = useState<number>(1);
-    const [sameSemester, setSameSemester] = useState<boolean>(
-        semester.semesterID === moveSemesterID
+    const [moveSemesterID, setMoveSemesterID] = useState<number>(
+        degree.semesters.filter(
+            (currSemester: Semester): boolean =>
+                currSemester.semesterID !== semester.semesterID
+        )[0].semesterID
     );
     function updateSemesterID(event: React.ChangeEvent<HTMLSelectElement>) {
         setMoveSemesterID(Number(event.target.value));
-        setSameSemester(semester.semesterID === Number(event.target.value));
     }
     function moveCourse() {
         const currentSemesterCourses = semester.courses.filter(
@@ -63,19 +64,24 @@ export function MoveCourse({
                         value={moveSemesterID}
                         onChange={updateSemesterID}
                     >
-                        {degree.semesters.map((semester: Semester) => (
-                            <option
-                                key={semester.semesterID}
-                                value={semester.semesterID}
-                                data-testid="change-semester-select"
-                            >
-                                {semester.season} {semester.year.toString()}
-                            </option>
-                        ))}
+                        {degree.semesters
+                            .filter(
+                                (currSemester: Semester): boolean =>
+                                    currSemester.semesterID !==
+                                    semester.semesterID
+                            )
+                            .map((semester: Semester) => (
+                                <option
+                                    key={semester.semesterID}
+                                    value={semester.semesterID}
+                                    data-testid="change-semester-select"
+                                >
+                                    {semester.season} {semester.year.toString()}
+                                </option>
+                            ))}
                     </Form.Select>
                 </Form.Group>
                 <Button
-                    disabled={sameSemester}
                     onClick={moveCourse}
                     title={"Click to move"}
                     className="button_move_semester"

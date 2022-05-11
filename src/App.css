@@ -58,6 +58,7 @@ td {
     text-align: justify;
 }
 
+
 tr:nth-child(even) {
     background-color: #f2f2f2;
 }
@@ -194,7 +195,7 @@ h6 {
 }
 
 .modal-dialog{
-    max-width: 50%;
+    max-width: 40%;
 }
 .modal-dialog table{
     margin-left: auto;
@@ -236,7 +237,7 @@ h6 {
     border-top: none;
 }
 
-.panel {
+.accordion-modal {
     border: 0px;
     background-color: inherit;
     color: inherit;
@@ -244,23 +245,29 @@ h6 {
     box-shadow: none;
 }
 
-.panel :focus{
+.accordion-modal :focus{
     outline: none;
     box-shadow: none;
     color: inherit;
     background: inherit;
 
 }
-.panel button-accordion:not(.collapsed)::before {
-    background-color: inherit;
-}
 
-.panel button{
+
+.accordion-modal header{
     border: 0px;
     color: inherit;
     outline: none;
     box-shadow: none;
     background: inherit;
+}
+
+ .accordion-modal button :focus, .accordion-modal button, .accordion-modal button:not(.collapsed) {
+    outline: none;
+    box-shadow: none;
+    color: inherit;
+    background: inherit;
+
 }
 
 .dropdown_semesters{
@@ -271,4 +278,10 @@ h6 {
     width: 25px;
     padding-left: 0px;
     padding-right: 0px;
+}
+
+.trash_button{
+    text-align:center;
+    width: 30px;
+    padding: 0px;
 }

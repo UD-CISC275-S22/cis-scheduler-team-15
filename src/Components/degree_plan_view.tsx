@@ -29,7 +29,6 @@ export function DegreePlanView({
     const courseList = degree.semesters.map(
         (semester: Semester) => semester.courses
     );
-    console.log("Course List: ", courseList);
     const creditList = courseList.map((courses: Course[]) =>
         courses.map((course: Course): number => course.credits)
     );
