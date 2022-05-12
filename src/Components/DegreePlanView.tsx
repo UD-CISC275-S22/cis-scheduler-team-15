@@ -4,10 +4,10 @@ import { Semester } from "../Interfaces/semester";
 import "../App.css";
 import { Row, Col, Button, Form } from "react-bootstrap";
 import { SemesterViewHome } from "./SemesterViewHome";
-import { AddSemester } from "./add_semester";
-import { CheckRequirements } from "./check_requirements";
+import { AddSemester } from "./AddSemester";
+import { CheckRequirements } from "./CheckRequirements";
 import { Course } from "../Interfaces/course";
-import { ShowAllErrors } from "./show_all_errors";
+import { ShowAllErrors } from "./ShowAllErrors";
 
 export function DegreePlanView({
     degree,

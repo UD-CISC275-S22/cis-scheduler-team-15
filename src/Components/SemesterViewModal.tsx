@@ -3,7 +3,7 @@ import { Course } from "../Interfaces/course";
 import { Semester } from "../Interfaces/semester";
 import { Button, Accordion } from "react-bootstrap";
 import "../App.css";
-import { MoveCourse } from "./move_course";
+import { MoveCourse } from "./MoveCourse";
 import { Degree } from "../Interfaces/degree";
 
 export function SemesterViewModal({

@@ -4,7 +4,7 @@ import { Degree } from "../Interfaces/degree";
 import { Semester } from "../Interfaces/semester";
 import { Course } from "../Interfaces/course";
 import { SemesterViewModal } from "./SemesterViewModal";
-import { AddCourse } from "./add_course";
+import { AddCourse } from "./AddCourse";
 
 export function EditSemester({
     semester,

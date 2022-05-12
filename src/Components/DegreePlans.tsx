@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Degree } from "../Interfaces/degree";
 import { Stack, Col, Row, Button, Form } from "react-bootstrap";
-import PlanData from "./../Data/plan_data.json";
-import { DegreePlanView } from "./degree_plan_view";
+import PlanData from "../Data/PlanData.json";
+import { DegreePlanView } from "./DegreePlanView";
 import { Course } from "../Interfaces/course";
 import { Semester } from "../Interfaces/semester";
 
