@@ -130,9 +130,8 @@ export function DegreePlans({ courses }: { courses: Course[] }): JSX.Element {
     function addEmptyDegreePlan(): void {
         const IDList = degreePlans.map((degree: Degree) => degree.degreeID);
         const newID = degreePlans.length > 0 ? Math.max(...IDList) + 1 : 1;
-        const newName = "Degree plan " + newID;
         const newDegreePlan: Degree = {
-            name: newName,
+            name: "Empty",
             degreeID: newID,
             semesters: []
         };

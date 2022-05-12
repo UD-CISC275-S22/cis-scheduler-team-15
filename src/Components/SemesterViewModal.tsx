@@ -144,7 +144,7 @@ export function SemesterViewModal({
                                 🗑️
                             </Button>
                         </td>
-                        <td width={180}>
+                        <td width={180} hidden={degree.semesters.length === 1}>
                             <MoveCourse
                                 semester={semester}
                                 degree={degree}
