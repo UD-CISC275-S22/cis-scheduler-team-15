@@ -96,26 +96,26 @@
       at validatePropertiesInDevelopment (node_modules/react-dom/cjs/react-dom.development.js:8765:5)
       at diffProperties (node_modules/react-dom/cjs/react-dom.development.js:9172:5)
 
-PASS src/App.test.tsx (33.04 s)
+PASS src/App.test.tsx (33.11 s)
   Final Project Tests
-    ✓ renders the course name somewhere (580 ms)
-    ✓ Students can establish that a course fulfills a degree requirement (2599 ms)
-    ✓ Students can reset course's info back to default (5390 ms)
-    ✓ Update courses in existing degree plans when course list is updated (5411 ms)
-    ✓ Students can remove or add a course as a course's prerequisite and not remove non-existent prerequisite (3154 ms)
-    ✓ Students can remove or add a course as a course's corequisite and not remove non-existent corequisite (3229 ms)
-    ✓ Students can see a list of existing courses (573 ms)
-    ✓ Students can edit the course code (2957 ms)
-    ✓ Student can edit the course title  (3042 ms)
-    ✓ Student can edit credits of a course (2897 ms)
+    ✓ renders the course name somewhere (588 ms)
+    ✓ Students can establish that a course fulfills a degree requirement (2538 ms)
+    ✓ Students can reset course's info back to default (5269 ms)
+    ✓ Update courses in existing degree plans when course list is updated (5516 ms)
+    ✓ Students can remove or add a course as a course's prerequisite and not remove non-existent prerequisite (3217 ms)
+    ✓ Students can remove or add a course as a course's corequisite and not remove non-existent corequisite (3196 ms)
+    ✓ Students can see a list of existing courses (564 ms)
+    ✓ Students can edit the course code (3066 ms)
+    ✓ Student can edit the course title  (3070 ms)
+    ✓ Student can edit credits of a course (2857 ms)
 
 ---------------------------------|---------|----------|---------|---------|-------------------
 File                             | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ---------------------------------|---------|----------|---------|---------|-------------------
-All files                        |   68.53 |    49.29 |   66.07 |   68.63 |                   
+All files                        |    69.5 |    52.11 |   66.07 |   69.62 |                   
  src                             |     100 |      100 |     100 |     100 |                   
   App.tsx                        |     100 |      100 |     100 |     100 |                   
- src/Components                  |   68.48 |    49.29 |   65.94 |   68.58 |                   
+ src/Components                  |   69.45 |    52.11 |   65.94 |   69.57 |                   
   SemesterViewHome.tsx           |   83.33 |      100 |   83.33 |   83.33 | 54                
   SemesterViewModal.tsx          |       0 |        0 |       0 |       0 | 22-167            
   add_course.tsx                 |       0 |        0 |       0 |       0 | 24-125            
@@ -125,7 +125,7 @@ All files                        |   68.53 |    49.29 |   66.07 |   68.63 |
   course_list.tsx                |     100 |      100 |     100 |     100 |                   
   course_list_view.tsx           |     100 |      100 |     100 |     100 |                   
   course_list_view_info.tsx      |     100 |      100 |     100 |     100 |                   
-  course_list_view_info_edit.tsx |   95.16 |    83.33 |     100 |   95.08 | 159-160,210-213   
+  course_list_view_info_edit.tsx |     100 |      100 |     100 |     100 |                   
   course_state.tsx               |   73.33 |       75 |   63.63 |   72.41 | 27,48-58,74       
   degree_plan_view.tsx           |    41.3 |       50 |      45 |      40 | 49-140,163        
   degree_plans.tsx               |   39.13 |       30 |   46.34 |   39.28 | 16,49-165,233,337 
@@ -142,5 +142,5 @@ All files                        |   68.53 |    49.29 |   66.07 |   68.63 |
 Test Suites: 1 passed, 1 total
 Tests:       10 passed, 10 total
 Snapshots:   0 total
-Time:        33.643 s
+Time:        33.731 s
 Ran all test suites.
