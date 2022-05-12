@@ -82,7 +82,7 @@ export function EditSemester({
                 show={modal}
                 onHide={() => setModal(false)}
                 scrollable={true}
-                dialogClassName="modal_edit_semester"
+                className="modal"
             >
                 <Modal.Header closeButton>
                     <Modal.Title>
@@ -116,13 +116,17 @@ export function EditSemester({
                             <SemesterViewModal
                                 semester={semester}
                                 degree={degree}
+                                courses={courses}
                                 editDegree={editDegree}
                                 deleteCourse={deleteCourse}
                             ></SemesterViewModal>
                         </Col>
                         <br></br>
                     </Row>
-
+                    <br></br>
+                    {!semester.errors.every(
+                        (error: string) => error === ""
+                    ) && <b style={{ color: "red" }}>Errors: </b>}
                     <div>
                         {semester.courses
                             .filter(
@@ -135,7 +139,10 @@ export function EditSemester({
                                     className="line-break"
                                     data-testid="error_message"
                                 >
-                                    <span data-testid="error_message">
+                                    <span
+                                        data-testid="error_message"
+                                        style={{ color: "red" }}
+                                    >
                                         {course.listing}:{" "}
                                         {
                                             semester.errors.filter(
