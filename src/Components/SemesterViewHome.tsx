@@ -4,8 +4,8 @@ import { Semester } from "../Interfaces/semester";
 import { Degree } from "../Interfaces/degree";
 import "../App.css";
 import { Button } from "react-bootstrap";
-import { EditSemester } from "./edit_semester";
-import { CheckSemesters } from "./check_semesters";
+import { EditSemester } from "./EditSemester";
+import { CheckSemesters } from "./CheckSemesters";
 
 export function SemesterViewHome({
     semester,

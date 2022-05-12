@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-import { DegreeRequirementView } from "./degree_requirement_view";
+import { DegreeRequirementView } from "./DegreeRequirementView";
 import "../App.css";
 
 export function DegreeRequirements(): JSX.Element {

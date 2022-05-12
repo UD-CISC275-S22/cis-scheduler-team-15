@@ -1,6 +1,6 @@
 import React from "react";
 import { Course } from "../Interfaces/course";
-import { CourseListView } from "./course_list_view";
+import { CourseListView } from "./CourseListView";
 import { Row, Col } from "react-bootstrap";
 
 export function CourseList({

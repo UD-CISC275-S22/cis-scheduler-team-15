@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Course } from "../Interfaces/course";
 import { Accordion } from "react-bootstrap";
-import { CourseListViewInfoEdit } from "./course_list_view_info_edit";
+import { CourseListViewInfoEdit } from "./CourseListViewInfoEdit";
 import "../App.css";
 
 export function CourseListViewInfo({

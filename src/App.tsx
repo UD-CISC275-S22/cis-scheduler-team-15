@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { CourseState } from "./Components/course_state";
+import { CourseState } from "./Components/CourseState";
 
 //const degrees = PlanData.map((degree): Degree => degree as Degree);
 

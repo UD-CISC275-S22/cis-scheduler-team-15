@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import { DegreePlans } from "./Components/degree_plans";
-import AllCourses from "./Data/course_list.json";
+import { DegreePlans } from "./Components/DegreePlans";
+import AllCourses from "./Data/CourseList.json";
 import userEvent from "@testing-library/user-event";
 import { Course } from "./Interfaces/course";
 
