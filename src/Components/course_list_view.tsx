@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Container } from "react-bootstrap";
+import { Accordion, Container } from "react-bootstrap";
 import { Course } from "../Interfaces/course";
 import { CourseListViewInfo } from "./course_list_view_info";
 export function CourseListView({
@@ -12,16 +12,12 @@ export function CourseListView({
     editCourses: (courseID: number, editedCourse: Course) => void;
 }): JSX.Element {
     return (
-        <Container>
-            <div>
-                <div>
-                    <CourseListViewInfo
-                        course={course}
-                        courses={courses}
-                        editCourses={editCourses}
-                    ></CourseListViewInfo>
-                </div>
-            </div>
-        </Container>
+        <Accordion>
+            <CourseListViewInfo
+                course={course}
+                courses={courses}
+                editCourses={editCourses}
+            ></CourseListViewInfo>
+        </Accordion>
     );
 }

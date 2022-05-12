@@ -168,9 +168,9 @@ h6 {
 }
 
 .accordion {
-    background-color: rgb(199, 199, 199);
-    color: #444;
-    padding: 8px;
+    background-color: rgb(122, 201, 233);
+    color: rgb(68, 68, 68);
+    padding: 4px;
     text-align: left;
     border: 12px;
     outline: 12px;

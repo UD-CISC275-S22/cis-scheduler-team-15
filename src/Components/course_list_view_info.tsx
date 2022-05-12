@@ -34,47 +34,44 @@ export function CourseListViewInfo({
     }
 
     return (
-        <span>
-            <Accordion className="accordian">
-                <Accordion.Header>
-                    {course.listing}: {course.title}
-                </Accordion.Header>
-                <Accordion.Body>
-                    <div>
-                        <b>Credit(s): </b>
-                        {course.credits}
-                    </div>
-                    <div>
-                        <b>Pre-Requistie Courses: </b>
-                        {course.preReqs.length === 0
-                            ? "N/A"
-                            : filterPreReq(course)}
-                    </div>
-                    <div>
-                        <b>Co-Requisite Courses: </b>
-                        {course.coReqs.length === 0
-                            ? "N/A"
-                            : filterCoReq(course)}
-                    </div>
-                    <div>
-                        <b>Semesters Offered: </b>
-                        {course.offered.join(", ")}
-                    </div>
-                    <div>
-                        <b>Degree Requirements Satified: </b>
-                        {course.reqsSatisfied.length === 0
-                            ? "N/A"
-                            : course.reqsSatisfied.join(", ")}
-                    </div>
-                    <div>
-                        <CourseListViewInfoEdit
-                            course={course}
-                            courses={courses}
-                            editCourses={editCourses}
-                        ></CourseListViewInfoEdit>
-                    </div>
-                </Accordion.Body>
-            </Accordion>
-        </span>
+        <Accordion.Item
+            eventKey={course.courseID.toString()}
+            data-testid="accordian-item"
+        >
+            <Accordion.Header>
+                {course.listing}: {course.title}
+            </Accordion.Header>
+            <Accordion.Body>
+                <div>
+                    <b>Credit(s): </b>
+                    {course.credits}
+                </div>
+                <div>
+                    <b>Pre-Requisite Courses: </b>
+                    {course.preReqs.length === 0 ? "N/A" : filterPreReq(course)}
+                </div>
+                <div>
+                    <b>Co-Requisite Courses: </b>
+                    {course.coReqs.length === 0 ? "N/A" : filterCoReq(course)}
+                </div>
+                <div>
+                    <b>Semesters Offered: </b>
+                    {course.offered.join(", ")}
+                </div>
+                <div>
+                    <b>Degree Requirements Satified: </b>
+                    {course.reqsSatisfied.length === 0
+                        ? "N/A"
+                        : course.reqsSatisfied.join(", ")}
+                </div>
+                <div>
+                    <CourseListViewInfoEdit
+                        course={course}
+                        courses={courses}
+                        editCourses={editCourses}
+                    ></CourseListViewInfoEdit>
+                </div>
+            </Accordion.Body>
+        </Accordion.Item>
     );
 }
