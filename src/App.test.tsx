@@ -64,6 +64,7 @@ describe("Final Project Tests (App)", () => {
         expect(defaults[1]).toBeUndefined();
         expect(firstEmpty).toBeNull();
     });
+
     test("Students can see a list of degree requirements", () => {
         let text1 = screen.queryByText("University Requirements:");
         let text2 = screen.queryByText("College Requirements:");
@@ -87,6 +88,8 @@ describe("Final Project Tests (App)", () => {
         expect(text4).toBeVisible();
     });
 
+    // Henry test("Degree requirements change when concentration changes", () => {});
+
     test("Students can see a list of existing courses", () => {
         const openCourses = screen.getByRole("button", {
             name: "Move to Course List 📄"
@@ -107,69 +110,6 @@ describe("Final Project Tests (App)", () => {
         expect(text3).not.toBeNull();
         expect(text4).not.toBeNull();
     });
-
-    test("Students will get an error in the semester view when a course with an unsatisfied prerequisite or corequisite is added", () => {
-        const openPlanPage = screen.getByRole("button", {
-            name: /Move to Degree Plans 📖/i
-        });
-        openPlanPage.click();
-        const addEmpty = screen.getByRole("button", {
-            name: /Add Empty ➕/i
-        });
-        addEmpty.click();
-        const firstEmpty = screen.queryByRole("button", {
-            name: "Empty"
-        });
-        firstEmpty?.click();
-        const editButton = screen.queryByRole("button", {
-            name: /Edit Plan 🖉/i
-        });
-        editButton?.click();
-        const addSemester = screen.queryByRole("button", {
-            name: /Add Semester ➕/i
-        });
-        addSemester?.click();
-        const createSemester = screen.queryByRole("button", {
-            name: /Create Semester/i
-        });
-        createSemester?.click();
-        const closeModal = screen.queryByRole("closebutton");
-        closeModal?.click();
-        const editSemester = screen.getAllByRole("button", {
-            name: "🖉"
-        })[0];
-        editSemester.click();
-        const addCourse = screen.getByRole("button", {
-            name: /Add Course/i
-        });
-        addCourse.click();
-        const filter = screen.getAllByRole("textbox");
-        userEvent.type(filter[3], "181");
-        let prereqMessage = screen.queryAllByText("CISC108");
-        let coreqMessage = screen.queryByText(
-            "Unsatisfied corequisite(s): MATH241"
-        );
-        expect(prereqMessage).toBeNull();
-        expect(coreqMessage).toBeNull();
-
-        const adding = screen.getByRole("button", {
-            name: "Click to add 2"
-        });
-        adding.click();
-        prereqMessage = screen.getAllByText(/CISC108/i);
-
-        coreqMessage = screen.queryByText(
-            "Unsatisfied corequisite(s): MATH241"
-        );
-        expect(prereqMessage.length).toBe(1);
-        //expect(coreqMessage).toBeVisible();
-    });
-    /*
-    test("Students can clear out semesters in a plan", () => {});
-
-    */
-
-    //Mike's Tests
 
     test("Students can establish that a course fulfills a degree requirement", () => {
         const courseListButton = screen.getByRole("button", {

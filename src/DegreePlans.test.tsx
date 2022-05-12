@@ -280,7 +280,7 @@ describe("Final Project Tests (DegreePlans)", () => {
         const text4 = screen.queryByText("9/124❌");
         expect(text4).toBeVisible();
     });
-
+    /*
     test("Students will get an error in the semester view when a course with an unsatisfied prerequisite or corequisite is added", () => {
         const addEmpty = screen.getByRole("button", {
             name: /Add Empty ➕/i
@@ -313,7 +313,8 @@ describe("Final Project Tests (DegreePlans)", () => {
         });
         addCourse.click();
         const filter = screen.getAllByRole("textbox");
-        userEvent.type(filter[2], "181"); /*
+        userEvent.type(filter[2], "181"); 
+
         let prereqMessage = screen.queryAllByText("CISC108");
         let coreqMessage = screen.queryByText(
             "Unsatisfied corequisite(s): MATH241"
@@ -331,6 +332,11 @@ describe("Final Project Tests (DegreePlans)", () => {
             "Unsatisfied corequisite(s): MATH241"
         );
         expect(prereqMessage.length).toBe(1); 
-        //expect(coreqMessage).toBeVisible();*/
+        //expect(coreqMessage).toBeVisible();
     });
+    */
+
+    // Henry test("Modify degree plan name", () => {});
+
+    // Henry test("Modify degree plan start year", () => {});
 });
