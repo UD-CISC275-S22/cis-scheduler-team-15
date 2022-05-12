@@ -192,7 +192,7 @@ describe("Final Project Tests (DegreePlans)", () => {
             name: "Click to add 13"
         });
         adding.click();
-        userEvent.type(filter[2], "e");
+        userEvent.type(filter[1], "e");
         adding = screen.getByRole("button", {
             name: "Click to add 16"
         });
@@ -271,13 +271,13 @@ describe("Final Project Tests (DegreePlans)", () => {
         });
         adding.click();
         const filter = screen.getAllByRole("textbox");
-        userEvent.type(filter[2], "e");
+        userEvent.type(filter[1], "e");
         adding = screen.getByRole("button", {
             name: "Click to add 16"
         });
         adding.click();
 
-        const text4 = screen.queryByText("Degree plan 2 Total Credits: 9");
+        const text4 = screen.queryByText("9/124❌");
         expect(text4).toBeVisible();
     });
 

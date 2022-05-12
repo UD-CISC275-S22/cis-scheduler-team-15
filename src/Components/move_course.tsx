@@ -15,12 +15,14 @@ export function MoveCourse({
     editDegree: (degreeID: number, newDegree: Degree) => void;
     course: Course;
 }): JSX.Element {
-    const [moveSemesterID, setMoveSemesterID] = useState<number>(
-        degree.semesters.filter(
+    let newSemesterID = semester.semesterID;
+    if (degree.semesters.length > 1) {
+        newSemesterID = degree.semesters.filter(
             (currSemester: Semester): boolean =>
                 currSemester.semesterID !== semester.semesterID
-        )[0].semesterID
-    );
+        )[0].semesterID;
+    }
+    const [moveSemesterID, setMoveSemesterID] = useState<number>(newSemesterID);
     function updateSemesterID(event: React.ChangeEvent<HTMLSelectElement>) {
         setMoveSemesterID(Number(event.target.value));
     }
