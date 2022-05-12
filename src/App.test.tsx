@@ -681,6 +681,10 @@ describe("Final Project Tests", () => {
         expect(
             firstAccordian[0].innerHTML.toString().replace(/<[^>]+>/g, "")
         ).toMatch("Pre-Requisite Courses: CISC181");
+        addPreReqButton.click();
+        expect(
+            firstAccordian[0].innerHTML.toString().replace(/<[^>]+>/g, "")
+        ).toMatch("Course already a PreReq");
 
         userEvent.selectOptions(preReqBox[1], preReqOptionsRem[0]);
         removePreReqButton.click();
@@ -731,6 +735,10 @@ describe("Final Project Tests", () => {
         expect(
             firstAccordian[0].innerHTML.toString().replace(/<[^>]+>/g, "")
         ).toMatch("Co-Requisite Courses: CISC181, MATH241");
+        addCoReqButton.click();
+        expect(
+            firstAccordian[0].innerHTML.toString().replace(/<[^>]+>/g, "")
+        ).toMatch("Course already a CoReq");
 
         userEvent.selectOptions(coReqBox[3], coReqOptionsRem[0]);
         removeCoReqButton.click();
