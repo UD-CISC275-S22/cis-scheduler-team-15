@@ -1,7 +1,11 @@
 import React from "react";
 import { Row, Col, Container } from "react-bootstrap";
 
-export function DegreeRequirementView(): JSX.Element {
+export function DegreeRequirementView({
+    concentration
+}: {
+    concentration: string;
+}): JSX.Element {
     return (
         <Container>
             <Row>
@@ -82,6 +86,62 @@ export function DegreeRequirementView(): JSX.Element {
                         <li>MATH 241 - Analytic Geometry and Calculus A</li>
                     </ul>
                 </Col>
+            </Row>
+            <Row>
+                <h3 hidden={concentration === "General (BA)"}>
+                    {concentration.substring(0, concentration.length - 5)}{" "}
+                    Requirements:
+                </h3>
+                <Col></Col>
+                <Col>
+                    <div
+                        hidden={
+                            concentration !==
+                            "Artificial Intelligence and Robotics (BS)"
+                        }
+                    >
+                        <ul className="App-left-list">
+                            <li>AI</li>
+                        </ul>
+                    </div>
+                    <div hidden={concentration !== "Bioinformtics (BS)"}>
+                        <ul className="App-left-list">
+                            <li>Bio</li>
+                        </ul>
+                    </div>
+                    <div hidden={concentration !== "Cybersecurity (BS)"}>
+                        <ul className="App-left-list">
+                            <li>Cyber</li>
+                        </ul>
+                    </div>
+                    <div hidden={concentration !== "Data Science (BS)"}>
+                        <ul className="App-left-list">
+                            <li>Data</li>
+                        </ul>
+                    </div>
+                    <div
+                        hidden={
+                            concentration !== "High Performance Computing (BS)"
+                        }
+                    >
+                        <ul className="App-left-list">
+                            <li>Perf</li>
+                        </ul>
+                    </div>
+                    <div hidden={concentration !== "Systems and Networks (BS)"}>
+                        <ul className="App-left-list">
+                            <li>System</li>
+                        </ul>
+                    </div>
+                    <div
+                        hidden={concentration !== "Theory and Computation (BS)"}
+                    >
+                        <ul className="App-left-list">
+                            <li>Theory</li>
+                        </ul>
+                    </div>
+                </Col>
+                <Col></Col>
             </Row>
             <h3>Electives:</h3>
             <a>

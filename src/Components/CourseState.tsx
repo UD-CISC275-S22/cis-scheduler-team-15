@@ -11,7 +11,7 @@ import { Button, Stack, Row, Col, Form } from "react-bootstrap";
 const COURSES = AllCourses.map((course): Course => ({ ...course }));
 const CONCENTRATONS = [
     "General (BA)",
-    "Artific Intelligence and Robotics (BS)",
+    "Artificial Intelligence and Robotics (BS)",
     "Bioinformtics (BS)",
     "Cybersecurity (BS)",
     "Data Science (BS)",
@@ -157,7 +157,9 @@ export function CourseState(): JSX.Element {
                     <hr></hr>
                     <Row>
                         <h3>Degree Requirements</h3>
-                        <DegreeRequirements></DegreeRequirements>
+                        <DegreeRequirements
+                            concentration={concentration}
+                        ></DegreeRequirements>
                     </Row>
                     <hr></hr>
                     <h3>External Links:</h3>
@@ -216,7 +218,10 @@ export function CourseState(): JSX.Element {
                     </div>
 
                     <Row>
-                        <DegreePlans courses={courses}></DegreePlans>
+                        <DegreePlans
+                            courses={courses}
+                            concentration={concentration}
+                        ></DegreePlans>
                     </Row>
                 </div>
                 <div hidden={!courseView}>
