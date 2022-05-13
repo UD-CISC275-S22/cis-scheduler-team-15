@@ -12,7 +12,7 @@ const COURSES = AllCourses.map((course): Course => ({ ...course }));
 const CONCENTRATONS = [
     "General (BA)",
     "Artificial Intelligence and Robotics (BS)",
-    "Bioinformtics (BS)",
+    "Bioinformatics (BS)",
     "Cybersecurity (BS)",
     "Data Science (BS)",
     "High Performance Computing (BS)",

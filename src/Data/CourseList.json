@@ -558,7 +558,7 @@
         "coReqs": [],
         "offered": ["Fall", "Winter", "Spring", "Summer"],
         "credits": 3,
-        "reqsSatisfied": ["SWR", "BREADTH"]
+        "reqsSatisfied": ["SWR", "BREADTH", "BREADTH300+"]
     },
     {
         "courseID": 57,
@@ -568,7 +568,7 @@
         "coReqs": [],
         "offered": ["Fall", "Winter", "Spring"],
         "credits": 3,
-        "reqsSatisfied": ["SWR", "BREADTH"]
+        "reqsSatisfied": ["SWR", "BREADTH", "BREADTH300+"]
     },
     {
         "courseID": 58,
