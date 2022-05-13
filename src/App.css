@@ -58,7 +58,6 @@ td {
     text-align: justify;
 }
 
-
 tr:nth-child(even) {
     background-color: #f2f2f2;
 }
@@ -194,10 +193,10 @@ h6 {
     white-space: pre-line;
 }
 
-.modal-dialog{
+.modal-dialog {
     max-width: 800px;
 }
-.modal-dialog table{
+.modal-dialog table {
     margin-left: auto;
     margin-right: auto;
 }
@@ -245,16 +244,14 @@ h6 {
     box-shadow: none;
 }
 
-.accordion-modal :focus{
+.accordion-modal :focus {
     outline: none;
     box-shadow: none;
     color: inherit;
     background: inherit;
-
 }
 
-
-.accordion-modal header{
+.accordion-modal header {
     border: 0px;
     color: inherit;
     outline: none;
@@ -262,26 +259,33 @@ h6 {
     background: inherit;
 }
 
- .accordion-modal button :focus, .accordion-modal button, .accordion-modal button:not(.collapsed) {
+.accordion-modal button :focus,
+.accordion-modal button,
+.accordion-modal button:not(.collapsed) {
     outline: none;
     box-shadow: none;
     color: inherit;
     background: inherit;
-
 }
 
-.dropdown_semesters{
+.dropdown_semesters {
     width: 160px;
     padding-right: 0px;
 }
-.button_move_semester{
+.button_move_semester {
     width: 25px;
     padding-left: 0px;
     padding-right: 0px;
 }
 
-.trash_button{
-    text-align:center;
+.trash_button {
+    text-align: center;
     width: 30px;
     padding: 0px;
+}
+
+.container {
+    display: table;
+    width: 100%;
+    border: 0;
 }
