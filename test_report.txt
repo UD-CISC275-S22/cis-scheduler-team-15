@@ -2,7 +2,7 @@
 > react-typescript-starter@0.1.0 test
 > react-scripts test "--coverage"
 
-PASS src/App.test.tsx (39.106 s)
+PASS src/App.test.tsx (60.753 s)
   ● Console
 
     console.error
@@ -26,14 +26,14 @@ PASS src/App.test.tsx (39.106 s)
           at /home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/node_modules/react-bootstrap/cjs/Row.js:22:3
           at div
           at /home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/node_modules/react-bootstrap/cjs/Stack.js:23:7
-          at DegreePlans (/home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/src/Components/DegreePlans.tsx:19:31)
+          at DegreePlans (/home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/src/Components/DegreePlans.tsx:22:5)
           at div
           at /home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/node_modules/react-bootstrap/cjs/Row.js:22:3
           at div
           at div
           at /home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/node_modules/react-bootstrap/cjs/Stack.js:23:7
           at div
-          at CourseState (/home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/src/Components/CourseState.tsx:31:35)
+          at CourseState (/home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/src/Components/CourseState.tsx:41:35)
           at div
           at App
 
@@ -88,7 +88,7 @@ PASS src/App.test.tsx (39.106 s)
           at div
           at /home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/node_modules/react-bootstrap/cjs/Stack.js:23:7
           at div
-          at CourseState (/home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/src/Components/CourseState.tsx:31:35)
+          at CourseState (/home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/src/Components/CourseState.tsx:41:35)
           at div
           at App
 
@@ -101,7 +101,7 @@ PASS src/App.test.tsx (39.106 s)
       at diffProperties (node_modules/react-dom/cjs/react-dom.development.js:9172:5)
       at prepareUpdate (node_modules/react-dom/cjs/react-dom.development.js:10215:10)
 
-PASS src/DegreePlans.test.tsx (8.261 s)
+PASS src/DegreePlans.test.tsx (8.783 s)
   ● Console
 
     console.error
@@ -125,7 +125,7 @@ PASS src/DegreePlans.test.tsx (8.261 s)
           at /home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/node_modules/react-bootstrap/cjs/Row.js:22:3
           at div
           at /home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/node_modules/react-bootstrap/cjs/Stack.js:23:7
-          at DegreePlans (/home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/src/Components/DegreePlans.tsx:19:31)
+          at DegreePlans (/home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/src/Components/DegreePlans.tsx:22:5)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
       at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
@@ -139,21 +139,21 @@ PASS src/DegreePlans.test.tsx (8.261 s)
 -----------------------------|---------|----------|---------|---------|-------------------
 File                         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -----------------------------|---------|----------|---------|---------|-------------------
-All files                    |   83.65 |     74.3 |   83.74 |   83.76 |                   
+All files                    |   82.58 |    72.36 |    82.8 |    82.8 |                   
  src                         |     100 |      100 |     100 |     100 |                   
   App.tsx                    |     100 |      100 |     100 |     100 |                   
- src/Components              |   83.62 |     74.3 |   83.68 |   83.73 |                   
+ src/Components              |   82.55 |    72.36 |   82.74 |   82.77 |                   
   AddCourse.tsx              |     100 |       90 |     100 |     100 | 56                
   AddSemester.tsx            |      85 |      100 |      75 |      85 | 26-27,70          
-  CheckRequirements.tsx      |   99.19 |       75 |      98 |   99.19 | 288               
+  CheckRequirements.tsx      |   98.38 |       75 |      96 |   98.38 | 181,288           
   CheckSemesters.tsx         |   98.57 |    92.85 |     100 |   98.52 | 20                
   CourseList.tsx             |     100 |      100 |     100 |     100 |                   
   CourseListView.tsx         |     100 |      100 |     100 |     100 |                   
   CourseListViewInfo.tsx     |     100 |      100 |     100 |     100 |                   
-  CourseListViewInfoEdit.tsx |     100 |      100 |     100 |     100 |                   
-  CourseState.tsx            |   73.33 |       75 |   63.63 |   72.41 | 27,48-58,74       
+  CourseListViewInfoEdit.tsx |   95.96 |    95.83 |   95.23 |   96.72 | 89-100            
+  CourseState.tsx            |   75.67 |       75 |   66.66 |      75 | 29,37,58-68,84    
   DegreePlanView.tsx         |   43.47 |    71.42 |      50 |   42.22 | 49-140            
-  DegreePlans.tsx            |   53.84 |       40 |   68.29 |   53.01 | 16,49-127,232     
+  DegreePlans.tsx            |   54.63 |    38.23 |   69.04 |    53.4 | 18,57-144,162,251 
   DegreeRequirementView.tsx  |     100 |      100 |     100 |     100 |                   
   DegreeRequirements.tsx     |     100 |      100 |     100 |     100 |                   
   EditSemester.tsx           |      95 |      100 |    92.3 |      95 | 83                
@@ -170,5 +170,5 @@ All files                    |   83.65 |     74.3 |   83.74 |   83.76 |
 Test Suites: 2 passed, 2 total
 Tests:       20 passed, 20 total
 Snapshots:   0 total
-Time:        48.025 s
+Time:        70.222 s
 Ran all test suites.
