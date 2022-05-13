@@ -2,7 +2,7 @@
 > react-typescript-starter@0.1.0 test
 > react-scripts test "--coverage"
 
-PASS src/App.test.tsx (36.25 s)
+PASS src/App.test.tsx (39.106 s)
   ● Console
 
     console.error
@@ -101,7 +101,7 @@ PASS src/App.test.tsx (36.25 s)
       at diffProperties (node_modules/react-dom/cjs/react-dom.development.js:9172:5)
       at prepareUpdate (node_modules/react-dom/cjs/react-dom.development.js:10215:10)
 
-PASS src/DegreePlans.test.tsx (7.753 s)
+PASS src/DegreePlans.test.tsx (8.261 s)
   ● Console
 
     console.error
@@ -139,10 +139,10 @@ PASS src/DegreePlans.test.tsx (7.753 s)
 -----------------------------|---------|----------|---------|---------|-------------------
 File                         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -----------------------------|---------|----------|---------|---------|-------------------
-All files                    |   83.52 |     74.3 |   83.57 |   83.63 |                   
+All files                    |   83.65 |     74.3 |   83.74 |   83.76 |                   
  src                         |     100 |      100 |     100 |     100 |                   
   App.tsx                    |     100 |      100 |     100 |     100 |                   
- src/Components              |   83.49 |     74.3 |   83.51 |    83.6 |                   
+ src/Components              |   83.62 |     74.3 |   83.68 |   83.73 |                   
   AddCourse.tsx              |     100 |       90 |     100 |     100 | 56                
   AddSemester.tsx            |      85 |      100 |      75 |      85 | 26-27,70          
   CheckRequirements.tsx      |   99.19 |       75 |      98 |   99.19 | 288               
@@ -168,7 +168,7 @@ All files                    |   83.52 |     74.3 |   83.57 |   83.63 |
 -----------------------------|---------|----------|---------|---------|-------------------
 
 Test Suites: 2 passed, 2 total
-Tests:       19 passed, 19 total
+Tests:       20 passed, 20 total
 Snapshots:   0 total
-Time:        44.716 s
+Time:        48.025 s
 Ran all test suites.
