@@ -521,4 +521,16 @@ describe("Final Project Tests (App)", () => {
             firstAccordian[0].innerHTML.toString().replace(/<[^>]+>/g, "")
         ).toMatch("Credit(s): 6");
     });
+    test("Student can filter the courses in the course list", () => {
+        const courseListButton = screen.getByRole("button", {
+            name: /Move to Course List 📄/i
+        });
+        courseListButton.click();
+
+        const filterBox = screen.getByTestId("course-filter");
+        userEvent.type(filterBox, "CISC");
+
+        const accordions = screen.queryAllByTestId("accordian-item", {});
+        expect(accordions.length).toBe(15);
+    });
 });
