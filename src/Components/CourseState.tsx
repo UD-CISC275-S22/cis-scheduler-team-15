@@ -19,8 +19,18 @@ const CONCENTRATONS = [
     "Systems and Networks (BS)",
     "Theory and Computation (BS)"
 ];
-const saveCoursesKey = "COURSE-DATA";
-let courseInput = COURSES;
+const saveCoursesKey = "COURSE-DATA2";
+let courseInput = COURSES.sort((a, b) => {
+    const fa = a.listing.toLowerCase();
+    const fb = b.listing.toLowerCase();
+    if (fa < fb) {
+        return -1;
+    } else if (fb > fa) {
+        return 1;
+    } else {
+        return 0;
+    }
+});
 
 const previousData = localStorage.getItem(saveCoursesKey);
 if (previousData !== null) {

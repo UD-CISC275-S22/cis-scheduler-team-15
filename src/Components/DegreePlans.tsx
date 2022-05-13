@@ -9,7 +9,7 @@ import { Semester } from "../Interfaces/semester";
 
 const DEGREEPLANSTARTBA = PlanDataBA.map((degree): Degree => ({ ...degree }));
 const DEGREEPLANSTARTBS = PlanDataBS.map((degree): Degree => ({ ...degree }));
-const saveDegreesKey = "DEGREE-DATA";
+const saveDegreesKey = "DEGREE-DATA2";
 let degreeInput = DEGREEPLANSTARTBA;
 
 const previousData = localStorage.getItem(saveDegreesKey);
