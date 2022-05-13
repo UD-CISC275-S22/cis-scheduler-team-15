@@ -108,6 +108,7 @@ export function CheckSemesters({
         const unsatisfiedPrereqIDs = prereqIDs.filter(
             (ID: number, index: number): boolean => !prereqSatisfied[index]
         );
+
         return unsatisfiedPrereqIDs
             .map(
                 (id: number) =>

@@ -138,7 +138,7 @@
         "coReqs": [],
         "offered": ["Fall", "Winter", "Spring", "Summer"],
         "credits": 4,
-        "reqsSatisfied": []
+        "reqsSatisfied": ["MATH242"]
     },
     {
         "courseID": 15,
@@ -148,7 +148,7 @@
         "coReqs": [],
         "offered": ["Fall", "Winter", "Spring", "Summer"],
         "credits": 2,
-        "reqsSatisfied": []
+        "reqsSatisfied": ["MATH243", "Continuous"]
     },
     {
         "courseID": 16,
@@ -424,11 +424,11 @@
         "courseID": 43,
         "listing": "CISC320",
         "title": "Introduction to Algorithms",
-        "preReqs": [12],
+        "preReqs": [5, 12],
         "coReqs": [],
         "offered": ["Fall"],
         "credits": 3,
-        "reqsSatisfied": ["CISC300+"]
+        "reqsSatisfied": ["CISC300+", "CISC320"]
     },
     {
         "courseID": 44,
@@ -449,5 +449,535 @@
         "offered": ["Spring", "Fall"],
         "credits": 3,
         "reqsSatisfied": ["CAH", "Breadth"]
+    },
+    {
+        "courseID": 46,
+        "listing": "CISC303",
+        "title": "Automata Theory",
+        "preReqs": [5, 12],
+        "coReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["CISC300+", "CISC303"]
+    },
+    {
+        "courseID": 47,
+        "listing": "BISC207",
+        "title": "Introduction to Biology I",
+        "preReqs": [],
+        "coReqs": [49],
+        "offered": ["Fall", "Winter", "Spring", "Summer"],
+        "credits": 4,
+        "reqsSatisfied": ["Science", "BISC207"]
+    },
+    {
+        "courseID": 48,
+        "listing": "BISC208",
+        "title": "Introduction to Biology II",
+        "preReqs": [47],
+        "coReqs": [51],
+        "offered": ["Fall", "Winter", "Spring", "Summer"],
+        "credits": 4,
+        "reqsSatisfied": ["Science", "BISC208"]
+    },
+    {
+        "courseID": 49,
+        "listing": "CHEM103",
+        "title": "General Chemistry",
+        "preReqs": [],
+        "coReqs": [50],
+        "offered": ["Fall", "Winter", "Spring", "Summer"],
+        "credits": 3,
+        "reqsSatisfied": ["Science", "CHEM103"]
+    },
+    {
+        "courseID": 50,
+        "listing": "CHEM133",
+        "title": "General Chemistry Laboratory",
+        "preReqs": [],
+        "coReqs": [49],
+        "offered": ["Fall", "Winter", "Spring", "Summer"],
+        "credits": 1,
+        "reqsSatisfied": ["Science", "CHEM133"]
+    },
+    {
+        "courseID": 51,
+        "listing": "CHEM104",
+        "title": "General Chemistry",
+        "preReqs": [49, 50],
+        "coReqs": [52],
+        "offered": ["Fall", "Spring"],
+        "credits": 3,
+        "reqsSatisfied": ["Science", "CHEM104"]
+    },
+    {
+        "courseID": 52,
+        "listing": "CHEM134",
+        "title": "General Chemistry Laboratory",
+        "preReqs": [49, 50],
+        "coReqs": [51],
+        "offered": ["Fall", "Winter", "Spring", "Summer"],
+        "credits": 1,
+        "reqsSatisfied": ["Science", "CEM134"]
+    },
+    {
+        "courseID": 53,
+        "listing": "UNIV401",
+        "title": "Senior Thesis",
+        "preReqs": [],
+        "coReqs": [],
+        "offered": ["Fall", "Spring"],
+        "credits": 3,
+        "reqsSatisfied": ["DLE"]
+    },
+    {
+        "courseID": 54,
+        "listing": "UNIV402",
+        "title": "Senior Thesis",
+        "preReqs": [53],
+        "coReqs": [],
+        "offered": ["Fall", "Spring"],
+        "credits": 3,
+        "reqsSatisfied": ["DLE", "Capstone"]
+    },
+    {
+        "courseID": 55,
+        "listing": "CISC355",
+        "title": "Computers, Ethics and Society",
+        "preReqs": [],
+        "coReqs": [],
+        "offered": ["Spring"],
+        "credits": 3,
+        "reqsSatisfied": ["CAH", "CISC355"]
+    },
+    {
+        "courseID": 56,
+        "listing": "ENGL312",
+        "title": "Written Communications in Business",
+        "preReqs": [17],
+        "coReqs": [],
+        "offered": ["Fall", "Winter", "Spring", "Summer"],
+        "credits": 3,
+        "reqsSatisfied": ["SWR", "BREADTH", "BREADTH300+"]
+    },
+    {
+        "courseID": 57,
+        "listing": "ENGL410",
+        "title": "Technical Writing",
+        "preReqs": [17],
+        "coReqs": [],
+        "offered": ["Fall", "Winter", "Spring"],
+        "credits": 3,
+        "reqsSatisfied": ["SWR", "BREADTH", "BREADTH300+"]
+    },
+    {
+        "courseID": 58,
+        "listing": "CISC304",
+        "title": "Logic for Programming",
+        "preReqs": [5, 12],
+        "coReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["CISC300+", "CISC304"]
+    },
+    {
+        "courseID": 59,
+        "listing": "CISC442",
+        "title": "Introduction to Computer Vision",
+        "preReqs": [5],
+        "coReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["CISC300+", "CISC442"]
+    },
+    {
+        "courseID": 60,
+        "listing": "CISC481",
+        "title": "Artificial Intelligence",
+        "preReqs": [5, 58],
+        "coReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["CISC300+", "CISC481"]
+    },
+    {
+        "courseID": 61,
+        "listing": "MATH205",
+        "title": "Statistical Methods",
+        "preReqs": [12],
+        "coReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 4,
+        "reqsSatisfied": ["Statistics"]
+    },
+    {
+        "courseID": 62,
+        "listing": "CISC483",
+        "title": "Introduction to Data Mining",
+        "preReqs": [5, 61],
+        "coReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["CISC300+", "CISC483", "Data"]
+    },
+    {
+        "courseID": 63,
+        "listing": "CISC484",
+        "title": "Introduction to Machine Learning",
+        "preReqs": [5, 61],
+        "coReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["CISC300+", "CISC484", "Data"]
+    },
+    {
+        "courseID": 64,
+        "listing": "CISC361",
+        "title": "Operating Systems",
+        "preReqs": [5, 6],
+        "coReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["CISC300+", "Systems", "CISC361"]
+    },
+    {
+        "courseID": 65,
+        "listing": "BISC401",
+        "title": "Molecular Biology of the Cell",
+        "preReqs": [47],
+        "coReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["CISC300+", "BISC401"]
+    },
+    {
+        "courseID": 66,
+        "listing": "CISC372",
+        "title": "Parallel Computing",
+        "preReqs": [5, 6],
+        "coReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["CISC300+", "CISC372"]
+    },
+    {
+        "courseID": 67,
+        "listing": "CISC436",
+        "title": "Computational Biology and Bioinformatics",
+        "preReqs": [5],
+        "coReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["CISC300+", "CISC436"]
+    },
+    {
+        "courseID": 68,
+        "listing": "MATH349",
+        "title": "Elementary Linear Algebra",
+        "preReqs": [14],
+        "coReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["CISC300+", "MATH349"]
+    },
+    {
+        "courseID": 69,
+        "listing": "CHEM213",
+        "title": "Elementary Organic Chemistry",
+        "preReqs": [51, 52],
+        "coReqs": [70],
+        "offered": ["Fall", "Winter", "Spring", "Summer"],
+        "credits": 3,
+        "reqsSatisfied": ["CISC300+", "CHEM213"]
+    },
+    {
+        "courseID": 70,
+        "listing": "CHEM215",
+        "title": "Elementary Organic Chemistry Laboratory",
+        "preReqs": [51, 52],
+        "coReqs": [69],
+        "offered": ["Fall", "Winter", "Spring", "Summer"],
+        "credits": 1,
+        "reqsSatisfied": ["CISC300+", "CHEM215"]
+    },
+    {
+        "courseID": 71,
+        "listing": "CHEM321",
+        "title": "Organic Chemistry I",
+        "preReqs": [51, 52],
+        "coReqs": [72],
+        "offered": ["Fall", "Winter", "Summer"],
+        "credits": 3,
+        "reqsSatisfied": ["CISC300+", "CHEM321"]
+    },
+    {
+        "courseID": 72,
+        "listing": "CHEM325",
+        "title": "Organic Chemistry Laboratory I",
+        "preReqs": [51, 52],
+        "coReqs": [71],
+        "offered": ["Fall", "Winter", "Spring", "Summer"],
+        "credits": 1,
+        "reqsSatisfied": ["CISC300+", "CHEM325"]
+    },
+    {
+        "courseID": 73,
+        "listing": "MATH350",
+        "title": "Probability Theory and Simulation Methods",
+        "preReqs": [15],
+        "coReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["Statistics", "Math"]
+    },
+    {
+        "courseID": 74,
+        "listing": "CISC450",
+        "title": "Computer Networks I",
+        "preReqs": [6],
+        "coReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["CISC300+", "CISC450"]
+    },
+    {
+        "courseID": 75,
+        "listing": "CISC464",
+        "title": "Introduction to Network Security",
+        "preReqs": [74],
+        "coReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["CISC300+", "CISC464"]
+    },
+    {
+        "courseID": 76,
+        "listing": "CPEG472",
+        "title": "Applied Cryptography",
+        "preReqs": [77],
+        "coReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["Cybersecurity"]
+    },
+    {
+        "courseID": 77,
+        "listing": "CPEG465",
+        "title": "Introduction to Cybersecurity",
+        "preReqs": [],
+        "coReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": []
+    },
+    {
+        "courseID": 78,
+        "listing": "CPEG473",
+        "title": "Cloud Computing and Security",
+        "preReqs": [77],
+        "coReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["Cybersecurity"]
+    },
+    {
+        "courseID": 79,
+        "listing": "CPEG475",
+        "title": "IoT and Embedded Systems Security",
+        "preReqs": [81, 77],
+        "coReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["Cybersecurity"]
+    },
+    {
+        "courseID": 80,
+        "listing": "CPEG202",
+        "title": "Introduction to Digital Systems",
+        "preReqs": [],
+        "coReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": []
+    },
+    {
+        "courseID": 81,
+        "listing": "CPEG222",
+        "title": "Microprocessor Systems",
+        "preReqs": [],
+        "coReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 4,
+        "reqsSatisfied": []
+    },
+    {
+        "courseID": 82,
+        "listing": "CPEG476",
+        "title": "Secure Software Design",
+        "preReqs": [],
+        "coReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["Cybersecurity"]
+    },
+    {
+        "courseID": 83,
+        "listing": "CPEG495",
+        "title": "Digital Forensics",
+        "preReqs": [],
+        "coReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["Cybersecurity"]
+    },
+    {
+        "courseID": 84,
+        "listing": "CISC437",
+        "title": "Database Systems",
+        "preReqs": [5],
+        "coReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["CISC300+", "CISC437"]
+    },
+    {
+        "courseID": 85,
+        "listing": "MATH302",
+        "title": "Ordinary Differential Equations",
+        "preReqs": [14, 68],
+        "coReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["Math", "Continuous"]
+    },
+    {
+        "courseID": 86,
+        "listing": "MATH426",
+        "title": "Computational Mathematics I",
+        "preReqs": [68],
+        "coReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["Math", "Continuous"]
+    },
+    {
+        "courseID": 87,
+        "listing": "CISC360",
+        "title": "Computer Architecture",
+        "preReqs": [5, 6],
+        "coReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["CISC300+", "CISC360"]
+    },
+    {
+        "courseID": 88,
+        "listing": "CISC471",
+        "title": "Compiler Design",
+        "preReqs": [6, 46],
+        "coReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["CISC300+", "CISC471"]
+    },
+    {
+        "courseID": 89,
+        "listing": "CISC401",
+        "title": "Elements of the Theory of Computation",
+        "preReqs": [46],
+        "coReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["CISC300+", "CISC401"]
+    },
+    {
+        "courseID": 90,
+        "listing": "CISC404",
+        "title": "Logic in Computer Science",
+        "preReqs": [58],
+        "coReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["CISC300+", "Discrete"]
+    },
+    {
+        "courseID": 91,
+        "listing": "MATH245",
+        "title": "An Introduction to Proof",
+        "preReqs": [12, 14],
+        "coReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["Discrete"]
+    },
+    {
+        "courseID": 92,
+        "listing": "MATH315",
+        "title": "Discrete Mathematics II",
+        "preReqs": [12],
+        "coReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["Discrete"]
+    },
+    {
+        "courseID": 93,
+        "listing": "MATH451",
+        "title": "Abstract Algebra I",
+        "preReqs": [68, 91],
+        "coReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["CISC300+", "Discrete"]
+    },
+    {
+        "courseID": 94,
+        "listing": "MATH535",
+        "title": "Introduction to Partial Differential Equations",
+        "preReqs": [85],
+        "coReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["Continuous"]
+    },
+    {
+        "courseID": 95,
+        "listing": "PHYS207",
+        "title": "Fundamentals of Physics I",
+        "preReqs": [],
+        "coReqs": [13, 96],
+        "offered": ["Fall", "Winter", "Spring", "Summer"],
+        "credits": 3,
+        "reqsSatisfied": ["Science"]
+    },
+    {
+        "courseID": 96,
+        "listing": "PHYS227",
+        "title": "Fundamentals of Physics Laboratory I",
+        "preReqs": [],
+        "coReqs": [95],
+        "offered": ["Fall", "Winter", "Spring", "Summer"],
+        "credits": 1,
+        "reqsSatisfied": ["Science"]
+    },
+    {
+        "courseID": 97,
+        "listing": "PHYS208",
+        "title": "Fundamentals of Physics II",
+        "preReqs": [95, 96],
+        "coReqs": [98],
+        "offered": ["Fall", "Winter", "Spring", "Summer"],
+        "credits": 3,
+        "reqsSatisfied": ["Science"]
+    },
+    {
+        "courseID": 98,
+        "listing": "PHYS228",
+        "title": "Fundamentals of Physics Laboratory II",
+        "preReqs": [95, 96],
+        "coReqs": [97],
+        "offered": ["Fall", "Winter", "Spring", "Summer"],
+        "credits": 1,
+        "reqsSatisfied": ["Science"]
     }
 ]

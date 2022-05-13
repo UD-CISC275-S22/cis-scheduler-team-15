@@ -10,7 +10,12 @@ import { Course } from "./Interfaces/course";
 describe("Final Project Tests (DegreePlans)", () => {
     beforeEach(() => {
         const COURSES = AllCourses.map((course): Course => ({ ...course }));
-        render(<DegreePlans courses={[...COURSES]} />);
+        render(
+            <DegreePlans
+                courses={[...COURSES]}
+                concentration={"General (BA)"}
+            />
+        );
     });
 
     test("Students can see a list of all the degree plans they have made", () => {
