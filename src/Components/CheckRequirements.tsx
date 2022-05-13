@@ -68,6 +68,7 @@ export function CheckRequirements({ degree }: { degree: Degree }): JSX.Element {
 
     function unmetRequirements(): number[] {
         //Courses
+        console.log(allCoursesInPlan);
         const E110Courses = allCoursesInPlan.filter((course: Course): boolean =>
             course.reqsSatisfied.includes("ENGL110")
         );

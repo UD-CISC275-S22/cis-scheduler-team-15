@@ -106,18 +106,29 @@
                         "credits": 4,
                         "reqsSatisfied": ["Science"]
                     },
+
                     {
-                        "courseID": 31,
-                        "listing": "UNIV167",
-                        "title": "Free I",
+                        "courseID": 95,
+                        "listing": "PHYS207",
+                        "title": "Fundamentals of Physics I",
                         "preReqs": [],
-                        "coReqs": [],
-                        "offered": ["Spring", "Fall"],
+                        "coReqs": [13, 96],
+                        "offered": ["Fall", "Winter", "Spring", "Summer"],
                         "credits": 3,
-                        "reqsSatisfied": []
+                        "reqsSatisfied": ["Science"]
+                    },
+                    {
+                        "courseID": 96,
+                        "listing": "PHYS227",
+                        "title": "Fundamentals of Physics Laboratory I",
+                        "preReqs": [],
+                        "coReqs": [95],
+                        "offered": ["Fall", "Winter", "Spring", "Summer"],
+                        "credits": 1,
+                        "reqsSatisfied": ["Science"]
                     }
                 ],
-                "errors": ["", "", "", "", ""]
+                "errors": ["", "", "", "", "", ""]
             },
             {
                 "semesterID": 3,
@@ -165,17 +176,27 @@
                         "reqsSatisfied": ["HCC"]
                     },
                     {
-                        "courseID": 32,
-                        "listing": "UNIV167",
-                        "title": "Free II",
-                        "preReqs": [],
-                        "coReqs": [],
-                        "offered": ["Spring", "Fall"],
+                        "courseID": 97,
+                        "listing": "PHYS208",
+                        "title": "Fundamentals of Physics II",
+                        "preReqs": [95, 96],
+                        "coReqs": [98],
+                        "offered": ["Fall", "Winter", "Spring", "Summer"],
                         "credits": 3,
-                        "reqsSatisfied": []
+                        "reqsSatisfied": ["Science"]
+                    },
+                    {
+                        "courseID": 98,
+                        "listing": "PHYS228",
+                        "title": "Fundamentals of Physics Laboratory II",
+                        "preReqs": [95, 96],
+                        "coReqs": [97],
+                        "offered": ["Fall", "Winter", "Spring", "Summer"],
+                        "credits": 1,
+                        "reqsSatisfied": ["Science"]
                     }
                 ],
-                "errors": ["", "", "", "", ""]
+                "errors": ["", "", "", "", "", ""]
             },
             {
                 "semesterID": 4,
@@ -213,24 +234,24 @@
                         "reqsSatisfied": ["CAH"]
                     },
                     {
-                        "courseID": 33,
-                        "listing": "UNIV167",
-                        "title": "Free III",
-                        "preReqs": [],
+                        "courseID": 43,
+                        "listing": "CISC320",
+                        "title": "Introduction to Algorithms",
+                        "preReqs": [5, 12],
                         "coReqs": [],
-                        "offered": ["Spring", "Fall"],
+                        "offered": ["Fall"],
                         "credits": 3,
-                        "reqsSatisfied": []
+                        "reqsSatisfied": ["CISC300+", "CISC320"]
                     },
                     {
-                        "courseID": 34,
-                        "listing": "UNIV167",
-                        "title": "Free IV",
+                        "courseID": 55,
+                        "listing": "CISC355",
+                        "title": "Computers, Ethics and Society",
                         "preReqs": [],
                         "coReqs": [],
-                        "offered": ["Spring", "Fall"],
+                        "offered": ["Spring"],
                         "credits": 3,
-                        "reqsSatisfied": []
+                        "reqsSatisfied": ["CAH", "CISC355"]
                     }
                 ],
                 "errors": ["", "", "", "", ""]
@@ -241,24 +262,24 @@
                 "year": 2022,
                 "courses": [
                     {
-                        "courseID": 43,
-                        "listing": "CISC320",
-                        "title": "Introduction to Algorithms",
-                        "preReqs": [12],
-                        "coReqs": [],
-                        "offered": ["Fall"],
-                        "credits": 3,
-                        "reqsSatisfied": ["CISC300+"]
-                    },
-                    {
-                        "courseID": 42,
-                        "listing": "ENGL167",
-                        "title": "Second Writing Requirement",
-                        "preReqs": [],
+                        "courseID": 46,
+                        "listing": "CISC303",
+                        "title": "Automata Theory",
+                        "preReqs": [5, 12],
                         "coReqs": [],
                         "offered": ["Spring", "Fall"],
                         "credits": 3,
-                        "reqsSatisfied": ["SWR"]
+                        "reqsSatisfied": ["CISC300+", "CISC303"]
+                    },
+                    {
+                        "courseID": 57,
+                        "listing": "ENGL410",
+                        "title": "Technical Writing",
+                        "preReqs": [17],
+                        "coReqs": [],
+                        "offered": ["Fall", "Winter", "Spring"],
+                        "credits": 3,
+                        "reqsSatisfied": ["SWR", "BREADTH"]
                     },
                     {
                         "courseID": 27,
@@ -299,14 +320,14 @@
                 "year": 2023,
                 "courses": [
                     {
-                        "courseID": 7,
-                        "listing": "CISC367",
-                        "title": "CISC Placeholder I (upper-level)",
-                        "preReqs": [],
+                        "courseID": 58,
+                        "listing": "CISC304",
+                        "title": "Logic for Programming",
+                        "preReqs": [5, 12],
                         "coReqs": [],
-                        "offered": ["Fall", "Spring"],
+                        "offered": ["Spring", "Fall"],
                         "credits": 3,
-                        "reqsSatisfied": ["CISC300+"]
+                        "reqsSatisfied": ["CISC300+", "CISC304"]
                     },
                     {
                         "courseID": 44,
@@ -357,24 +378,24 @@
                 "year": 2023,
                 "courses": [
                     {
-                        "courseID": 9,
-                        "listing": "CISC367",
-                        "title": "CISC Placeholder III (upper-level)",
-                        "preReqs": [],
+                        "courseID": 66,
+                        "listing": "CISC372",
+                        "title": "Parallel Computing",
+                        "preReqs": [5, 6],
                         "coReqs": [],
-                        "offered": ["Fall", "Spring"],
+                        "offered": ["Spring", "Fall"],
                         "credits": 3,
-                        "reqsSatisfied": ["CISC300+"]
+                        "reqsSatisfied": ["CISC300+", "CISC372"]
                     },
                     {
-                        "courseID": 10,
-                        "listing": "CISC367",
-                        "title": "CISC Placeholder IV (upper-level)",
-                        "preReqs": [],
+                        "courseID": 60,
+                        "listing": "CISC481",
+                        "title": "Artificial Intelligence",
+                        "preReqs": [5, 58],
                         "coReqs": [],
-                        "offered": ["Fall", "Spring"],
+                        "offered": ["Spring", "Fall"],
                         "credits": 3,
-                        "reqsSatisfied": ["CISC300+"]
+                        "reqsSatisfied": ["CISC300+", "CISC481"]
                     },
                     {
                         "courseID": 18,

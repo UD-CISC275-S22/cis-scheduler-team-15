@@ -939,5 +939,45 @@
         "offered": ["Spring", "Fall"],
         "credits": 3,
         "reqsSatisfied": ["Continuous"]
+    },
+    {
+        "courseID": 95,
+        "listing": "PHYS207",
+        "title": "Fundamentals of Physics I",
+        "preReqs": [],
+        "coReqs": [13, 96],
+        "offered": ["Fall", "Winter", "Spring", "Summer"],
+        "credits": 3,
+        "reqsSatisfied": ["Science"]
+    },
+    {
+        "courseID": 96,
+        "listing": "PHYS227",
+        "title": "Fundamentals of Physics Laboratory I",
+        "preReqs": [],
+        "coReqs": [95],
+        "offered": ["Fall", "Winter", "Spring", "Summer"],
+        "credits": 1,
+        "reqsSatisfied": ["Science"]
+    },
+    {
+        "courseID": 97,
+        "listing": "PHYS208",
+        "title": "Fundamentals of Physics II",
+        "preReqs": [95, 96],
+        "coReqs": [98],
+        "offered": ["Fall", "Winter", "Spring", "Summer"],
+        "credits": 3,
+        "reqsSatisfied": ["Science"]
+    },
+    {
+        "courseID": 98,
+        "listing": "PHYS228",
+        "title": "Fundamentals of Physics Laboratory II",
+        "preReqs": [95, 96],
+        "coReqs": [97],
+        "offered": ["Fall", "Winter", "Spring", "Summer"],
+        "credits": 1,
+        "reqsSatisfied": ["Science"]
     }
 ]
