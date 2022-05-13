@@ -54,7 +54,6 @@ export function DegreePlans({
     }
 
     function saveData() {
-        console.log(JSON.stringify(degreePlans));
         localStorage.setItem(saveDegreesKey, JSON.stringify(degreePlans));
     }
     function revert() {
@@ -104,7 +103,6 @@ export function DegreePlans({
         ].length;
         let courses: Course[] = [];
         for (let i = 0; i < numCourses; i++) {
-            console.log("CourseID: ", reducedArray[startingInd + 9 * i]);
             courses = [
                 ...courses,
                 replaceCourse(parseInt(reducedArray[startingInd + 9 * i]))

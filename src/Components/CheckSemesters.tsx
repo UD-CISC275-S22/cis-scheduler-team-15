@@ -63,13 +63,6 @@ export function CheckSemesters({
         const semesterPrereqIDs = semesterCourses.map(
             (course: Course): number[] => course.preReqs
         );
-        console.log(semester.semesterID);
-        console.log(
-            "Courses:",
-            semester.courses.map((course: Course) => course.courseID)
-        );
-        console.log("IDs:", semesterPrereqIDs);
-        console.log("Previous:", allCourseIDBefore);
         const prereqBool = semesterPrereqIDs.map(
             (prereqs: number[]): boolean[] =>
                 prereqs.map((prereq: number): boolean =>
@@ -115,17 +108,6 @@ export function CheckSemesters({
         const unsatisfiedPrereqIDs = prereqIDs.filter(
             (ID: number, index: number): boolean => !prereqSatisfied[index]
         );
-        console.log(
-            "Unsatisfied pre:",
-            unsatisfiedPrereqIDs
-                .map(
-                    (id: number) =>
-                        courses.filter(
-                            (course: Course): boolean => course.courseID === id
-                        )[0].listing
-                )
-                .join(", ")
-        );
 
         return unsatisfiedPrereqIDs
             .map(
@@ -145,7 +127,6 @@ export function CheckSemesters({
         const unsatisfiedCoreqIDs = coreqIDs.filter(
             (ID: number, index: number): boolean => !coreqSatisfied[index]
         );
-        console.log("Unsatisfied co:", unsatisfiedCoreqIDs);
         return unsatisfiedCoreqIDs
             .map(
                 (id: number) =>
