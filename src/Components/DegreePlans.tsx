@@ -58,16 +58,19 @@ export function DegreePlans({
         localStorage.setItem(saveDegreesKey, JSON.stringify(degreePlans));
     }
     function revert() {
-        setDegreePlans(DEGREEPLANSTARTBA);
-        localStorage.setItem(saveDegreesKey, JSON.stringify(DEGREEPLANSTARTBA));
-        // if (concentration !== "General (BA)") {
-        // } else {
-        //     setDegreePlans(DEGREEPLANSTARTBA);
-        //     localStorage.setItem(
-        //         saveDegreesKey,
-        //         JSON.stringify(DEGREEPLANSTARTBA)
-        //     );
-        // }
+        if (concentration !== "General (BA)") {
+            setDegreePlans(DEGREEPLANSTARTBS);
+            localStorage.setItem(
+                saveDegreesKey,
+                JSON.stringify(DEGREEPLANSTARTBS)
+            );
+        } else {
+            setDegreePlans(DEGREEPLANSTARTBA);
+            localStorage.setItem(
+                saveDegreesKey,
+                JSON.stringify(DEGREEPLANSTARTBA)
+            );
+        }
     }
 
     function uploadFile(event: React.ChangeEvent<HTMLInputElement>) {
