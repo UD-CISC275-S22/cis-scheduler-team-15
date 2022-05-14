@@ -373,6 +373,7 @@ export function DegreePlans({
                                     hidden={
                                         degree.degreeID !== currentDegreePlanID
                                     }
+                                    concentration={concentration}
                                 ></DegreePlanView>
                             </div>
                         </span>
