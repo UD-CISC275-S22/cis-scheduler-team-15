@@ -30,7 +30,6 @@ export function CourseList({
                     controlId="Course_listing_filter"
                     className="container"
                 >
-                    <Form.Label>Filter course listing:</Form.Label>
                     <Form.Control
                         data-testid={"course-filter"}
                         placeholder="Enter filter for courses here"
