@@ -147,13 +147,13 @@ describe("Final Project Tests (App)", () => {
         mOptions[0].click();
         expect(
             firstAccordian[0].innerHTML.toString().replace(/<[^>]+>/g, "")
-        ).toMatch("Degree Requirements Satified: Science, BISC207, FYS, FL");
-        mOptions[1].click();
+        ).toMatch(
+            "Degree Requirements Satified: Science, BISC207, FYS, FL, CISC108"
+        );
+        mOptions[0].click();
         expect(
             firstAccordian[0].innerHTML.toString().replace(/<[^>]+>/g, "")
-        ).toMatch(
-            "Degree Requirements Satified: Science, BISC207, FYS, FL, CISC108, CISC181"
-        );
+        ).toMatch("Degree Requirements Satified: Science, BISC207, FYS, FL");
     });
 
     test("Students can reset course's info back to default", () => {
