@@ -140,6 +140,7 @@ export function SemesterViewModal({
                                 variant="danger"
                                 onClick={() => deleteCourse(index, semester)}
                                 className="trash_button"
+                                data-testid="delete-course-button"
                             >
                                 🗑️
                             </Button>

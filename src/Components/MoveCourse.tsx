@@ -87,6 +87,7 @@ export function MoveCourse({
                     onClick={moveCourse}
                     title={"Click to move"}
                     className="button_move_semester"
+                    data-testid="move-course-button"
                 >
                     ⬌
                 </Button>

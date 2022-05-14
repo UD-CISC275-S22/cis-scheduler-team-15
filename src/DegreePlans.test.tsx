@@ -295,11 +295,46 @@ describe("Final Project Tests (DegreePlans)", () => {
             name: /Edit Plan 🖉/i
         });
         editPlanButton.click();
-        const editSemesterButtons = screen.queryAllByRole("button", {
+        let editSemesterButtons = screen.queryAllByRole("button", {
             name: "🖉"
         });
-
         editSemesterButtons[0].click();
+        const trashButtons1InitLength = screen.getAllByTestId(
+            "delete-course-button"
+        ).length;
+        let closeModal1 = screen.queryByRole("closebutton");
+        closeModal1?.click();
+        editSemesterButtons = screen.queryAllByRole("button", {
+            name: "🖉"
+        });
+        editSemesterButtons[4].click();
+        const trashButtons2InitLength =
+            screen.getAllByTestId("delete-course-button").length -
+            trashButtons1InitLength;
+        const closeModal2 = screen.queryByRole("closebutton");
+        closeModal2?.click();
+        editSemesterButtons = screen.queryAllByRole("button", {
+            name: "🖉"
+        });
+        editSemesterButtons[0].click();
+        const moveCourseButton = screen.getAllByTestId("move-course-button")[0];
+        moveCourseButton.click();
+        const trashButtons1AfterLength =
+            screen.getAllByTestId("delete-course-button").length -
+            trashButtons2InitLength -
+            1;
+        closeModal1 = screen.queryByRole("closebutton");
+        closeModal1?.click();
+        editSemesterButtons = screen.queryAllByRole("button", {
+            name: "🖉"
+        });
+        editSemesterButtons[4].click();
+        const trashButtons2AfterLength =
+            screen.getAllByTestId("delete-course-button").length -
+            trashButtons1AfterLength;
+
+        expect(trashButtons1AfterLength).toBe(trashButtons1InitLength - 1);
+        expect(trashButtons2AfterLength).toBe(trashButtons2InitLength + 1);
     });
 
     /*
