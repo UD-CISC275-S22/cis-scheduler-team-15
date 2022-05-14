@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import { DegreePlans } from "./Components/DegreePlans";
 import AllCourses from "./Data/CourseList.json";
 import userEvent from "@testing-library/user-event";
-import { Course } from "./Interfaces/course";
+import { Course } from "./Interfaces/Course";
 
 //import ReactDOM from "react-dom";
 
@@ -285,6 +285,58 @@ describe("Final Project Tests (DegreePlans)", () => {
         const text4 = screen.queryByText("9/124❌");
         expect(text4).toBeVisible();
     });
+
+    test("Students can move courses between semesters", () => {
+        const degreePlanButton = screen.getByRole("button", {
+            name: "Default"
+        });
+        degreePlanButton.click();
+        const editPlanButton = screen.getByRole("button", {
+            name: /Edit Plan 🖉/i
+        });
+        editPlanButton.click();
+        let editSemesterButtons = screen.queryAllByRole("button", {
+            name: "🖉"
+        });
+        editSemesterButtons[0].click();
+        const trashButtons1InitLength = screen.getAllByTestId(
+            "delete-course-button"
+        ).length;
+        let closeModal1 = screen.queryByRole("closebutton");
+        closeModal1?.click();
+        editSemesterButtons = screen.queryAllByRole("button", {
+            name: "🖉"
+        });
+        editSemesterButtons[4].click();
+        const trashButtons2InitLength =
+            screen.getAllByTestId("delete-course-button").length -
+            trashButtons1InitLength;
+        const closeModal2 = screen.queryByRole("closebutton");
+        closeModal2?.click();
+        editSemesterButtons = screen.queryAllByRole("button", {
+            name: "🖉"
+        });
+        editSemesterButtons[0].click();
+        const moveCourseButton = screen.getAllByTestId("move-course-button")[0];
+        moveCourseButton.click();
+        const trashButtons1AfterLength =
+            screen.getAllByTestId("delete-course-button").length -
+            trashButtons2InitLength -
+            1;
+        closeModal1 = screen.queryByRole("closebutton");
+        closeModal1?.click();
+        editSemesterButtons = screen.queryAllByRole("button", {
+            name: "🖉"
+        });
+        editSemesterButtons[4].click();
+        const trashButtons2AfterLength =
+            screen.getAllByTestId("delete-course-button").length -
+            trashButtons1AfterLength;
+
+        expect(trashButtons1AfterLength).toBe(trashButtons1InitLength - 1);
+        expect(trashButtons2AfterLength).toBe(trashButtons2InitLength + 1);
+    });
+
     /*
     test("Students will get an error in the semester view when a course with an unsatisfied prerequisite or corequisite is added", () => {
         const addEmpty = screen.getByRole("button", {

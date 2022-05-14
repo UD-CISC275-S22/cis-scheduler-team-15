@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "../App.css";
-import { Degree } from "../Interfaces/degree";
-import { Course } from "../Interfaces/course";
-import { Semester } from "../Interfaces/semester";
+import { Degree } from "../Interfaces/Degree";
+import { Course } from "../Interfaces/Course";
+import { Semester } from "../Interfaces/Semester";
 import { Button } from "react-bootstrap";
 
 export function CheckRequirements({

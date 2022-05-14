@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { Degree } from "../Interfaces/degree";
-import { Semester } from "../Interfaces/semester";
+import { Degree } from "../Interfaces/Degree";
+import { Semester } from "../Interfaces/Semester";
 import "../App.css";
 import { Row, Col, Button, Form } from "react-bootstrap";
 import { SemesterViewHome } from "./SemesterViewHome";
 import { AddSemester } from "./AddSemester";
 import { CheckRequirements } from "./CheckRequirements";
-import { Course } from "../Interfaces/course";
+import { Course } from "../Interfaces/Course";
 import { ShowAllErrors } from "./ShowAllErrors";
 
 export function DegreePlanView({

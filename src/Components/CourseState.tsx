@@ -1,7 +1,7 @@
 import { DegreePlans } from "./DegreePlans";
 import { DegreeRequirements } from "./DegreeRequirements";
 import { CourseList } from "./CourseList";
-import { Course } from "../Interfaces/course";
+import { Course } from "../Interfaces/Course";
 import AllCourses from "../Data/CourseList.json";
 import { useState } from "react";
 import React from "react";

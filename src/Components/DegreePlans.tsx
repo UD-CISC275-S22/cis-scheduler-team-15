@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Degree } from "../Interfaces/degree";
+import { Degree } from "../Interfaces/Degree";
 import { Stack, Col, Row, Button, Form } from "react-bootstrap";
 import PlanDataBA from "../Data/PlanDataBA.json";
 import PlanDataBS from "../Data/PlanDataBS.json";
 import { DegreePlanView } from "./DegreePlanView";
-import { Course } from "../Interfaces/course";
-import { Semester } from "../Interfaces/semester";
+import { Course } from "../Interfaces/Course";
+import { Semester } from "../Interfaces/Semester";
 
 const DEGREEPLANSTARTBA = PlanDataBA.map((degree): Degree => ({ ...degree }));
 const DEGREEPLANSTARTBS = PlanDataBS.map((degree): Degree => ({ ...degree }));
