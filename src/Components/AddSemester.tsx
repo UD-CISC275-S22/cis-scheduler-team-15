@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
-import { Degree } from "../Interfaces/degree";
-import { Semester } from "../Interfaces/semester";
+import { Degree } from "../Interfaces/Degree";
+import { Semester } from "../Interfaces/Semester";
 
 export function AddSemester({
     degree,

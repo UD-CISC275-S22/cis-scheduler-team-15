@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import { DegreePlans } from "./Components/DegreePlans";
 import AllCourses from "./Data/CourseList.json";
 import userEvent from "@testing-library/user-event";
-import { Course } from "./Interfaces/course";
+import { Course } from "./Interfaces/Course";
 
 //import ReactDOM from "react-dom";
 
@@ -285,6 +285,23 @@ describe("Final Project Tests (DegreePlans)", () => {
         const text4 = screen.queryByText("9/124❌");
         expect(text4).toBeVisible();
     });
+
+    test("Students can move courses between semesters", () => {
+        const degreePlanButton = screen.getByRole("button", {
+            name: "Default"
+        });
+        degreePlanButton.click();
+        const editPlanButton = screen.getByRole("button", {
+            name: /Edit Plan 🖉/i
+        });
+        editPlanButton.click();
+        const editSemesterButtons = screen.queryAllByRole("button", {
+            name: "🖉"
+        });
+
+        editSemesterButtons[0].click();
+    });
+
     /*
     test("Students will get an error in the semester view when a course with an unsatisfied prerequisite or corequisite is added", () => {
         const addEmpty = screen.getByRole("button", {

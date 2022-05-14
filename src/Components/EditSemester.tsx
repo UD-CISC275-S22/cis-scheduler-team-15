@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Button, Modal, Row, Col } from "react-bootstrap";
-import { Degree } from "../Interfaces/degree";
-import { Semester } from "../Interfaces/semester";
-import { Course } from "../Interfaces/course";
+import { Degree } from "../Interfaces/Degree";
+import { Semester } from "../Interfaces/Semester";
+import { Course } from "../Interfaces/Course";
 import { SemesterViewModal } from "./SemesterViewModal";
 import { AddCourse } from "./AddCourse";
 

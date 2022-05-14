@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { Course } from "../Interfaces/course";
-import { Semester } from "../Interfaces/semester";
+import { Course } from "../Interfaces/Course";
+import { Semester } from "../Interfaces/Semester";
 import { Button, Accordion } from "react-bootstrap";
 import "../App.css";
 import { MoveCourse } from "./MoveCourse";
-import { Degree } from "../Interfaces/degree";
+import { Degree } from "../Interfaces/Degree";
 
 export function SemesterViewModal({
     semester,
