@@ -2,7 +2,7 @@
 > react-typescript-starter@0.1.0 test
 > react-scripts test "--coverage"
 
-PASS src/App.test.tsx (64.826 s)
+PASS src/App.test.tsx (66.234 s)
   ● Console
 
     console.error
@@ -101,7 +101,7 @@ PASS src/App.test.tsx (64.826 s)
       at diffProperties (node_modules/react-dom/cjs/react-dom.development.js:9172:5)
       at prepareUpdate (node_modules/react-dom/cjs/react-dom.development.js:10215:10)
 
-PASS src/DegreePlans.test.tsx (9.866 s)
+PASS src/DegreePlans.test.tsx (9.908 s)
   ● Console
 
     console.error
@@ -170,5 +170,5 @@ All files                    |   36.41 |    66.11 |    31.7 |   36.07 |
 Test Suites: 2 passed, 2 total
 Tests:       21 passed, 21 total
 Snapshots:   0 total
-Time:        75.428 s
+Time:        76.921 s
 Ran all test suites.
