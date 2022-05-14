@@ -56,7 +56,7 @@
                         "coReqs": [],
                         "offered": ["Spring", "Fall"],
                         "credits": 3,
-                        "reqsSatisfied": ["Multicultural"]
+                        "reqsSatisfied": ["Multicultural", "Breadth"]
                     }
                 ],
                 "errors": ["", "", "", "", ""]
@@ -163,7 +163,7 @@
                         "coReqs": [],
                         "offered": ["Spring", "Fall"],
                         "credits": 3,
-                        "reqsSatisfied": ["CAH"]
+                        "reqsSatisfied": ["CAH", "Breadth"]
                     },
                     {
                         "courseID": 26,
@@ -173,7 +173,7 @@
                         "coReqs": [],
                         "offered": ["Spring", "Fall"],
                         "credits": 3,
-                        "reqsSatisfied": ["HCC"]
+                        "reqsSatisfied": ["HCC", "Breadth"]
                     },
                     {
                         "courseID": 97,
@@ -221,7 +221,7 @@
                         "coReqs": [],
                         "offered": ["Spring", "Fall"],
                         "credits": 3,
-                        "reqsSatisfied": ["SBS"]
+                        "reqsSatisfied": ["SBS", "Breadth"]
                     },
                     {
                         "courseID": 25,
@@ -231,7 +231,7 @@
                         "coReqs": [],
                         "offered": ["Spring", "Fall"],
                         "credits": 3,
-                        "reqsSatisfied": ["CAH"]
+                        "reqsSatisfied": ["CAH", "Breadth"]
                     },
                     {
                         "courseID": 43,
@@ -289,7 +289,7 @@
                         "coReqs": [],
                         "offered": ["Spring", "Fall"],
                         "credits": 3,
-                        "reqsSatisfied": ["HCC"]
+                        "reqsSatisfied": ["HCC", "Breadth"]
                     },
                     {
                         "courseID": 29,
@@ -299,7 +299,7 @@
                         "coReqs": [],
                         "offered": ["Spring", "Fall"],
                         "credits": 3,
-                        "reqsSatisfied": ["SBS"]
+                        "reqsSatisfied": ["SBS", "Breadth"]
                     },
                     {
                         "courseID": 35,

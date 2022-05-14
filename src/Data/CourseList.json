@@ -147,7 +147,7 @@
         "preReqs": [14],
         "coReqs": [],
         "offered": ["Fall", "Winter", "Spring", "Summer"],
-        "credits": 2,
+        "credits": 4,
         "reqsSatisfied": ["MATH243", "Continuous"]
     },
     {
@@ -198,7 +198,7 @@
         "coReqs": [],
         "offered": ["Fall", "Spring"],
         "credits": 3,
-        "reqsSatisfied": ["DLE", "Capstone"]
+        "reqsSatisfied": ["DLE", "Capstone", "Systems"]
     },
     {
         "courseID": 21,
@@ -558,7 +558,7 @@
         "coReqs": [],
         "offered": ["Fall", "Winter", "Spring", "Summer"],
         "credits": 3,
-        "reqsSatisfied": ["SWR", "BREADTH", "BREADTH300+"]
+        "reqsSatisfied": ["SWR", "Breadth", "BREADTH300+"]
     },
     {
         "courseID": 57,
@@ -568,7 +568,7 @@
         "coReqs": [],
         "offered": ["Fall", "Winter", "Spring"],
         "credits": 3,
-        "reqsSatisfied": ["SWR", "BREADTH", "BREADTH300+"]
+        "reqsSatisfied": ["SWR", "Breadth", "BREADTH300+"]
     },
     {
         "courseID": 58,
@@ -608,7 +608,7 @@
         "coReqs": [],
         "offered": ["Spring", "Fall"],
         "credits": 4,
-        "reqsSatisfied": ["Statistics"]
+        "reqsSatisfied": ["Statistics", "MATH205"]
     },
     {
         "courseID": 62,
@@ -688,7 +688,7 @@
         "coReqs": [70],
         "offered": ["Fall", "Winter", "Spring", "Summer"],
         "credits": 3,
-        "reqsSatisfied": ["CISC300+", "CHEM213"]
+        "reqsSatisfied": ["Organic"]
     },
     {
         "courseID": 70,
@@ -698,7 +698,7 @@
         "coReqs": [69],
         "offered": ["Fall", "Winter", "Spring", "Summer"],
         "credits": 1,
-        "reqsSatisfied": ["CISC300+", "CHEM215"]
+        "reqsSatisfied": ["Organic"]
     },
     {
         "courseID": 71,
@@ -708,7 +708,7 @@
         "coReqs": [72],
         "offered": ["Fall", "Winter", "Summer"],
         "credits": 3,
-        "reqsSatisfied": ["CISC300+", "CHEM321"]
+        "reqsSatisfied": ["Organic"]
     },
     {
         "courseID": 72,
@@ -718,7 +718,7 @@
         "coReqs": [71],
         "offered": ["Fall", "Winter", "Spring", "Summer"],
         "credits": 1,
-        "reqsSatisfied": ["CISC300+", "CHEM325"]
+        "reqsSatisfied": ["Organic"]
     },
     {
         "courseID": 73,
@@ -748,7 +748,7 @@
         "coReqs": [],
         "offered": ["Spring", "Fall"],
         "credits": 3,
-        "reqsSatisfied": ["CISC300+", "CISC464"]
+        "reqsSatisfied": ["CISC300+", "CISC464", "Cybersecurity", "Systems"]
     },
     {
         "courseID": 76,
@@ -768,7 +768,7 @@
         "coReqs": [],
         "offered": ["Spring", "Fall"],
         "credits": 3,
-        "reqsSatisfied": []
+        "reqsSatisfied": ["Cyberecurity"]
     },
     {
         "courseID": 78,
@@ -778,7 +778,7 @@
         "coReqs": [],
         "offered": ["Spring", "Fall"],
         "credits": 3,
-        "reqsSatisfied": ["Cybersecurity"]
+        "reqsSatisfied": ["Cybersecurity", "Systems"]
     },
     {
         "courseID": 79,
@@ -838,7 +838,7 @@
         "coReqs": [],
         "offered": ["Spring", "Fall"],
         "credits": 3,
-        "reqsSatisfied": ["CISC300+", "CISC437"]
+        "reqsSatisfied": ["CISC300+", "CISC437", "Systems"]
     },
     {
         "courseID": 85,
@@ -979,5 +979,95 @@
         "offered": ["Fall", "Winter", "Spring", "Summer"],
         "credits": 1,
         "reqsSatisfied": ["Science"]
+    },
+    {
+        "courseID": 99,
+        "listing": "CPEG494",
+        "title": "System Hardening and Protection",
+        "preReqs": [],
+        "coReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["CPEG494"]
+    },
+    {
+        "courseID": 100,
+        "listing": "MATH351",
+        "title": "Engineering Mathematics I",
+        "preReqs": [],
+        "coReqs": [15],
+        "offered": ["Fall", "Winter", "Spring"],
+        "credits": 3,
+        "reqsSatisfied": ["MATH351"]
+    },
+    {
+        "courseID": 101,
+        "listing": "MATH428",
+        "title": "Computational Mathematics II",
+        "preReqs": [86],
+        "coReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["MATH428"]
+    },
+    {
+        "courseID": 102,
+        "listing": "MATH450",
+        "title": "Mathematical Statistics",
+        "preReqs": [73],
+        "coReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["MATH450"]
+    },
+    {
+        "courseID": 103,
+        "listing": "CPEG470",
+        "title": "Web Applications Security",
+        "preReqs": [],
+        "coReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["Cybersecurity"]
+    },
+    {
+        "courseID": 104,
+        "listing": "CPEG497",
+        "title": "Advanced Cybersecurity",
+        "preReqs": [77],
+        "coReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["Cybersecurity", "Systems"]
+    },
+    {
+        "courseID": 105,
+        "listing": "CISC453",
+        "title": "Simulation of Computer Networks",
+        "preReqs": [74],
+        "coReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["Systems"]
+    },
+    {
+        "courseID": 106,
+        "listing": "CISC459",
+        "title": "Topics in Communications, Distributed Computing and Networks",
+        "preReqs": [74],
+        "coReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["Systems"]
+    },
+    {
+        "courseID": 107,
+        "listing": "CISC474",
+        "title": "Advanced Web Technologies",
+        "preReqs": [4],
+        "coReqs": [],
+        "offered": ["Spring", "Fall"],
+        "credits": 3,
+        "reqsSatisfied": ["Systems"]
     }
 ]

@@ -410,7 +410,7 @@ describe("Final Project Tests (App)", () => {
         courseListButton.click();
 
         const accordions = screen.queryAllByTestId("accordian-item", {});
-        expect(accordions.length).toBe(98);
+        expect(accordions.length).toBe(107);
     });
 
     test("Students can edit the course code", () => {
@@ -538,6 +538,6 @@ describe("Final Project Tests (App)", () => {
         userEvent.type(filterBox, "CISC");
 
         const accordions = screen.queryAllByTestId("accordian-item", {});
-        expect(accordions.length).toBe(32);
+        expect(accordions.length).toBe(35);
     });
 });
