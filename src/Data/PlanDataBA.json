@@ -1,0 +1,472 @@
+[
+    {
+        "degreeID": 1,
+        "name": "Default",
+        "semesters": [
+            {
+                "semesterID": 1,
+                "season": "Fall",
+                "year": 2020,
+                "courses": [
+                    {
+                        "courseID": 1,
+                        "listing": "CISC108",
+                        "title": "Introduction to Computer Science I",
+                        "preReqs": [],
+                        "coReqs": [13],
+                        "offered": ["Fall", "Spring"],
+                        "credits": 3,
+                        "reqsSatisfied": ["CISC108"]
+                    },
+                    {
+                        "courseID": 16,
+                        "listing": "EGGG101",
+                        "title": "Introduction to Engineering",
+                        "preReqs": [],
+                        "coReqs": [],
+                        "offered": ["Fall"],
+                        "credits": 2,
+                        "reqsSatisfied": ["FYS"]
+                    },
+                    {
+                        "courseID": 17,
+                        "listing": "ENGL110",
+                        "title": "Seminar in Composition",
+                        "preReqs": [],
+                        "coReqs": [],
+                        "offered": ["Fall", "Winter", "Spring", "Summer"],
+                        "credits": 3,
+                        "reqsSatisfied": ["ENGL110"]
+                    },
+                    {
+                        "courseID": 13,
+                        "listing": "MATH241",
+                        "title": "Analytic Geometry and Calculus A",
+                        "preReqs": [],
+                        "coReqs": [],
+                        "offered": ["Fall", "Winter", "Spring", "Summer"],
+                        "credits": 4,
+                        "reqsSatisfied": ["MATH241"]
+                    },
+                    {
+                        "courseID": 23,
+                        "listing": "UNIV167",
+                        "title": "Breadth I (Multicultural)",
+                        "preReqs": [],
+                        "coReqs": [],
+                        "offered": ["Spring", "Fall"],
+                        "credits": 3,
+                        "reqsSatisfied": ["Multicultural", "Breadth"]
+                    }
+                ],
+                "errors": ["", "", "", "", ""]
+            },
+            {
+                "semesterID": 2,
+                "season": "Spring",
+                "year": 2021,
+                "courses": [
+                    {
+                        "courseID": 2,
+                        "listing": "CISC181",
+                        "title": "Introduction to Computer Science II",
+                        "preReqs": [1],
+                        "coReqs": [13],
+                        "offered": ["Fall", "Spring"],
+                        "credits": 3,
+                        "reqsSatisfied": ["CISC181"]
+                    },
+                    {
+                        "courseID": 3,
+                        "listing": "CISC210",
+                        "title": "Introduction to Systems Programming",
+                        "preReqs": [1],
+                        "coReqs": [13],
+                        "offered": ["Fall", "Spring"],
+                        "credits": 3,
+                        "reqsSatisfied": ["CISC210"]
+                    },
+                    {
+                        "courseID": 12,
+                        "listing": "MATH210",
+                        "title": "Discrete Mathematics I",
+                        "preReqs": [],
+                        "coReqs": [13],
+                        "offered": ["Fall", "Winter", "Spring"],
+                        "credits": 3,
+                        "reqsSatisfied": ["MATH210"]
+                    },
+                    {
+                        "courseID": 30,
+                        "listing": "UNIV167",
+                        "title": "Breadth I (Natural Sciences Lab)",
+                        "preReqs": [],
+                        "coReqs": [],
+                        "offered": ["Spring", "Fall"],
+                        "credits": 4,
+                        "reqsSatisfied": ["Science", "Breadth"]
+                    },
+                    {
+                        "courseID": 31,
+                        "listing": "UNIV167",
+                        "title": "Free I",
+                        "preReqs": [],
+                        "coReqs": [],
+                        "offered": ["Spring", "Fall"],
+                        "credits": 3,
+                        "reqsSatisfied": []
+                    }
+                ],
+                "errors": ["", "", "", "", ""]
+            },
+            {
+                "semesterID": 3,
+                "season": "Fall",
+                "year": 2021,
+                "courses": [
+                    {
+                        "courseID": 5,
+                        "listing": "CISC220",
+                        "title": "Data Structures",
+                        "preReqs": [3],
+                        "coReqs": [13],
+                        "offered": ["Fall", "Spring"],
+                        "credits": 3,
+                        "reqsSatisfied": ["CISC220"]
+                    },
+                    {
+                        "courseID": 6,
+                        "listing": "CISC260",
+                        "title": "Machine Organization and Assembly Language",
+                        "preReqs": [3],
+                        "coReqs": [],
+                        "offered": ["Fall", "Spring"],
+                        "credits": 3,
+                        "reqsSatisfied": ["CISC260"]
+                    },
+                    {
+                        "courseID": 24,
+                        "listing": "UNIV167",
+                        "title": "Breadth I (Creative Arts and Humanities)",
+                        "preReqs": [],
+                        "coReqs": [],
+                        "offered": ["Spring", "Fall"],
+                        "credits": 3,
+                        "reqsSatisfied": ["CAH", "Breadth"]
+                    },
+                    {
+                        "courseID": 26,
+                        "listing": "UNIV167",
+                        "title": "Breadth I (History and Cultural Change)",
+                        "preReqs": [],
+                        "coReqs": [],
+                        "offered": ["Spring", "Fall"],
+                        "credits": 3,
+                        "reqsSatisfied": ["HCC", "Breadth"]
+                    },
+                    {
+                        "courseID": 32,
+                        "listing": "UNIV167",
+                        "title": "Free II",
+                        "preReqs": [],
+                        "coReqs": [],
+                        "offered": ["Spring", "Fall"],
+                        "credits": 3,
+                        "reqsSatisfied": []
+                    }
+                ],
+                "errors": ["", "", "", "", ""]
+            },
+            {
+                "semesterID": 4,
+                "season": "Spring",
+                "year": 2022,
+                "courses": [
+                    {
+                        "courseID": 4,
+                        "listing": "CISC275",
+                        "title": "Introduction to Software Engineering",
+                        "preReqs": [2, 5],
+                        "coReqs": [],
+                        "offered": ["Fall", "Spring"],
+                        "credits": 3,
+                        "reqsSatisfied": ["CISC275"]
+                    },
+                    {
+                        "courseID": 29,
+                        "listing": "UNIV167",
+                        "title": "Breadth II (Social and Behavioral Sciences)",
+                        "preReqs": [],
+                        "coReqs": [],
+                        "offered": ["Spring", "Fall"],
+                        "credits": 3,
+                        "reqsSatisfied": ["SBS", "Breadth"]
+                    },
+                    {
+                        "courseID": 25,
+                        "listing": "UNIV167",
+                        "title": "Breadth II (Creative Arts and Humanities)",
+                        "preReqs": [],
+                        "coReqs": [],
+                        "offered": ["Spring", "Fall"],
+                        "credits": 3,
+                        "reqsSatisfied": ["CAH", "Breadth"]
+                    },
+                    {
+                        "courseID": 33,
+                        "listing": "UNIV167",
+                        "title": "Free III",
+                        "preReqs": [],
+                        "coReqs": [],
+                        "offered": ["Spring", "Fall"],
+                        "credits": 3,
+                        "reqsSatisfied": []
+                    },
+                    {
+                        "courseID": 34,
+                        "listing": "UNIV167",
+                        "title": "Free IV",
+                        "preReqs": [],
+                        "coReqs": [],
+                        "offered": ["Spring", "Fall"],
+                        "credits": 3,
+                        "reqsSatisfied": []
+                    }
+                ],
+                "errors": ["", "", "", "", ""]
+            },
+            {
+                "semesterID": 5,
+                "season": "Fall",
+                "year": 2022,
+                "courses": [
+                    {
+                        "courseID": 7,
+                        "listing": "CISC367",
+                        "title": "CISC Placeholder I (upper-level)",
+                        "preReqs": [],
+                        "coReqs": [],
+                        "offered": ["Fall", "Spring"],
+                        "credits": 3,
+                        "reqsSatisfied": ["CISC300+"]
+                    },
+                    {
+                        "courseID": 42,
+                        "listing": "ENGL167",
+                        "title": "Second Writing Requirement",
+                        "preReqs": [],
+                        "coReqs": [],
+                        "offered": ["Spring", "Fall"],
+                        "credits": 3,
+                        "reqsSatisfied": ["SWR"]
+                    },
+                    {
+                        "courseID": 27,
+                        "listing": "UNIV167",
+                        "title": "Breadth II (History and Cultural Change)",
+                        "preReqs": [],
+                        "coReqs": [],
+                        "offered": ["Spring", "Fall"],
+                        "credits": 3,
+                        "reqsSatisfied": ["HCC", "Breadth"]
+                    },
+                    {
+                        "courseID": 29,
+                        "listing": "UNIV167",
+                        "title": "Breadth II (Social and Behavioral Sciences)",
+                        "preReqs": [],
+                        "coReqs": [],
+                        "offered": ["Spring", "Fall"],
+                        "credits": 3,
+                        "reqsSatisfied": ["SBS", "Breadth"]
+                    },
+                    {
+                        "courseID": 35,
+                        "listing": "UNIV167",
+                        "title": "Free V",
+                        "preReqs": [],
+                        "coReqs": [],
+                        "offered": ["Spring", "Fall"],
+                        "credits": 3,
+                        "reqsSatisfied": []
+                    }
+                ],
+                "errors": ["", "", "", "", ""]
+            },
+            {
+                "semesterID": 6,
+                "season": "Spring",
+                "year": 2023,
+                "courses": [
+                    {
+                        "courseID": 8,
+                        "listing": "CISC367",
+                        "title": "CISC Placeholder II (upper-level)",
+                        "preReqs": [],
+                        "coReqs": [],
+                        "offered": ["Fall", "Spring"],
+                        "credits": 3,
+                        "reqsSatisfied": ["CISC300+"]
+                    },
+                    {
+                        "courseID": 44,
+                        "listing": "UNIV167",
+                        "title": "Breadth I (General)",
+                        "preReqs": [],
+                        "coReqs": [],
+                        "offered": ["Spring", "Fall"],
+                        "credits": 3,
+                        "reqsSatisfied": ["CAH", "Breadth"]
+                    },
+                    {
+                        "courseID": 45,
+                        "listing": "UNIV167",
+                        "title": "Breadth II (General)",
+                        "preReqs": [],
+                        "coReqs": [],
+                        "offered": ["Spring", "Fall"],
+                        "credits": 3,
+                        "reqsSatisfied": ["CAH", "Breadth"]
+                    },
+                    {
+                        "courseID": 36,
+                        "listing": "UNIV167",
+                        "title": "Free VI",
+                        "preReqs": [],
+                        "coReqs": [],
+                        "offered": ["Spring", "Fall"],
+                        "credits": 3,
+                        "reqsSatisfied": []
+                    },
+                    {
+                        "courseID": 37,
+                        "listing": "UNIV167",
+                        "title": "Free VII",
+                        "preReqs": [],
+                        "coReqs": [],
+                        "offered": ["Spring", "Fall"],
+                        "credits": 3,
+                        "reqsSatisfied": []
+                    }
+                ],
+                "errors": ["", "", "", "", ""]
+            },
+            {
+                "semesterID": 7,
+                "season": "Fall",
+                "year": 2023,
+                "courses": [
+                    {
+                        "courseID": 9,
+                        "listing": "CISC367",
+                        "title": "CISC Placeholder III (upper-level)",
+                        "preReqs": [],
+                        "coReqs": [],
+                        "offered": ["Fall", "Spring"],
+                        "credits": 3,
+                        "reqsSatisfied": ["CISC300+"]
+                    },
+                    {
+                        "courseID": 10,
+                        "listing": "CISC367",
+                        "title": "CISC Placeholder IV (upper-level)",
+                        "preReqs": [],
+                        "coReqs": [],
+                        "offered": ["Fall", "Spring"],
+                        "credits": 3,
+                        "reqsSatisfied": ["CISC300+"]
+                    },
+                    {
+                        "courseID": 18,
+                        "listing": "UNIV367",
+                        "title": "Breadth I (upper-level)",
+                        "preReqs": [],
+                        "coReqs": [],
+                        "offered": ["Fall", "Spring"],
+                        "credits": 3,
+                        "reqsSatisfied": ["BREADTH300+", "Breadth"]
+                    },
+                    {
+                        "courseID": 21,
+                        "listing": "CISC498",
+                        "title": "Computer Science Senior Design Project I",
+                        "preReqs": [4, 43],
+                        "coReqs": [],
+                        "offered": ["Fall"],
+                        "credits": 3,
+                        "reqsSatisfied": ["CISC300+"]
+                    },
+                    {
+                        "courseID": 38,
+                        "listing": "UNIV167",
+                        "title": "Free VIII",
+                        "preReqs": [],
+                        "coReqs": [],
+                        "offered": ["Spring", "Fall"],
+                        "credits": 3,
+                        "reqsSatisfied": []
+                    }
+                ],
+                "errors": ["", "", "", "", ""]
+            },
+            {
+                "semesterID": 8,
+                "season": "Spring",
+                "year": 2024,
+                "courses": [
+                    {
+                        "courseID": 22,
+                        "listing": "CISC499",
+                        "title": "Computer Science Senior Design Project II (Capstone)",
+                        "preReqs": [21],
+                        "coReqs": [],
+                        "offered": ["Spring"],
+                        "credits": 3,
+                        "reqsSatisfied": ["DLE", "Capstone"]
+                    },
+                    {
+                        "courseID": 19,
+                        "listing": "UNIV367",
+                        "title": "Breadth II (upper-level)",
+                        "preReqs": [],
+                        "coReqs": [],
+                        "offered": ["Fall", "Spring"],
+                        "credits": 3,
+                        "reqsSatisfied": ["BREADTH300+", "Breadth"]
+                    },
+                    {
+                        "courseID": 39,
+                        "listing": "UNIV167",
+                        "title": "Free IX",
+                        "preReqs": [],
+                        "coReqs": [],
+                        "offered": ["Spring", "Fall"],
+                        "credits": 3,
+                        "reqsSatisfied": []
+                    },
+                    {
+                        "courseID": 40,
+                        "listing": "UNIV167",
+                        "title": "Free X",
+                        "preReqs": [],
+                        "coReqs": [],
+                        "offered": ["Spring", "Fall"],
+                        "credits": 3,
+                        "reqsSatisfied": []
+                    },
+                    {
+                        "courseID": 41,
+                        "listing": "UNIV167",
+                        "title": "Free XI",
+                        "preReqs": [],
+                        "coReqs": [],
+                        "offered": ["Spring", "Fall"],
+                        "credits": 3,
+                        "reqsSatisfied": []
+                    }
+                ],
+                "errors": ["", "", "", "", ""]
+            }
+        ]
+    }
+]

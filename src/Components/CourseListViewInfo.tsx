@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Course } from "../Interfaces/course";
+import { Course } from "../Interfaces/Course";
 import { Accordion } from "react-bootstrap";
 import { CourseListViewInfoEdit } from "./CourseListViewInfoEdit";
 import "../App.css";

@@ -1,7 +1,7 @@
 import { DegreePlans } from "./DegreePlans";
 import { DegreeRequirements } from "./DegreeRequirements";
 import { CourseList } from "./CourseList";
-import { Course } from "../Interfaces/course";
+import { Course } from "../Interfaces/Course";
 import AllCourses from "../Data/CourseList.json";
 import { useState } from "react";
 import React from "react";
@@ -11,16 +11,26 @@ import { Button, Stack, Row, Col, Form } from "react-bootstrap";
 const COURSES = AllCourses.map((course): Course => ({ ...course }));
 const CONCENTRATONS = [
     "General (BA)",
-    "Artific Intelligence and Robotics (BS)",
-    "Bioinformtics (BS)",
+    "Artificial Intelligence and Robotics (BS)",
+    "Bioinformatics (BS)",
     "Cybersecurity (BS)",
     "Data Science (BS)",
     "High Performance Computing (BS)",
     "Systems and Networks (BS)",
     "Theory and Computation (BS)"
 ];
-const saveCoursesKey = "COURSE-DATA";
-let courseInput = COURSES;
+const saveCoursesKey = "COURSE-DATA2";
+let courseInput = COURSES.sort((a, b) => {
+    const fa = a.listing.toLowerCase();
+    const fb = b.listing.toLowerCase();
+    if (fa < fb) {
+        return -1;
+    } else if (fb > fa) {
+        return 1;
+    } else {
+        return 0;
+    }
+});
 
 const previousData = localStorage.getItem(saveCoursesKey);
 if (previousData !== null) {
@@ -157,7 +167,9 @@ export function CourseState(): JSX.Element {
                     <hr></hr>
                     <Row>
                         <h3>Degree Requirements</h3>
-                        <DegreeRequirements></DegreeRequirements>
+                        <DegreeRequirements
+                            concentration={concentration}
+                        ></DegreeRequirements>
                     </Row>
                     <hr></hr>
                     <h3>External Links:</h3>
@@ -216,7 +228,10 @@ export function CourseState(): JSX.Element {
                     </div>
 
                     <Row>
-                        <DegreePlans courses={courses}></DegreePlans>
+                        <DegreePlans
+                            courses={courses}
+                            concentration={concentration}
+                        ></DegreePlans>
                     </Row>
                 </div>
                 <div hidden={!courseView}>

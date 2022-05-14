@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Course } from "../Interfaces/course";
+import { Course } from "../Interfaces/Course";
 import { useState } from "react";
 import { Accordion, Button, Form, InputGroup, Row, Col } from "react-bootstrap";
 import AllCourses from "../Data/CourseList.json";

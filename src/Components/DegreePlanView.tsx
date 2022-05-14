@@ -1,24 +1,26 @@
 import React, { useState } from "react";
-import { Degree } from "../Interfaces/degree";
-import { Semester } from "../Interfaces/semester";
+import { Degree } from "../Interfaces/Degree";
+import { Semester } from "../Interfaces/Semester";
 import "../App.css";
 import { Row, Col, Button, Form } from "react-bootstrap";
 import { SemesterViewHome } from "./SemesterViewHome";
 import { AddSemester } from "./AddSemester";
 import { CheckRequirements } from "./CheckRequirements";
-import { Course } from "../Interfaces/course";
+import { Course } from "../Interfaces/Course";
 import { ShowAllErrors } from "./ShowAllErrors";
 
 export function DegreePlanView({
     degree,
     editDegree,
     hidden,
-    courses
+    courses,
+    concentration
 }: {
     degree: Degree;
     editDegree: (degreeID: number, newDegree: Degree) => void;
     hidden: boolean;
     courses: Course[];
+    concentration: string;
 }): JSX.Element {
     let initialYear = 2020;
     if (degree.semesters.length > 0) {
@@ -144,8 +146,10 @@ export function DegreePlanView({
         <div hidden={hidden}>
             <div style={{ margin: "5px" }} className="App-thin3 Align-center">
                 <div>
-                    {credits}/124
-                    {credits < 124 ? "❌" : "✔️"}
+                    <h4>
+                        {credits}/124
+                        {credits < 124 ? "❌" : "✔️"}
+                    </h4>
                 </div>
             </div>
             <div className="Align-right">
@@ -216,7 +220,10 @@ export function DegreePlanView({
 
             <Row className="App-thin">
                 <Col>
-                    <CheckRequirements degree={degree}></CheckRequirements>
+                    <CheckRequirements
+                        degree={degree}
+                        concentration={concentration}
+                    ></CheckRequirements>
                 </Col>
                 <Col>
                     <AddSemester

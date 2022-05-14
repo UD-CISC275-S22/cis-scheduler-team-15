@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Accordion } from "react-bootstrap";
-import { Course } from "../Interfaces/course";
+import { Course } from "../Interfaces/Course";
 import { CourseListViewInfo } from "./CourseListViewInfo";
 export function CourseListView({
     course,

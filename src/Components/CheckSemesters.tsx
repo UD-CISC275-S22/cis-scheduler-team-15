@@ -1,6 +1,6 @@
-import { Degree } from "../Interfaces/degree";
-import { Semester } from "../Interfaces/semester";
-import { Course } from "../Interfaces/course";
+import { Degree } from "../Interfaces/Degree";
+import { Semester } from "../Interfaces/Semester";
+import { Course } from "../Interfaces/Course";
 
 export function CheckSemesters({
     courses,
@@ -108,6 +108,7 @@ export function CheckSemesters({
         const unsatisfiedPrereqIDs = prereqIDs.filter(
             (ID: number, index: number): boolean => !prereqSatisfied[index]
         );
+
         return unsatisfiedPrereqIDs
             .map(
                 (id: number) =>

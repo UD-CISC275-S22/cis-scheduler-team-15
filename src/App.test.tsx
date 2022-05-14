@@ -131,7 +131,7 @@ describe("Final Project Tests (App)", () => {
         uOptions[0].click();
         expect(
             firstAccordian[0].innerHTML.toString().replace(/<[^>]+>/g, "")
-        ).toMatch("Degree Requirements Satified: CISC108, FYS");
+        ).toMatch("Degree Requirements Satified: Science, BISC207, FYS");
 
         const cAccordian = screen.queryByTestId("edit-coll-req-accordian");
         const cOptions = screen.queryAllByTestId("edit-coll-req-option");
@@ -139,7 +139,7 @@ describe("Final Project Tests (App)", () => {
         cOptions[0].click();
         expect(
             firstAccordian[0].innerHTML.toString().replace(/<[^>]+>/g, "")
-        ).toMatch("Degree Requirements Satified: CISC108, FYS, FL");
+        ).toMatch("Degree Requirements Satified: Science, BISC207, FYS, FL");
 
         const mAccordian = screen.queryByTestId("edit-major-req-accordian");
         const mOptions = screen.queryAllByTestId("edit-major-req-option");
@@ -147,11 +147,13 @@ describe("Final Project Tests (App)", () => {
         mOptions[0].click();
         expect(
             firstAccordian[0].innerHTML.toString().replace(/<[^>]+>/g, "")
-        ).toMatch("Degree Requirements Satified: FYS, FL");
+        ).toMatch("Degree Requirements Satified: Science, BISC207, FYS, FL");
         mOptions[1].click();
         expect(
             firstAccordian[0].innerHTML.toString().replace(/<[^>]+>/g, "")
-        ).toMatch("Degree Requirements Satified: FYS, FL, CISC181");
+        ).toMatch(
+            "Degree Requirements Satified: Science, BISC207, FYS, FL, CISC108, CISC181"
+        );
     });
 
     test("Students can reset course's info back to default", () => {
@@ -161,7 +163,7 @@ describe("Final Project Tests (App)", () => {
         courseListButton.click();
 
         const text1 = screen.queryAllByText(
-            "CISC108: Introduction to Computer Science I"
+            "BISC207: Introduction to Biology I"
         );
         expect(text1[0]).toBeVisible();
         const firstAccordian = screen.getAllByTestId("accordian-item");
@@ -219,18 +221,18 @@ describe("Final Project Tests (App)", () => {
         mOptions[1].click();
         expect(
             firstAccordian[0].innerHTML.toString().replace(/<[^>]+>/g, "")
-        ).toMatch("Degree Requirements Satified: CISC108, FYS, FL, CISC181");
+        ).toMatch(
+            "Degree Requirements Satified: Science, BISC207, FYS, FL, CISC181"
+        );
 
         resetButton.click();
         expect(
             firstAccordian[0].innerHTML.toString().replace(/<[^>]+>/g, "")
-        ).toMatch("Credit(s): 3");
-        text = screen.queryAllByText(
-            "CISC108: Introduction to Computer Science I"
-        );
+        ).toMatch("Credit(s): 4");
+        text = screen.queryAllByText("BISC207: Introduction to Biology I");
         expect(
             firstAccordian[0].innerHTML.toString().replace(/<[^>]+>/g, "")
-        ).toMatch("Degree Requirements Satified: CISC108");
+        ).toMatch("Degree Requirements Satified: Science, BISC207");
         expect(text[0]).toBeVisible();
     });
     test("Update courses in existing degree plans when course list is updated", () => {
@@ -238,7 +240,8 @@ describe("Final Project Tests (App)", () => {
             name: /Move to Course List 📄/i
         });
         courseListButton.click();
-
+        const filterBox = screen.getByTestId("course-filter");
+        userEvent.type(filterBox, "CISC");
         const text1 = screen.queryAllByText(
             "CISC108: Introduction to Computer Science I"
         );
@@ -333,7 +336,7 @@ describe("Final Project Tests (App)", () => {
         addPreReqButton.click();
         expect(
             firstAccordian[0].innerHTML.toString().replace(/<[^>]+>/g, "")
-        ).toMatch("Pre-Requisite Courses: CISC181");
+        ).toMatch("Pre-Requisite Courses: BISC208");
         addPreReqButton.click();
         expect(
             firstAccordian[0].innerHTML.toString().replace(/<[^>]+>/g, "")
@@ -362,7 +365,7 @@ describe("Final Project Tests (App)", () => {
 
         expect(
             firstAccordian[0].innerHTML.toString().replace(/<[^>]+>/g, "")
-        ).toMatch("Co-Requisite Courses: MATH241");
+        ).toMatch("Co-Requisite Courses: CHEM103");
 
         const coReqOptionsRem = screen.getAllByTestId("remove-coReq");
         const coReqBox = screen.getAllByRole("combobox");
@@ -377,7 +380,7 @@ describe("Final Project Tests (App)", () => {
         removeCoReqButton.click();
         expect(
             firstAccordian[0].innerHTML.toString().replace(/<[^>]+>/g, "")
-        ).toMatch("Co-Requisite Courses: MATH241");
+        ).toMatch("Co-Requisite Courses: CHEM103");
         expect(
             firstAccordian[0].innerHTML.toString().replace(/<[^>]+>/g, "")
         ).toMatch("Course not one of the CoReqs");
@@ -387,7 +390,7 @@ describe("Final Project Tests (App)", () => {
         addCoReqButton.click();
         expect(
             firstAccordian[0].innerHTML.toString().replace(/<[^>]+>/g, "")
-        ).toMatch("Co-Requisite Courses: CISC181, MATH241");
+        ).toMatch("Co-Requisite Courses: BISC208, CHEM103");
         addCoReqButton.click();
         expect(
             firstAccordian[0].innerHTML.toString().replace(/<[^>]+>/g, "")
@@ -397,7 +400,7 @@ describe("Final Project Tests (App)", () => {
         removeCoReqButton.click();
         expect(
             firstAccordian[0].innerHTML.toString().replace(/<[^>]+>/g, "")
-        ).toMatch("Co-Requisite Courses: MATH241");
+        ).toMatch("Co-Requisite Courses: CHEM103");
     });
 
     test("Students can see a list of existing courses", () => {
@@ -407,7 +410,7 @@ describe("Final Project Tests (App)", () => {
         courseListButton.click();
 
         const accordions = screen.queryAllByTestId("accordian-item", {});
-        expect(accordions.length).toBe(45);
+        expect(accordions.length).toBe(107);
     });
 
     test("Students can edit the course code", () => {
@@ -441,11 +444,9 @@ describe("Final Project Tests (App)", () => {
         hideButton[0].click();
 
         const text = screen.queryAllByText(
-            "CISC118: Introduction to Computer Science I"
+            "CISC118: Introduction to Biology I"
         );
-        text1 = screen.queryAllByText(
-            "CISC108: Introduction to Computer Science I"
-        );
+        text1 = screen.queryAllByText("BISC207: Introduction to Biology I");
         expect(text1[0]).toBeUndefined();
         expect(text[0]).toBeVisible();
     });
@@ -455,6 +456,9 @@ describe("Final Project Tests (App)", () => {
             name: /Move to Course List 📄/i
         });
         courseListButton.click();
+
+        const filterBox = screen.getByTestId("course-filter");
+        userEvent.type(filterBox, "CISC");
 
         let text1 = screen.queryAllByText(
             "CISC108: Introduction to Computer Science I"
@@ -483,8 +487,8 @@ describe("Final Project Tests (App)", () => {
         text1 = screen.queryAllByText(
             "CISC108: Introduction to Computer Science I"
         );
-        expect(text1[0]).toBeUndefined();
         expect(text[0]).toBeVisible();
+        expect(text1[0]).toBeUndefined();
     });
 
     test("Student can edit credits of a course", () => {
@@ -492,6 +496,9 @@ describe("Final Project Tests (App)", () => {
             name: /Move to Course List 📄/i
         });
         courseListButton.click();
+
+        const filterBox = screen.getByTestId("course-filter");
+        userEvent.type(filterBox, "CISC");
 
         const firstAccordian = screen.getAllByTestId("accordian-item");
         firstAccordian[0].click();
@@ -531,6 +538,6 @@ describe("Final Project Tests (App)", () => {
         userEvent.type(filterBox, "CISC");
 
         const accordions = screen.queryAllByTestId("accordian-item", {});
-        expect(accordions.length).toBe(15);
+        expect(accordions.length).toBe(35);
     });
 });

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Course } from "../Interfaces/course";
+import { Course } from "../Interfaces/Course";
 import { CourseListView } from "./CourseListView";
 import { Row, Col, Form } from "react-bootstrap";
 

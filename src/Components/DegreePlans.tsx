@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { Degree } from "../Interfaces/degree";
+import { Degree } from "../Interfaces/Degree";
 import { Stack, Col, Row, Button, Form } from "react-bootstrap";
-import PlanData from "../Data/PlanData.json";
+import PlanDataBA from "../Data/PlanDataBA.json";
+import PlanDataBS from "../Data/PlanDataBS.json";
 import { DegreePlanView } from "./DegreePlanView";
-import { Course } from "../Interfaces/course";
-import { Semester } from "../Interfaces/semester";
+import { Course } from "../Interfaces/Course";
+import { Semester } from "../Interfaces/Semester";
 
-const DEGREEPLANSTART = PlanData.map((degree): Degree => ({ ...degree }));
-const saveDegreesKey = "DEGREE-DATA";
-let degreeInput = DEGREEPLANSTART;
+const DEGREEPLANSTARTBA = PlanDataBA.map((degree): Degree => ({ ...degree }));
+const DEGREEPLANSTARTBS = PlanDataBS.map((degree): Degree => ({ ...degree }));
+const saveDegreesKey = "DEGREE-DATA2";
+let degreeInput = DEGREEPLANSTARTBA;
 
 const previousData = localStorage.getItem(saveDegreesKey);
 
@@ -16,7 +18,13 @@ if (previousData !== null) {
     degreeInput = JSON.parse(previousData);
 }
 
-export function DegreePlans({ courses }: { courses: Course[] }): JSX.Element {
+export function DegreePlans({
+    courses,
+    concentration
+}: {
+    courses: Course[];
+    concentration: string;
+}): JSX.Element {
     const [degreePlans, setDegreePlans] = useState<Degree[]>(degreeInput);
     const [currentDegreePlanID, setCurrentDegreePlanID] = useState<number>(0);
     const [addingFile, setAddingFile] = useState<boolean>(false);
@@ -46,12 +54,22 @@ export function DegreePlans({ courses }: { courses: Course[] }): JSX.Element {
     }
 
     function saveData() {
-        console.log(JSON.stringify(degreePlans));
         localStorage.setItem(saveDegreesKey, JSON.stringify(degreePlans));
     }
     function revert() {
-        setDegreePlans(DEGREEPLANSTART);
-        localStorage.setItem(saveDegreesKey, JSON.stringify(DEGREEPLANSTART));
+        if (concentration !== "General (BA)") {
+            setDegreePlans(DEGREEPLANSTARTBS);
+            localStorage.setItem(
+                saveDegreesKey,
+                JSON.stringify(DEGREEPLANSTARTBS)
+            );
+        } else {
+            setDegreePlans(DEGREEPLANSTARTBA);
+            localStorage.setItem(
+                saveDegreesKey,
+                JSON.stringify(DEGREEPLANSTARTBA)
+            );
+        }
     }
 
     function uploadFile(event: React.ChangeEvent<HTMLInputElement>) {
@@ -85,7 +103,6 @@ export function DegreePlans({ courses }: { courses: Course[] }): JSX.Element {
         ].length;
         let courses: Course[] = [];
         for (let i = 0; i < numCourses; i++) {
-            console.log("CourseID: ", reducedArray[startingInd + 9 * i]);
             courses = [
                 ...courses,
                 replaceCourse(parseInt(reducedArray[startingInd + 9 * i]))
@@ -140,21 +157,23 @@ export function DegreePlans({ courses }: { courses: Course[] }): JSX.Element {
 
     function addStartDegreePlan(): void {
         const IDList = degreePlans.map((degree: Degree) => degree.degreeID);
+        let newPlan = DEGREEPLANSTARTBA[0];
+        if (concentration !== "General (BA)") {
+            newPlan = DEGREEPLANSTARTBS[0];
+        }
         setDegreePlans([
             ...degreePlans,
             {
-                ...DEGREEPLANSTART[0],
+                ...newPlan,
                 degreeID: degreePlans.length > 0 ? Math.max(...IDList) + 1 : 1,
-                semesters: DEGREEPLANSTART[0].semesters.map(
-                    (semester: Semester) => ({
-                        ...semester,
-                        courses: semester.courses.map(
-                            (course: Course): Course => ({
-                                ...replaceCourse(course.courseID)
-                            })
-                        )
-                    })
-                )
+                semesters: newPlan.semesters.map((semester: Semester) => ({
+                    ...semester,
+                    courses: semester.courses.map(
+                        (course: Course): Course => ({
+                            ...replaceCourse(course.courseID)
+                        })
+                    )
+                }))
             }
         ]);
     }
@@ -354,6 +373,7 @@ export function DegreePlans({ courses }: { courses: Course[] }): JSX.Element {
                                     hidden={
                                         degree.degreeID !== currentDegreePlanID
                                     }
+                                    concentration={concentration}
                                 ></DegreePlanView>
                             </div>
                         </span>

@@ -1,7 +1,7 @@
 import React from "react";
-import { Course } from "../Interfaces/course";
-import { Semester } from "../Interfaces/semester";
-import { Degree } from "../Interfaces/degree";
+import { Course } from "../Interfaces/Course";
+import { Semester } from "../Interfaces/Semester";
+import { Degree } from "../Interfaces/Degree";
 import "../App.css";
 import { Button } from "react-bootstrap";
 import { EditSemester } from "./EditSemester";
