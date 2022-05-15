@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { render, screen } from "@testing-library/react";
 import { DegreePlans } from "./Components/DegreePlans";
 import AllCourses from "./Data/CourseList.json";
@@ -10,10 +10,14 @@ import { Course } from "./Interfaces/Course";
 describe("Final Project Tests (DegreePlans)", () => {
     beforeEach(() => {
         const COURSES = AllCourses.map((course): Course => ({ ...course }));
+        function insertCourse(newCourse: Course) {
+            newCourse;
+        }
         render(
             <DegreePlans
                 courses={[...COURSES]}
                 concentration={"General (BA)"}
+                insertCourse={insertCourse}
             />
         );
     });

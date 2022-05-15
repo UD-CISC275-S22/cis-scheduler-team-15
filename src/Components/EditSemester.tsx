@@ -12,7 +12,8 @@ export function EditSemester({
     degree,
     editDegree,
     courses,
-    checkSemester
+    checkSemester,
+    insertCourse
 }: {
     semester: Semester;
     editMode: boolean;
@@ -24,6 +25,7 @@ export function EditSemester({
         degree: Degree,
         editDegree: (degreeID: number, newDegree: Degree) => void
     ) => void;
+    insertCourse: (newCourse: Course) => void;
 }): JSX.Element {
     const [modal, setModal] = useState<boolean>(false);
     function replaceSemesterInDegree(newSemester: Semester) {
@@ -99,6 +101,7 @@ export function EditSemester({
                             degree={degree}
                             editDegree={editDegree}
                             checkSemester={checkSemester}
+                            insertCourse={insertCourse}
                         ></AddCourse>
                     </Row>
                     <Row>
