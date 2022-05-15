@@ -20,10 +20,12 @@ if (previousData !== null) {
 
 export function DegreePlans({
     courses,
-    concentration
+    concentration,
+    insertCourse
 }: {
     courses: Course[];
     concentration: string;
+    insertCourse: (newCourse: Course) => void;
 }): JSX.Element {
     const [degreePlans, setDegreePlans] = useState<Degree[]>(degreeInput);
     const [currentDegreePlanID, setCurrentDegreePlanID] = useState<number>(0);
@@ -374,6 +376,7 @@ export function DegreePlans({
                                         degree.degreeID !== currentDegreePlanID
                                     }
                                     concentration={concentration}
+                                    insertCourse={insertCourse}
                                 ></DegreePlanView>
                             </div>
                         </span>

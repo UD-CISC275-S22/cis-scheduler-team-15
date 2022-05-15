@@ -13,7 +13,8 @@ export function SemesterViewHome({
     deleteSemester,
     degree,
     editDegree,
-    courses
+    courses,
+    insertCourse
 }: {
     semester: Semester;
     editMode: boolean;
@@ -21,6 +22,7 @@ export function SemesterViewHome({
     degree: Degree;
     editDegree: (degreeID: number, newDegree: Degree) => void;
     courses: Course[];
+    insertCourse: (newCourse: Course) => void;
 }): JSX.Element {
     return (
         <div>
@@ -45,6 +47,7 @@ export function SemesterViewHome({
                                     editDegree
                                 })
                             }
+                            insertCourse={insertCourse}
                         ></EditSemester>
                     </th>
                     <th className="Align-right">

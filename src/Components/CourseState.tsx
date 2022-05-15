@@ -54,6 +54,9 @@ export function CourseState(): JSX.Element {
             )
         );
     }
+    function insertCourse(newCourse: Course) {
+        setCourses([...courses, newCourse]);
+    }
     function saveData() {
         localStorage.setItem(saveCoursesKey, JSON.stringify(courses));
     }
@@ -231,6 +234,7 @@ export function CourseState(): JSX.Element {
                         <DegreePlans
                             courses={courses}
                             concentration={concentration}
+                            insertCourse={insertCourse}
                         ></DegreePlans>
                     </Row>
                 </div>
