@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { render, screen } from "@testing-library/react";
 import { DegreePlans } from "./Components/DegreePlans";
 import AllCourses from "./Data/CourseList.json";
