@@ -235,6 +235,8 @@ export function CourseState(): JSX.Element {
                             courses={courses}
                             concentration={concentration}
                             insertCourse={insertCourse}
+                            saveCourses={saveData}
+                            revertCourses={revert}
                         ></DegreePlans>
                     </Row>
                 </div>
@@ -270,14 +272,7 @@ export function CourseState(): JSX.Element {
                                     <b>Save 💾</b>
                                 </Button>
                             </Col>
-                            <Col xs={3}>
-                                <Button
-                                    onClick={revert}
-                                    style={{ margin: "5px 0px" }}
-                                >
-                                    <b>Revert to Default</b>
-                                </Button>
-                            </Col>
+
                             <div className="App-break"></div>
                         </Row>
                     </div>
