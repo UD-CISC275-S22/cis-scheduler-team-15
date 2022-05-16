@@ -190,7 +190,7 @@ describe("Final Project Tests (DegreePlans)", () => {
         });
         addCourse.click();
         let adding = screen.getByRole("button", {
-            name: "Click to add 1"
+            name: "Click to add CISC108"
         });
         adding.click();
         const filter = screen.getAllByRole("textbox");
@@ -198,12 +198,12 @@ describe("Final Project Tests (DegreePlans)", () => {
         const newC = screen.getAllByTestId("add-course-select");
         userEvent.selectOptions(selectCourses[3], newC[12]);
         adding = screen.getByRole("button", {
-            name: "Click to add 13"
+            name: "Click to add MATH241"
         });
         adding.click();
         userEvent.type(filter[1], "e");
         adding = screen.getByRole("button", {
-            name: "Click to add 16"
+            name: "Click to add EGGG101"
         });
         adding.click();
         text1 = screen.queryAllByText("CISC108");
@@ -254,14 +254,14 @@ describe("Final Project Tests (DegreePlans)", () => {
         });
         addCourse.click();
         let adding = screen.getByRole("button", {
-            name: "Click to add 1"
+            name: "Click to add CISC108"
         });
         adding.click();
         const selectCourses = screen.getAllByRole("combobox");
         const newC = screen.getAllByTestId("add-course-select");
         userEvent.selectOptions(selectCourses[3], newC[12]);
         adding = screen.getByRole("button", {
-            name: "Click to add 13"
+            name: "Click to add MATH241"
         });
         adding.click();
         const closeModal2 = screen.queryByRole("closebutton");
@@ -276,13 +276,13 @@ describe("Final Project Tests (DegreePlans)", () => {
         });
         addCourse.click();
         adding = screen.getByRole("button", {
-            name: "Click to add 1"
+            name: "Click to add CISC108"
         });
         adding.click();
         const filter = screen.getAllByRole("textbox");
         userEvent.type(filter[1], "e");
         adding = screen.getByRole("button", {
-            name: "Click to add 16"
+            name: "Click to add EGGG101"
         });
         adding.click();
 
@@ -341,6 +341,61 @@ describe("Final Project Tests (DegreePlans)", () => {
         expect(trashButtons2AfterLength).toBe(trashButtons2InitLength + 1);
     });
 
+    test("Students will see all errors from their degree plan in the degree plan view", () => {
+        const addEmpty = screen.getByRole("button", {
+            name: /Add Empty ➕/i
+        });
+        addEmpty.click();
+        const firstEmpty = screen.queryByRole("button", {
+            name: "Empty"
+        });
+        firstEmpty?.click();
+        const editButton = screen.queryByRole("button", {
+            name: /Edit Plan 🖉/i
+        });
+        editButton?.click();
+        const addSemester = screen.queryByRole("button", {
+            name: /Add Semester ➕/i
+        });
+        addSemester?.click();
+        const createSemester = screen.queryByRole("button", {
+            name: /Create Semester/i
+        });
+        createSemester?.click();
+        const seasonButton = screen.getAllByRole("combobox");
+        userEvent.selectOptions(seasonButton[1], "Winter");
+        createSemester?.click();
+        const closeModal = screen.queryByRole("closebutton");
+        closeModal?.click();
+        const editSemester = screen.getAllByRole("button", {
+            name: "🖉"
+        })[0];
+        editSemester.click();
+        const addCourse = screen.getByRole("button", {
+            name: /Add Course/i
+        });
+        addCourse.click();
+        let adding = screen.getByRole("button", {
+            name: "Click to add CISC108"
+        });
+        adding.click();
+        const filter = screen.getAllByRole("textbox");
+        userEvent.type(filter[1], "242");
+        adding = screen.getByRole("button", {
+            name: "Click to add MATH242"
+        });
+        adding.click();
+        const closeModal2 = screen.queryByRole("closebutton");
+        closeModal2?.click();
+        const errorButton = screen.getByRole("button", {
+            name: "⚠ Show Errors ⚠"
+        });
+        errorButton.click();
+        let errorText = screen.queryByTestId("CISC108 error");
+        expect(errorText).not.toBeNull();
+        errorText = screen.queryByTestId("MATH242 error");
+        expect(errorText).not.toBeNull();
+    });
     /*
     test("Students will get an error in the semester view when a course with an unsatisfied prerequisite or corequisite is added", () => {
         const addEmpty = screen.getByRole("button", {

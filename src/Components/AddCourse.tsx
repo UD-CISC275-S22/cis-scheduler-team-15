@@ -175,7 +175,13 @@ export function AddCourse({
                                 <Button
                                     onClick={insertNewCourse}
                                     data-toggle="tooltip"
-                                    title={"Click to add " + resultID}
+                                    title={
+                                        "Click to add " +
+                                        courses.filter(
+                                            (course: Course): boolean =>
+                                                course.courseID === resultID
+                                        )[0].listing
+                                    }
                                     variant="success"
                                 >
                                     ➕
