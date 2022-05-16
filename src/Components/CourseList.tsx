@@ -19,9 +19,13 @@ export function CourseList({
     }
 
     function searchCourses(search: string): Course[] {
-        return courses.filter((course: Course): boolean =>
-            course.listing.includes(search.toUpperCase())
-        );
+        return courses
+            .sort((course1, course2) =>
+                course1.listing < course2.listing ? -1 : 1
+            )
+            .filter((course: Course): boolean =>
+                course.listing.includes(search.toUpperCase())
+            );
     }
     return (
         <div>

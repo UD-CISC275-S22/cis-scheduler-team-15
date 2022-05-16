@@ -14,13 +14,15 @@ export function DegreePlanView({
     editDegree,
     hidden,
     courses,
-    concentration
+    concentration,
+    insertCourse
 }: {
     degree: Degree;
     editDegree: (degreeID: number, newDegree: Degree) => void;
     hidden: boolean;
     courses: Course[];
     concentration: string;
+    insertCourse: (newCourse: Course) => void;
 }): JSX.Element {
     let initialYear = 2020;
     if (degree.semesters.length > 0) {
@@ -251,6 +253,7 @@ export function DegreePlanView({
                                     degree={degree}
                                     editDegree={editDegree}
                                     courses={courses}
+                                    insertCourse={insertCourse}
                                 ></SemesterViewHome>
                                 <br></br>
                             </div>
@@ -271,6 +274,7 @@ export function DegreePlanView({
                                     degree={degree}
                                     editDegree={editDegree}
                                     courses={courses}
+                                    insertCourse={insertCourse}
                                 ></SemesterViewHome>
                                 <br></br>
                             </div>
