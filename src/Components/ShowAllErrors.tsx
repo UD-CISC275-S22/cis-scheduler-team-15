@@ -27,7 +27,10 @@ export function ShowAllErrors({ degree }: { degree: Degree }): JSX.Element {
                             )
                             .map((course: Course, index: number) => (
                                 <p key={index} className="line-break">
-                                    <span>
+                                    <span
+                                        data-testid={course.listing + " error"}
+                                        style={{ color: "red" }}
+                                    >
                                         {course.listing} {"\r"} (
                                         {semester.season}{" "}
                                         {semester.year.toString()}):{" "}
