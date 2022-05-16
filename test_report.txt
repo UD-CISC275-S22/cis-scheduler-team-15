@@ -2,7 +2,7 @@
 > react-typescript-starter@0.1.0 test
 > react-scripts test "--coverage"
 
-PASS src/App.test.tsx (62.953 s)
+PASS src/App.test.tsx (95.173 s)
   ● Console
 
     console.error
@@ -101,7 +101,7 @@ PASS src/App.test.tsx (62.953 s)
       at diffProperties (node_modules/react-dom/cjs/react-dom.development.js:9172:5)
       at prepareUpdate (node_modules/react-dom/cjs/react-dom.development.js:10215:10)
 
-PASS src/DegreePlans.test.tsx (9.841 s)
+PASS src/DegreePlans.test.tsx (16.757 s)
   ● Console
 
     console.error
@@ -139,11 +139,11 @@ PASS src/DegreePlans.test.tsx (9.841 s)
 -----------------------------|---------|----------|---------|---------|-----------------------------------------------------------------------------------------
 File                         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                       
 -----------------------------|---------|----------|---------|---------|-----------------------------------------------------------------------------------------
-All files                    |   36.17 |    66.11 |   31.53 |   35.83 |                                                                                         
+All files                    |   36.54 |    68.13 |   32.37 |   36.21 |                                                                                         
  src                         |     100 |      100 |     100 |     100 |                                                                                         
   App.tsx                    |     100 |      100 |     100 |     100 |                                                                                         
- src/Components              |   36.13 |    66.11 |   31.44 |   35.79 |                                                                                         
-  AddCourse.tsx              |    75.6 |       90 |   81.25 |    75.6 | 95-123                                                                                  
+ src/Components              |   36.51 |    68.13 |   32.28 |   36.17 |                                                                                         
+  AddCourse.tsx              |   76.19 |       90 |   82.35 |   76.19 | 95-123                                                                                  
   AddSemester.tsx            |      85 |      100 |      75 |      85 | 26-27,70                                                                                
   CheckRequirements.tsx      |   16.18 |    36.11 |    9.19 |   16.18 | 487,567-2622,2638-2640,2649-2651,2660-2662,2671-2673,2682-2684,2693-2695,2704-2706,2732 
   CheckSemesters.tsx         |   98.57 |    92.85 |     100 |   98.52 | 20                                                                                      
@@ -160,7 +160,7 @@ All files                    |   36.17 |    66.11 |   31.53 |   35.83 |
   MoveCourse.tsx             |   94.73 |      100 |   88.88 |   94.73 | 27                                                                                      
   SemesterViewHome.tsx       |   83.33 |      100 |   83.33 |   83.33 | 57                                                                                      
   SemesterViewModal.tsx      |   71.42 |    58.33 |   69.23 |   71.42 | 46-59                                                                                   
-  ShowAllErrors.tsx          |   28.57 |       50 |   16.66 |   28.57 | 14-36                                                                                   
+  ShowAllErrors.tsx          |     100 |      100 |     100 |     100 |                                                                                         
  src/Interfaces              |       0 |        0 |       0 |       0 |                                                                                         
   Course.ts                  |       0 |        0 |       0 |       0 |                                                                                         
   Degree.ts                  |       0 |        0 |       0 |       0 |                                                                                         
@@ -168,7 +168,7 @@ All files                    |   36.17 |    66.11 |   31.53 |   35.83 |
 -----------------------------|---------|----------|---------|---------|-----------------------------------------------------------------------------------------
 
 Test Suites: 2 passed, 2 total
-Tests:       21 passed, 21 total
+Tests:       22 passed, 22 total
 Snapshots:   0 total
-Time:        73.565 s
+Time:        112.946 s
 Ran all test suites.
