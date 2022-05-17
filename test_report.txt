@@ -2,7 +2,7 @@
 > react-typescript-starter@0.1.0 test
 > react-scripts test "--coverage"
 
-PASS src/App.test.tsx (81.861 s)
+PASS src/App.test.tsx (64.837 s)
   ● Console
 
     console.error
@@ -60,7 +60,7 @@ PASS src/App.test.tsx (81.861 s)
           at /home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/node_modules/react-bootstrap/cjs/Row.js:22:3
           at div
           at span
-          at CourseListViewInfoEdit (/home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/src/Components/CourseListViewInfoEdit.tsx:38:5)
+          at CourseListViewInfoEdit (/home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/src/Components/CourseListViewInfoEdit.tsx:61:5)
           at div
           at div
           at div
@@ -101,7 +101,7 @@ PASS src/App.test.tsx (81.861 s)
       at diffProperties (node_modules/react-dom/cjs/react-dom.development.js:9172:5)
       at prepareUpdate (node_modules/react-dom/cjs/react-dom.development.js:10215:10)
 
-PASS src/DegreePlans.test.tsx (15.12 s)
+PASS src/DegreePlans.test.tsx (11.318 s)
   ● Console
 
     console.error
@@ -139,10 +139,10 @@ PASS src/DegreePlans.test.tsx (15.12 s)
 -----------------------------|---------|----------|---------|---------|-----------------------------------------------------------------------------------------
 File                         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                       
 -----------------------------|---------|----------|---------|---------|-----------------------------------------------------------------------------------------
-All files                    |   36.43 |    67.39 |   32.32 |    36.1 |                                                                                         
+All files                    |   36.92 |    67.93 |   32.67 |   36.53 |                                                                                         
  src                         |     100 |      100 |     100 |     100 |                                                                                         
   App.tsx                    |     100 |      100 |     100 |     100 |                                                                                         
- src/Components              |    36.4 |    67.39 |   32.24 |   36.06 |                                                                                         
+ src/Components              |   36.88 |    67.93 |   32.59 |    36.5 |                                                                                         
   AddCourse.tsx              |   76.19 |       90 |   82.35 |   76.19 | 95-123                                                                                  
   AddSemester.tsx            |      85 |      100 |      75 |      85 | 26-27,70                                                                                
   CheckRequirements.tsx      |   16.18 |    36.11 |    9.19 |   16.18 | 487,567-2622,2638-2640,2649-2651,2660-2662,2671-2673,2682-2684,2693-2695,2704-2706,2732 
@@ -150,7 +150,7 @@ All files                    |   36.43 |    67.39 |   32.32 |    36.1 |
   CourseList.tsx             |     100 |      100 |     100 |     100 |                                                                                         
   CourseListView.tsx         |     100 |      100 |     100 |     100 |                                                                                         
   CourseListViewInfo.tsx     |     100 |      100 |     100 |     100 |                                                                                         
-  CourseListViewInfoEdit.tsx |   95.96 |    95.83 |   95.23 |   96.72 | 89-100                                                                                  
+  CourseListViewInfoEdit.tsx |     100 |      100 |     100 |     100 |                                                                                         
   CourseState.tsx            |   73.68 |       75 |   61.53 |   72.97 | 29,37,58-71,87                                                                          
   DegreePlanView.tsx         |   43.47 |    71.42 |      50 |   42.22 | 53-144                                                                                  
   DegreePlans.tsx            |   51.96 |    36.11 |   67.44 |   50.53 | 18,63-157,175,264                                                                       
@@ -170,5 +170,5 @@ All files                    |   36.43 |    67.39 |   32.32 |    36.1 |
 Test Suites: 2 passed, 2 total
 Tests:       22 passed, 22 total
 Snapshots:   0 total
-Time:        97.956 s
+Time:        76.91 s
 Ran all test suites.
