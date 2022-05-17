@@ -2,7 +2,7 @@
 > react-typescript-starter@0.1.0 test
 > react-scripts test "--coverage"
 
-PASS src/App.test.tsx (64.837 s)
+PASS src/App.test.tsx (85.078 s)
   ● Console
 
     console.error
@@ -24,6 +24,7 @@ PASS src/App.test.tsx (64.837 s)
           at div
           at div
           at /home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/node_modules/react-bootstrap/cjs/Row.js:22:3
+          at ManageDegreePlans (/home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/src/Components/ManageDegreePlans.tsx:9:5)
           at div
           at /home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/node_modules/react-bootstrap/cjs/Stack.js:23:7
           at DegreePlans (/home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/src/Components/DegreePlans.tsx:22:5)
@@ -101,7 +102,7 @@ PASS src/App.test.tsx (64.837 s)
       at diffProperties (node_modules/react-dom/cjs/react-dom.development.js:9172:5)
       at prepareUpdate (node_modules/react-dom/cjs/react-dom.development.js:10215:10)
 
-PASS src/DegreePlans.test.tsx (11.318 s)
+FAIL src/DegreePlans.test.tsx (17.081 s)
   ● Console
 
     console.error
@@ -123,6 +124,7 @@ PASS src/DegreePlans.test.tsx (11.318 s)
           at div
           at div
           at /home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/node_modules/react-bootstrap/cjs/Row.js:22:3
+          at ManageDegreePlans (/home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/src/Components/ManageDegreePlans.tsx:9:5)
           at div
           at /home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/node_modules/react-bootstrap/cjs/Stack.js:23:7
           at DegreePlans (/home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/src/Components/DegreePlans.tsx:22:5)
@@ -136,39 +138,61 @@ PASS src/DegreePlans.test.tsx (11.318 s)
       at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
       at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:22707:5)
 
+  ● Final Project Tests (DegreePlans) › Students will get an error in the semester view when a course with an unsatisfied prerequisite or corequisite is added
+
+    expect(received).toMatch(expected)
+
+    Expected substring: "Errors with the following courses: CISC108, MATH242"
+    Received string:    ""
+
+      483 |         const errorTestID = screen.getByTestId("semester-error-test");
+      484 |         const errorText = errorTestID.innerHTML.toString();
+    > 485 |         expect(errorText).toMatch(
+          |                           ^
+      486 |             "Errors with the following courses: CISC108, MATH242"
+      487 |         );
+      488 |         //const errorText = screen.queryByTestId(
+
+      at Object.<anonymous> (src/DegreePlans.test.tsx:485:27)
+      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
+      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
+      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
+      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
+
 -----------------------------|---------|----------|---------|---------|-----------------------------------------------------------------------------------------
 File                         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                       
 -----------------------------|---------|----------|---------|---------|-----------------------------------------------------------------------------------------
-All files                    |   36.92 |    67.93 |   32.67 |   36.53 |                                                                                         
+All files                    |   37.15 |    68.47 |   33.02 |   36.72 |                                                                                         
  src                         |     100 |      100 |     100 |     100 |                                                                                         
   App.tsx                    |     100 |      100 |     100 |     100 |                                                                                         
- src/Components              |   36.88 |    67.93 |   32.59 |    36.5 |                                                                                         
-  AddCourse.tsx              |   76.19 |       90 |   82.35 |   76.19 | 95-123                                                                                  
+ src/Components              |   37.11 |    68.47 |   32.94 |   36.69 |                                                                                         
+  AddCourse.tsx              |   76.19 |       90 |   82.35 |   76.19 | 107-135                                                                                 
   AddSemester.tsx            |      85 |      100 |      75 |      85 | 26-27,70                                                                                
   CheckRequirements.tsx      |   16.18 |    36.11 |    9.19 |   16.18 | 487,567-2622,2638-2640,2649-2651,2660-2662,2671-2673,2682-2684,2693-2695,2704-2706,2732 
-  CheckSemesters.tsx         |   98.57 |    92.85 |     100 |   98.52 | 20                                                                                      
+  CheckSemesters.tsx         |   98.57 |    92.85 |     100 |   98.52 | 25                                                                                      
   CourseList.tsx             |     100 |      100 |     100 |     100 |                                                                                         
   CourseListView.tsx         |     100 |      100 |     100 |     100 |                                                                                         
   CourseListViewInfo.tsx     |     100 |      100 |     100 |     100 |                                                                                         
   CourseListViewInfoEdit.tsx |     100 |      100 |     100 |     100 |                                                                                         
   CourseState.tsx            |   73.68 |       75 |   61.53 |   72.97 | 29,37,58-71,87                                                                          
   DegreePlanView.tsx         |   43.47 |    71.42 |      50 |   42.22 | 53-144                                                                                  
-  DegreePlans.tsx            |   51.96 |    36.11 |   67.44 |   50.53 | 18,63-157,175,264                                                                       
+  DegreePlans.tsx            |   42.35 |       30 |   54.83 |   39.47 | 18,65-159,177,220                                                                       
   DegreeRequirementView.tsx  |     100 |      100 |     100 |     100 |                                                                                         
   DegreeRequirements.tsx     |     100 |      100 |     100 |     100 |                                                                                         
-  EditSemester.tsx           |      95 |      100 |    92.3 |      95 | 85                                                                                      
-  MoveCourse.tsx             |   94.73 |      100 |   88.88 |   94.73 | 27                                                                                      
+  EditSemester.tsx           |   93.75 |      100 |   88.88 |   93.75 | 98                                                                                      
+  ManageDegreePlans.tsx      |     100 |    83.33 |     100 |     100 | 31                                                                                      
+  MoveCourse.tsx             |   94.73 |      100 |   88.88 |   94.73 | 31                                                                                      
   SemesterViewHome.tsx       |   83.33 |      100 |   83.33 |   83.33 | 57                                                                                      
-  SemesterViewModal.tsx      |   71.42 |    58.33 |   69.23 |   71.42 | 46-59                                                                                   
+  SemesterViewModal.tsx      |   71.42 |    58.33 |   69.23 |   71.42 | 51-64                                                                                   
   ShowAllErrors.tsx          |     100 |      100 |     100 |     100 |                                                                                         
+  ShowSemesterErrors.tsx     |     100 |      100 |     100 |     100 |                                                                                         
  src/Interfaces              |       0 |        0 |       0 |       0 |                                                                                         
   Course.ts                  |       0 |        0 |       0 |       0 |                                                                                         
   Degree.ts                  |       0 |        0 |       0 |       0 |                                                                                         
   Semester.ts                |       0 |        0 |       0 |       0 |                                                                                         
 -----------------------------|---------|----------|---------|---------|-----------------------------------------------------------------------------------------
-
-Test Suites: 2 passed, 2 total
-Tests:       22 passed, 22 total
+Test Suites: 1 failed, 1 passed, 2 total
+Tests:       1 failed, 22 passed, 23 total
 Snapshots:   0 total
-Time:        76.91 s
+Time:        103.074 s
 Ran all test suites.
