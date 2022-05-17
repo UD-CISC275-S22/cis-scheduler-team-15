@@ -4,6 +4,8 @@ import { Degree } from "../Interfaces/Degree";
 import { Semester } from "../Interfaces/Semester";
 import { Course } from "../Interfaces/Course";
 
+/*Includes a dropdown of other semester in the plan and a button
+which can be used to move courses between semesters*/
 export function MoveCourse({
     semester,
     degree,
@@ -23,10 +25,16 @@ export function MoveCourse({
         )[0].semesterID;
     }
     const [moveSemesterID, setMoveSemesterID] = useState<number>(newSemesterID);
+
     function updateSemesterID(event: React.ChangeEvent<HTMLSelectElement>) {
+        //sets the state for the semester being moved to
         setMoveSemesterID(Number(event.target.value));
     }
+
     function moveCourse() {
+        //moves a course between semesters by creating to new semesters:
+        //the one being moved from and the one being moved to.
+        //calls editDegree to replace these semesters in the plan
         const currentSemesterCourses = semester.courses.filter(
             (currCourse: Course): boolean =>
                 course.courseID !== currCourse.courseID
@@ -55,6 +63,7 @@ export function MoveCourse({
         const newDegree: Degree = { ...degree, semesters: newSemesters };
         editDegree(newDegree.degreeID, newDegree);
     }
+
     return (
         <div>
             <Row>

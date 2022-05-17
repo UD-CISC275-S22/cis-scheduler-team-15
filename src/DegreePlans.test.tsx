@@ -5,8 +5,6 @@ import AllCourses from "./Data/CourseList.json";
 import userEvent from "@testing-library/user-event";
 import { Course } from "./Interfaces/Course";
 
-//import ReactDOM from "react-dom";
-
 describe("Final Project Tests (DegreePlans)", () => {
     beforeEach(() => {
         const COURSES = AllCourses.map((course): Course => ({ ...course }));
@@ -110,10 +108,10 @@ describe("Final Project Tests (DegreePlans)", () => {
         });
         editPlanButton.click();
         const editSemesterButtons = screen.queryAllByRole("button", {
-            name: /🖉/i
+            name: /Click to edit Spring 2021/i
         });
 
-        editSemesterButtons[1].click();
+        editSemesterButtons[0].click();
         const deleteAllButton = screen.getByRole("button", {
             name: /Delete All 🗑️/i
         });
@@ -137,7 +135,7 @@ describe("Final Project Tests (DegreePlans)", () => {
         });
         editPlanButton.click();
         const editSemesterButtons = screen.queryAllByRole("button", {
-            name: "🖉"
+            name: "Click to edit Fall 2020"
         });
 
         editSemesterButtons[0].click();
@@ -182,7 +180,7 @@ describe("Final Project Tests (DegreePlans)", () => {
         expect(text3[2]).toBeUndefined();
         expect(text4).toBeVisible();
         const editSemester = screen.getByRole("button", {
-            name: "🖉"
+            name: "Click to edit Fall 2022"
         });
         editSemester.click();
         const addCourse = screen.getByRole("button", {
@@ -245,9 +243,9 @@ describe("Final Project Tests (DegreePlans)", () => {
         createSemester?.click();
         const closeModal = screen.queryByRole("closebutton");
         closeModal?.click();
-        let editSemester = screen.getAllByRole("button", {
-            name: "🖉"
-        })[0];
+        let editSemester = screen.getByRole("button", {
+            name: "Click to edit Fall 2022"
+        });
         editSemester.click();
         let addCourse = screen.getByRole("button", {
             name: /Add Course/i
@@ -267,9 +265,9 @@ describe("Final Project Tests (DegreePlans)", () => {
         const closeModal2 = screen.queryByRole("closebutton");
         closeModal2?.click();
 
-        editSemester = screen.getAllByRole("button", {
-            name: "🖉"
-        })[1];
+        editSemester = screen.getByRole("button", {
+            name: "Click to edit Winter 2022"
+        });
         editSemester.click();
         addCourse = screen.getByRole("button", {
             name: /Add Course/i
@@ -299,28 +297,28 @@ describe("Final Project Tests (DegreePlans)", () => {
             name: /Edit Plan 🖉/i
         });
         editPlanButton.click();
-        let editSemesterButtons = screen.queryAllByRole("button", {
-            name: "🖉"
+        let editSemesterButtons = screen.getByRole("button", {
+            name: "Click to edit Fall 2020"
         });
-        editSemesterButtons[0].click();
+        editSemesterButtons.click();
         const trashButtons1InitLength = screen.getAllByTestId(
             "delete-course-button"
         ).length;
         let closeModal1 = screen.queryByRole("closebutton");
         closeModal1?.click();
-        editSemesterButtons = screen.queryAllByRole("button", {
-            name: "🖉"
+        editSemesterButtons = screen.getByRole("button", {
+            name: "Click to edit Spring 2021"
         });
-        editSemesterButtons[4].click();
+        editSemesterButtons.click();
         const trashButtons2InitLength =
             screen.getAllByTestId("delete-course-button").length -
             trashButtons1InitLength;
         const closeModal2 = screen.queryByRole("closebutton");
         closeModal2?.click();
-        editSemesterButtons = screen.queryAllByRole("button", {
-            name: "🖉"
+        editSemesterButtons = screen.getByRole("button", {
+            name: "Click to edit Fall 2020"
         });
-        editSemesterButtons[0].click();
+        editSemesterButtons.click();
         const moveCourseButton = screen.getAllByTestId("move-course-button")[0];
         moveCourseButton.click();
         const trashButtons1AfterLength =
@@ -329,10 +327,10 @@ describe("Final Project Tests (DegreePlans)", () => {
             1;
         closeModal1 = screen.queryByRole("closebutton");
         closeModal1?.click();
-        editSemesterButtons = screen.queryAllByRole("button", {
-            name: "🖉"
+        editSemesterButtons = screen.getByRole("button", {
+            name: "Click to edit Spring 2021"
         });
-        editSemesterButtons[4].click();
+        editSemesterButtons.click();
         const trashButtons2AfterLength =
             screen.getAllByTestId("delete-course-button").length -
             trashButtons1AfterLength;
@@ -367,9 +365,95 @@ describe("Final Project Tests (DegreePlans)", () => {
         createSemester?.click();
         const closeModal = screen.queryByRole("closebutton");
         closeModal?.click();
-        const editSemester = screen.getAllByRole("button", {
-            name: "🖉"
-        })[0];
+        let editSemester = screen.getByRole("button", {
+            name: "Click to edit Fall 2022"
+        });
+        editSemester.click();
+        let addCourse = screen.getByRole("button", {
+            name: /Add Course/i
+        });
+        addCourse.click();
+        let adding = screen.getByRole("button", {
+            name: "Click to add CISC108"
+        });
+        adding.click();
+        let filter = screen.getAllByRole("textbox");
+        userEvent.type(filter[1], "242");
+        adding = screen.getByRole("button", {
+            name: "Click to add MATH242"
+        });
+        adding.click();
+        const closeModal2 = screen.queryByRole("closebutton");
+        closeModal2?.click();
+        let errorButton = screen.getByRole("button", {
+            name: "⚠ Show Errors ⚠"
+        });
+        errorButton.click();
+        let errorText = screen.queryByTestId("CISC108 error-all errors");
+        expect(errorText).not.toBeNull();
+        errorText = screen.queryByTestId("MATH242 error-all errors");
+        expect(errorText).not.toBeNull();
+        editSemester = screen.getByRole("button", {
+            name: "Click to edit Winter 2022"
+        });
+        editSemester.click();
+        addCourse = screen.getByRole("button", {
+            name: /Add Course/i
+        });
+        addCourse.click();
+        filter = screen.getAllByRole("textbox");
+        userEvent.type(filter[2], "241");
+        adding = screen.getByRole("button", {
+            name: "Click to add MATH241"
+        });
+        adding.click();
+        const closeModal3 = screen.queryByRole("closebutton");
+        closeModal3?.click();
+        const hideErrorButton = screen.getByRole("button", {
+            name: "🛑 Hide Errors 🛑"
+        });
+        hideErrorButton.click();
+        errorButton = screen.getByRole("button", {
+            name: "⚠ Show Errors ⚠"
+        });
+        errorButton.click();
+        errorText = screen.queryByTestId("CISC108 error-all errors");
+        expect(errorText).toBeNull();
+        errorText = screen.queryByTestId("MATH242 error-all errors");
+        expect(errorText).toBeNull();
+    });
+
+    test("Students will get an error in the semester view when a course with an unsatisfied prerequisite or corequisite is added", () => {
+        const defaultPlan = screen.getByRole("button", { name: "Default" });
+        defaultPlan.click();
+        const deletePlan = screen.getByRole("button", {
+            name: "Delete Plan 🗑️"
+        });
+        deletePlan.click();
+        const addEmpty = screen.getByRole("button", {
+            name: /Add Empty ➕/i
+        });
+        addEmpty.click();
+        const editButton = screen.getByRole("button", {
+            name: /Edit Plan 🖉/i
+        });
+        editButton?.click();
+        const addSemester = screen.getByRole("button", {
+            name: /Add Semester ➕/i
+        });
+        addSemester.click();
+        const createSemester = screen.getByRole("button", {
+            name: /Create Semester/i
+        });
+        createSemester?.click();
+        const seasonButton = screen.getAllByRole("combobox");
+        userEvent.selectOptions(seasonButton[1], "Winter");
+        createSemester?.click();
+        const closeModal = screen.queryByRole("closebutton");
+        closeModal?.click();
+        const editSemester = screen.getByRole("button", {
+            name: "Click to edit Fall 2022"
+        });
         editSemester.click();
         const addCourse = screen.getByRole("button", {
             name: /Add Course/i
@@ -385,72 +469,46 @@ describe("Final Project Tests (DegreePlans)", () => {
             name: "Click to add MATH242"
         });
         adding.click();
-        const closeModal2 = screen.queryByRole("closebutton");
+        const fall2022Modal = screen.getByTestId("Fall 2022 modal");
+        const fall2022ModalText = fall2022Modal.innerHTML.toString();
+        const errorTestID = screen.getByTestId("semester-error-test");
+        const errorText = errorTestID.innerHTML.toString();
+        expect(errorText).toMatch(
+            "Errors with the following courses: CISC108, MATH242"
+        );
+        //const errorText = screen.queryByTestId(
+        //    "semester errrors: CISC108,MATH242"
+        //);
+        //expect(errorText).toBeVisible();
+        //errorText = screen.queryByTestId("MATH242 error-semester errors");
+        //expect(errorText).not.toBeNull();
+        /*const closeModal2 = screen.queryByRole("closebutton");
         closeModal2?.click();
-        const errorButton = screen.getByRole("button", {
-            name: "⚠ Show Errors ⚠"
+        editSemester = screen.getByRole("button", {
+            name: "Click to edit Winter 2022"
         });
-        errorButton.click();
-        let errorText = screen.queryByTestId("CISC108 error");
-        expect(errorText).not.toBeNull();
-        errorText = screen.queryByTestId("MATH242 error");
-        expect(errorText).not.toBeNull();
-    });
-    /*
-    test("Students will get an error in the semester view when a course with an unsatisfied prerequisite or corequisite is added", () => {
-        const addEmpty = screen.getByRole("button", {
-            name: /Add Empty ➕/i
-        });
-        addEmpty.click();
-        const firstEmpty = screen.queryByRole("button", {
-            name: "Empty"
-        });
-        firstEmpty?.click();
-        const editButton = screen.queryByRole("button", {
-            name: /Edit Plan 🖉/i
-        });
-        editButton?.click();
-        const addSemester = screen.queryByRole("button", {
-            name: /Add Semester ➕/i
-        });
-        addSemester?.click();
-        const createSemester = screen.queryByRole("button", {
-            name: /Create Semester/i
-        });
-        createSemester?.click();
-        const closeModal = screen.queryByRole("closebutton");
-        closeModal?.click();
-        const editSemester = screen.getAllByRole("button", {
-            name: "🖉"
-        })[0];
         editSemester.click();
-        const addCourse = screen.getByRole("button", {
+        addCourse = screen.getByRole("button", {
             name: /Add Course/i
         });
         addCourse.click();
-        const filter = screen.getAllByRole("textbox");
-        userEvent.type(filter[2], "181"); 
-
-        let prereqMessage = screen.queryAllByText("CISC108");
-        let coreqMessage = screen.queryByText(
-            "Unsatisfied corequisite(s): MATH241"
-        );
-        expect(prereqMessage).toBeNull();
-       expect(coreqMessage).toBeNull();
-        
-        const adding = screen.getByRole("button", {
-            name: "Click to add 2"
+        filter = screen.getAllByRole("textbox");
+        userEvent.type(filter[2], "241");
+        adding = screen.getByRole("button", {
+            name: "Click to add MATH241"
         });
         adding.click();
-        prereqMessage = screen.getAllByText(/CISC108/i);
-
-        coreqMessage = screen.queryByText(
-            "Unsatisfied corequisite(s): MATH241"
-        );
-        expect(prereqMessage.length).toBe(1); 
-        //expect(coreqMessage).toBeVisible();
+        const closeModal3 = screen.queryByRole("closebutton");
+        closeModal3?.click();
+        editSemester = screen.getByRole("button", {
+            name: "Click to edit Fall 2022"
+        });
+        editSemester.click();
+        errorText = screen.queryByTestId("CISC108 error-all errors");
+        expect(errorText).toBeNull();
+        errorText = screen.queryByTestId("MATH242 error-all errors");
+        expect(errorText).toBeNull();*/
     });
-    */
 
     // Henry test("Modify degree plan name", () => {});
 

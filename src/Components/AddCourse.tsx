@@ -4,6 +4,8 @@ import { Degree } from "../Interfaces/Degree";
 import { Semester } from "../Interfaces/Semester";
 import { Course } from "../Interfaces/Course";
 
+/*Called by edit semester, includes a show/hide section that has a course filter,
+course select, and course add button. Handles inserting courses to semester*/
 export function AddCourse({
     courses,
     semester,
@@ -24,21 +26,25 @@ export function AddCourse({
 }): JSX.Element {
     const [coursePromptVisible, setCoursePromptVisible] =
         useState<boolean>(false);
-    const [resultID, setResultID] = useState<number>(courses[0].courseID);
+    const [resultID, setResultID] = useState<number>(courses[0].courseID); //represents the course the user has selected
     const [search, setSearch] = useState<string>("");
     const [duplicateError, setDuplicateError] = useState<boolean>(false);
+
     function updateSearch(event: React.ChangeEvent<HTMLInputElement>) {
+        //updates search state and resultID state to the top item in the dropdown
         const newSearch = event.target.value;
         setSearch(newSearch);
         setResultID(searchCourses(newSearch)[0].courseID);
     }
 
     function updateResultID(event: React.ChangeEvent<HTMLSelectElement>) {
+        //updates the resultID state
         const currID = parseInt(event.target.value);
         setResultID(currID);
     }
 
     function checkDuplicateCourse(): boolean {
+        //checks for a duplicate course in degree plan
         const allCoursesInPlan = degree.semesters.reduce(
             (allCourses: Course[], currentSemester: Semester) => [
                 ...allCourses,
@@ -51,7 +57,10 @@ export function AddCourse({
         );
         return allCourseID.includes(resultID);
     }
+
     function insertNewCourse() {
+        //checks if a course is duplicate, if not adds the course by calling editDegree
+        //otherwise changes the duplicateError state to indicate that a duplicate has been requested
         const resultCourse = courses.find(
             (course: Course): boolean => course.courseID === resultID
         );
@@ -86,12 +95,15 @@ export function AddCourse({
     }
 
     function searchCourses(search: string): Course[] {
+        //filters the list of courses based on the search
         return courses.filter((course: Course): boolean =>
             course.listing.includes(search.toUpperCase())
         );
     }
 
     function insertDuplicateCourse() {
+        //inserts a duplicate course by creating a new one with the description
+        //(duplicate). adds it to the degreePlan and the list of all courses
         const resultCourse = courses.filter(
             (course: Course): boolean => course.courseID === resultID
         )[0];
