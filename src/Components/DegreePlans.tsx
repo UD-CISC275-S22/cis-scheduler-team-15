@@ -21,11 +21,15 @@ if (previousData !== null) {
 export function DegreePlans({
     courses,
     concentration,
-    insertCourse
+    insertCourse,
+    saveCourses,
+    revertCourses
 }: {
     courses: Course[];
     concentration: string;
     insertCourse: (newCourse: Course) => void;
+    saveCourses: () => void;
+    revertCourses: () => void;
 }): JSX.Element {
     const [degreePlans, setDegreePlans] = useState<Degree[]>(degreeInput);
     const [addingFile, setAddingFile] = useState<boolean>(false);
@@ -59,6 +63,7 @@ export function DegreePlans({
 
     function saveData() {
         localStorage.setItem(saveDegreesKey, JSON.stringify(degreePlans));
+        saveCourses();
     }
     function revert() {
         if (concentration !== "General (BA)") {
@@ -74,6 +79,7 @@ export function DegreePlans({
                 JSON.stringify(DEGREEPLANSTARTBA)
             );
         }
+        revertCourses();
     }
 
     function uploadFile(event: React.ChangeEvent<HTMLInputElement>) {
@@ -105,14 +111,19 @@ export function DegreePlans({
         const numCourses = [
             ...courseInds.filter((str: string) => str === semArray[1])
         ].length;
-        let courses: Course[] = [];
+        let coursesNew: Course[] = [];
+        const maxCourseID = Math.max(
+            ...courses.map((course: Course) => course.courseID)
+        );
         for (let i = 0; i < numCourses; i++) {
-            courses = [
-                ...courses,
-                replaceCourse(parseInt(reducedArray[startingInd + 9 * i]))
-            ];
+            if (parseInt(reducedArray[startingInd + 9 * i]) <= maxCourseID) {
+                coursesNew = [
+                    ...coursesNew,
+                    replaceCourse(parseInt(reducedArray[startingInd + 9 * i]))
+                ];
+            }
         }
-        return courses;
+        return coursesNew;
     }
 
     function addUploadedDegree() {

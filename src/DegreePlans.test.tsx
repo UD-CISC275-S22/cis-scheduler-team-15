@@ -8,14 +8,23 @@ import { Course } from "./Interfaces/Course";
 describe("Final Project Tests (DegreePlans)", () => {
     beforeEach(() => {
         const COURSES = AllCourses.map((course): Course => ({ ...course }));
+        // Placeholder functions, not used in this file
         function insertCourse(newCourse: Course) {
             newCourse;
+        }
+        function save() {
+            console.log("");
+        }
+        function revert() {
+            console.log("");
         }
         render(
             <DegreePlans
                 courses={[...COURSES]}
                 concentration={"General (BA)"}
                 insertCourse={insertCourse}
+                saveCourses={save}
+                revertCourses={revert}
             />
         );
     });

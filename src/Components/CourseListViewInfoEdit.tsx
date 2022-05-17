@@ -10,29 +10,52 @@ type ChangeEvent = React.ChangeEvent<
 const defaultCourseData = AllCourses.map((course): Course => ({ ...course }));
 const universtiyCourses = [
     "FYS",
-    "ENGL100",
-    "Breadth",
     "DLE",
     "Capstone",
     "Multicultural",
     "CAH",
     "HCC",
-    "SBS",
-    "Science"
+    "SBS"
 ];
-//Change these to all acronyms?
-const college_requirements = ["FL", "SWR"];
-const major_requirements = [
-    "CISC108",
-    "CISC181",
-    "CISC210",
-    "CISC275",
-    "CISC220",
-    "CISC260",
-    "CISC300+",
-    "MATH210",
-    "MATH241",
-    "BREADTH300+"
+const universityCourseDesc = [
+    "- First Year Experience",
+    "",
+    "- Discovery Learning Experience",
+    "",
+    "",
+    "- Creative Arts and Humanities",
+    "- History and Cultural Change",
+    "- Social and Behavioral Sciences",
+    ""
+];
+const college_requirements = ["FL", "SWR", "Breadth", "Science", "BREADTH300+"];
+const collegeCourseDesc = [
+    "- Foreign Language",
+    "- Second Writing Requirement",
+    "",
+    "",
+    ""
+];
+const major_requirements = ["CISC300+"];
+const concentrationCourses = [
+    "Statistics",
+    "Cybersecurity",
+    "Continuous",
+    "Discrete",
+    "Systems",
+    "Organic",
+    "Data",
+    "Math"
+];
+const concentrationCourseDesc = [
+    "Probability/Statistics",
+    "Cybersecurity",
+    "Continuous Track",
+    "Discrete Track",
+    "Systems",
+    "Organic Chemistry",
+    "Data Analysis",
+    "Advanced Math"
 ];
 export function CourseListViewInfoEdit({
     course,
@@ -272,9 +295,7 @@ export function CourseListViewInfoEdit({
                             <Form>
                                 <hr />
                                 <Form.Label>
-                                    <b>
-                                        <u>Edit Credits:</u>
-                                    </b>
+                                    <b>Edit Credits:</b>
                                 </Form.Label>
                                 <InputGroup>
                                     <Form.Control
@@ -296,9 +317,7 @@ export function CourseListViewInfoEdit({
                                     </Button>
                                 </InputGroup>
                                 <Form.Label>
-                                    <b>
-                                        <u>Edit Course Title:</u>
-                                    </b>
+                                    <b>Edit Course Title:</b>
                                 </Form.Label>
                                 <InputGroup>
                                     <Form.Control
@@ -318,7 +337,9 @@ export function CourseListViewInfoEdit({
                                         Update Title
                                     </Button>
                                 </InputGroup>
-                                <Form.Label>Edit Course Listing:</Form.Label>
+                                <Form.Label>
+                                    <b>Edit Course Listing:</b>
+                                </Form.Label>
                                 <InputGroup>
                                     <Form.Control
                                         data-testid={"edit-listing"}
@@ -337,7 +358,9 @@ export function CourseListViewInfoEdit({
                                         Update Listing
                                     </Button>
                                 </InputGroup>
-                                <Form.Label>Edit Pre-Requisites:</Form.Label>
+                                <Form.Label>
+                                    <b>Edit Pre-Requisites:</b>
+                                </Form.Label>
                                 <InputGroup>
                                     <Form.Select
                                         value={newID}
@@ -396,7 +419,9 @@ export function CourseListViewInfoEdit({
                                 <div className="text-danger">
                                     {doubler && "Course not one of the PreReqs"}
                                 </div>
-                                <Form.Label>Edit Co-Requisites:</Form.Label>
+                                <Form.Label>
+                                    <b>Edit Co-Requisites:</b>
+                                </Form.Label>
                                 <InputGroup>
                                     <Form.Select
                                         value={newCoID}
@@ -462,7 +487,9 @@ export function CourseListViewInfoEdit({
                         </Col>
                         <Col>
                             <hr />
-                            <div>Edit Degree Requirements:</div>
+                            <div>
+                                <b>Edit Degree Requirements</b>:
+                            </div>
                             <Accordion>
                                 <Accordion.Item
                                     eventKey="0"
@@ -480,7 +507,12 @@ export function CourseListViewInfoEdit({
                                                     }
                                                     key={index}
                                                     type="checkbox"
-                                                    label={req}
+                                                    label={
+                                                        req +
+                                                        universityCourseDesc[
+                                                            index
+                                                        ]
+                                                    }
                                                     value={req}
                                                     checked={reqSat.includes(
                                                         req
@@ -507,7 +539,10 @@ export function CourseListViewInfoEdit({
                                                     }
                                                     key={index}
                                                     type="checkbox"
-                                                    label={req}
+                                                    label={
+                                                        req +
+                                                        collegeCourseDesc[index]
+                                                    }
                                                     value={req}
                                                     checked={reqSat.includes(
                                                         req
@@ -535,6 +570,38 @@ export function CourseListViewInfoEdit({
                                                     key={index}
                                                     type="checkbox"
                                                     label={req}
+                                                    value={req}
+                                                    checked={reqSat.includes(
+                                                        req
+                                                    )}
+                                                    onChange={updateReq}
+                                                ></Form.Check>
+                                            )
+                                        )}
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                                <Accordion.Item
+                                    eventKey="3"
+                                    data-testid={"edit-conc-req-accordian"}
+                                >
+                                    <Accordion.Header>
+                                        Adjust Concentratoin Requirements
+                                        Satisfied:
+                                    </Accordion.Header>
+                                    <Accordion.Body>
+                                        {concentrationCourses.map(
+                                            (req: string, index: number) => (
+                                                <Form.Check
+                                                    data-testid={
+                                                        "edit-conc-req-option"
+                                                    }
+                                                    key={index}
+                                                    type="checkbox"
+                                                    label={
+                                                        concentrationCourseDesc[
+                                                            index
+                                                        ]
+                                                    }
                                                     value={req}
                                                     checked={reqSat.includes(
                                                         req
