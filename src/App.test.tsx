@@ -148,12 +148,22 @@ describe("Final Project Tests (App)", () => {
         expect(
             firstAccordian[0].innerHTML.toString().replace(/<[^>]+>/g, "")
         ).toMatch(
-            "Degree Requirements Satified: Science, BISC207, FYS, FL, CISC108"
+            "Degree Requirements Satified: Science, BISC207, FYS, FL, CISC300+"
         );
         mOptions[0].click();
         expect(
             firstAccordian[0].innerHTML.toString().replace(/<[^>]+>/g, "")
         ).toMatch("Degree Requirements Satified: Science, BISC207, FYS, FL");
+
+        const conAccordian = screen.queryByTestId("edit-conc-req-accordian");
+        const conOptions = screen.queryAllByTestId("edit-conc-req-option");
+        conAccordian?.click();
+        conOptions[0].click();
+        expect(
+            firstAccordian[0].innerHTML.toString().replace(/<[^>]+>/g, "")
+        ).toMatch(
+            "Degree Requirements Satified: Science, BISC207, FYS, FL, Statistics"
+        );
     });
 
     test("Students can reset course's info back to default", () => {
@@ -218,11 +228,15 @@ describe("Final Project Tests (App)", () => {
         const mAccordian = screen.queryByTestId("edit-major-req-accordian");
         const mOptions = screen.queryAllByTestId("edit-major-req-option");
         mAccordian?.click();
-        mOptions[1].click();
+        mOptions[0].click();
+        const conAccordian = screen.queryByTestId("edit-conc-req-accordian");
+        const conOptions = screen.queryAllByTestId("edit-conc-req-option");
+        conAccordian?.click();
+        conOptions[0].click();
         expect(
             firstAccordian[0].innerHTML.toString().replace(/<[^>]+>/g, "")
         ).toMatch(
-            "Degree Requirements Satified: Science, BISC207, FYS, FL, CISC181"
+            "Degree Requirements Satified: Science, BISC207, FYS, FL, CISC300+, Statistics"
         );
 
         resetButton.click();
@@ -235,6 +249,7 @@ describe("Final Project Tests (App)", () => {
         ).toMatch("Degree Requirements Satified: Science, BISC207");
         expect(text[0]).toBeVisible();
     });
+
     test("Update courses in existing degree plans when course list is updated", () => {
         const courseListButton = screen.getByRole("button", {
             name: /Move to Course List 📄/i
