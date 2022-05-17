@@ -3,9 +3,9 @@ import { Degree } from "../Interfaces/Degree";
 import { Stack, Col, Row, Button, Form } from "react-bootstrap";
 import PlanDataBA from "../Data/PlanDataBA.json";
 import PlanDataBS from "../Data/PlanDataBS.json";
-import { DegreePlanView } from "./DegreePlanView";
 import { Course } from "../Interfaces/Course";
 import { Semester } from "../Interfaces/Semester";
+import { ManageDegreePlans } from "./ManageDegreePlans";
 
 const DEGREEPLANSTARTBA = PlanDataBA.map((degree): Degree => ({ ...degree }));
 const DEGREEPLANSTARTBS = PlanDataBS.map((degree): Degree => ({ ...degree }));
@@ -32,12 +32,11 @@ export function DegreePlans({
     revertCourses: () => void;
 }): JSX.Element {
     const [degreePlans, setDegreePlans] = useState<Degree[]>(degreeInput);
-    const [currentDegreePlanID, setCurrentDegreePlanID] = useState<number>(0);
     const [addingFile, setAddingFile] = useState<boolean>(false);
     const [content, setContent] = useState<string>("No file data uploaded");
 
     useEffect(() => {
-        setDegreePlans(
+        updateDegreePlans(
             degreePlans.map((degree: Degree) => ({
                 ...degree,
                 semesters: degree.semesters.map((semester: Semester) => ({
@@ -52,6 +51,9 @@ export function DegreePlans({
         );
     }, [courses]);
 
+    function updateDegreePlans(degreePlans: Degree[]) {
+        setDegreePlans(degreePlans);
+    }
     function replaceCourse(coursenum: number): Course {
         const courseIDS = courses.map((course: Course) => course.courseID);
         const index = courseIDS.findIndex((x) => x === coursenum);
@@ -65,13 +67,13 @@ export function DegreePlans({
     }
     function revert() {
         if (concentration !== "General (BA)") {
-            setDegreePlans(DEGREEPLANSTARTBS);
+            updateDegreePlans(DEGREEPLANSTARTBS);
             localStorage.setItem(
                 saveDegreesKey,
                 JSON.stringify(DEGREEPLANSTARTBS)
             );
         } else {
-            setDegreePlans(DEGREEPLANSTARTBA);
+            updateDegreePlans(DEGREEPLANSTARTBA);
             localStorage.setItem(
                 saveDegreesKey,
                 JSON.stringify(DEGREEPLANSTARTBA)
@@ -154,7 +156,7 @@ export function DegreePlans({
                 degreeID: newID
             };
         }
-        setDegreePlans([...degreePlans, newPlan]);
+        updateDegreePlans([...degreePlans, newPlan]);
     }
 
     function addEmptyDegreePlan(): void {
@@ -165,7 +167,7 @@ export function DegreePlans({
             degreeID: newID,
             semesters: []
         };
-        setDegreePlans([...degreePlans, newDegreePlan]);
+        updateDegreePlans([...degreePlans, newDegreePlan]);
     }
 
     function addStartDegreePlan(): void {
@@ -174,7 +176,7 @@ export function DegreePlans({
         if (concentration !== "General (BA)") {
             newPlan = DEGREEPLANSTARTBS[0];
         }
-        setDegreePlans([
+        updateDegreePlans([
             ...degreePlans,
             {
                 ...newPlan,
@@ -189,52 +191,6 @@ export function DegreePlans({
                 }))
             }
         ]);
-    }
-
-    function removeDegreePlan(degreeID: number): void {
-        setDegreePlans(
-            degreePlans.filter((degree: Degree) => degree.degreeID !== degreeID)
-        );
-    }
-
-    function selectDegreePlan(degree: Degree): void {
-        setCurrentDegreePlanID(
-            degree.degreeID === currentDegreePlanID ? 0 : degree.degreeID
-        );
-    }
-
-    function sortSemesters(degree: Degree): Degree {
-        let newSemesters = [...degree.semesters];
-        newSemesters = newSemesters.sort(
-            (a: Semester, b: Semester): number =>
-                a.year -
-                b.year +
-                (["Winter", "Spring", "Summer", "Fall"].indexOf(a.season) / 4 -
-                    ["Winter", "Spring", "Summer", "Fall"].indexOf(b.season) /
-                        4)
-        );
-        return (
-            degree.degreeID,
-            {
-                ...degree,
-                semesters: newSemesters
-            }
-        );
-    }
-
-    function editDegreePlan(degreeID: number, newDegreePlan: Degree) {
-        newDegreePlan = sortSemesters(newDegreePlan);
-        newDegreePlan.semesters.map((semester: Semester) =>
-            semester.courses.sort((course1, course2) =>
-                course1.listing < course2.listing ? -1 : 1
-            )
-        );
-        setDegreePlans(
-            degreePlans.map(
-                (degree: Degree): Degree =>
-                    degree.degreeID === degreeID ? newDegreePlan : degree
-            )
-        );
     }
 
     return (
@@ -314,86 +270,13 @@ export function DegreePlans({
                     <div className="App-break"></div>
                 </Row>
             </div>
-
-            <Row>
-                <div className="tab">
-                    <Col>
-                        <div>
-                            {degreePlans.map((degree: Degree) => (
-                                <Button
-                                    key={degree.degreeID}
-                                    value={degree.degreeID}
-                                    style={{ margin: "0px 5px" }}
-                                    className="tablinks"
-                                    onClick={() => selectDegreePlan(degree)}
-                                    active={
-                                        degree.degreeID === currentDegreePlanID
-                                    }
-                                >
-                                    {degree.name}
-                                </Button>
-                            ))}
-                            <span hidden={currentDegreePlanID !== 0}>
-                                <b>🠘 Select a Degree Plan to View/Edit</b>
-                            </span>
-                        </div>
-                    </Col>
-                </div>
-
-                <div>
-                    {degreePlans.map((degree: Degree) => (
-                        <span key={degree.degreeID}>
-                            <Row>
-                                <Col>
-                                    <div
-                                        hidden={
-                                            degree.degreeID !==
-                                            currentDegreePlanID
-                                        }
-                                        className="Align-left2"
-                                    >
-                                        <h3>Total Credits</h3>
-                                    </div>
-                                </Col>
-                                <Col>
-                                    <div
-                                        hidden={
-                                            degree.degreeID !==
-                                            currentDegreePlanID
-                                        }
-                                        className="App-special3-right"
-                                    >
-                                        <Button
-                                            onClick={() =>
-                                                removeDegreePlan(
-                                                    currentDegreePlanID
-                                                )
-                                            }
-                                            variant="danger"
-                                            style={{ margin: "5px" }}
-                                        >
-                                            Delete Plan 🗑️
-                                        </Button>
-                                    </div>
-                                </Col>
-                            </Row>
-
-                            <div className="App-special3">
-                                <DegreePlanView
-                                    courses={courses}
-                                    degree={degree}
-                                    editDegree={editDegreePlan}
-                                    hidden={
-                                        degree.degreeID !== currentDegreePlanID
-                                    }
-                                    concentration={concentration}
-                                    insertCourse={insertCourse}
-                                ></DegreePlanView>
-                            </div>
-                        </span>
-                    ))}
-                </div>
-            </Row>
+            <ManageDegreePlans
+                degreePlans={degreePlans}
+                updateDegreePlans={updateDegreePlans}
+                courses={courses}
+                concentration={concentration}
+                insertCourse={insertCourse}
+            ></ManageDegreePlans>
         </Stack>
     );
 }

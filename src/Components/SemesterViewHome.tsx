@@ -55,6 +55,12 @@ export function SemesterViewHome({
                             hidden={!editMode}
                             variant="danger"
                             onClick={() => deleteSemester(semester.semesterID)}
+                            title={
+                                "Click to delete " +
+                                semester.season +
+                                " " +
+                                semester.year
+                            }
                         >
                             🗑️
                         </Button>

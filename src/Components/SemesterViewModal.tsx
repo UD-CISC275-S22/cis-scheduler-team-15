@@ -6,6 +6,10 @@ import "../App.css";
 import { MoveCourse } from "./MoveCourse";
 import { Degree } from "../Interfaces/Degree";
 
+/*The table shown of a semester's courses in the EditSemester modal
+Inclues the buttons for deleting and moving individual courses.
+Includes a customized accordion component in each row of the table
+to provide more details for each course*/
 export function SemesterViewModal({
     semester,
     degree,
@@ -22,6 +26,7 @@ export function SemesterViewModal({
     const [hovering, setHovering] = useState<boolean[]>(
         Array(semester.courses.length).fill(false)
     );
+
     return (
         <div>
             <table className="center" key={semester.semesterID}>

@@ -5,6 +5,8 @@ import { Degree } from "../Interfaces/Degree";
 import { Semester } from "../Interfaces/Semester";
 import { Course } from "../Interfaces/Course";
 
+/*Shows the errors for every semester in the degree plan by
+combining the error field of every semester*/
 export function ShowAllErrors({ degree }: { degree: Degree }): JSX.Element {
     const [visible, setVisible] = useState<boolean>(false);
 
@@ -28,7 +30,9 @@ export function ShowAllErrors({ degree }: { degree: Degree }): JSX.Element {
                             .map((course: Course, index: number) => (
                                 <p key={index} className="line-break">
                                     <span
-                                        data-testid={course.listing + " error"}
+                                        data-testid={
+                                            course.listing + " error-all errors"
+                                        }
                                         style={{ color: "red" }}
                                     >
                                         {course.listing} {"\r"} (

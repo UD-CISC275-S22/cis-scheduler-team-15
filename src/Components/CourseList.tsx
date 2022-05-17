@@ -30,6 +30,7 @@ export function CourseList({
     return (
         <div>
             <div>
+                <br></br>
                 <Form.Group
                     controlId="Course_listing_filter"
                     className="container"
@@ -41,6 +42,7 @@ export function CourseList({
                         onChange={updateSearch}
                     />
                 </Form.Group>
+                <br></br>
             </div>
             <Row>
                 <Col>
