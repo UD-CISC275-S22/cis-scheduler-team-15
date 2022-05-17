@@ -478,8 +478,8 @@ describe("Final Project Tests (DegreePlans)", () => {
             name: "Click to add MATH242"
         });
         adding.click();
-        const fall2022Modal = screen.getByTestId("Fall 2022 modal");
-        const fall2022ModalText = fall2022Modal.innerHTML.toString();
+        //const fall2022Modal = screen.getByTestId("Fall 2022 modal");
+        //const fall2022ModalText = fall2022Modal.innerHTML.toString();
         const errorTestID = screen.getByTestId("semester-error-test");
         const errorText = errorTestID.innerHTML.toString();
         expect(errorText).toMatch(
