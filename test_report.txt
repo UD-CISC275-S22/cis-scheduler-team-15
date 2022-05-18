@@ -2,7 +2,8 @@
 > react-typescript-starter@0.1.0 test
 > react-scripts test "--coverage"
 
-PASS src/App.test.tsx (66.883 s)
+PASS src/DegreePlans.test.tsx (19.85 s)
+PASS src/App.test.tsx (66.742 s)
   ● Console
 
     console.error
@@ -47,7 +48,7 @@ PASS src/App.test.tsx (66.883 s)
           at div
           at /home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/node_modules/react-bootstrap/cjs/Stack.js:23:7
           at div
-          at CourseState (/home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/src/Components/CourseState.tsx:41:35)
+          at CourseState (/home/runner/work/cis-scheduler-team-15/cis-scheduler-team-15/src/Components/CourseState.tsx:46:35)
           at div
           at App
 
@@ -60,42 +61,41 @@ PASS src/App.test.tsx (66.883 s)
       at diffProperties (node_modules/react-dom/cjs/react-dom.development.js:9172:5)
       at prepareUpdate (node_modules/react-dom/cjs/react-dom.development.js:10215:10)
 
-PASS src/DegreePlans.test.tsx (15.554 s)
------------------------------|---------|----------|---------|---------|-----------------------------------------------------------------------------------------
-File                         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                       
------------------------------|---------|----------|---------|---------|-----------------------------------------------------------------------------------------
-All files                    |   38.45 |    69.02 |   33.94 |   38.04 |                                                                                         
- src                         |     100 |      100 |     100 |     100 |                                                                                         
-  App.tsx                    |     100 |      100 |     100 |     100 |                                                                                         
- src/Components              |   38.42 |    69.02 |   33.85 |      38 |                                                                                         
-  AddCourse.tsx              |     100 |       90 |     100 |     100 | 67                                                                                      
-  AddSemester.tsx            |      85 |      100 |      75 |      85 | 26-27,70                                                                                
-  CheckRequirements.tsx      |   16.18 |    36.11 |    9.19 |   16.18 | 487,567-2622,2638-2640,2649-2651,2660-2662,2671-2673,2682-2684,2693-2695,2704-2706,2732 
-  CheckSemesters.tsx         |   98.57 |    92.85 |     100 |   98.52 | 25                                                                                      
-  CourseList.tsx             |     100 |      100 |     100 |     100 |                                                                                         
-  CourseListView.tsx         |     100 |      100 |     100 |     100 |                                                                                         
-  CourseListViewInfo.tsx     |     100 |      100 |     100 |     100 |                                                                                         
-  CourseListViewInfoEdit.tsx |     100 |      100 |     100 |     100 |                                                                                         
-  CourseState.tsx            |   73.68 |       75 |   61.53 |   72.97 | 29,37,58-71,87                                                                          
-  DegreePlanView.tsx         |   69.56 |    85.71 |      70 |   68.88 | 86-144                                                                                  
-  DegreePlans.tsx            |   42.35 |    26.66 |   54.83 |   39.47 | 18,71-165,183,226                                                                       
-  DegreeRequirementView.tsx  |     100 |      100 |     100 |     100 |                                                                                         
-  DegreeRequirements.tsx     |     100 |      100 |     100 |     100 |                                                                                         
-  EditSemester.tsx           |   93.75 |      100 |   88.88 |   93.75 | 98                                                                                      
-  ManageDegreePlans.tsx      |     100 |    83.33 |     100 |     100 | 31                                                                                      
-  MoveCourse.tsx             |   94.73 |      100 |   88.88 |   94.73 | 31                                                                                      
-  SemesterViewHome.tsx       |   83.33 |      100 |   83.33 |   83.33 | 59                                                                                      
-  SemesterViewModal.tsx      |   71.42 |    58.33 |   69.23 |   71.42 | 54-73                                                                                   
-  ShowAllErrors.tsx          |     100 |      100 |     100 |     100 |                                                                                         
-  ShowSemesterErrors.tsx     |     100 |      100 |     100 |     100 |                                                                                         
- src/Interfaces              |       0 |        0 |       0 |       0 |                                                                                         
-  Course.ts                  |       0 |        0 |       0 |       0 |                                                                                         
-  Degree.ts                  |       0 |        0 |       0 |       0 |                                                                                         
-  Semester.ts                |       0 |        0 |       0 |       0 |                                                                                         
------------------------------|---------|----------|---------|---------|-----------------------------------------------------------------------------------------
+-----------------------------|---------|----------|---------|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+File                         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                                                                                                                                                   
+-----------------------------|---------|----------|---------|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+All files                    |   53.91 |    73.36 |   49.22 |   53.65 |                                                                                                                                                                                                                     
+ src                         |     100 |      100 |     100 |     100 |                                                                                                                                                                                                                     
+  App.tsx                    |     100 |      100 |     100 |     100 |                                                                                                                                                                                                                     
+ src/Components              |   53.88 |    73.36 |   49.15 |   53.62 |                                                                                                                                                                                                                     
+  AddCourse.tsx              |     100 |       90 |     100 |     100 | 67                                                                                                                                                                                                                  
+  AddSemester.tsx            |      85 |      100 |      75 |      85 | 26-27,70                                                                                                                                                                                                            
+  CheckRequirements.tsx      |   38.66 |    58.33 |   30.97 |   38.66 | 498,578-845,1057,1061,1065,1069,1073,1077,1081,1085,1089,1093,1097,1101,1105,1109,1113,1125,1129,1366,1370,1374,1378,1382,1386,1390,1394,1398,1402,1406,1459-2633,2651-2653,2684-2686,2695-2697,2706-2708,2717-2719 
+  CheckSemesters.tsx         |   98.57 |    92.85 |     100 |   98.52 | 25                                                                                                                                                                                                                  
+  CourseList.tsx             |     100 |      100 |     100 |     100 |                                                                                                                                                                                                                     
+  CourseListView.tsx         |     100 |      100 |     100 |     100 |                                                                                                                                                                                                                     
+  CourseListViewInfo.tsx     |     100 |      100 |     100 |     100 |                                                                                                                                                                                                                     
+  CourseListViewInfoEdit.tsx |     100 |      100 |     100 |     100 |                                                                                                                                                                                                                     
+  CourseState.tsx            |   76.31 |       75 |   69.23 |   75.67 | 33,42,65-82                                                                                                                                                                                                         
+  DegreePlanView.tsx         |   76.08 |    85.71 |      80 |   75.55 | 105-153                                                                                                                                                                                                             
+  DegreePlans.tsx            |   42.35 |    26.66 |   54.83 |   39.47 | 22,76-177,197,240                                                                                                                                                                                                   
+  DegreeRequirementView.tsx  |     100 |      100 |     100 |     100 |                                                                                                                                                                                                                     
+  DegreeRequirements.tsx     |     100 |      100 |     100 |     100 |                                                                                                                                                                                                                     
+  EditSemester.tsx           |   93.75 |      100 |   88.88 |   93.75 | 98                                                                                                                                                                                                                  
+  ManageDegreePlans.tsx      |     100 |    83.33 |     100 |     100 | 36                                                                                                                                                                                                                  
+  MoveCourse.tsx             |   94.73 |      100 |   88.88 |   94.73 | 31                                                                                                                                                                                                                  
+  SemesterViewHome.tsx       |     100 |      100 |     100 |     100 |                                                                                                                                                                                                                     
+  SemesterViewModal.tsx      |   71.42 |    58.33 |   69.23 |   71.42 | 54-73                                                                                                                                                                                                               
+  ShowAllErrors.tsx          |     100 |      100 |     100 |     100 |                                                                                                                                                                                                                     
+  ShowSemesterErrors.tsx     |     100 |      100 |     100 |     100 |                                                                                                                                                                                                                     
+ src/Interfaces              |       0 |        0 |       0 |       0 |                                                                                                                                                                                                                     
+  Course.ts                  |       0 |        0 |       0 |       0 |                                                                                                                                                                                                                     
+  Degree.ts                  |       0 |        0 |       0 |       0 |                                                                                                                                                                                                                     
+  Semester.ts                |       0 |        0 |       0 |       0 |                                                                                                                                                                                                                     
+-----------------------------|---------|----------|---------|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Test Suites: 2 passed, 2 total
-Tests:       25 passed, 25 total
+Tests:       27 passed, 27 total
 Snapshots:   0 total
-Time:        83.216 s
+Time:        87.356 s
 Ran all test suites.
