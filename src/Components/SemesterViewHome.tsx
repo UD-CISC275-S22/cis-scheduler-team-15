@@ -7,6 +7,8 @@ import { Button } from "react-bootstrap";
 import { EditSemester } from "./EditSemester";
 import { CheckSemesters } from "./CheckSemesters";
 
+/* Table view of each semester used in the displayed degree plan */
+
 export function SemesterViewHome({
     semester,
     editMode,

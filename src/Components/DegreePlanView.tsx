@@ -9,6 +9,8 @@ import { CheckRequirements } from "./CheckRequirements";
 import { Course } from "../Interfaces/Course";
 import { ShowAllErrors } from "./ShowAllErrors";
 
+/* Contains the buttons and functionality to modify a specific degree plan */
+
 export function DegreePlanView({
     degree,
     editDegree,
@@ -41,6 +43,7 @@ export function DegreePlanView({
         .flat()
         .reduce((prev: number, num: number) => prev + num, 0);
 
+    // Use odd and even semesters to create a two-semester wide view
     const oddSemesters = degree.semesters.filter(
         (sem: Semester): boolean => degree.semesters.indexOf(sem) % 2 === 1
     );
@@ -61,11 +64,13 @@ export function DegreePlanView({
     }
 
     function updateStartYear(event: React.ChangeEvent<HTMLSelectElement>) {
+        // Updates the year of the first semester in the degree plan to a desired year
         setStartYear(parseInt(event.target.value));
     }
 
     function updatePlanStartYear() {
-        let offset = 0;
+        // Taking in a desired start year, adds a constant value to the year of each semester
+        let offset = 0; // Offset determines the difference between the year of the first semester and the target start year
         if (degree.semesters.length > 0) {
             offset = startYear - degree.semesters[0].year;
         }
@@ -83,6 +88,7 @@ export function DegreePlanView({
     }
 
     function deleteSemester(semesterID: number) {
+        // Removes a semester with the corresponding semester ID
         const newSemesters = degree.semesters.filter(
             (semester: Semester): boolean => semester.semesterID !== semesterID
         );
@@ -93,6 +99,9 @@ export function DegreePlanView({
     }
 
     function arrayToCSV(): string {
+        // Converts a degree plan to a csv format
+        // Semesters and courses joined with new lines
+        // Fields containing arrays are joined into a single value with '-'
         const semesterString = degree.semesters
             .map((semester: Semester) =>
                 [
@@ -134,7 +143,7 @@ export function DegreePlanView({
         });
         const url = URL.createObjectURL(blob);
 
-        // Create a link to download it
+        // Create a link to download the degree plan based on the current degree ID
         const pom = document.createElement("a");
         pom.href = url;
         pom.setAttribute(

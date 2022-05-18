@@ -5,6 +5,9 @@ import { Course } from "../Interfaces/Course";
 import { Semester } from "../Interfaces/Semester";
 import { DegreePlanView } from "./DegreePlanView";
 
+/* Second part of the DegreePlans file, this contains the code for actually displaying
+all of the degree plan info */
+
 export function ManageDegreePlans({
     degreePlans,
     updateDegreePlans,
@@ -21,18 +24,21 @@ export function ManageDegreePlans({
     const [currentDegreePlanID, setCurrentDegreePlanID] = useState<number>(0);
 
     function removeDegreePlan(degreeID: number): void {
+        // Removes a degree plan based on a target ID
         updateDegreePlans(
             degreePlans.filter((degree: Degree) => degree.degreeID !== degreeID)
         );
     }
 
     function selectDegreePlan(degree: Degree): void {
+        // Updates the current degree plan being displayed
         setCurrentDegreePlanID(
             degree.degreeID === currentDegreePlanID ? 0 : degree.degreeID
         );
     }
 
     function sortSemesters(degree: Degree): Degree {
+        // Makes sure the semesters display in chronological order when a semester is added to the plan
         let newSemesters = [...degree.semesters];
         newSemesters = newSemesters.sort(
             (a: Semester, b: Semester): number =>
@@ -52,6 +58,7 @@ export function ManageDegreePlans({
     }
 
     function editDegreePlan(degreeID: number, newDegreePlan: Degree) {
+        // Modify a plan by replacing the old plan with the new one (identified using degree ID)
         newDegreePlan = sortSemesters(newDegreePlan);
         newDegreePlan.semesters.map((semester: Semester) =>
             semester.courses.sort((course1, course2) =>

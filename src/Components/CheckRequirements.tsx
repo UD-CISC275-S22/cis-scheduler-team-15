@@ -5,6 +5,13 @@ import { Course } from "../Interfaces/Course";
 import { Semester } from "../Interfaces/Semester";
 import { Button } from "react-bootstrap";
 
+/* Called within the DegreePlanView, it checks all of the requirements of the 
+current concentration (determined by state in the homepage), and checks the number
+of credits within the degree plan, and then displays the number of credits missing
+for those requirements which are unmet.
+Note: This file is long since each degree requirement has many edge cases and unique 
+requirments whish must be coded individually. */
+
 export function CheckRequirements({
     degree,
     concentration
@@ -12,7 +19,8 @@ export function CheckRequirements({
     degree: Degree;
     concentration: string;
 }): JSX.Element {
-    const [check, setCheck] = useState<boolean>(false);
+    const [check, setCheck] = useState<boolean>(false); // State to determine whether user wants to see unmet requirements
+    //the "reqs[Concentration]" is an array of strings used to display which requirement is unmet
     const reqsBA = [
         "ENGL110",
         "FYS",
@@ -287,6 +295,7 @@ export function CheckRequirements({
         "Continuous track"
     ];
 
+    // Static variables for the number of credits for each requirement
     const E110 = 3;
     const FYS = 2;
     const DLE = 3;
@@ -372,6 +381,8 @@ export function CheckRequirements({
         0
     );
 
+    // Unmet requirements finds the courses in the degree plan which meet specific requirements,
+    // and then calculates the difference in credits
     function unmetRequirements(): number[] {
         //Courses
         const E110Courses = allCoursesInPlan.filter((course: Course): boolean =>
@@ -2623,6 +2634,8 @@ export function CheckRequirements({
     }
 
     function printMissing(): string[] {
+        // Based on the credit difference, produces either an empty string if the requirements are met,
+        // or a string displaying the unmet requirements if not
         let netCredits = unmetRequirements();
         const netTotal = TOTAL - totalCredits;
         let retString = netCredits.map((credits: number, ind: number): string =>

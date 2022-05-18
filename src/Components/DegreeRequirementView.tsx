@@ -1,6 +1,9 @@
 import React from "react";
 import { Row, Col, Container } from "react-bootstrap";
 
+/* Contains the information for all of the degree requirements for 
+all of the different CS concentrations */
+
 export function DegreeRequirementView({
     concentration
 }: {

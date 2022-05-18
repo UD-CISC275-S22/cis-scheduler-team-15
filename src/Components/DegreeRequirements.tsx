@@ -3,6 +3,8 @@ import { Button } from "react-bootstrap";
 import { DegreeRequirementView } from "./DegreeRequirementView";
 import "../App.css";
 
+// Show and hide functionality to show a list of the degree requirements based on concentration
+
 export function DegreeRequirements({
     concentration
 }: {
