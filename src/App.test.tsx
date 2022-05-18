@@ -88,8 +88,6 @@ describe("Final Project Tests (App)", () => {
         expect(text4).toBeVisible();
     });
 
-    // Henry test("Degree requirements change when concentration changes", () => {});
-
     test("Students can see a list of existing courses", () => {
         const openCourses = screen.getByRole("button", {
             name: "Move to Course List 📄"
@@ -554,5 +552,42 @@ describe("Final Project Tests (App)", () => {
 
         const accordions = screen.queryAllByTestId("accordian-item", {});
         expect(accordions.length).toBe(35);
+    });
+    test("Student can view the degree requirements of an individual concentration", () => {
+        const showHides = screen.getAllByRole("button", {
+            name: /Show/i
+        });
+        showHides[0].click();
+        const collegeReqsTitle = screen.getByText("College Requirements:");
+        let scienceReqs = screen.getByText(
+            "7 credits Mathematics, Natural Sciences, and Technology (one must contain a lab)"
+        );
+        expect(collegeReqsTitle).toBeVisible();
+        expect(scienceReqs).toBeVisible();
+        const concentrations = screen.getByRole("combobox");
+        expect(screen.queryByText("Bioinformatics Requirements:")).toBeNull();
+        expect(screen.queryByText("Cybersecurity Requirements:")).toBeNull();
+        userEvent.selectOptions(concentrations, "Bioinformatics (BS)");
+        scienceReqs = screen.getByText("8 credits of Lab Science");
+        expect(scienceReqs).toBeVisible();
+        expect(
+            screen.queryByText("Bioinformatics Requirements:")
+        ).toBeVisible();
+        expect(screen.queryByText("Cybersecurity Requirements:")).toBeNull();
+        expect(
+            screen.queryByText("BISC 401 - Molecular Biology of the Cell")
+        ).toBeVisible();
+        expect(
+            screen.queryByText("CPEG 494 - System Hardening and Protection")
+        ).not.toBeVisible();
+        userEvent.selectOptions(concentrations, "Cybersecurity (BS)");
+        expect(screen.queryByText("Bioinformatics Requirements:")).toBeNull();
+        expect(screen.queryByText("Cybersecurity Requirements:")).toBeVisible();
+        expect(
+            screen.queryByText("BISC 401 - Molecular Biology of the Cell")
+        ).not.toBeVisible();
+        expect(
+            screen.queryByText("CPEG 494 - System Hardening and Protection")
+        ).toBeVisible();
     });
 });

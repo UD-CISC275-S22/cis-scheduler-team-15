@@ -2627,7 +2627,7 @@ export function CheckRequirements({
         const netTotal = TOTAL - totalCredits;
         let retString = netCredits.map((credits: number, ind: number): string =>
             credits > 0
-                ? "Warning: You are missing " +
+                ? "You are missing " +
                   netCredits[ind] +
                   " credits as part of the " +
                   reqsBA[ind] +
@@ -2638,7 +2638,7 @@ export function CheckRequirements({
             netCredits = unmetRequirementsAI();
             retString = netCredits.map((credits: number, ind: number): string =>
                 credits > 0
-                    ? "Warning: You are missing " +
+                    ? "You are missing " +
                       netCredits[ind] +
                       " credits as part of the " +
                       reqsAI[ind] +
@@ -2649,7 +2649,7 @@ export function CheckRequirements({
             netCredits = unmetRequirementsBio();
             retString = netCredits.map((credits: number, ind: number): string =>
                 credits > 0
-                    ? "Warning: You are missing " +
+                    ? "You are missing " +
                       netCredits[ind] +
                       " credits as part of the " +
                       reqsBio[ind] +
@@ -2660,7 +2660,7 @@ export function CheckRequirements({
             netCredits = unmetRequirementsCyber();
             retString = netCredits.map((credits: number, ind: number): string =>
                 credits > 0
-                    ? "Warning: You are missing " +
+                    ? "You are missing " +
                       netCredits[ind] +
                       " credits as part of the " +
                       reqsCyber[ind] +
@@ -2671,7 +2671,7 @@ export function CheckRequirements({
             netCredits = unmetRequirementsData();
             retString = netCredits.map((credits: number, ind: number): string =>
                 credits > 0
-                    ? "Warning: You are missing " +
+                    ? "You are missing " +
                       netCredits[ind] +
                       " credits as part of the " +
                       reqsData[ind] +
@@ -2682,7 +2682,7 @@ export function CheckRequirements({
             netCredits = unmetRequirementsPerf();
             retString = netCredits.map((credits: number, ind: number): string =>
                 credits > 0
-                    ? "Warning: You are missing " +
+                    ? "You are missing " +
                       netCredits[ind] +
                       " credits as part of the " +
                       reqsPerf[ind] +
@@ -2693,7 +2693,7 @@ export function CheckRequirements({
             netCredits = unmetRequirementsSystems();
             retString = netCredits.map((credits: number, ind: number): string =>
                 credits > 0
-                    ? "Warning: You are missing " +
+                    ? "You are missing " +
                       netCredits[ind] +
                       " credits as part of the " +
                       reqsSystems[ind] +
@@ -2704,7 +2704,7 @@ export function CheckRequirements({
             netCredits = unmetRequirementsTheory();
             retString = netCredits.map((credits: number, ind: number): string =>
                 credits > 0
-                    ? "Warning: You are missing " +
+                    ? "You are missing " +
                       netCredits[ind] +
                       " credits as part of the " +
                       reqsTheory[ind] +
@@ -2715,7 +2715,7 @@ export function CheckRequirements({
         if (netTotal > 0) {
             retString = [
                 ...retString,
-                "Warning: You are missing " +
+                "You are missing " +
                     netTotal.toString() +
                     " credits to satisfy your total credits."
             ];
@@ -2735,7 +2735,13 @@ export function CheckRequirements({
             >
                 {!check ? "⚠ Check Requirements ⚠" : "🛑 Stop Checking 🛑"}
             </Button>
-            <div hidden={!check}>{printMissing().join("\r\n")}</div>
+            <div hidden={!check}>
+                {printMissing().map((missing: string, index: number) => (
+                    <p key={index} className="line-break">
+                        <span style={{ color: "red" }}>{missing}</span>
+                    </p>
+                ))}
+            </div>
         </div>
     );
 }

@@ -522,4 +522,55 @@ describe("Final Project Tests (DegreePlans)", () => {
     // Henry test("Modify degree plan name", () => {});
 
     // Henry test("Modify degree plan start year", () => {});
+
+    test("Students will see all errors from their degree plan in the degree plan view", () => {
+        const defaultPlan = screen.getByRole("button", { name: "Default" });
+        defaultPlan.click();
+        expect(
+            screen.queryByText(
+                "You are missing 12 credits as part of the FL requirement."
+            )
+        ).not.toBeVisible();
+        const reqsButton = screen.getByRole("button", {
+            name: "⚠ Check Requirements ⚠"
+        });
+        reqsButton.click();
+        expect(
+            screen.queryByText(
+                "You are missing 12 credits as part of the FL requirement."
+            )
+        ).toBeVisible();
+        let totalCreditErrorBefore = screen.queryByText(
+            "You are missing 3 credits to satisfy your total credits."
+        );
+        let totalCreditErrorAfter = screen.queryByText(
+            "You are missing 18 credits to satisfy your total credits."
+        );
+        let MATH241Error = screen.queryByText(
+            "You are missing 4 credits as part of the MATH241 requirement."
+        );
+        expect(totalCreditErrorBefore).toBeVisible();
+        expect(totalCreditErrorAfter).toBeNull();
+        expect(MATH241Error).toBeNull();
+        const editPlan = screen.queryByRole("button", {
+            name: /Edit Plan 🖉/i
+        });
+        editPlan?.click();
+        const firstSemDelete = screen.getAllByRole("button", {
+            name: "Click to delete Fall 2020"
+        })[0];
+        firstSemDelete.click();
+        totalCreditErrorBefore = screen.queryByText(
+            "You are missing 3 credits to satisfy your total credits."
+        );
+        totalCreditErrorAfter = screen.queryByText(
+            "You are missing 18 credits to satisfy your total credits."
+        );
+        MATH241Error = screen.queryByText(
+            "You are missing 4 credits as part of the MATH241 requirement."
+        );
+        expect(totalCreditErrorBefore).toBeNull();
+        expect(totalCreditErrorAfter).toBeVisible();
+        expect(MATH241Error).toBeVisible();
+    });
 });
