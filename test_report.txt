@@ -2,7 +2,7 @@
 > react-typescript-starter@0.1.0 test
 > react-scripts test "--coverage"
 
-PASS src/App.test.tsx (79.006 s)
+PASS src/App.test.tsx (66.883 s)
   ● Console
 
     console.error
@@ -60,7 +60,7 @@ PASS src/App.test.tsx (79.006 s)
       at diffProperties (node_modules/react-dom/cjs/react-dom.development.js:9172:5)
       at prepareUpdate (node_modules/react-dom/cjs/react-dom.development.js:10215:10)
 
-PASS src/DegreePlans.test.tsx (16.945 s)
+PASS src/DegreePlans.test.tsx (15.554 s)
 -----------------------------|---------|----------|---------|---------|-----------------------------------------------------------------------------------------
 File                         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                       
 -----------------------------|---------|----------|---------|---------|-----------------------------------------------------------------------------------------
@@ -78,7 +78,7 @@ All files                    |   38.45 |    69.02 |   33.94 |   38.04 |
   CourseListViewInfoEdit.tsx |     100 |      100 |     100 |     100 |                                                                                         
   CourseState.tsx            |   73.68 |       75 |   61.53 |   72.97 | 29,37,58-71,87                                                                          
   DegreePlanView.tsx         |   69.56 |    85.71 |      70 |   68.88 | 86-144                                                                                  
-  DegreePlans.tsx            |   42.35 |    26.66 |   54.83 |   39.47 | 18,65-159,177,220                                                                       
+  DegreePlans.tsx            |   42.35 |    26.66 |   54.83 |   39.47 | 18,71-165,183,226                                                                       
   DegreeRequirementView.tsx  |     100 |      100 |     100 |     100 |                                                                                         
   DegreeRequirements.tsx     |     100 |      100 |     100 |     100 |                                                                                         
   EditSemester.tsx           |   93.75 |      100 |   88.88 |   93.75 | 98                                                                                      
@@ -97,5 +97,5 @@ All files                    |   38.45 |    69.02 |   33.94 |   38.04 |
 Test Suites: 2 passed, 2 total
 Tests:       25 passed, 25 total
 Snapshots:   0 total
-Time:        96.759 s
+Time:        83.216 s
 Ran all test suites.
