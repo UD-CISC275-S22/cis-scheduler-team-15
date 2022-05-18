@@ -28,7 +28,6 @@ describe("Final Project Tests (DegreePlans)", () => {
             />
         );
     });
-
     test("Students can see a list of all the degree plans they have made", () => {
         const addEmpty = screen.getByRole("button", {
             name: /Add Empty ➕/i
@@ -432,26 +431,24 @@ describe("Final Project Tests (DegreePlans)", () => {
         expect(errorText).toBeNull();
     });
 
-    test("Students will get an error in the semester view when a course with an unsatisfied prerequisite or corequisite is added", () => {
-        const defaultPlan = screen.getByRole("button", { name: "Default" });
-        defaultPlan.click();
-        const deletePlan = screen.getByRole("button", {
-            name: "Delete Plan 🗑️"
-        });
-        deletePlan.click();
+    test("Students can insert a duplicate course into the plan if they pass the error screen", () => {
         const addEmpty = screen.getByRole("button", {
             name: /Add Empty ➕/i
         });
         addEmpty.click();
-        const editButton = screen.getByRole("button", {
+        const firstEmpty = screen.queryByRole("button", {
+            name: "Empty"
+        });
+        firstEmpty?.click();
+        const editButton = screen.queryByRole("button", {
             name: /Edit Plan 🖉/i
         });
         editButton?.click();
-        const addSemester = screen.getByRole("button", {
+        const addSemester = screen.queryByRole("button", {
             name: /Add Semester ➕/i
         });
-        addSemester.click();
-        const createSemester = screen.getByRole("button", {
+        addSemester?.click();
+        const createSemester = screen.queryByRole("button", {
             name: /Create Semester/i
         });
         createSemester?.click();
@@ -460,11 +457,11 @@ describe("Final Project Tests (DegreePlans)", () => {
         createSemester?.click();
         const closeModal = screen.queryByRole("closebutton");
         closeModal?.click();
-        const editSemester = screen.getByRole("button", {
+        let editSemester = screen.getByRole("button", {
             name: "Click to edit Fall 2022"
         });
         editSemester.click();
-        const addCourse = screen.getByRole("button", {
+        let addCourse = screen.getByRole("button", {
             name: /Add Course/i
         });
         addCourse.click();
@@ -472,27 +469,16 @@ describe("Final Project Tests (DegreePlans)", () => {
             name: "Click to add CISC108"
         });
         adding.click();
-        const filter = screen.getAllByRole("textbox");
-        userEvent.type(filter[1], "242");
+        const selectCourses = screen.getAllByRole("combobox");
+        const newC = screen.getAllByTestId("add-course-select");
+        userEvent.selectOptions(selectCourses[3], newC[12]);
         adding = screen.getByRole("button", {
-            name: "Click to add MATH242"
+            name: "Click to add MATH241"
         });
         adding.click();
-        //const fall2022Modal = screen.getByTestId("Fall 2022 modal");
-        //const fall2022ModalText = fall2022Modal.innerHTML.toString();
-        const errorTestID = screen.getByTestId("semester-error-test");
-        const errorText = errorTestID.innerHTML.toString();
-        expect(errorText).toMatch(
-            "Errors with the following courses: CISC108, MATH242"
-        );
-        //const errorText = screen.queryByTestId(
-        //    "semester errrors: CISC108,MATH242"
-        //);
-        //expect(errorText).toBeVisible();
-        //errorText = screen.queryByTestId("MATH242 error-semester errors");
-        //expect(errorText).not.toBeNull();
-        /*const closeModal2 = screen.queryByRole("closebutton");
+        const closeModal2 = screen.queryByRole("closebutton");
         closeModal2?.click();
+
         editSemester = screen.getByRole("button", {
             name: "Click to edit Winter 2022"
         });
@@ -501,27 +487,68 @@ describe("Final Project Tests (DegreePlans)", () => {
             name: /Add Course/i
         });
         addCourse.click();
-        filter = screen.getAllByRole("textbox");
-        userEvent.type(filter[2], "241");
         adding = screen.getByRole("button", {
-            name: "Click to add MATH241"
+            name: "Click to add CISC108"
         });
         adding.click();
-        const closeModal3 = screen.queryByRole("closebutton");
-        closeModal3?.click();
-        editSemester = screen.getByRole("button", {
-            name: "Click to edit Fall 2022"
+        const filter = screen.getAllByRole("textbox");
+        userEvent.type(filter[1], "e");
+        adding = screen.getByRole("button", {
+            name: "Click to add EGGG101"
         });
-        editSemester.click();
-        errorText = screen.queryByTestId("CISC108 error-all errors");
-        expect(errorText).toBeNull();
-        errorText = screen.queryByTestId("MATH242 error-all errors");
-        expect(errorText).toBeNull();*/
+        adding.click();
+        const text4 = screen.queryByText("9/124❌");
+        expect(text4).toBeVisible();
+        adding = screen.getByRole("button", {
+            name: "Click to add CISC108"
+        });
+        adding.click();
+        const addDuplicate = screen.getByRole("button", {
+            name: "Add duplicate ➕"
+        });
+        addDuplicate.click();
+        const text5 = screen.queryByText("12/124❌");
+        expect(text5).toBeVisible();
+        const modal = screen.getByTestId("Winter 2022 modal");
+        expect(modal.innerHTML.toString().replace(/<[^>]+>/g, "")).toMatch(
+            "Introduction to Computer Science I (duplicate)"
+        );
     });
 
-    // Henry test("Modify degree plan name", () => {});
+    test("Modify degree plan name", () => {
+        const degreeButton = screen.getByRole("button", {
+            name: "Default"
+        });
+        degreeButton.click();
+        const editPlanButton = screen.getByRole("button", {
+            name: /Edit Plan 🖉/i
+        });
+        editPlanButton.click();
+    });
 
-    // Henry test("Modify degree plan start year", () => {});
+    test("Modify degree plan start year", () => {
+        const degreeButton = screen.getByRole("button", {
+            name: "Default"
+        });
+        degreeButton.click();
+        const editPlanButton = screen.getByRole("button", {
+            name: /Edit Plan 🖉/i
+        });
+        editPlanButton.click();
+
+        const nameBox = screen.getByTestId("start-year-box");
+        userEvent.selectOptions(nameBox, "2018");
+
+        const updateStartButton = screen.getByRole("button", {
+            name: /Update Start Year/i
+        });
+        updateStartButton.click();
+
+        const text = screen.queryByText("Fall 2018");
+        const text2 = screen.queryByText("Spring 2019");
+        expect(text).toBeVisible();
+        expect(text2).toBeVisible();
+    });
 
     test("Students will see all errors from their degree plan in the degree plan view", () => {
         const defaultPlan = screen.getByRole("button", { name: "Default" });
@@ -572,5 +599,15 @@ describe("Final Project Tests (DegreePlans)", () => {
         expect(totalCreditErrorBefore).toBeNull();
         expect(totalCreditErrorAfter).toBeVisible();
         expect(MATH241Error).toBeVisible();
+        const nameBox = screen.getByTestId("degree-plan-name-box");
+        userEvent.type(nameBox, "Plan 1");
+
+        const stopEditButton = screen.getByRole("button", {
+            name: /Stop Editing 🛑/i
+        });
+        stopEditButton.click();
+
+        const text = screen.queryByText("Plan 1");
+        expect(text).toBeVisible();
     });
 });

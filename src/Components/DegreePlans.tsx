@@ -35,6 +35,10 @@ export function DegreePlans({
     const [addingFile, setAddingFile] = useState<boolean>(false);
     const [content, setContent] = useState<string>("No file data uploaded");
 
+    /**Used to avoid infintite loops when checking if a course has updates information that
+     * has changed due to editing within the Course List page. Only runs once the courses
+     * list has been updated
+     */
     useEffect(() => {
         updateDegreePlans(
             degreePlans.map((degree: Degree) => ({
@@ -55,6 +59,8 @@ export function DegreePlans({
         setDegreePlans(degreePlans);
     }
     function replaceCourse(coursenum: number): Course {
+        //Helper function to replace the course that has updated information
+        //that is used within the useEffect function above.
         const courseIDS = courses.map((course: Course) => course.courseID);
         const index = courseIDS.findIndex((x) => x === coursenum);
         const newCourse = courses[index];

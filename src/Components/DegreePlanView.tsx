@@ -180,6 +180,7 @@ export function DegreePlanView({
                     <Form.Group className="mb-3" controlId="degreeName">
                         <Form.Label>Degree Plan Name:</Form.Label>
                         <Form.Control
+                            data-testid="degree-plan-name-box"
                             type="name"
                             placeholder={degree.name}
                             onChange={updateName}
@@ -190,6 +191,7 @@ export function DegreePlanView({
                     <Form.Group controlId="startYear">
                         <Form.Label>Choose Year</Form.Label>
                         <Form.Select
+                            data-testid="start-year-box"
                             value={startYear}
                             onChange={updateStartYear}
                         >
@@ -219,7 +221,13 @@ export function DegreePlanView({
                     </Button>
                 </Col>
             </Row>
-
+            <Row className="App-thin">
+                <AddSemester
+                    degree={degree}
+                    editDegree={editDegree}
+                    editMode={editMode}
+                ></AddSemester>
+            </Row>
             <Row className="App-thin">
                 <Col>
                     <CheckRequirements
@@ -228,16 +236,10 @@ export function DegreePlanView({
                     ></CheckRequirements>
                 </Col>
                 <Col>
-                    <AddSemester
-                        degree={degree}
-                        editDegree={editDegree}
-                        editMode={editMode}
-                    ></AddSemester>
-                </Col>
-                <Col>
                     <ShowAllErrors degree={degree}></ShowAllErrors>
                 </Col>
             </Row>
+            <br></br>
             <Row>
                 <Col>
                     <div>
