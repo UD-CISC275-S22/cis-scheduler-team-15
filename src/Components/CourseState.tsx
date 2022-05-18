@@ -8,6 +8,9 @@ import React from "react";
 import "../App.css";
 import { Button, Stack, Row, Col, Form } from "react-bootstrap";
 
+/* Top level state which instantiates the courses, displays the home page, 
+and allows for navigation to subpages. */
+
 const COURSES = AllCourses.map((course): Course => ({ ...course }));
 const CONCENTRATONS = [
     "General (BA)",
@@ -20,6 +23,7 @@ const CONCENTRATONS = [
     "Theory and Computation (BS)"
 ];
 const saveCoursesKey = "COURSE-DATA2";
+// CourseInput sorts the inputted JSON course data alphanumerically
 let courseInput = COURSES.sort((a, b) => {
     const fa = a.listing.toLowerCase();
     const fb = b.listing.toLowerCase();
@@ -34,6 +38,7 @@ let courseInput = COURSES.sort((a, b) => {
 
 const previousData = localStorage.getItem(saveCoursesKey);
 if (previousData !== null) {
+    // Checks whether data is stored locally for the course list and updates the starting state of the course list accordingly
     courseInput = JSON.parse(previousData);
 }
 
@@ -47,6 +52,7 @@ export function CourseState(): JSX.Element {
     );
 
     function editCourses(courseID: number, editedCourse: Course) {
+        // Updates the courselist with a course that was modified
         setCourses(
             courses.map(
                 (course: Course): Course =>
@@ -55,35 +61,44 @@ export function CourseState(): JSX.Element {
         );
     }
     function insertCourse(newCourse: Course) {
+        // Adds a course to the course list
         setCourses([...courses, newCourse]);
     }
     function saveData() {
+        // Saves the current course list locally
         localStorage.setItem(saveCoursesKey, JSON.stringify(courses));
     }
     function revert() {
+        // If the user chooses to go back to the default, this function allows
+        // the course list to return to the original sorted JSON course list
         setCourses(COURSES);
         localStorage.setItem(saveCoursesKey, JSON.stringify(COURSES));
     }
 
     function moveHome() {
+        // Moves to the home page
         setHome(true);
         setPlanView(false);
         setCourseView(false);
     }
 
     function movePlanView() {
+        // Moves to the degree plan page
         setHome(false);
         setPlanView(true);
         setCourseView(false);
     }
 
     function moveCourseView() {
+        // Moves to the course list page
         setHome(false);
         setPlanView(false);
         setCourseView(true);
     }
 
     function updateConcentration(event: React.ChangeEvent<HTMLSelectElement>) {
+        // Channges the current concentration, which changes the list of degree requirements,
+        // the default plan (depending on BS or BA route), and the degree requirement checking
         setConcentration(event.target.value);
     }
 
