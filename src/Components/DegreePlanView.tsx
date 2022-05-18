@@ -219,7 +219,13 @@ export function DegreePlanView({
                     </Button>
                 </Col>
             </Row>
-
+            <Row className="App-thin">
+                <AddSemester
+                    degree={degree}
+                    editDegree={editDegree}
+                    editMode={editMode}
+                ></AddSemester>
+            </Row>
             <Row className="App-thin">
                 <Col>
                     <CheckRequirements
@@ -228,16 +234,10 @@ export function DegreePlanView({
                     ></CheckRequirements>
                 </Col>
                 <Col>
-                    <AddSemester
-                        degree={degree}
-                        editDegree={editDegree}
-                        editMode={editMode}
-                    ></AddSemester>
-                </Col>
-                <Col>
                     <ShowAllErrors degree={degree}></ShowAllErrors>
                 </Col>
             </Row>
+            <br></br>
             <Row>
                 <Col>
                     <div>
