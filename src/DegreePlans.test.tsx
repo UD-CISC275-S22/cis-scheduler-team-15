@@ -515,7 +515,49 @@ describe("Final Project Tests (DegreePlans)", () => {
         );
     });
 
-    // Henry test("Modify degree plan name", () => {});
+    test("Modify degree plan name", () => {
+        const degreeButton = screen.getByRole("button", {
+            name: "Default"
+        });
+        degreeButton.click();
+        const editPlanButton = screen.getByRole("button", {
+            name: /Edit Plan 🖉/i
+        });
+        editPlanButton.click();
 
-    // Henry test("Modify degree plan start year", () => {});
+        const nameBox = screen.getByTestId("degree-plan-name-box");
+        userEvent.type(nameBox, "Plan 1");
+
+        const stopEditButton = screen.getByRole("button", {
+            name: /Stop Editing 🛑/i
+        });
+        stopEditButton.click();
+
+        const text = screen.queryByText("Plan 1");
+        expect(text).toBeVisible();
+    });
+
+    test("Modify degree plan start year", () => {
+        const degreeButton = screen.getByRole("button", {
+            name: "Default"
+        });
+        degreeButton.click();
+        const editPlanButton = screen.getByRole("button", {
+            name: /Edit Plan 🖉/i
+        });
+        editPlanButton.click();
+
+        const nameBox = screen.getByTestId("start-year-box");
+        userEvent.selectOptions(nameBox, "2018");
+
+        const updateStartButton = screen.getByRole("button", {
+            name: /Update Start Year/i
+        });
+        updateStartButton.click();
+
+        const text = screen.queryByText("Fall 2018");
+        const text2 = screen.queryByText("Spring 2019");
+        expect(text).toBeVisible();
+        expect(text2).toBeVisible();
+    });
 });

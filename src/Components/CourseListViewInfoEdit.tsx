@@ -4,10 +4,18 @@ import { useState } from "react";
 import { Accordion, Button, Form, InputGroup, Row, Col } from "react-bootstrap";
 import AllCourses from "../Data/CourseList.json";
 
+/*Handled all of the editing within the course list accordion, allows for editing of the
+title, number of credits, course lisintg, coreqs, prereqs, adjut major, college, 
+university and conectration requirements for a specific course*/
 type ChangeEvent = React.ChangeEvent<
     HTMLTextAreaElement | HTMLInputElement | HTMLSelectElement
 >;
+
+//Data of the default classes for the reset to default function
 const defaultCourseData = AllCourses.map((course): Course => ({ ...course }));
+
+//Lists of options that can then be used selected for either the
+//university, college, major, or concentration requirements.
 const universtiyCourses = [
     "FYS",
     "DLE",
@@ -19,7 +27,6 @@ const universtiyCourses = [
 ];
 const universityCourseDesc = [
     "- First Year Experience",
-    "",
     "- Discovery Learning Experience",
     "",
     "",
@@ -86,6 +93,8 @@ export function CourseListViewInfoEdit({
     const [reqSat, setReqSat] = useState<string[]>(course.reqsSatisfied);
 
     function idInitialSetter(): number {
+        //Sets the id of the inital course to be displayed for
+        //Pre-Req or Co-Req box
         if (course.courseID === 1) {
             return 2;
         } else {
@@ -93,6 +102,7 @@ export function CourseListViewInfoEdit({
         }
     }
     function createNewCourse(coursen: Course): Course {
+        //Helper funciton that sets a new course from state above
         const newCourse: Course = {
             courseID: coursen.courseID,
             listing: listings,
@@ -107,6 +117,7 @@ export function CourseListViewInfoEdit({
     }
 
     function updateReq(event: ChangeEvent) {
+        //updates the req based on what is in state
         const req = event.target.value;
         if (reqSat.includes(req)) {
             setReqSat(reqSat.filter((e: string) => e !== req));
@@ -137,6 +148,7 @@ export function CourseListViewInfoEdit({
         }
     }
 
+    //Three setters for state
     function updateTitle(event: ChangeEvent) {
         setTitle(event.target.value);
     }
@@ -146,7 +158,10 @@ export function CourseListViewInfoEdit({
     function updateCredits(event: ChangeEvent) {
         setCredits(parseInt(event.target.value));
     }
+
     function resetDefault(courseID: number) {
+        //Helper function that activates when the user wants to reset a course
+        //to the default information.
         const defaultCourse: Course[] = defaultCourseData.filter(
             (coursed: Course) => courseID === coursed.courseID
         );
@@ -163,13 +178,15 @@ export function CourseListViewInfoEdit({
         setDoubleCo(false);
         setDoubleCor(false);
     }
+
+    //Four setters one for each adding a new co/prereq
+    //as well as removing a co/prereq.
     function updateNewID(event: ChangeEvent) {
         setNewID(parseInt(event.target.value));
     }
     function updateRemoveID(event: ChangeEvent) {
         setRemoveID(parseInt(event.target.value));
     }
-
     function updateNewCoID(event: ChangeEvent) {
         setNewCoID(parseInt(event.target.value));
     }
@@ -178,6 +195,7 @@ export function CourseListViewInfoEdit({
     }
 
     function addNewPreReq(courseID: number) {
+        //Helper function that adds a prereq based on state above
         if (preReqss.includes(courseID)) {
             setDouble(true);
             setDoubler(false);
@@ -200,6 +218,7 @@ export function CourseListViewInfoEdit({
     }
 
     function removePreReq(courseID: number) {
+        //Helper function that removes a prereq based on state above
         if (preReqss.includes(courseID)) {
             const removePreReq = preReqss.filter(
                 (courseIDf: number) => courseIDf !== courseID
@@ -229,6 +248,7 @@ export function CourseListViewInfoEdit({
     }
 
     function addNewCoReq(courseID: number) {
+        //Helper function that adds a coreq based on state above
         if (coReqss.includes(courseID)) {
             setDoubleCo(true);
             setDoubleCor(false);
@@ -255,6 +275,7 @@ export function CourseListViewInfoEdit({
     }
 
     function removeCoReq(courseID: number) {
+        //Helper function that removes a coreq based on state above
         if (coReqss.includes(courseID)) {
             const removeCoReq = coReqss.filter(
                 (courseIDf: number) => courseIDf !== courseID
